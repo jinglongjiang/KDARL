@@ -1,0 +1,131 @@
+{
+  "gru": {
+    "cells": {
+      "10-circle_crossing": {
+        "collision": 3,
+        "success": 29,
+        "timeout": 0
+      },
+      "10-square_crossing": {
+        "collision": 4,
+        "success": 25,
+        "timeout": 3
+      },
+      "20-circle_crossing": {
+        "collision": 8,
+        "success": 24,
+        "timeout": 0
+      },
+      "20-square_crossing": {
+        "collision": 4,
+        "success": 23,
+        "timeout": 5
+      },
+      "5-circle_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      },
+      "5-square_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      }
+    },
+    "checkpoint_sha256": "ba8f3276421e5672479ea3fec20fe01dd6d53c8a4ac9bd0fb662423fd14376eb",
+    "episodes": 192,
+    "policy_latency_ms_median": 29.703907668590546,
+    "policy_latency_ms_p95": 36.878933757543564,
+    "totals": {
+      "collision": 19,
+      "success": 165,
+      "timeout": 8
+    }
+  },
+  "kda": {
+    "cells": {
+      "10-circle_crossing": {
+        "collision": 1,
+        "success": 30,
+        "timeout": 1
+      },
+      "10-square_crossing": {
+        "collision": 4,
+        "success": 25,
+        "timeout": 3
+      },
+      "20-circle_crossing": {
+        "collision": 6,
+        "success": 25,
+        "timeout": 1
+      },
+      "20-square_crossing": {
+        "collision": 4,
+        "success": 25,
+        "timeout": 3
+      },
+      "5-circle_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      },
+      "5-square_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      }
+    },
+    "checkpoint_sha256": "138ed2e46fbb676c8dd0c62c3b9575360349fbc6c0f6ab868f89d8c8d1e0445b",
+    "episodes": 192,
+    "policy_latency_ms_median": 31.675510108470917,
+    "policy_latency_ms_p95": 38.97104784846306,
+    "totals": {
+      "collision": 15,
+      "success": 169,
+      "timeout": 8
+    }
+  },
+  "mamba": {
+    "cells": {
+      "10-circle_crossing": {
+        "collision": 1,
+        "success": 28,
+        "timeout": 3
+      },
+      "10-square_crossing": {
+        "collision": 1,
+        "success": 27,
+        "timeout": 4
+      },
+      "20-circle_crossing": {
+        "collision": 7,
+        "success": 24,
+        "timeout": 1
+      },
+      "20-square_crossing": {
+        "collision": 5,
+        "success": 23,
+        "timeout": 4
+      },
+      "5-circle_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      },
+      "5-square_crossing": {
+        "collision": 1,
+        "success": 31,
+        "timeout": 0
+      }
+    },
+    "checkpoint_sha256": "fe04e811c3bf9f88757f3825a65879c8748307078afbd686472c3dc4780e192f",
+    "episodes": 192,
+    "policy_latency_ms_median": 29.9697145819664,
+    "policy_latency_ms_p95": 37.08718344569206,
+    "totals": {
+      "collision": 15,
+      "success": 165,
+      "timeout": 12
+    }
+  }
+}

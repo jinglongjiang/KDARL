@@ -1,0 +1,22 @@
+{
+  "checkpoint_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-m",
+    "crowd_nav.train",
+    "--config",
+    "/root/kda-vl-optimized-20261007/results/kda.ini",
+    "--outdir",
+    "/root/kda-vl-optimized-20261007/results/kda",
+    "--device",
+    "cuda",
+    "--seed",
+    "419",
+    "--temporal-backbone",
+    "kda"
+  ],
+  "final_episode": 10000,
+  "initial_il_checkpoint_sha256": "3d4258add2c04e198161dad450f6ff078367b71c044f40d1076a396254868c81",
+  "optimizer_steps": 40000,
+  "wall_seconds": 16269.628291368484
+}

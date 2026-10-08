@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "ba8f3276421e5672479ea3fec20fe01dd6d53c8a4ac9bd0fb662423fd14376eb",
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-m",
+    "crowd_nav.train",
+    "--config",
+    "/root/kda-vl-10000-20261007/results/gru.ini",
+    "--outdir",
+    "/root/kda-vl-10000-20261007/results/gru",
+    "--device",
+    "cuda",
+    "--seed",
+    "419",
+    "--temporal-backbone",
+    "gru",
+    "--resume",
+    "/root/kda-vl-3000-20261006/results/gru/rl_model_ep3000.pth",
+    "--resume-rebuild-il-replay"
+  ],
+  "final_episode": 10000,
+  "initial_checkpoint_sha256": "77e7bc2f706f1b04710d1deb86f0063513c245c742809479aeaa33f4678c4cd1",
+  "optimizer_step": 40000,
+  "wall_seconds": 13565.861411333084
+}

@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "fe04e811c3bf9f88757f3825a65879c8748307078afbd686472c3dc4780e192f",
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-m",
+    "crowd_nav.train",
+    "--config",
+    "/root/kda-vl-10000-20261007/results/mamba.ini",
+    "--outdir",
+    "/root/kda-vl-10000-20261007/results/mamba",
+    "--device",
+    "cuda",
+    "--seed",
+    "419",
+    "--temporal-backbone",
+    "mamba",
+    "--resume",
+    "/root/kda-vl-3000-20261006/results/mamba/rl_model_ep3000.pth",
+    "--resume-rebuild-il-replay"
+  ],
+  "final_episode": 10000,
+  "initial_checkpoint_sha256": "960f4f17abe4f34adddc1f6c0a0bef312e573697dc34f84bc9397faf83ec2abe",
+  "optimizer_step": 40000,
+  "wall_seconds": 12543.720938444138
+}

@@ -1,0 +1,21 @@
+{
+  "checkpoint_sha256": "960f4f17abe4f34adddc1f6c0a0bef312e573697dc34f84bc9397faf83ec2abe",
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-m",
+    "crowd_nav.train",
+    "--config",
+    "/root/kda-vl-3000-20261006/results/mamba.ini",
+    "--outdir",
+    "/root/kda-vl-3000-20261006/results/mamba",
+    "--device",
+    "cuda",
+    "--seed",
+    "419",
+    "--temporal-backbone",
+    "mamba"
+  ],
+  "final_episode": 3000,
+  "gpu_memory_peak_sampled_mib": 17076,
+  "wall_seconds": 14608.368885755539
+}

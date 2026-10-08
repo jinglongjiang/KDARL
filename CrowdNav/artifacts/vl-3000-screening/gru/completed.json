@@ -1,0 +1,21 @@
+{
+  "checkpoint_sha256": "77e7bc2f706f1b04710d1deb86f0063513c245c742809479aeaa33f4678c4cd1",
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-m",
+    "crowd_nav.train",
+    "--config",
+    "/root/kda-vl-3000-20261006/results/gru.ini",
+    "--outdir",
+    "/root/kda-vl-3000-20261006/results/gru",
+    "--device",
+    "cuda",
+    "--seed",
+    "419",
+    "--temporal-backbone",
+    "gru"
+  ],
+  "final_episode": 3000,
+  "gpu_memory_peak_sampled_mib": 12300,
+  "wall_seconds": 13708.032494306564
+}

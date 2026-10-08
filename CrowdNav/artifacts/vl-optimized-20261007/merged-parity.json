@@ -1,0 +1,63 @@
+{
+  "replay": {
+    "passed": true,
+    "combinations": 8,
+    "ring_wrap_tested": true,
+    "mc_targets_exact": true,
+    "sample_indices_exact": true
+  },
+  "scorer": {
+    "kda": {
+      "passed": true,
+      "comparisons": 94,
+      "max_abs_error": {
+        "windows": 0.0,
+        "current_token": 0.0,
+        "rewards": 1.3877787807814457e-17,
+        "clearance": 0.0,
+        "values": 0.0,
+        "raw_scores": 1.1102230246251565e-16,
+        "scores": 2.220446049250313e-16
+      },
+      "argmax_mismatches": 0,
+      "history_unchanged": true,
+      "strict_il_load": true,
+      "train_dropout_rng_matched": true
+    },
+    "mamba": {
+      "passed": true,
+      "comparisons": 96,
+      "max_abs_error": {
+        "windows": 0.0,
+        "current_token": 0.0,
+        "rewards": 1.3877787807814457e-17,
+        "clearance": 0.0,
+        "values": 0.0,
+        "raw_scores": 1.1102230246251565e-16,
+        "scores": 1.1102230246251565e-16
+      },
+      "argmax_mismatches": 0,
+      "history_unchanged": true,
+      "strict_il_load": true,
+      "train_dropout_rng_matched": true
+    },
+    "gru": {
+      "passed": true,
+      "comparisons": 84,
+      "max_abs_error": {
+        "windows": 0.0,
+        "current_token": 0.0,
+        "rewards": 1.3877787807814457e-17,
+        "clearance": 0.0,
+        "values": 0.0,
+        "raw_scores": 1.1102230246251565e-16,
+        "scores": 1.1102230246251565e-16
+      },
+      "argmax_mismatches": 0,
+      "history_unchanged": true,
+      "strict_il_load": true,
+      "train_dropout_rng_matched": true
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,114 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[10-06 12:42:05] INFO: [TENSORBOARD] Fresh events will be saved to: /root/kda-vl-3000-20261006/results/kda/tensorboard_logs
+[10-06 12:42:05] INFO: [TEMPORAL-BACKBONE] CLI override: kda
+[10-06 12:42:05] INFO: [CONTRACTS] GRID initialized from runtime cfg: {'n_speeds': 5, 'n_headings': 16, 'v_min': 0.05, 'v_max': 1.0, 'sampling': 'exponential', 'include_stop': False, 'stop_eps': 0.05}
+[10-06 12:42:05] INFO: [CONTRACTS] GRID locked from env.config: {'n_speeds': 5, 'n_headings': 16, 'v_min': 0.05, 'v_max': 1.0, 'sampling': 'exponential', 'include_stop': False, 'stop_eps': 0.05}, num_actions=80
+[10-06 12:42:05] INFO: [SEED] 使用命令行指定的seed: 419
+[10-06 12:42:05] INFO: [SEED] ⚡ CUDA确定性模式已关闭（训练模式，速度优先）
+[10-06 12:42:05] INFO: [DENSE-REWARD] progress_reward=0.0, time_penalty=0.0, stand_penalty=0.0
+[10-06 12:42:05] INFO: human number: 5
+[10-06 12:42:05] INFO: Not randomize human's radius and preferred speed
+[10-06 12:42:05] INFO: Training simulation: circle_crossing, test simulation: circle_crossing
+[10-06 12:42:05] INFO: Square width: 10.0, circle radius: 4.0
+[10-06 12:42:05] INFO: [BOOT] policy=mamba_rl device=cuda
+[10-06 12:42:05] INFO: ============================================================
+[10-06 12:42:05] INFO: [SOT] env: circle R=4.0 Nh=5 dt=0.25 T=50 | reward: 1.0/-0.5/-0.5 | actions: 80(sampling=exponential, stop=False) | success_radius=0.25 | eval eps=0
+[10-06 12:42:05] INFO: ============================================================
+[10-06 12:42:05] INFO: [ALGO] Value-lookahead (KDA): one-step lookahead + epsilon-greedy
+[10-06 12:42:05] INFO: REWARD: success=1.0, collision=-0.5, timeout=-0.5
+[10-06 12:42:05] INFO: TRAINING: lr=1e-05, gamma=0.99, batch=256, updates_per_ep=4
+[10-06 12:42:05] INFO: TIMESTEP: dt=0.25s
+[10-06 12:42:05] INFO: ============================================================
+[10-06 12:42:05] WARNING: Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+[10-06 12:42:08] INFO: [DISCRETE-Q] Q-head initialized: 80 actions (5 speeds × 16 headings, stop=False)
+[10-06 12:42:08] INFO: [VALUE-HEAD] Value head initialized (SARL-style, 1-dim output)
+[10-06 12:42:08] INFO: [AUXILIARY-HEAD] Future position predictor initialized: 3 neighbors × 4 future steps
+[10-06 12:42:08] INFO: [ABLATION] Lookahead scoring mode: full
+[10-06 12:42:08] INFO: ================================================================================
+[10-06 12:42:08] INFO: [TEMPORAL-BACKBONE] KDA backbone configuration:
+[10-06 12:42:08] INFO:   d_model=256, n_layers=4, d_state=64
+[10-06 12:42:08] INFO:   d_conv=4, expand=2
+[10-06 12:42:08] INFO: [SEQ-FINAL] Sequence Length Configuration (SSOT):
+[10-06 12:42:08] INFO:   seq_len=24 (from train.config:[buffer])
+[10-06 12:42:08] INFO:   T=24 (should match policy.config:[temporal].T)
+[10-06 12:42:08] INFO: [ARCH-FINAL] Architecture: EnhancedSpatial(3-way:robot+human+relation) -> KDA -> DualHead
+[10-06 12:42:08] INFO: [DEVICE] cuda
+[10-06 12:42:08] INFO: ================================================================================
+[10-06 12:42:08] INFO: [SEED] ⚡ CUDA确定性模式已关闭（训练模式，速度优先）
+[10-06 12:42:08] INFO: [POLICY-INIT] Main policy built: mamba_rl
+[10-06 12:42:08] INFO: [POLICY-INIT] Set multiagent_training=True (5-human crowd navigation)
+[10-06 12:42:08] INFO: [MAMBA-RL] Set env_dt=0.25
+[10-06 12:42:08] INFO: ✅ debug.md清理：奖励整形器已删除（未实际使用）
+[10-06 12:42:08] INFO: ============================================================
+[10-06 12:42:08] INFO: [CONFIG-SUMMARY] Training Configuration (Runtime Values)
+[10-06 12:42:08] INFO:   Policy: mamba_rl
+[10-06 12:42:08] INFO:   Sequence: seq_len=24
+[10-06 12:42:08] INFO:   Training: batch_size=256, updates_per_ep=4
+[10-06 12:42:08] INFO:   Learning: lr=0.000010, gamma=0.99
+[10-06 12:42:08] INFO:   Episodes: 3000, device=cuda
+[10-06 12:42:08] INFO: ============================================================
+[10-06 12:42:08] INFO: [SARL-TRAIN] goal prior=OFF
+[10-06 12:42:08] INFO: [CFG-LOCK] circle R=4 Nh=5 dt=0.25 T=50 succ_r=0.25 visible=False actions=80 eval_eps=0
+[10-06 12:42:08] INFO: [REWARD-PROFILE] Using profile=benchmark, time_limit=50.0s
+[10-06 12:42:08] INFO: [REWARD-BENCHMARK] {'success': 1.0, 'collision': -0.5, 'timeout': -0.5}
+[10-06 12:42:08] INFO: [CONFIG-FALLBACK] success=1.0, collision=-0.5, timeout=-0.5
+[10-06 12:42:08] INFO: [ACTIVE-REWARD] Using profile-based rewards: {'success': 1.0, 'collision': -0.5, 'timeout': -0.5}
+[10-06 12:42:08] INFO: ============================================================
+[10-06 12:42:08] INFO: [TRAJECTORY-LOG] Recording enabled: /root/kda-vl-3000-20261006/results/kda/trajectory.log
+[10-06 12:42:08] INFO: [IL-AUTO] 自动检测训练数据...
+[10-06 12:42:08] INFO: [IL-AUTO]   离线数据集: None (exists: False)
+[10-06 12:42:08] INFO: [IL-AUTO]   BC checkpoint: /root/kda-vl-3000-20261006/results/kda/il_policy.pth (exists: False)
+[10-06 12:42:08] INFO: [IL-AUTO]   IL checkpoint: /root/kda-vl-3000-20261006/results/kda/ckpt_il.pt (exists: False)
+[10-06 12:42:08] INFO: [IL-AUTO] ✗ 无离线数据集也无checkpoint，将执行完整IL+BC训练
+[10-06 12:42:08] INFO: [IQL-REPLAY] Initialized: capacity=200000, seq_len=24, with MC returns
+[10-06 12:42:08] INFO: [SARL-BUFFER] rl_buffer capacity=200000, n_step=1, per=False
+[10-06 12:42:08] INFO: [STATS-RESET] TrainingStats reset for RL phase
+[10-06 12:42:08] INFO: [IL-BC] Starting BC training phase...
+[10-06 12:42:08] INFO: [IL-CONFIG] success_target=5000 max_total_episodes=12000 prefill_batch_episodes=64 patience_batches=5
+[10-06 12:42:08] INFO: [IL-CONFIG] success_target=5000 (type=int)
+[10-06 12:42:08] INFO: [IL-CONFIG] max_total_episodes=12000 (type=int)
+[10-06 12:42:08] INFO: [IL-CONFIG] batch_collect_episodes=64 (type=int)
+[10-06 12:42:08] INFO: [IL-CONFIG] patience_batches=5 (type=int)
+[10-06 12:42:08] INFO: [IL-TEACHER] Applying ORCA teacher profile: neighbor_dist=6.0, max_neighbors=15, time_horizon=5.0, time_horizon_obst=5.0, safety_space=0.25
+[10-06 12:42:08] INFO: [DENSE-REWARD] progress_reward=0.0, time_penalty=0.0, stand_penalty=0.0
+[10-06 12:42:08] INFO: human number: 5
+[10-06 12:42:08] INFO: Not randomize human's radius and preferred speed
+[10-06 12:42:08] INFO: Training simulation: circle_crossing, test simulation: circle_crossing
+[10-06 12:42:08] INFO: Square width: 10.0, circle radius: 4.0
+[10-06 12:42:08] WARNING: [IL] Explorer has no replay buffer reference; IL data will stay in-flight only
+[10-06 12:42:08] INFO: [IL-START] Buffer size before IL: 0
+[10-06 12:42:08] INFO: [IL-CACHE] 发现离线数据集缓存: /root/workspace/nav_data/mamba/camrl/CrowdNav/data/il_dataset_diverse_v5.0_merged_15000_with_idx.pth
+[10-06 12:42:16] INFO: [IL-CACHE] 数据集版本: 5.0_merged_15000_with_idx
+[10-06 12:42:16] INFO: [IL-CACHE] 生成时间: 2026-05-21 00:12:37
+[10-06 12:42:16] INFO: [IL-CACHE] Seeds: []
+[10-06 12:42:16] INFO: [IL-CACHE] ORCA configs: []
+[10-06 12:42:16] INFO: [IL-CACHE] 总轨迹数: 15000
+[10-06 12:42:16] INFO: [IL-CACHE] 原始成功率: 90.14%
+[10-06 12:42:16] INFO: [IL-CACHE] 限制加载: 15000 episodes (max_il_prefill=50000)
+[10-06 12:42:16] INFO: [IL-CACHE] ✓ 成功加载 15000 条轨迹
+[10-06 12:42:16] INFO: [IL-CACHE] 跳过在线采集，直接使用离线数据集
+[10-06 12:42:16] INFO: [IL-COLLECT] Final success set: 15000 trajectories from 16640 attempts (success_ratio=90.14%)
+[10-06 12:42:16] INFO: [IL-DATA] BC dataset uses success+collision: success=15000, collision=0
+[10-06 12:42:16] INFO: [IL-BUFFER] IL data reserved for BC pretraining only (15000 trajectories)
+[10-06 12:42:16] INFO: [DENSE-REWARD] progress_reward=0.0, time_penalty=0.0, stand_penalty=0.0
+[10-06 12:42:16] INFO: human number: 5
+[10-06 12:42:16] INFO: Not randomize human's radius and preferred speed
+[10-06 12:42:16] INFO: Training simulation: circle_crossing, test simulation: circle_crossing
+[10-06 12:42:16] INFO: Square width: 10.0, circle radius: 4.0
+[10-06 12:42:16] INFO: [IL-TEACHER] Restored ORCA parameters for RL phase
+[10-06 12:42:16] INFO: [IL-BC] ✗ No BC checkpoint found at /root/kda-vl-3000-20261006/results/kda/il_policy.pth
+[10-06 12:42:16] INFO: [IL-BC] Starting 50 epochs of BC training from scratch
+[10-06 12:42:16] INFO: [IL-BC] Training policy network - 1506809 params
+[10-06 12:42:16] INFO: [TRAINING-MODE] Switched to 'rl' mode
+[10-06 12:42:16] INFO: [IL-BC-MODE] Using RL mode for BC training (full 24-frame temporal modeling)
+[10-06 12:42:16] INFO: [IL-BC-MODE] This ensures BC learns sequence dependencies, not just single-frame actions
+[10-06 12:42:16] INFO: [IL-OBJECTIVE] mode=value_regression, lr=0.0001, gamma=0.99
+[10-06 12:42:16] INFO: [IL-BC] Data source: Provided trajectories
+[10-06 12:42:16] INFO: [IL-BC] Trajectories: 15000
+[10-06 12:42:43] INFO: [IL-ACTION-PROCESS] Total steps: 749318, n_actions=80
+[10-06 12:42:43] INFO: [IL-TOKEN-CONVERT] Converting 17983632 states to tokens in batches (batch_size=100000, please wait)...
+[IL-TOKEN-CONVERT]:   0%|                                          | 0/17983632 [00:00<?, ?states/s][IL-TOKEN-CONVERT]:   1%|▏                          | 100000/17983632 [00:12<38:33, 7730.77states/s][IL-TOKEN-CONVERT]:   1%|▏                          | 100000/17983632 [00:23<38:33, 7730.77states/s][IL-TOKEN-CONVERT]:   1%|▎                          | 200000/17983632 [00:26<38:34, 7682.47states/s][IL-TOKEN-CONVERT]:   2%|▍                          | 300000/17983632 [00:38<38:13, 7710.31states/s][IL-TOKEN-CONVERT]:   2%|▌                          | 400000/17983632 [00:51<37:49, 7746.69states/s][IL-TOKEN-CONVERT]:   3%|▊                          | 500000/17983632 [01:04<37:38, 7740.32states/s][IL-TOKEN-CONVERT]:   3%|▊                          | 500000/17983632 [01:16<37:38, 7740.32states/s][IL-TOKEN-CONVERT]:   3%|▉                          | 600000/17983632 [01:17<37:35, 7708.87states/s][IL-TOKEN-CONVERT]:   4%|█                          | 700000/17983632 [01:30<37:21, 7709.85states/s][IL-TOKEN-CONVERT]:   4%|█▏                         | 800000/17983632 [01:43<37:04, 7724.26states/s][IL-TOKEN-CONVERT]:   5%|█▎                         | 900000/17983632 [01:56<36:51, 7725.54states/s][IL-TOKEN-CONVERT]:   5%|█▎                         | 900000/17983632 [02:08<36:51, 7725.54states/s][IL-TOKEN-CONVERT]:   6%|█▍                        | 1000000/17983632 [02:09<36:34, 7738.49states/s][IL-TOKEN-CONVERT]:   6%|█▍                        | 1000000/17983632 [02:21<36:34, 7738.49states/s][IL-TOKEN-CONVERT]:   6%|█▌                        | 1100000/17983632 [02:22<36:35, 7691.09states/s][IL-TOKEN-CONVERT]:   7%|█▋                        | 1200000/17983632 [02:35<36:19, 7700.97states/s][IL-TOKEN-CONVERT]:   7%|█▉                        | 1300000/17983632 [02:48<36:10, 7687.64states/s][IL-TOKEN-CONVERT]:   8%|██                        | 1400000/17983632 [03:01<35:49, 7715.39states/s][IL-TOKEN-CONVERT]:   8%|██▏                       | 1500000/17983632 [03:14<35:30, 7738.37states/s]/root/miniconda3/envs/mamba/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

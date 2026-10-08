@@ -1,0 +1,95 @@
+{
+  "arms": {
+    "gru": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-optimized-20261007/results/gru.ini",
+        "--outdir",
+        "/root/kda-vl-optimized-20261007/results/gru",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "gru"
+      ],
+      "finished_at": 1791372969.639047,
+      "latest_episode": 10000,
+      "pid": 1880069,
+      "started_at": 1791359704.253119,
+      "state": "completed"
+    },
+    "kda": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-optimized-20261007/results/kda.ini",
+        "--outdir",
+        "/root/kda-vl-optimized-20261007/results/kda",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "kda"
+      ],
+      "finished_at": 1791375973.8705206,
+      "latest_episode": 10000,
+      "pid": 1880067,
+      "started_at": 1791359704.2422292,
+      "state": "completed"
+    },
+    "mamba": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-optimized-20261007/results/mamba.ini",
+        "--outdir",
+        "/root/kda-vl-optimized-20261007/results/mamba",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "mamba"
+      ],
+      "finished_at": 1791372437.4446754,
+      "latest_episode": 10000,
+      "pid": 1880068,
+      "started_at": 1791359704.2476683,
+      "state": "completed"
+    },
+    "smoke": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-optimized-20261007/results/smoke.ini",
+        "--outdir",
+        "/root/kda-vl-optimized-20261007/results/smoke",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "kda"
+      ],
+      "finished_at": 1791359704.1285882,
+      "latest_episode": 200,
+      "pid": 1874124,
+      "started_at": 1791359233.640103,
+      "state": "completed"
+    }
+  },
+  "controller_pid": 1874114,
+  "disk_free_gib": 2.0180130004882812,
+  "stage": "COMPLETED"
+}

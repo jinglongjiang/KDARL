@@ -1,0 +1,131 @@
+{
+  "gru": {
+    "cells": {
+      "10-circle_crossing": {
+        "collision": 2,
+        "success": 26,
+        "timeout": 4
+      },
+      "10-square_crossing": {
+        "collision": 2,
+        "success": 27,
+        "timeout": 3
+      },
+      "20-circle_crossing": {
+        "collision": 8,
+        "success": 21,
+        "timeout": 3
+      },
+      "20-square_crossing": {
+        "collision": 5,
+        "success": 21,
+        "timeout": 6
+      },
+      "5-circle_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      },
+      "5-square_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      }
+    },
+    "checkpoint_sha256": "96f06039a07b75d09e3b067ebb796d6de113b6d80a33214db737ed6d3a245828",
+    "episodes": 192,
+    "policy_latency_ms_median": 14.075754210352898,
+    "policy_latency_ms_p95": 15.685533173382282,
+    "totals": {
+      "collision": 17,
+      "success": 159,
+      "timeout": 16
+    }
+  },
+  "kda": {
+    "cells": {
+      "10-circle_crossing": {
+        "collision": 6,
+        "success": 26,
+        "timeout": 0
+      },
+      "10-square_crossing": {
+        "collision": 1,
+        "success": 31,
+        "timeout": 0
+      },
+      "20-circle_crossing": {
+        "collision": 9,
+        "success": 22,
+        "timeout": 1
+      },
+      "20-square_crossing": {
+        "collision": 3,
+        "success": 20,
+        "timeout": 9
+      },
+      "5-circle_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      },
+      "5-square_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      }
+    },
+    "checkpoint_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+    "episodes": 192,
+    "policy_latency_ms_median": 16.29013940691948,
+    "policy_latency_ms_p95": 17.76176020503044,
+    "totals": {
+      "collision": 19,
+      "success": 163,
+      "timeout": 10
+    }
+  },
+  "mamba": {
+    "cells": {
+      "10-circle_crossing": {
+        "collision": 2,
+        "success": 29,
+        "timeout": 1
+      },
+      "10-square_crossing": {
+        "collision": 2,
+        "success": 30,
+        "timeout": 0
+      },
+      "20-circle_crossing": {
+        "collision": 10,
+        "success": 22,
+        "timeout": 0
+      },
+      "20-square_crossing": {
+        "collision": 6,
+        "success": 22,
+        "timeout": 4
+      },
+      "5-circle_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      },
+      "5-square_crossing": {
+        "collision": 0,
+        "success": 32,
+        "timeout": 0
+      }
+    },
+    "checkpoint_sha256": "f23e411effac2f1959eead081fa49c908a85532642172c50a34427fe40bff2b9",
+    "episodes": 192,
+    "policy_latency_ms_median": 14.760654419660568,
+    "policy_latency_ms_p95": 18.082939833402637,
+    "totals": {
+      "collision": 20,
+      "success": 167,
+      "timeout": 5
+    }
+  }
+}

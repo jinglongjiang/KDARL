@@ -1,0 +1,85 @@
+{
+  "arms": {
+    "gru": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-10000-20261007/results/gru.ini",
+        "--outdir",
+        "/root/kda-vl-10000-20261007/results/gru",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "gru",
+        "--resume",
+        "/root/kda-vl-3000-20261006/results/gru/rl_model_ep3000.pth",
+        "--resume-rebuild-il-replay"
+      ],
+      "exit_code": 0,
+      "finished_at": 1791322496.4172795,
+      "latest_episode": 10000,
+      "pid": 1710303,
+      "started_at": 1791308930.5558681,
+      "state": "completed"
+    },
+    "kda": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-10000-20261007/results/kda.ini",
+        "--outdir",
+        "/root/kda-vl-10000-20261007/results/kda",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "kda",
+        "--resume",
+        "/root/kda-vl-3000-20261006/results/kda/rl_model_ep3000.pth",
+        "--resume-rebuild-il-replay"
+      ],
+      "exit_code": 0,
+      "finished_at": 1791324631.390429,
+      "latest_episode": 10000,
+      "pid": 1710301,
+      "started_at": 1791308930.5551264,
+      "state": "completed"
+    },
+    "mamba": {
+      "command": [
+        "/root/miniconda3/envs/mamba/bin/python",
+        "-m",
+        "crowd_nav.train",
+        "--config",
+        "/root/kda-vl-10000-20261007/results/mamba.ini",
+        "--outdir",
+        "/root/kda-vl-10000-20261007/results/mamba",
+        "--device",
+        "cuda",
+        "--seed",
+        "419",
+        "--temporal-backbone",
+        "mamba",
+        "--resume",
+        "/root/kda-vl-3000-20261006/results/mamba/rl_model_ep3000.pth",
+        "--resume-rebuild-il-replay"
+      ],
+      "exit_code": 0,
+      "finished_at": 1791321474.2764184,
+      "latest_episode": 10000,
+      "pid": 1710302,
+      "started_at": 1791308930.55548,
+      "state": "completed"
+    }
+  },
+  "disk_free_gib": 5.4768829345703125,
+  "pid": 1695792,
+  "stage": "COMPLETED"
+}

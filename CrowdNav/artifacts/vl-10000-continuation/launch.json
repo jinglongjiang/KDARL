@@ -1,0 +1,17 @@
+{
+  "pid": 1695792,
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-u",
+    "tools/resume_vl_parallel.py",
+    "--previous",
+    "/root/kda-vl-3000-20261006/results",
+    "--output",
+    "/root/kda-vl-10000-20261007/results",
+    "--source-commit",
+    "1964f05",
+    "--previous-pid",
+    "1608116"
+  ],
+  "source_commit": "1964f05"
+}

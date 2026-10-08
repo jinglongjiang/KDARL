@@ -1,0 +1,29 @@
+# Model weights and training datasets are deliberately not published.
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.pkl
+*.pickle
+*.onnx
+*.bin
+*.h5
+*.hdf5
+*.npz
+!CrowdNav/artifacts/kda-vl-freeze/*.npz
+
+# Local environments, process control and transient caches.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+*.pid
+*.pid.json
+*.lock
+*.bak*
+*.json.progress
+tensorboard_logs/
+events.out.tfevents.*
+
