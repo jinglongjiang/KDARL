@@ -1,17 +1,7 @@
 {
-  "stage": "WAITING_FOREIGN_PIPELINE",
-  "remote": {
-    "controller_alive": true,
-    "gpu_pids": [
-      2392742,
-      2392744,
-      2392746,
-      2392743,
-      2392747
-    ],
-    "complete": null,
-    "error": null,
-    "free_bytes": 5460172800
-  },
-  "wall_seconds": 15079.883116960526
+  "stage": "confirmation_COMPLETE",
+  "rules": [
+    "first5",
+    "ttc5"
+  ]
 }

@@ -1,8 +1,8 @@
 # KDARL: KDA-VL Research Code and Evidence
 
 This repository publishes the current scene-level KDA-VL project, its Mamba and
-GRU controls, completed experiment evidence, and an in-progress human-selection
-study snapshot. It does **not** publish model weights, ORCA training datasets,
+GRU controls, completed experiment evidence, and the completed human-selection
+study with independent confirmation. It does **not** publish model weights, ORCA training datasets,
 the parent repository's Git history, or the discontinued `shixu` research line.
 
 ## Architecture
@@ -69,7 +69,7 @@ results and failed preflight attempts remain in the evidence directories.
 | `CrowdNav/artifacts/kda-vl-freeze` | Reference/causal/save-load/shared-init checks and non-weight trace fixtures |
 | `CrowdNav/artifacts/vl-*` | Protocols, final evaluations, comparisons, completion metadata, training logs and plots |
 | `experiments/diagnostics-20261008` | Completed D0-D9 diagnostic scripts, JSON results and compressed decision traces |
-| `experiments/selection-20261008` | Frozen first5/nearest5/existing-TTC Top-5 study, available completed cells and status snapshot |
+| `experiments/selection-20261008` | Completed first5/nearest5/existing-TTC Top-5 study: 60 cell JSON files, 30,000 episode executions, frozen protocol and independent confirmation |
 | `snapshot-manifest.json` | SHA256, sizes and provenance of exported files; excluded binary inventory; study state at export |
 
 Compressed `*.json.gz` files contain decision-level JSON evidence, not weights.
@@ -84,24 +84,40 @@ they do not imply that those files are available after cloning.
 - `CrowdNav/KDA-VL-3000-SCREENING.md`: initial fixed-budget experiment.
 - `CrowdNav/KDA-VL-COMPREHENSIVE-REPORT.md`: V1 and V2 training/evaluation report.
 - `CrowdNav/KDA-DIAGNOSTIC-REPORT.md`: completed high-resolution diagnostic audit.
+- `CrowdNav/KDA-SELECTION-CONFIRMATION-REPORT.md`: verified development and independent confirmation results, paired tests, safety regressions and evidence limits (Chinese).
 
 The comprehensive report predates V3: do not mistake its V2 results for the
 latest continuous-run weights. The diagnostic audit subsequently evaluated
 V3 weights on 3,000 episodes per arm; that larger evaluation is distinct from
 the 192-episode comparison above.
 
-## Selection Study Status at This Export
+## Completed Selection Study
 
-This is a **snapshot**, not a declaration that the study has finished.
+The previous commit `0674f41` was an incomplete selection-study snapshot. This
+update includes both completed blocks, the frozen winner, final verdict and
+report verification. No weights, mixed-density training or retraining are added.
 
-- GRU: all three rules completed the development block (90000-90499).
-- KDA: waiting for the existing RTX4090 workload and evaluation pipeline to finish.
-- Independent confirmation (91000-91499): not completed at export.
-- No mixed-density training, retraining, or final-result claims are included.
+- Development: cases 90000-90499; first5 / nearest5 / inherited TTC Top-5.
+- Winner frozen from KDA development results: `ttc5`.
+- Independent confirmation: cases 91000-91499; first5 versus frozen `ttc5`.
+- Verdict: `CONFIRMED_SELECTION_GAIN` under the predeclared KDA adoption rule.
 
-Use `snapshot-manifest.json` for exact export time and captured statuses.
-Subsequent results require a separate update; uploading these files does not
-stop or restart the active study.
+| KDA independent confirmation, 3,000 episodes | First5 | TTC Top-5 | Change |
+|---|---:|---:|---:|
+| Success | 84.83% | 90.27% | +5.43 pp |
+| Collision | 12.07% | 7.17% | -4.90 pp |
+| Timeout | 3.10% | 2.57% | -0.53 pp (not significant after correction) |
+
+These are deployment-selection gains with one frozen five-person-trained seed,
+not evidence of a KDA-specific memory advantage or superiority over Mamba.
+GRU also benefits, but its timeout rate rises from 8.00% to 9.63%. Local KDA
+regressions and original-success damage are retained in the report. KDA ran on
+RTX4090 and GRU on RTX3060 with different PyTorch versions: cross-arm absolute
+performance comparisons are not permitted in this study. Six cells reuse case
+IDs; the report includes case-cluster bootstrap intervals in addition to the
+requested exact paired McNemar tests and Bonferroni correction.
+
+Use `snapshot-manifest.json` for exact export time, file hashes and captured statuses.
 
 ## Dependencies and Running
 

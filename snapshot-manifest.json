@@ -1,5 +1,5 @@
 {
-  "created_utc": "2026-10-08T08:57:41.321772+00:00",
+  "created_utc": "2026-10-08T12:35:04.194340+00:00",
   "parent_repository": "/home/abc/workspace/nav_data/mamba/camrl",
   "parent_commit": "86969cd4fc71632bc31f54094dad8c539fc8c8f2",
   "scope": "Current scene-level official-KDA VL project, historical v1/v2 source, baseline controls, diagnostics and selection study snapshot.",
@@ -7,31 +7,21 @@
   "no_training_demonstrations": true,
   "selection_status": {
     "gru": {
-      "stage": "development_COMPLETE",
+      "stage": "confirmation_COMPLETE",
       "rules": [
         "first5",
-        "nearest5",
         "ttc5"
       ]
     },
     "kda": {
-      "stage": "WAITING_FOREIGN_PIPELINE",
-      "remote": {
-        "controller_alive": true,
-        "gpu_pids": [
-          2392742,
-          2392744,
-          2392746,
-          2392743,
-          2392747
-        ],
-        "complete": null,
-        "error": null,
-        "free_bytes": 5460172800
-      },
-      "wall_seconds": 15079.883116960526
+      "stage": "confirmation_COMPLETE",
+      "rules": [
+        "first5",
+        "ttc5"
+      ]
     },
-    "final_confirmation_complete": false
+    "final_confirmation_complete": true,
+    "verdict": "CONFIRMED_SELECTION_GAIN"
   },
   "files": [
     {
@@ -1747,6 +1737,13 @@
       "bytes": 5966,
       "sha256": "fc0dce85425926bbb9c10dd774a1cba006dba8eb7b4042dfac6fd2105d1a8169",
       "source": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/VL-v2-contract.md",
+      "source_commit": null
+    },
+    {
+      "path": "CrowdNav/KDA-SELECTION-CONFIRMATION-REPORT.md",
+      "bytes": 12997,
+      "sha256": "7fe17dd41fa82e23e8cccb60877ec969eb51fde64f4b6bdb02ce5e643315a5ea",
+      "source": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/KDA-SELECTION-CONFIRMATION-REPORT.md",
       "source_commit": null
     },
     {
@@ -6321,6 +6318,188 @@
       "source_commit": null
     },
     {
+      "path": "experiments/selection-20261008/DONE.json",
+      "bytes": 176,
+      "sha256": "a4e60403b8979a9af8d3ffc62c0e7980f91daba5d2ac23665816762e0440a676",
+      "source": "/home/abc/workspace/kda-selection-20261008/DONE.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-first5/cell0.json",
+      "bytes": 171028,
+      "sha256": "fbe51a0dca1102eeb41a35ca129cffab841ee5efa4ea388507ba3aa20bc4e53c",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-first5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-first5/cell1.json",
+      "bytes": 170926,
+      "sha256": "cbf54e4db925c40d9d20a8ebfaa81f0b3962dfe5dedf13a12a3840182efc40db",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-first5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-first5/cell2.json",
+      "bytes": 171933,
+      "sha256": "29d2cf1cbd6f41983b3d2041213e06fc30682ff6975233918355f0268e140501",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-first5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-first5/cell3.json",
+      "bytes": 171849,
+      "sha256": "96bcbd3b6efbf4e4595041fff38738b923aeaa60b1f0bcb21b10e0aafa59aa39",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-first5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-first5/cell4.json",
+      "bytes": 172372,
+      "sha256": "9953f0b616a2e6239a6d5a6fdeaebf4497df9f0020be43f61e2a54c15fbc73ce",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-first5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-first5/cell5.json",
+      "bytes": 172433,
+      "sha256": "df6ca63e335bb728dfb24e63df0402a942ae4c6ea838896d710150015406c958",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-first5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-ttc5/cell0.json",
+      "bytes": 171024,
+      "sha256": "7a843994d34289b6ea98c9d73eef8c774d46c89fe13f5bc29188e2c46b7d9ae1",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-ttc5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-ttc5/cell1.json",
+      "bytes": 170924,
+      "sha256": "64b938553b0e627287991f3005de999547ab09ec8d02ef31c724976243be603e",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-ttc5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-ttc5/cell2.json",
+      "bytes": 171717,
+      "sha256": "0027e9d723647c9482df68c160d7b5816c0a63064d15fe4baddfd2f0571f8eae",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-ttc5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-ttc5/cell3.json",
+      "bytes": 171677,
+      "sha256": "7a95fd7d4c84e0efa9dd7bd433c032ace6be0abb6046c2c8a92c7e337570b133",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-ttc5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-ttc5/cell4.json",
+      "bytes": 171948,
+      "sha256": "cd03567f50d538325f4e895ba14276d463044fd89df444127714f554dc280eac",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-ttc5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/gru-ttc5/cell5.json",
+      "bytes": 172103,
+      "sha256": "c09801b3e3451ef2ef052646854d00995f4da352cd97c61045c295831f22f8d8",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/gru-ttc5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-first5/cell0.json",
+      "bytes": 171008,
+      "sha256": "af6990547d39e13b2b4b04a63a64f07d01798fb5442e74853be2be2fc48d4b42",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-first5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-first5/cell1.json",
+      "bytes": 170905,
+      "sha256": "78078eb2e30525f7a5fb7c6a0ddbb7f1670de553dc305b95cb40b37d2751f5a4",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-first5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-first5/cell2.json",
+      "bytes": 171906,
+      "sha256": "fd6c42a166db1aa3b465486c4f38bee8ad2c887e8f7d657aaf5d67e8ac3ca317",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-first5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-first5/cell3.json",
+      "bytes": 171745,
+      "sha256": "02d4fa7356072127e089d43b0c760112f518f97315b912313b9200108ab08688",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-first5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-first5/cell4.json",
+      "bytes": 172439,
+      "sha256": "767b1fa4d5ac2c2d12dc983a94445c719b1d3e1226be0c471ed6e47804c6f81e",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-first5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-first5/cell5.json",
+      "bytes": 172347,
+      "sha256": "0c8aed49521ec10dc5e023ea277c38f4f5d718445675500ee7cf98f739c05576",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-first5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-ttc5/cell0.json",
+      "bytes": 171006,
+      "sha256": "ddfff74a5e0cfd5243894dd95923e36868fb20bdc7d40d5698de908c73f076b4",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-ttc5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-ttc5/cell1.json",
+      "bytes": 170902,
+      "sha256": "12ac80c1059d4f863358d4549a7b373d2f2dc0596b3013310c3f52f884ac09ab",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-ttc5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-ttc5/cell2.json",
+      "bytes": 171698,
+      "sha256": "5f9fd82bd4c301f712bdef4bac931872077d89d41b9cfa950db526d265de9c3e",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-ttc5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-ttc5/cell3.json",
+      "bytes": 171693,
+      "sha256": "7e956109c3c336d8d2f272e05a5bd94cb6e7f6202249fdfc5535c186d108ce24",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-ttc5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-ttc5/cell4.json",
+      "bytes": 172038,
+      "sha256": "22b9c8ceb3be5434dfecb8f5b0b53d16a8955d586d1b4d180ccd6d460b988bcd",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-ttc5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation/kda-ttc5/cell5.json",
+      "bytes": 172184,
+      "sha256": "8313706ca06fac7f9ce8be121849db60d2801b925e47f5c7090c6dfa73bab750",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation/kda-ttc5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/confirmation-summary.json",
+      "bytes": 21781,
+      "sha256": "4e04a1a2609f2a5e20582219a1ff66e9214f37fd5d83ac387d197b261d5b84f7",
+      "source": "/home/abc/workspace/kda-selection-20261008/confirmation-summary.json",
+      "source_commit": null
+    },
+    {
       "path": "experiments/selection-20261008/controller.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -6454,6 +6633,139 @@
       "source_commit": null
     },
     {
+      "path": "experiments/selection-20261008/development/kda-first5/cell0.json",
+      "bytes": 170989,
+      "sha256": "420a2db7ba291701e98fdc1cb23ac17496d2a64a4ec326dddc3e94818f90c349",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-first5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-first5/cell1.json",
+      "bytes": 170859,
+      "sha256": "6abe1444560ae14e346b7d37d313f9607e2a4b0a3cbe1b7a72045ea0e41bc0b2",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-first5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-first5/cell2.json",
+      "bytes": 171891,
+      "sha256": "097e24f50f20f904a167d338eb84ddc082dbdc30646efd8a883ae1bbb81d9006",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-first5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-first5/cell3.json",
+      "bytes": 171773,
+      "sha256": "3a4abbb3f04250af4fa9ffc9195ecc38b2ac064b2894e315b25ed4302f753c61",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-first5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-first5/cell4.json",
+      "bytes": 172399,
+      "sha256": "7860a9ed32ddacac1716de81b537c92a6821b365d535b2590cddf716c55e71ba",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-first5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-first5/cell5.json",
+      "bytes": 172376,
+      "sha256": "bd611530b0980f609deec81bd1eb29cc045c6ea6eb57e722582b3092ee27a6aa",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-first5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-nearest5/cell0.json",
+      "bytes": 170988,
+      "sha256": "a89be2daea3b5e89f93f53ba9476c2daa2ad1baed5325061967d852a1c4cfdfc",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-nearest5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-nearest5/cell1.json",
+      "bytes": 170862,
+      "sha256": "080ed740d014dcd188447264cc6af5b06c01e34f790311797e26633675c23937",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-nearest5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-nearest5/cell2.json",
+      "bytes": 171811,
+      "sha256": "e4eb106e4d5ae5171a0b934a09e4f1c11eaa43d2c5ddb8b8570d4587c80305a4",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-nearest5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-nearest5/cell3.json",
+      "bytes": 171678,
+      "sha256": "cae1af479036245131ffdb5f9aa026abe890f9d1495c328ceb7351b45b98f799",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-nearest5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-nearest5/cell4.json",
+      "bytes": 172144,
+      "sha256": "a580133dc6e4d9a0eafb1c2efda40f1c0ee9cc435e16dfb908407e32cba1ba51",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-nearest5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-nearest5/cell5.json",
+      "bytes": 172172,
+      "sha256": "7effbebb53295e12b2811430e6159973bcd6d521533e4823c80e28c2e118e23a",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-nearest5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-ttc5/cell0.json",
+      "bytes": 170987,
+      "sha256": "966b422e4fd5aaf13e1edbf367958bca309a25d2b6655664171f83a38a0e5665",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-ttc5/cell0.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-ttc5/cell1.json",
+      "bytes": 170855,
+      "sha256": "6f136c0eaa726046fde7459f8207989b730a1084b3efb72923595bc69c14d587",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-ttc5/cell1.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-ttc5/cell2.json",
+      "bytes": 171722,
+      "sha256": "fb417fb214e1713bd0e501bb87625960ca4055e6be93675d55d7630e0cce3299",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-ttc5/cell2.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-ttc5/cell3.json",
+      "bytes": 171742,
+      "sha256": "623b94f49187269b80e4febf437414fe9f6dd35b7ae5264b078500ec1b2627fc",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-ttc5/cell3.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-ttc5/cell4.json",
+      "bytes": 172012,
+      "sha256": "96fb5f936b577a3bd2500aaae01a3ae82fa06c28ace10b95b053e94b0eb64ad8",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-ttc5/cell4.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development/kda-ttc5/cell5.json",
+      "bytes": 172232,
+      "sha256": "5b2add556e7745c6e727cf47015118373a0c0efa70820383a59eb7218cdc9b00",
+      "source": "/home/abc/workspace/kda-selection-20261008/development/kda-ttc5/cell5.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/development-summary.json",
+      "bytes": 35536,
+      "sha256": "3e53327787634a860ccbc56ed93b374677618d84af7161f077fbb2686122f292",
+      "source": "/home/abc/workspace/kda-selection-20261008/development-summary.json",
+      "source_commit": null
+    },
+    {
       "path": "experiments/selection-20261008/evaluate-selection.py",
       "bytes": 12971,
       "sha256": "fa6f0f2e5d5e3b62f874905a8bbe7a2628b29e883da72f339ae3400d5eedd3e8",
@@ -6461,10 +6773,185 @@
       "source_commit": null
     },
     {
+      "path": "experiments/selection-20261008/foreign-completion.json",
+      "bytes": 163,
+      "sha256": "2faf25a35db80cf684b2225517b49da677c6cc37a1ee09af396e90ab67e8ab79",
+      "source": "/home/abc/workspace/kda-selection-20261008/foreign-completion.json",
+      "source_commit": null
+    },
+    {
       "path": "experiments/selection-20261008/frozen-manifest.json",
       "bytes": 41742,
       "sha256": "d103422592dca52844c627002c13e4b5b2b822f0ebd7285965c912a6d62dcdce",
       "source": "/home/abc/workspace/kda-selection-20261008/frozen-manifest.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-first5-cell0.log",
+      "bytes": 2341,
+      "sha256": "90fc3121b072af268d96cf32248408c2e678c27c00a594889d99ae214cc58b0e",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-first5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-first5-cell1.log",
+      "bytes": 2341,
+      "sha256": "c9edab50a1b8ea27a157275ecc24ee49758c61c6760052b575fd5a78612df192",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-first5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-first5-cell2.log",
+      "bytes": 2341,
+      "sha256": "a2f07373803807a8e298fe2dfd4890bbe4e3ae60ed16ebfc410a8472687934b7",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-first5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-first5-cell3.log",
+      "bytes": 2341,
+      "sha256": "e89e2e1398c809c0de3de8a77147f93691fc747a633c86cdb573542051c686d8",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-first5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-first5-cell4.log",
+      "bytes": 2341,
+      "sha256": "54b080acaf485e7b6319e0d14093b9a05e790e94e9e0000d9dab4ef52b830bc2",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-first5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-first5-cell5.log",
+      "bytes": 2341,
+      "sha256": "ca59a0a7d82d21ceec126f63702562e97a18796e22f2123f9cdbbe9398c8167a",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-first5-cell5.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-ttc5-cell0.log",
+      "bytes": 2241,
+      "sha256": "b57184e79063cc0452f3af25bdc6be102cfb5aac285ccd0cb924ff417babfd3c",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-ttc5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-ttc5-cell1.log",
+      "bytes": 2241,
+      "sha256": "acc23d266a7eb31e51a7b538a9943158ea4559c07a4fb1f0f141e90fcdc7117f",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-ttc5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-ttc5-cell2.log",
+      "bytes": 2241,
+      "sha256": "027ae421a3f3efc5a48def76a3def741823c46ddccd014bbf197e5da85819355",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-ttc5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-ttc5-cell3.log",
+      "bytes": 2241,
+      "sha256": "3e5b33b54cb1a370fcf9687b3812da30aa519a88d4e307783b97cccdaf65da6a",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-ttc5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-ttc5-cell4.log",
+      "bytes": 2241,
+      "sha256": "c2531eb925eaa9c814ae358ff68c38dd424ddd4f3e48be0b8158d9aed2c6fd30",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-ttc5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-gru-ttc5-cell5.log",
+      "bytes": 2241,
+      "sha256": "502f6b7dd924f7d1b7d1d2c5e94d78b92a6a82d8e3718e7725917b14a7f586c9",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-gru-ttc5-cell5.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-first5-cell0.log",
+      "bytes": 3164,
+      "sha256": "2ed26bdbd40a91a4d503ea9806a796f642e0034c2e79a521d54300ca930606c8",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-first5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-first5-cell1.log",
+      "bytes": 3164,
+      "sha256": "07af7ff0d0d62ea7ae5a224fcea424ce4366e1545c8af28fe6ff80f2c3241dbc",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-first5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-first5-cell2.log",
+      "bytes": 3164,
+      "sha256": "3d7153f0e889de9ff8f3765d4b44e83a1b795ed2b341a555bb417c3fcd12c3a3",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-first5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-first5-cell3.log",
+      "bytes": 3164,
+      "sha256": "1dcea5840dfeb63829c6d33ca13582248aef10b48ff15eaab3ec60b22fc751c4",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-first5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-first5-cell4.log",
+      "bytes": 3164,
+      "sha256": "531f51339f73f2a70a34bc14fac4b752c07fcf1881f084bba83bc0af29069e24",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-first5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-first5-cell5.log",
+      "bytes": 3164,
+      "sha256": "3c2c6872e522459b9feb6ca8a9d409405f621a1db9bd931e73b988f06e021eed",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-first5-cell5.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-ttc5-cell0.log",
+      "bytes": 3064,
+      "sha256": "2c1831fb01565015cd713b1027f5d6a51100b9de8df78ed2e0f623a02c097df9",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-ttc5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-ttc5-cell1.log",
+      "bytes": 3064,
+      "sha256": "ace424a01fbb50ef03e82424eb6fb8ca00d7da5ac98eff5f25a769e7cc7121da",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-ttc5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-ttc5-cell2.log",
+      "bytes": 3064,
+      "sha256": "7e6674d637db5cdd19dd8843b5f649e6b5435717eca27700600d52fb366bbe38",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-ttc5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-ttc5-cell3.log",
+      "bytes": 3064,
+      "sha256": "f5237928b9181a1ff31d43eaa4f896e44f6653a728527cd0706c0c17f944af37",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-ttc5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-ttc5-cell4.log",
+      "bytes": 3064,
+      "sha256": "3955aee9c2d2f38ce631811ae751bf2325d9e3e47786e8ff2bc9d271ae01e587",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-ttc5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/confirmation-kda-ttc5-cell5.log",
+      "bytes": 3064,
+      "sha256": "50d541779ee4545a33d4cd1df95d3c9c8512f8a0acf5a32bffadbd09260bee4d",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/confirmation-kda-ttc5-cell5.log",
       "source_commit": null
     },
     {
@@ -6594,10 +7081,143 @@
       "source_commit": null
     },
     {
+      "path": "experiments/selection-20261008/logs/development-kda-first5-cell0.log",
+      "bytes": 3164,
+      "sha256": "1736eeae95998f94e33c0ab2336141082c822870dceeb2937588aa3ef5c2318d",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-first5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-first5-cell1.log",
+      "bytes": 3164,
+      "sha256": "5bd15f2252c8eee7af3b8e3739e31f3533ae0b78906968800c9b94c3df52fa0f",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-first5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-first5-cell2.log",
+      "bytes": 3164,
+      "sha256": "fa7d68fedb8294fb1c595954b6f3db788e6402cdcd4532bad2ccdbcc150fa4d4",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-first5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-first5-cell3.log",
+      "bytes": 3164,
+      "sha256": "ab60c06ae2eb6f949206587e2ddac0929b02915565dbfe1f303b1f1dfcc60353",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-first5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-first5-cell4.log",
+      "bytes": 3164,
+      "sha256": "0666c1a388605c38c4f8844584ef3936523307996d305135c7e7d60d4137f5fe",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-first5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-first5-cell5.log",
+      "bytes": 3164,
+      "sha256": "40b187d2ce48a2f83e76084809526904d4dec027422b4e1c470d6474eca11876",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-first5-cell5.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-nearest5-cell0.log",
+      "bytes": 3264,
+      "sha256": "d16d073211667159a353d5e5106c95bc9908ed071f3a4e6b29949bedfeb2ce4e",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-nearest5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-nearest5-cell1.log",
+      "bytes": 3264,
+      "sha256": "740a297889fdae05dcd09affeaa2c0dd28756a00d99637c107d9a67b5fb4d891",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-nearest5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-nearest5-cell2.log",
+      "bytes": 3264,
+      "sha256": "fcb7519561b4983f3213bef7b2354f4e0128b77334979ac4cb8f92d2b19fe868",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-nearest5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-nearest5-cell3.log",
+      "bytes": 3264,
+      "sha256": "564e2846fe8b386061619fc079fb54f5b03d4d3f4e771fe9c880c4c30359d5d7",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-nearest5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-nearest5-cell4.log",
+      "bytes": 3264,
+      "sha256": "454b27082a261f3ed9a99cf7c5d6ebc9262a1613e9ef2eb39fe3cee0292aaf79",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-nearest5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-nearest5-cell5.log",
+      "bytes": 3264,
+      "sha256": "fb6f5311ee65865f5fb50d499e583d1c9aded84e5548211dcacc4797f4babc6c",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-nearest5-cell5.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-ttc5-cell0.log",
+      "bytes": 3064,
+      "sha256": "1fd8d4ae7ba77b0c05c7aa08606410d72ae40a697c0f619f5c1df29d1b165699",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-ttc5-cell0.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-ttc5-cell1.log",
+      "bytes": 3064,
+      "sha256": "2cd76866715ef27c6aa1ff5408b3d1520c156b407267141c38cf006fe76e365b",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-ttc5-cell1.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-ttc5-cell2.log",
+      "bytes": 3064,
+      "sha256": "60a73d1514daf62f8d5944f5a418cbbaa661c6413586008478539f2d8c84c01d",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-ttc5-cell2.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-ttc5-cell3.log",
+      "bytes": 3064,
+      "sha256": "38870f5bfab757abf280ce94164282d8221816d3b14bc6d2a7ba10a9df1625a2",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-ttc5-cell3.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-ttc5-cell4.log",
+      "bytes": 3064,
+      "sha256": "721cf9443c5cf7fef65915c1e2c6512cd36302b09d23fdb4266347b3ae90418b",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-ttc5-cell4.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/development-kda-ttc5-cell5.log",
+      "bytes": 3064,
+      "sha256": "90769b8c57c1218798ed340bd50bc259df5b7f53a951878c1348801865274518",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/development-kda-ttc5-cell5.log",
+      "source_commit": null
+    },
+    {
       "path": "experiments/selection-20261008/logs/gru-preflight.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source": "/home/abc/workspace/kda-selection-20261008/logs/gru-preflight.log",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/logs/kda-preflight.log",
+      "bytes": 823,
+      "sha256": "a73c0c7561505e09ebb68c574707289ff4840afabf482b47614399af8bd04e51",
+      "source": "/home/abc/workspace/kda-selection-20261008/logs/kda-preflight.log",
       "source_commit": null
     },
     {
@@ -6615,10 +7235,24 @@
       "source_commit": null
     },
     {
+      "path": "experiments/selection-20261008/preflight/kda.json",
+      "bytes": 754,
+      "sha256": "2b6ae3bc39831c7673dbd41d324841b9ab662134475db55bc91b6fb93096aa8f",
+      "source": "/home/abc/workspace/kda-selection-20261008/preflight/kda.json",
+      "source_commit": null
+    },
+    {
       "path": "experiments/selection-20261008/protocol.json",
       "bytes": 2719,
       "sha256": "1ad9f207351f45d5e9c5d563c787b6e199af50372bdf67020d0420368239c8d4",
       "source": "/home/abc/workspace/kda-selection-20261008/protocol.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/report-verification.json",
+      "bytes": 10571,
+      "sha256": "697f1c624402ea62d225d5bab7ce6bce92372941bcd193f80d1f7774d256d8af",
+      "source": "/home/abc/workspace/kda-selection-20261008/report-verification.json",
       "source_commit": null
     },
     {
@@ -6630,23 +7264,30 @@
     },
     {
       "path": "experiments/selection-20261008/status-gru.json",
-      "bytes": 96,
-      "sha256": "4337f798b17233434282195faa4cd37c51ecd3205a47c96b6e80dfd22fe46b13",
+      "bytes": 81,
+      "sha256": "98814ab351d644c06e7c0149b7329677ae85fafc05d05cf8e63435a0023e9da1",
       "source": "/home/abc/workspace/kda-selection-20261008/status-gru.json",
       "source_commit": null
     },
     {
       "path": "experiments/selection-20261008/status-kda.json",
-      "bytes": 297,
-      "sha256": "e5a0540014d129862471d7dc3ec08395064e7b59aa715ff7c9e2fb6bb078b78f",
+      "bytes": 81,
+      "sha256": "98814ab351d644c06e7c0149b7329677ae85fafc05d05cf8e63435a0023e9da1",
       "source": "/home/abc/workspace/kda-selection-20261008/status-kda.json",
       "source_commit": null
     },
     {
       "path": "experiments/selection-20261008/status.json",
-      "bytes": 50,
-      "sha256": "a9ea3cc53594c6dcb147b635468d737477e60736a6df6214fb39243d0436f6fd",
+      "bytes": 67,
+      "sha256": "5504f34868b2b5e6cb7be5f6d3bdabbfdb29f2f0de0fcf69a1258b42b6b82183",
       "source": "/home/abc/workspace/kda-selection-20261008/status.json",
+      "source_commit": null
+    },
+    {
+      "path": "experiments/selection-20261008/winner-frozen.json",
+      "bytes": 206,
+      "sha256": "0d0d98e25315987db781872ea98521ed50b1388794aaa3b4b2f3bceef1cfac48",
+      "source": "/home/abc/workspace/kda-selection-20261008/winner-frozen.json",
       "source_commit": null
     }
   ],
