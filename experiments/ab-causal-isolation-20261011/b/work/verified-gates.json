@@ -1,0 +1,614 @@
+{
+  "A1": {
+    "eligible_conditions": [
+      {
+        "model": "kda-s419-t24",
+        "geometry": "circle",
+        "condition": "E4"
+      },
+      {
+        "model": "kda-s419-t24",
+        "geometry": "square",
+        "condition": "E2"
+      },
+      {
+        "model": "kda-s419-t24",
+        "geometry": "square",
+        "condition": "E4"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "circle",
+        "condition": "E1"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "circle",
+        "condition": "E2"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "circle",
+        "condition": "E3"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "circle",
+        "condition": "E4"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "square",
+        "condition": "E2"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "square",
+        "condition": "E4"
+      }
+    ],
+    "disqualified_conditions": [
+      {
+        "model": "kda-s419-t24",
+        "geometry": "circle",
+        "condition": "E2",
+        "failure_roots": 2,
+        "unmatched_failure_roots": 1,
+        "rescues": 2,
+        "reason": "Whole condition disqualified: missing success controls"
+      },
+      {
+        "model": "kda-s419-t24",
+        "geometry": "circle",
+        "condition": "E5",
+        "failure_roots": 2,
+        "unmatched_failure_roots": 2,
+        "rescues": 0,
+        "reason": "Whole condition disqualified: missing success controls"
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "circle",
+        "condition": "E5",
+        "failure_roots": 2,
+        "unmatched_failure_roots": 1,
+        "rescues": 0,
+        "reason": "Whole condition disqualified: missing success controls"
+      }
+    ],
+    "by_geometry": {
+      "circle": {
+        "failure_roots": 6,
+        "success_controls": 6,
+        "rescues": 2,
+        "success_destructions": 0,
+        "paired_mean_delta_root_G": 0.23719663806608487,
+        "control_mean_delta_root_G": -0.0038527585432994262,
+        "seeds": [
+          "kda-s419-t24",
+          "kda-s443-t24"
+        ],
+        "A1_numeric_gate": "PASS"
+      },
+      "square": {
+        "failure_roots": 6,
+        "success_controls": 6,
+        "rescues": 3,
+        "success_destructions": 0,
+        "paired_mean_delta_root_G": 0.2581918514980232,
+        "control_mean_delta_root_G": -0.061774555986766955,
+        "seeds": [
+          "kda-s419-t24",
+          "kda-s443-t24"
+        ],
+        "A1_numeric_gate": "PASS"
+      }
+    },
+    "all_eligible_conditions_descriptive": {
+      "failure_roots": 12,
+      "success_controls": 12,
+      "rescues": 5,
+      "success_destructions": 0,
+      "paired_mean_delta_root_G": 0.24769424478205404,
+      "control_mean_delta_root_G": -0.03281365726503319,
+      "seeds": [
+        "kda-s419-t24",
+        "kda-s443-t24"
+      ],
+      "A1_numeric_gate": "PASS"
+    },
+    "excluding_duplicate_E3": {
+      "failure_roots": 11,
+      "success_controls": 11,
+      "rescues": 5,
+      "success_destructions": 0,
+      "paired_mean_delta_root_G": 0.2702119033986044,
+      "control_mean_delta_root_G": -0.035796717016399845,
+      "seeds": [
+        "kda-s419-t24",
+        "kda-s443-t24"
+      ],
+      "A1_numeric_gate": "PASS"
+    },
+    "scope": "Finite frozen failure-root opportunities only; not an online trigger, whole-distribution benefit or method freeze."
+  },
+  "thresholds_modified": false,
+  "full_training_started": false,
+  "method_level_progress": false,
+  "excess_transfer": {
+    "baseline_rows": [
+      {
+        "model": "kda-s419-t24",
+        "geometry": "circle",
+        "A": "E1",
+        "B": "E2",
+        "against_references": [
+          {
+            "reference": "orca-grid",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": 0.0625,
+              "case_delta": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "case_bootstrap95": [
+                -0.1875,
+                0.3125
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": 0.07197173457509673,
+              "case_delta": [
+                -1.0294654194559962,
+                0.07481485619332495,
+                0.10867081623149194,
+                0.14448320980697626,
+                0.13499411381729448,
+                0.9865854917951473,
+                -0.038022999837210136,
+                0.7217781334878344,
+                0.6806943966061109,
+                -0.8923366015006406,
+                0.23904820790054487,
+                -0.0855921745013245,
+                0.1615460230823264,
+                -0.06688726302331033,
+                -0.014635108388233786,
+                0.025872070987211893
+              ],
+              "case_bootstrap95": [
+                -0.1778975368712225,
+                0.3000997938203639
+              ]
+            },
+            "baseline_threshold_met": true
+          },
+          {
+            "reference": "cv-mpc",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": -0.1875,
+              "case_delta": [
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                -1,
+                0
+              ],
+              "case_bootstrap95": [
+                -0.4375,
+                0.0625
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.10082241058299068,
+              "case_delta": [
+                0.020675241092497076,
+                0.1755504842265012,
+                -0.8024616560688864,
+                0.04838852095794638,
+                -0.876039275585401,
+                0.1708452064032422,
+                0.011782734994621236,
+                -0.45640282055934767,
+                0.7810380551427589,
+                0.19974807167090425,
+                0.42325600994935736,
+                0.025829619077116228,
+                0.2104446499668809,
+                -0.9301707206575188,
+                -0.7335430804646312,
+                0.11790039052610851
+              ],
+              "case_bootstrap95": [
+                -0.3443646877371878,
+                0.1321160121200214
+              ]
+            },
+            "baseline_threshold_met": false
+          }
+        ],
+        "both_reference_baseline_threshold_met": false
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "circle",
+        "A": "E1",
+        "B": "E2",
+        "against_references": [
+          {
+            "reference": "orca-grid",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": -0.0625,
+              "case_delta": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "case_bootstrap95": [
+                -0.25,
+                0.125
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.02482533107450234,
+              "case_delta": [
+                -1.035217959101661,
+                -0.04446748078866225,
+                0.07684598916313001,
+                0.162245500177574,
+                0.1307957888308141,
+                0.2069566073496487,
+                -0.02150198623896593,
+                0.15164201521476495,
+                0.04710759959479627,
+                -1.0037445895044232,
+                0.7442979248963632,
+                -0.02536908406451871,
+                0.06521500763262666,
+                -0.1785498712901022,
+                -0.040015573735660837,
+                0.36655481467223905
+              ],
+              "case_bootstrap95": [
+                -0.2452611588475178,
+                0.16547426095608056
+              ]
+            },
+            "baseline_threshold_met": false
+          },
+          {
+            "reference": "cv-mpc",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": -0.3125,
+              "case_delta": [
+                0,
+                0,
+                -1,
+                0,
+                -1,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                -1,
+                -1,
+                0
+              ],
+              "case_bootstrap95": [
+                -0.5625,
+                0.0
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.19761947623258977,
+              "case_delta": [
+                0.014922701446832165,
+                0.05626814724451401,
+                -0.8342864831372483,
+                0.06615081132854411,
+                -0.8802376005718814,
+                -0.6087836780422564,
+                0.02830374859286544,
+                -1.026538938832417,
+                0.14745125813144433,
+                0.08834008366712154,
+                0.9285057269451756,
+                0.08605270951392202,
+                0.11411363451718115,
+                -1.0418333289243107,
+                -0.7589235458120582,
+                0.45858313421113567
+              ],
+              "case_bootstrap95": [
+                -0.48452783953977413,
+                0.07224252673758766
+              ]
+            },
+            "baseline_threshold_met": false
+          }
+        ],
+        "both_reference_baseline_threshold_met": false
+      },
+      {
+        "model": "kda-s419-t24",
+        "geometry": "square",
+        "A": "E1",
+        "B": "E2",
+        "against_references": [
+          {
+            "reference": "orca-grid",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": -0.0625,
+              "case_delta": [
+                -1,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+              ],
+              "case_bootstrap95": [
+                -0.3125,
+                0.1875
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.1365141003137136,
+              "case_delta": [
+                -0.8672700791902979,
+                0.2713161741949761,
+                -0.006481798805491379,
+                -0.308125978112577,
+                -0.15942464161085979,
+                -0.3126935483056734,
+                -0.11303710932552369,
+                -0.026449903568674937,
+                -0.09935339142716026,
+                -0.9183023841079928,
+                -0.3567667167241121,
+                0.1459234409945077,
+                0.9877769627920471,
+                -0.3492118846445106,
+                -0.20895057653832605,
+                0.1368258293602515
+              ],
+              "case_bootstrap95": [
+                -0.3412632821608909,
+                0.09772779830364257
+              ]
+            },
+            "baseline_threshold_met": false
+          },
+          {
+            "reference": "cv-mpc",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": -0.25,
+              "case_delta": [
+                0,
+                1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                -1
+              ],
+              "case_bootstrap95": [
+                -0.5,
+                0.0
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.2725982942546873,
+              "case_delta": [
+                0.0557038402250043,
+                0.7995329759003579,
+                0.04726791978433459,
+                -1.0761584523993157,
+                0.15757794688600185,
+                -0.7277446542961356,
+                -0.07793413470791133,
+                -1.1137169048730737,
+                -0.01162258588290832,
+                0.11129530736604976,
+                -0.3949806526773251,
+                -0.010907349724574633,
+                -0.07185676767357418,
+                -1.071036573747758,
+                -0.08193915417939535,
+                -0.8950534680747735
+              ],
+              "case_bootstrap95": [
+                -0.5242859874909136,
+                -0.020824666225693
+              ]
+            },
+            "baseline_threshold_met": false
+          }
+        ],
+        "both_reference_baseline_threshold_met": false
+      },
+      {
+        "model": "kda-s443-t24",
+        "geometry": "square",
+        "A": "E1",
+        "B": "E2",
+        "against_references": [
+          {
+            "reference": "orca-grid",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": 0.0,
+              "case_delta": [
+                -1,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                1,
+                0,
+                1,
+                0
+              ],
+              "case_bootstrap95": [
+                -0.3125,
+                0.3125
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.06539340089264764,
+              "case_delta": [
+                -0.9055149932782387,
+                0.5964693361372827,
+                0.17210456931964968,
+                0.024918471737930714,
+                -0.2994498379429323,
+                -0.5940130194752006,
+                -0.08044842006110065,
+                0.16626816371434128,
+                0.08933063689027276,
+                -0.26962847524188915,
+                -0.9020286989379247,
+                0.07847295328390191,
+                0.8875519536332966,
+                -0.35533306542137366,
+                0.4448304946327938,
+                -0.09982448327317195
+              ],
+              "case_bootstrap95": [
+                -0.2997264699241339,
+                0.16981698714681956
+              ]
+            },
+            "baseline_threshold_met": false
+          },
+          {
+            "reference": "cv-mpc",
+            "success_excess_loss": {
+              "mean_delta_B_minus_A": -0.1875,
+              "case_delta": [
+                0,
+                1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                -1,
+                0,
+                1,
+                -1,
+                0,
+                0,
+                -1,
+                1,
+                -1
+              ],
+              "case_bootstrap95": [
+                -0.5,
+                0.1875
+              ]
+            },
+            "return_excess_loss": {
+              "mean_delta_B_minus_A": -0.20147759483362135,
+              "case_delta": [
+                0.017458926137063513,
+                1.1246861378426645,
+                0.22585428790947565,
+                -0.743114002548808,
+                0.017552750553929353,
+                -1.0090641254656627,
+                -0.045345445443488286,
+                -0.9209988375900575,
+                0.1770614424345247,
+                0.7599692162321534,
+                -0.9402426348911377,
+                -0.07835783743518043,
+                -0.17208177683232462,
+                -1.0771577545246211,
+                0.5718419169917245,
+                -1.131703780708197
+              ],
+              "case_bootstrap95": [
+                -0.5238156762617173,
+                0.13095931759252352
+              ]
+            },
+            "baseline_threshold_met": false
+          }
+        ],
+        "both_reference_baseline_threshold_met": false
+      }
+    ],
+    "baseline_necessary_gate": "FAIL",
+    "A1_gate_cannot_override_failed_baseline": true,
+    "decision": "KILL extra-value-transfer candidate; not refutation of all value failures"
+  },
+  "verified_input_sha256": "5995024f62ad85231f3f632c46b3b1b9a39651f33e31e42a415826780feb4b0d"
+}

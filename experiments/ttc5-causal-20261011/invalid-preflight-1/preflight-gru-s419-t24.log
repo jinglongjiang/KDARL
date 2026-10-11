@@ -1,0 +1,15 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Traceback (most recent call last):
+  File "/root/ttc5-causal-20261011/audit.py", line 438, in <module>
+    main()
+  File "/root/ttc5-causal-20261011/audit.py", line 431, in main
+    if a.mode=='preflight':preflight(a.model)
+  File "/root/ttc5-causal-20261011/audit.py", line 243, in preflight
+    check_historical(ep, old[case], None)
+  File "/root/ttc5-causal-20261011/audit.py", line 159, in check_historical
+    assert ep['minimum_clearance'] == old['minimum_clearance'], (ep['case'], 'old clearance')
+AssertionError: (91000, 'old clearance')
+[W1011 11:07:43.003672727 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

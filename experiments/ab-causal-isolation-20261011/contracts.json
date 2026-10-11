@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "history_trials": [
+    {
+      "length": 12,
+      "mode": "random",
+      "observations": 15,
+      "status": "PASS"
+    },
+    {
+      "length": 12,
+      "mode": "greedy",
+      "observations": 15,
+      "status": "PASS"
+    },
+    {
+      "length": 12,
+      "mode": "alternating",
+      "observations": 15,
+      "status": "PASS"
+    },
+    {
+      "length": 24,
+      "mode": "random",
+      "observations": 27,
+      "status": "PASS"
+    },
+    {
+      "length": 24,
+      "mode": "greedy",
+      "observations": 27,
+      "status": "PASS"
+    },
+    {
+      "length": 24,
+      "mode": "alternating",
+      "observations": 27,
+      "status": "PASS"
+    }
+  ],
+  "epsilon_zero_bitwise_states": 10,
+  "terminal_tests": [
+    {
+      "condition": "goal",
+      "detected": 48,
+      "status": "PASS"
+    },
+    {
+      "condition": "collision",
+      "detected": 80,
+      "status": "PASS"
+    },
+    {
+      "condition": "known_timeout",
+      "detected": 80,
+      "status": "PASS"
+    }
+  ],
+  "grid": 80,
+  "torch": "2.9.1+cu128",
+  "scope": "CPU unit tests, stand-in value only. No optimizer; physical CV/reward/goal contract differences unchanged."
+}

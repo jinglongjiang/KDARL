@@ -1,0 +1,83 @@
+{
+  "checkpoint_sha256": "c78f5314ddaf09ed59a69a55be8f96b7604c1a276ec28430410b2978f371659d",
+  "episodes": [
+    {
+      "case": 89000,
+      "human_num": 5,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.6298236312032323,
+      "minimum_clearance": 0.29331371735921047,
+      "time": 11.75
+    },
+    {
+      "case": 89001,
+      "human_num": 5,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.617290140942288,
+      "minimum_clearance": 0.42394359335095816,
+      "time": 12.25
+    },
+    {
+      "case": 89002,
+      "human_num": 5,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.6361854860638709,
+      "minimum_clearance": 0.4289772237431116,
+      "time": 11.5
+    },
+    {
+      "case": 89000,
+      "human_num": 10,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.5292642959409235,
+      "minimum_clearance": 0.07325307257487323,
+      "time": 14.25
+    },
+    {
+      "case": 89001,
+      "human_num": 10,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.5565276983253596,
+      "minimum_clearance": 0.10880423244885429,
+      "time": 13.75
+    },
+    {
+      "case": 89002,
+      "human_num": 10,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.6361854860638709,
+      "minimum_clearance": 0.22340987923061567,
+      "time": 11.5
+    }
+  ],
+  "wall_seconds": 2.6514742374420166,
+  "policy_latency_ms_median": 7.471067481674254,
+  "policy_latency_ms_p95": 7.892207923578098,
+  "latency_includes_full_80_action_scoring": true,
+  "backbone": "gru",
+  "arm_dir": "arms/formal-gru",
+  "budget": 10000,
+  "protocol": {
+    "cells": [
+      [
+        5,
+        "circle_crossing"
+      ],
+      [
+        10,
+        "circle_crossing"
+      ]
+    ],
+    "cases": [
+      89000,
+      89002
+    ],
+    "n_cases": 3
+  }
+}

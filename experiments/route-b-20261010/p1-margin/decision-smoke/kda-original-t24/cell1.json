@@ -1,0 +1,31 @@
+{
+  "status": "已验证通过",
+  "checkpoint": "kda-original-t24",
+  "cell": 1,
+  "episodes": [
+    {
+      "case": 90000,
+      "outcome": "success",
+      "steps": 39
+    },
+    {
+      "case": 90001,
+      "outcome": "success",
+      "steps": 36
+    },
+    {
+      "case": 90002,
+      "outcome": "success",
+      "steps": 45
+    }
+  ],
+  "steps": 120,
+  "wall_seconds": 0.20703458786010742,
+  "source_sha256": "da8f3ce04b6ca44b1ecd5f4b8b6bd498c7831f55df461a37cc49e55f4a3e81f0",
+  "geometry_bitwise": true,
+  "selected_actions_identical": true,
+  "training": 0,
+  "nn_forward_calls": 0,
+  "new_policy_rollouts": 0,
+  "robot_visible": false
+}

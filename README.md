@@ -2,8 +2,51 @@
 
 This repository publishes the current scene-level KDA-VL project, its Mamba and
 GRU controls, completed experiment evidence, and the completed human-selection
-study with independent confirmation. It does **not** publish model weights, ORCA training datasets,
-the parent repository's Git history, or the discontinued `shixu` research line.
+study with independent confirmation. The 2026-10-12 archive update includes
+available model weights, intermediate checkpoints, retained optimizer/replay
+states, training logs, raw results, and the matching ORCA demonstration dataset
+through Git LFS. The parent repository's Git history and discontinued `shixu`
+research line are not imported.
+
+## Full Evidence Archive (2026-10-12)
+
+`research-archive-manifest.json` is the current file-level source, size, and
+SHA256 inventory. It supersedes the publication scope of the older
+`snapshot-manifest.json` and `export-verification.json`, which remain unchanged
+as historical records of the previous weight-free export.
+
+- `CrowdNav/artifacts`: V1, V2 and V3 weights, intermediate checkpoints,
+  configurations, training logs, and recorded evaluations.
+- `archives/history-seed419-20261009`: original seed419 T12/T24 KDA/GRU
+  training archives, including existing intermediate optimizer states.
+- `experiments/kda-history-replication-20261010`: seed443 counterpart.
+- `experiments`: selection, lookahead and random controls, history-length and
+  scale studies, AC3 including negative outcomes, route-B, TTC5 counterfactuals,
+  A/B audits, and historical preference-formation measurements through Oct 11.
+- `CrowdNav/data/il_dataset_diverse_v5.0_merged_15000_with_idx.pth`:
+  the matching archived ORCA dataset (SHA256 recorded in the manifest).
+
+These are archived experiments, not claims of algorithmic success. In
+particular, the preference-formation T1 historical RL measurement is complete,
+but T3.2 is unexecuted because its original definition was unavailable; its
+overall task remains INCOMPLETE. Intermediate replay/RNG and actual historical
+sampled-batch sequences must not be inferred from retained optimizer states.
+
+Install Git LFS before fetching binary content. To inspect code first without
+downloading all evidence:
+
+```bash
+GIT_LFS_SKIP_SMUDGE=1 git clone git@github.com:jinglongjiang/KDARL.git
+cd KDARL
+git lfs pull --include='CrowdNav/artifacts/vl-optimized-20261007/kda/*.pth'
+```
+
+Large evidence files are split into 512-MiB LFS parts, with an adjacent
+`*.reassembly.json` giving ordered part paths and the original SHA256. Use
+`python tools/restore-archive.py <descriptor>` after fetching its LFS parts to
+restore the exact original file. Local exported LFS paths can remain pointers
+to save disk space; `git lfs checkout <path>` materializes fetched content.
+Do not edit immutable archived LFS cache objects in place.
 
 ## Architecture
 
@@ -142,7 +185,7 @@ of which are optional and inactive in KDA-VL. They are not additional tested
 algorithms or new KDA components. An unused, invalid standalone memory snippet
 is not exported; the active replay implementation is `utils/ppo_buffer.py`.
 
-For evaluation, provide your own matching checkpoint and run from the selected
+For evaluation, fetch the matching archived checkpoint and run from the selected
 project root. Always initialize the action grid from the loaded config and
 assert **80** actions. For example:
 

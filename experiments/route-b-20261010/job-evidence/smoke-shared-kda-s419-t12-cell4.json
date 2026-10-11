@@ -1,0 +1,15 @@
+{
+  "name": "smoke-shared-kda-s419-t12-cell4",
+  "pid": 2735,
+  "exit_code": 0,
+  "wall_seconds": 20.007505893707275,
+  "args": [
+    "--id",
+    "kda-s419-t12",
+    "--cell",
+    "4",
+    "--shared",
+    "--smoke"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n"
+}

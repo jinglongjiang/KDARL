@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "checkpoint_sha256": "96f06039a07b75d09e3b067ebb796d6de113b6d80a33214db737ed6d3a245828",
+  "grid_actions": 80,
+  "comparisons": 144,
+  "five_person_equal_comparisons": 32,
+  "max_abs_error": {
+    "windows": 0.0,
+    "values": 0.0,
+    "rewards": 1.3877787807814457e-17,
+    "clearance": 0.0
+  },
+  "nonbitwise_comparisons": {
+    "windows": 0,
+    "values": 0,
+    "rewards": 33,
+    "clearance": 0
+  },
+  "windows_values_bitwise_required": true,
+  "reward_clearance_absolute_tolerance": 2e-15,
+  "wall_seconds": 5.807924032211304,
+  "torch": "2.2.2",
+  "note": "Reward/clearance tolerance is inherited ULP, not bitwise parity claim."
+}

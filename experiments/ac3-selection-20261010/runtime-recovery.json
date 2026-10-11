@@ -1,0 +1,11 @@
+{
+  "cause": "runtimeUbuntu22image has noCcompiler; Tritonimport failed before modelconstruction",
+  "fix": "Use preexisting develUbuntu22image; no packagesor methodchanges",
+  "code_change": "Controller restart preserves first-start two-hourdeadline",
+  "original_manifest": "/home/abc/workspace/ac3-selection-20261010/attempts/runtime-no-compiler/frozen-manifest.json",
+  "changed_files": [
+    "/home/abc/workspace/ac3-selection-20261010/run.py"
+  ],
+  "no_outcome_data_seen": true,
+  "clock_reset": false
+}

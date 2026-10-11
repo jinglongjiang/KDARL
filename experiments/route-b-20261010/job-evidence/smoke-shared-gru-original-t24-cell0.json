@@ -1,0 +1,15 @@
+{
+  "name": "smoke-shared-gru-original-t24-cell0",
+  "pid": 3814,
+  "exit_code": 0,
+  "wall_seconds": 8.002548456192017,
+  "args": [
+    "--id",
+    "gru-original-t24",
+    "--cell",
+    "0",
+    "--shared",
+    "--smoke"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n"
+}

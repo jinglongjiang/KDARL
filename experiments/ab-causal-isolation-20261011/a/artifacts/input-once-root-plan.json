@@ -1,0 +1,663 @@
+{
+  "roots": [
+    {
+      "root_id": 504,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90009,
+      "step": 0,
+      "scope": "failure",
+      "original_matched_root": 538,
+      "case_split": "test"
+    },
+    {
+      "root_id": 508,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90019,
+      "step": 22,
+      "scope": "failure",
+      "original_matched_root": 577,
+      "case_split": "test"
+    },
+    {
+      "root_id": 511,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90024,
+      "step": 21,
+      "scope": "failure",
+      "original_matched_root": 629,
+      "case_split": "test"
+    },
+    {
+      "root_id": 537,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90093,
+      "step": 8,
+      "scope": "success-control",
+      "original_matched_root": 607,
+      "case_split": "dev"
+    },
+    {
+      "root_id": 538,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90094,
+      "step": 0,
+      "scope": "success-control",
+      "original_matched_root": 504,
+      "case_split": "test"
+    },
+    {
+      "root_id": 555,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90149,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 566,
+      "case_split": "test"
+    },
+    {
+      "root_id": 566,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90169,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 555,
+      "case_split": "test"
+    },
+    {
+      "root_id": 575,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90184,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 608,
+      "case_split": "test"
+    },
+    {
+      "root_id": 577,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90192,
+      "step": 23,
+      "scope": "success-control",
+      "original_matched_root": 508,
+      "case_split": "train"
+    },
+    {
+      "root_id": 594,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90229,
+      "step": 23,
+      "scope": "failure",
+      "original_matched_root": 622,
+      "case_split": "test"
+    },
+    {
+      "root_id": 604,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90249,
+      "step": 59,
+      "scope": "failure",
+      "original_matched_root": 672,
+      "case_split": "test"
+    },
+    {
+      "root_id": 607,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90259,
+      "step": 8,
+      "scope": "failure",
+      "original_matched_root": 537,
+      "case_split": "test"
+    },
+    {
+      "root_id": 608,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90260,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 575,
+      "case_split": "train"
+    },
+    {
+      "root_id": 622,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90303,
+      "step": 25,
+      "scope": "success-control",
+      "original_matched_root": 594,
+      "case_split": "dev"
+    },
+    {
+      "root_id": 629,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90334,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 511,
+      "case_split": "test"
+    },
+    {
+      "root_id": 672,
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "case": 90474,
+      "step": 60,
+      "scope": "success-control",
+      "original_matched_root": 604,
+      "case_split": "test"
+    },
+    {
+      "root_id": 685,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90009,
+      "step": 0,
+      "scope": "failure",
+      "original_matched_root": 730,
+      "case_split": "test"
+    },
+    {
+      "root_id": 690,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90018,
+      "step": 0,
+      "scope": "success-control",
+      "original_matched_root": 691,
+      "case_split": "dev"
+    },
+    {
+      "root_id": 691,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90019,
+      "step": 0,
+      "scope": "failure",
+      "original_matched_root": 690,
+      "case_split": "test"
+    },
+    {
+      "root_id": 702,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90034,
+      "step": 25,
+      "scope": "failure",
+      "original_matched_root": 793,
+      "case_split": "test"
+    },
+    {
+      "root_id": 717,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90069,
+      "step": 21,
+      "scope": "failure",
+      "original_matched_root": 811,
+      "case_split": "test"
+    },
+    {
+      "root_id": 728,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90089,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 807,
+      "case_split": "test"
+    },
+    {
+      "root_id": 730,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90094,
+      "step": 0,
+      "scope": "success-control",
+      "original_matched_root": 685,
+      "case_split": "test"
+    },
+    {
+      "root_id": 760,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90169,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 869,
+      "case_split": "test"
+    },
+    {
+      "root_id": 766,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90184,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 791,
+      "case_split": "test"
+    },
+    {
+      "root_id": 774,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90199,
+      "step": 43,
+      "scope": "failure",
+      "original_matched_root": 875,
+      "case_split": "test"
+    },
+    {
+      "root_id": 791,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90230,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 766,
+      "case_split": "train"
+    },
+    {
+      "root_id": 793,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90235,
+      "step": 25,
+      "scope": "success-control",
+      "original_matched_root": 702,
+      "case_split": "train"
+    },
+    {
+      "root_id": 807,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90260,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 728,
+      "case_split": "train"
+    },
+    {
+      "root_id": 811,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90271,
+      "step": 21,
+      "scope": "success-control",
+      "original_matched_root": 717,
+      "case_split": "train"
+    },
+    {
+      "root_id": 869,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90403,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 760,
+      "case_split": "dev"
+    },
+    {
+      "root_id": 875,
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "case": 90415,
+      "step": 49,
+      "scope": "success-control",
+      "original_matched_root": 774,
+      "case_split": "train"
+    },
+    {
+      "root_id": 13,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90018,
+      "step": 0,
+      "scope": "success-control",
+      "original_matched_root": 14,
+      "case_split": "dev"
+    },
+    {
+      "root_id": 14,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90019,
+      "step": 0,
+      "scope": "failure",
+      "original_matched_root": 13,
+      "case_split": "test"
+    },
+    {
+      "root_id": 23,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90034,
+      "step": 22,
+      "scope": "failure",
+      "original_matched_root": 149,
+      "case_split": "test"
+    },
+    {
+      "root_id": 31,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90049,
+      "step": 1,
+      "scope": "failure",
+      "original_matched_root": 176,
+      "case_split": "test"
+    },
+    {
+      "root_id": 37,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90064,
+      "step": 30,
+      "scope": "failure",
+      "original_matched_root": 46,
+      "case_split": "test"
+    },
+    {
+      "root_id": 46,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90076,
+      "step": 30,
+      "scope": "success-control",
+      "original_matched_root": 37,
+      "case_split": "train"
+    },
+    {
+      "root_id": 64,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90124,
+      "step": 26,
+      "scope": "failure",
+      "original_matched_root": 163,
+      "case_split": "test"
+    },
+    {
+      "root_id": 77,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90169,
+      "step": 21,
+      "scope": "failure",
+      "original_matched_root": 122,
+      "case_split": "test"
+    },
+    {
+      "root_id": 85,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90184,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 215,
+      "case_split": "test"
+    },
+    {
+      "root_id": 101,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90229,
+      "step": 22,
+      "scope": "failure",
+      "original_matched_root": 109,
+      "case_split": "test"
+    },
+    {
+      "root_id": 109,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90252,
+      "step": 22,
+      "scope": "success-control",
+      "original_matched_root": 101,
+      "case_split": "train"
+    },
+    {
+      "root_id": 122,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90277,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 77,
+      "case_split": "train"
+    },
+    {
+      "root_id": 149,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90342,
+      "step": 22,
+      "scope": "success-control",
+      "original_matched_root": 23,
+      "case_split": "train"
+    },
+    {
+      "root_id": 163,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90372,
+      "step": 26,
+      "scope": "success-control",
+      "original_matched_root": 64,
+      "case_split": "train"
+    },
+    {
+      "root_id": 176,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90396,
+      "step": 1,
+      "scope": "success-control",
+      "original_matched_root": 31,
+      "case_split": "train"
+    },
+    {
+      "root_id": 215,
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "case": 90481,
+      "step": 21,
+      "scope": "success-control",
+      "original_matched_root": 85,
+      "case_split": "train"
+    },
+    {
+      "root_id": 229,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90009,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 364,
+      "case_split": "test"
+    },
+    {
+      "root_id": 230,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90010,
+      "step": 21,
+      "scope": "success-control",
+      "original_matched_root": 268,
+      "case_split": "train"
+    },
+    {
+      "root_id": 234,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90014,
+      "step": 21,
+      "scope": "failure",
+      "original_matched_root": 403,
+      "case_split": "test"
+    },
+    {
+      "root_id": 236,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90018,
+      "step": 0,
+      "scope": "success-control",
+      "original_matched_root": 237,
+      "case_split": "dev"
+    },
+    {
+      "root_id": 237,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90019,
+      "step": 0,
+      "scope": "failure",
+      "original_matched_root": 236,
+      "case_split": "test"
+    },
+    {
+      "root_id": 241,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90024,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 419,
+      "case_split": "test"
+    },
+    {
+      "root_id": 246,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90029,
+      "step": 35,
+      "scope": "failure",
+      "original_matched_root": 427,
+      "case_split": "test"
+    },
+    {
+      "root_id": 250,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90034,
+      "step": 21,
+      "scope": "failure",
+      "original_matched_root": 467,
+      "case_split": "test"
+    },
+    {
+      "root_id": 258,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90049,
+      "step": 20,
+      "scope": "failure",
+      "original_matched_root": 356,
+      "case_split": "test"
+    },
+    {
+      "root_id": 268,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90064,
+      "step": 23,
+      "scope": "failure",
+      "original_matched_root": 230,
+      "case_split": "test"
+    },
+    {
+      "root_id": 356,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90244,
+      "step": 21,
+      "scope": "success-control",
+      "original_matched_root": 258,
+      "case_split": "test"
+    },
+    {
+      "root_id": 364,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90256,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 229,
+      "case_split": "train"
+    },
+    {
+      "root_id": 403,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90334,
+      "step": 20,
+      "scope": "success-control",
+      "original_matched_root": 234,
+      "case_split": "test"
+    },
+    {
+      "root_id": 419,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90362,
+      "step": 22,
+      "scope": "success-control",
+      "original_matched_root": 241,
+      "case_split": "train"
+    },
+    {
+      "root_id": 427,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90372,
+      "step": 35,
+      "scope": "success-control",
+      "original_matched_root": 246,
+      "case_split": "train"
+    },
+    {
+      "root_id": 467,
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "case": 90443,
+      "step": 21,
+      "scope": "success-control",
+      "original_matched_root": 250,
+      "case_split": "dev"
+    }
+  ],
+  "roots_sha256": "665da8a3e170b40f8106e0f634c738b576e2dc7d887c508fab3a922f13adacb2",
+  "models": [
+    "kda-s419-t24",
+    "kda-s443-t24",
+    "gru-s419-t24",
+    "gru-s443-t24"
+  ],
+  "arms": [
+    "ttc5-V",
+    "allN-V"
+  ],
+  "rule": "Each model: first8 failure test cases (case%5==4), original matched success root per failure, no readout/outcome-result root selection. Matched controls retain original case group and are NOT all claimed test cases.",
+  "question": "Can legal all-N frozen-weight input at one root decision improve actual repaired-parent continuation while protecting original successes?",
+  "GO": "Positive paired actual continuation benefit with no added success destruction/collisions; only limited input-mechanism support, not algorithm innovation.",
+  "KILL": "No protected outcome benefit: seal all-N-one-step-only candidate regardless of offline readout movement.",
+  "budget": "64 frozen roots x2 arms, <=128 episodes over four models, <=201 total environment steps/episode.",
+  "closedloop_semantics": "At root, same80commands/rpred/filter/terminal; only latent input changes. FullN selected command executed once, then repaired original TTC5/V parent resumed.",
+  "control": "A0 repeated read-only scoring must be exact; when allN chooses A0, entire continuation command/reward trajectory must be exact.",
+  "exclusion": "This input experiment is mandatory independent of A4 gate. Matched success controls not reassigned to another data split; no readout-head claim on train-group controls."
+}

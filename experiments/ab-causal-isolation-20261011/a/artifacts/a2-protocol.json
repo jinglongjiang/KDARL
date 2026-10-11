@@ -1,0 +1,10 @@
+{
+  "question": "Do pinned physical/reward and actualTTC history corrections remove original strict action-ranking errors?",
+  "GO": "Residual errors survive: proceed only to fixed-budget matched readout isolation, not method training.",
+  "KILL": "No residual strict error survives: stop value/readout cause candidate for these roots.",
+  "budget": "One streaming pass of all 16 frozen branch files, <=20 CPU minutes; no GPU.",
+  "controls": "Unchanged roots, original weights/commands/safety/rewards/continuation; deduplicate candidate index; separate cell and failure/success.",
+  "decomposition": "D(G-Qpred)=D(Qpinned-Qpred)+D(Qactual-Qpinned)+D(G-Qactual); D=alternative-A0.",
+  "limitation": "Algebraic error decomposition, NOT causal attribution fractions. Pinned includes reward and terminal correction.",
+  "tolerance": 1e-06
+}

@@ -1,0 +1,147 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "gru-original-t24",
+    "backbone": "gru",
+    "seed": 419,
+    "length": 24,
+    "weight": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/gru/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/gru.ini",
+    "training": "reused IL50+fresh RL10000",
+    "origin": "original optimized run",
+    "weight_sha256": "96f06039a07b75d09e3b067ebb796d6de113b6d80a33214db737ed6d3a245828",
+    "config_sha256": "ecb6cdf1fd33867ccf85714911377f78da8ba632a19264822e185892079e7434"
+  },
+  "episodes": [
+    {
+      "cell": 3,
+      "case": 90000,
+      "outcome": "success",
+      "steps": 44
+    },
+    {
+      "cell": 3,
+      "case": 90001,
+      "outcome": "timeout",
+      "steps": 201
+    },
+    {
+      "cell": 3,
+      "case": 90002,
+      "outcome": "success",
+      "steps": 53
+    },
+    {
+      "cell": 3,
+      "case": 90003,
+      "outcome": "success",
+      "steps": 60
+    },
+    {
+      "cell": 3,
+      "case": 90004,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "cell": 3,
+      "case": 90005,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "cell": 3,
+      "case": 90006,
+      "outcome": "success",
+      "steps": 58
+    },
+    {
+      "cell": 3,
+      "case": 90007,
+      "outcome": "success",
+      "steps": 43
+    },
+    {
+      "cell": 3,
+      "case": 90008,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "cell": 3,
+      "case": 90009,
+      "outcome": "success",
+      "steps": 56
+    },
+    {
+      "cell": 3,
+      "case": 90010,
+      "outcome": "collision",
+      "steps": 2
+    },
+    {
+      "cell": 3,
+      "case": 90011,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "cell": 3,
+      "case": 90012,
+      "outcome": "success",
+      "steps": 57
+    },
+    {
+      "cell": 3,
+      "case": 90013,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "cell": 3,
+      "case": 90014,
+      "outcome": "success",
+      "steps": 43
+    },
+    {
+      "cell": 3,
+      "case": 90015,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "cell": 3,
+      "case": 90016,
+      "outcome": "success",
+      "steps": 52
+    },
+    {
+      "cell": 3,
+      "case": 90017,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "cell": 3,
+      "case": 90018,
+      "outcome": "success",
+      "steps": 56
+    },
+    {
+      "cell": 3,
+      "case": 90019,
+      "outcome": "success",
+      "steps": 44
+    }
+  ],
+  "steps": 1102,
+  "wall_seconds": 23.706830978393555,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "actions": 80,
+  "smoke": false,
+  "fast_legacy_checked": false,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/per-checkpoint/gru-original-t24/cell3.steps.jsonl.gz"
+}

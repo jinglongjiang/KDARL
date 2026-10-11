@@ -1,0 +1,15 @@
+{
+  "name": "full-own-gru-s443-t24-cell2",
+  "pid": 5404,
+  "exit_code": 0,
+  "wall_seconds": 28.007935523986816,
+  "args": [
+    "--id",
+    "gru-s443-t24",
+    "--cell",
+    "2",
+    "--n-cases",
+    "20"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90000, \"steps\": 51}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90001, \"steps\": 50}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90002, \"steps\": 69}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90003, \"steps\": 41}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90004, \"steps\": 64}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90005, \"steps\": 53}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90006, \"steps\": 53}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90007, \"steps\": 49}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90008, \"steps\": 53}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90009, \"steps\": 61}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90010, \"steps\": 45}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90011, \"steps\": 48}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90012, \"steps\": 49}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90013, \"steps\": 54}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90014, \"steps\": 57}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90015, \"steps\": 49}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90016, \"steps\": 53}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90017, \"steps\": 54}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90018, \"steps\": 46}\n{\"checkpoint\": \"gru-s443-t24\", \"cell\": 2, \"case\": 90019, \"steps\": 54}\n"
+}

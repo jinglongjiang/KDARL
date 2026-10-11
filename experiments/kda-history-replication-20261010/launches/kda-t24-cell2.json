@@ -1,0 +1,31 @@
+{
+  "pid": 2928716,
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-B",
+    "/root/kda-history-20261009/evaluate-history.py",
+    "--project",
+    "/root/cc-diag-20261008/code",
+    "--arm-dir",
+    "/root/kda-history-replication-20261010/runs/kda-t24",
+    "--config",
+    "/root/kda-history-replication-20261010/kda-t24.ini",
+    "--backbone",
+    "kda",
+    "--human-select",
+    "ttc5",
+    "--expected-checkpoint-sha",
+    "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+    "--case-base",
+    "91000",
+    "--n-cases",
+    "500",
+    "--cell",
+    "2",
+    "--out",
+    "/root/kda-history-replication-20261010/evaluation/kda-t24/cell2.json"
+  ],
+  "core": 4,
+  "started": 1791585197.214874,
+  "kind": "eval"
+}

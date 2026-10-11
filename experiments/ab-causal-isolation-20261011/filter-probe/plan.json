@@ -1,0 +1,139 @@
+{
+  "roots": [
+    {
+      "root_id": 42,
+      "model": "kda-s419-t24",
+      "case": 90070,
+      "step": 20,
+      "scope": "timeout",
+      "filtered_candidate": 70
+    },
+    {
+      "root_id": 45,
+      "model": "kda-s419-t24",
+      "case": 90075,
+      "step": 21,
+      "scope": "timeout",
+      "filtered_candidate": 6
+    },
+    {
+      "root_id": 20,
+      "model": "kda-s419-t24",
+      "case": 90029,
+      "step": 20,
+      "scope": "success-control",
+      "filtered_candidate": 43
+    },
+    {
+      "root_id": 43,
+      "model": "kda-s419-t24",
+      "case": 90071,
+      "step": 20,
+      "scope": "success-control",
+      "filtered_candidate": 57
+    },
+    {
+      "root_id": 284,
+      "model": "kda-s443-t24",
+      "case": 90090,
+      "step": 23,
+      "scope": "timeout",
+      "filtered_candidate": 3
+    },
+    {
+      "root_id": 310,
+      "model": "kda-s443-t24",
+      "case": 90148,
+      "step": 23,
+      "scope": "timeout",
+      "filtered_candidate": 69
+    },
+    {
+      "root_id": 312,
+      "model": "kda-s443-t24",
+      "case": 90151,
+      "step": 27,
+      "scope": "success-control",
+      "filtered_candidate": 54
+    },
+    {
+      "root_id": 336,
+      "model": "kda-s443-t24",
+      "case": 90201,
+      "step": 1,
+      "scope": "success-control",
+      "filtered_candidate": 71
+    },
+    {
+      "root_id": 515,
+      "model": "gru-s419-t24",
+      "case": 90037,
+      "step": 25,
+      "scope": "timeout",
+      "filtered_candidate": 15
+    },
+    {
+      "root_id": 516,
+      "model": "gru-s419-t24",
+      "case": 90042,
+      "step": 22,
+      "scope": "timeout",
+      "filtered_candidate": 14
+    },
+    {
+      "root_id": 523,
+      "model": "gru-s419-t24",
+      "case": 90062,
+      "step": 38,
+      "scope": "success-control",
+      "filtered_candidate": 9
+    },
+    {
+      "root_id": 543,
+      "model": "gru-s419-t24",
+      "case": 90116,
+      "step": 24,
+      "scope": "success-control",
+      "filtered_candidate": 15
+    },
+    {
+      "root_id": 708,
+      "model": "gru-s443-t24",
+      "case": 90050,
+      "step": 20,
+      "scope": "timeout",
+      "filtered_candidate": 33
+    },
+    {
+      "root_id": 715,
+      "model": "gru-s443-t24",
+      "case": 90066,
+      "step": 27,
+      "scope": "timeout",
+      "filtered_candidate": 36
+    },
+    {
+      "root_id": 716,
+      "model": "gru-s443-t24",
+      "case": 90067,
+      "step": 21,
+      "scope": "success-control",
+      "filtered_candidate": 36
+    },
+    {
+      "root_id": 735,
+      "model": "gru-s443-t24",
+      "case": 90102,
+      "step": 34,
+      "scope": "success-control",
+      "filtered_candidate": 32
+    }
+  ],
+  "rule": "First2 original20Square failure and first2 success-control roots/model whose original rawtop was hard-filtered while some candidate was safe. Alternative fixed to original rawtop, no future-based choice.",
+  "intervention": "Only execute that filtered actual command once at root, synchronize last_action, then restore unchanged TTC5 policy and unchanged filter. This is diagnostic action forcing, not a deployable filter modification.",
+  "GO": "At least one preselected filtered action improves realized G: supports a filtered-out return-improving opportunity at that root. Broad protected mechanism requires both KDA seeds improve and no success or physical safety destruction.",
+  "KILL": "If no filtered alternative improves G, stop tested filter-blocked-loss explanation. If any additional collision/success destruction, KILL this bypass as protected solution.",
+  "limit": "Two roots per scope/model cannot estimate main-cause share. An action violating .2 policy margin can be collision-free yet still violate original safety contract. Return improvement does not prove filter is incorrect.",
+  "baseline": "Terminal-fixed separate continuation, same original checkpoint; compare A0 and forced action in same world.",
+  "source_sha256": "665da8a3e170b40f8106e0f634c738b576e2dc7d887c508fab3a922f13adacb2"
+}

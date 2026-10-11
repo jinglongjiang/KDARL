@@ -1,0 +1,204 @@
+{
+  "task": "ROUTE_B_EVIDENCE_CONSOLIDATION",
+  "created": 1791616709.1017032,
+  "train_episodes": 0,
+  "optimizer_steps": 0,
+  "checkpoints": [
+    {
+      "id": "kda-s419-t12",
+      "backbone": "kda",
+      "seed": 419,
+      "length": 12,
+      "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t12/rl_model_ep10000.pth",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t12.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "85f1585e0b86b3aa3386dce0b2f81cd80489ce955f1b7c63cc9eea693356289d",
+      "config_sha256": "7c7d1386c50287e32ea61a36110180cc732baaeb34e2dcf06ea826efd9f16179"
+    },
+    {
+      "id": "kda-s419-t24",
+      "backbone": "kda",
+      "seed": 419,
+      "length": 24,
+      "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t24/rl_model_ep10000.pth",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t24.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+      "config_sha256": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7"
+    },
+    {
+      "id": "gru-s419-t12",
+      "backbone": "gru",
+      "seed": 419,
+      "length": 12,
+      "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/gru-t12/rl_model_ep10000.pth",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/gru-t12.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "09e223fbef7fd6ae24b27a654578439aa5c1e1cd582e86f7de789566c32a7e7d",
+      "config_sha256": "67069d4221d7b900a867c2aeedcbdac0961c46b64097aa7c518e3dc4bf6577da"
+    },
+    {
+      "id": "gru-s419-t24",
+      "backbone": "gru",
+      "seed": 419,
+      "length": 24,
+      "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/gru-t24/rl_model_ep10000.pth",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/gru-t24.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "acc0ea789835105d31eb83275c475e1da0a49bc0e5db86386c32052584dfa93d",
+      "config_sha256": "35ccdf1dc1f871b13bacc1b1eb2a8d82c1fcefaf787177bd31905c738f92d61e"
+    },
+    {
+      "id": "kda-s443-t12",
+      "backbone": "kda",
+      "seed": 443,
+      "length": 12,
+      "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t12/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t12.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "113c33c132de0793f36e1f02aa1a9d8704ab562ae30d645ac17d35d0108b010f",
+      "config_sha256": "e40490e1c82e37a5eb9ebf88667933955552204ec0d38971c0c44b66922446f0"
+    },
+    {
+      "id": "kda-s443-t24",
+      "backbone": "kda",
+      "seed": 443,
+      "length": 24,
+      "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t24/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t24.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+      "config_sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a"
+    },
+    {
+      "id": "gru-s443-t12",
+      "backbone": "gru",
+      "seed": 443,
+      "length": 12,
+      "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t12/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t12.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "8923e9998c8281f5c038c014b9137a936180a0b6556c6b77610c729d99ff4730",
+      "config_sha256": "0d51e4f5e4554fa59d31d3aebb7f081ecc5be34cc13f1d3656c66855bdaa7b62"
+    },
+    {
+      "id": "gru-s443-t24",
+      "backbone": "gru",
+      "seed": 443,
+      "length": 24,
+      "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t24/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t24.ini",
+      "training": "fresh IL50+RL10000",
+      "origin": "history-length study",
+      "weight_sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c",
+      "config_sha256": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f"
+    },
+    {
+      "id": "kda-original-t24",
+      "backbone": "kda",
+      "seed": 419,
+      "length": 24,
+      "weight": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/kda/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/kda.ini",
+      "training": "reused IL50+fresh RL10000",
+      "origin": "original optimized run",
+      "weight_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+      "config_sha256": "6e77ae41f6902672490fa929670ea3c6c703a6db3c4f10eed8fbc75a10fd8749"
+    },
+    {
+      "id": "gru-original-t24",
+      "backbone": "gru",
+      "seed": 419,
+      "length": 24,
+      "weight": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/gru/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/gru.ini",
+      "training": "reused IL50+fresh RL10000",
+      "origin": "original optimized run",
+      "weight_sha256": "96f06039a07b75d09e3b067ebb796d6de113b6d80a33214db737ed6d3a245828",
+      "config_sha256": "ecb6cdf1fd33867ccf85714911377f78da8ba632a19264822e185892079e7434"
+    },
+    {
+      "id": "mamba-original-t24",
+      "backbone": "mamba",
+      "seed": 419,
+      "length": 24,
+      "weight": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/mamba/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/mamba.ini",
+      "training": "reused IL50+fresh RL10000",
+      "origin": "original optimized run",
+      "weight_sha256": "f23e411effac2f1959eead081fa49c908a85532642172c50a34427fe40bff2b9",
+      "config_sha256": "cc2a64237e77404ee8d9808af9640b44c415527ddfdde6d5c82839ae8fd13a25"
+    }
+  ],
+  "project": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav",
+  "original_projects_read_only": true,
+  "runtime": "temporary local3060 container, existing isolated torch2.7.1 env; no package changes",
+  "conditions": {
+    "alpha": 0.3,
+    "risk_lambda": 0.8,
+    "safety_margin": 0.2,
+    "actions": 80,
+    "selection": "ttc5",
+    "selection_anchor": "once at true current robot state; shared by all candidates",
+    "horizon_seconds": 0.25,
+    "case_base": 90000,
+    "smoke_cases_per_cell": 3,
+    "full_cases_per_cell": 20,
+    "optional_expansion": false,
+    "sample_choice": "20/cell is frozen; do not expand based on observed margin results",
+    "common_reference": "kda-original-t24",
+    "common_windows": "same reference prefix/successor tokens and commands; T12 uses final12 frames"
+  },
+  "metrics": [
+    "unmasked successor V top1-top2",
+    "gap/abs(top1 V), zero-scale flagged",
+    "raw r+gammaV gap separately (not V gap)",
+    "top5-V clearance range, min/max and individual candidates",
+    "actual next-position endpoint clearance",
+    "environment old-human-velocity same-time swept clearance",
+    "actual-update same-time swept clearance"
+  ],
+  "clearance_bins": [
+    "<0",
+    "[0,0.2)",
+    "[0.2,0.4)",
+    "[0.4,0.8)",
+    ">=0.8"
+  ],
+  "interval_unit": "episode clustered; descriptive bootstrap, not independent steps or11 independent seeds",
+  "decision": {
+    "gap_median_range": [
+      0.0001,
+      0.01
+    ],
+    "clearance_spread_median_range_m": [
+      0.01,
+      1.0
+    ],
+    "range_definition": "broad operational order-of-magnitude screen, not proof of equivalence",
+    "outcome": "heterogeneity across checkpoints downgrades common-configuration claim",
+    "causal_limit": "shared training objective causation cannot be isolated without an objective intervention",
+    "interpretation": "V gap is not Q action gap; one-step clearance is not long-run action quality"
+  },
+  "statistical_limits": [
+    "No small gap proves value failure",
+    "flat clearance-bin spread is descriptive, not statistical independence",
+    "two seed absolute differences are observed variation, not an estimated noise floor",
+    "same checkpoint interventions can still include finite-case and runtime uncertainty"
+  ],
+  "reserved_cases_92000_92499_untouched": true,
+  "forbidden": [
+    "training",
+    "original-project edits",
+    "new outcome benchmark beyond P1",
+    "new action/filter/reward/model",
+    "4090 usage"
+  ]
+}

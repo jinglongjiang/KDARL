@@ -1,0 +1,141 @@
+{
+  "arm": "mamba",
+  "rules": {
+    "ttc5": {
+      "overall": {
+        "n": 3000,
+        "counts": {
+          "success": 2701,
+          "collision": 61,
+          "timeout": 238
+        },
+        "rates_percent": {
+          "success": 90.03333333333333,
+          "collision": 2.033333333333333,
+          "timeout": 7.933333333333334
+        },
+        "mean_return": 0.4984247189094987,
+        "median_minimum_clearance": 0.20323273082558307,
+        "success_time_mean": 14.503239540910775,
+        "success_time_median": 13.0,
+        "success_time_p90": 20.0
+      },
+      "cells": {
+        "0": {
+          "n": 500,
+          "counts": {
+            "success": 497,
+            "collision": 2,
+            "timeout": 1
+          },
+          "rates_percent": {
+            "success": 99.4,
+            "collision": 0.4,
+            "timeout": 0.2
+          },
+          "mean_return": 0.6385137538731046,
+          "median_minimum_clearance": 0.22976271317844182,
+          "success_time_mean": 11.185613682092555,
+          "success_time_median": 11.0,
+          "success_time_p90": 12.25
+        },
+        "1": {
+          "n": 500,
+          "counts": {
+            "success": 496,
+            "collision": 1,
+            "timeout": 3
+          },
+          "rates_percent": {
+            "success": 99.2,
+            "collision": 0.2,
+            "timeout": 0.6
+          },
+          "mean_return": 0.6381562124214586,
+          "median_minimum_clearance": 0.20541641565578378,
+          "success_time_mean": 11.175907258064516,
+          "success_time_median": 10.75,
+          "success_time_p90": 13.5
+        },
+        "2": {
+          "n": 500,
+          "counts": {
+            "success": 488,
+            "collision": 4,
+            "timeout": 8
+          },
+          "rates_percent": {
+            "success": 97.6,
+            "collision": 0.8,
+            "timeout": 1.6
+          },
+          "mean_return": 0.5611554680714705,
+          "median_minimum_clearance": 0.20607480525980543,
+          "success_time_mean": 13.836577868852459,
+          "success_time_median": 13.5,
+          "success_time_p90": 16.0
+        },
+        "3": {
+          "n": 500,
+          "counts": {
+            "success": 466,
+            "collision": 10,
+            "timeout": 24
+          },
+          "rates_percent": {
+            "success": 93.2,
+            "collision": 2.0,
+            "timeout": 4.8
+          },
+          "mean_return": 0.5198556038069498,
+          "median_minimum_clearance": 0.20161545902197048,
+          "success_time_mean": 14.325643776824034,
+          "success_time_median": 12.75,
+          "success_time_p90": 19.375
+        },
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 457,
+            "collision": 14,
+            "timeout": 29
+          },
+          "rates_percent": {
+            "success": 91.4,
+            "collision": 2.8,
+            "timeout": 5.8
+          },
+          "mean_return": 0.4253991217955287,
+          "median_minimum_clearance": 0.2005980822485937,
+          "success_time_mean": 18.657002188183807,
+          "success_time_median": 17.5,
+          "success_time_p90": 22.950000000000017
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 297,
+            "collision": 30,
+            "timeout": 173
+          },
+          "rates_percent": {
+            "success": 59.4,
+            "collision": 6.0,
+            "timeout": 34.6
+          },
+          "mean_return": 0.20746815348848013,
+          "median_minimum_clearance": 0.1908882965960692,
+          "success_time_mean": 20.594276094276093,
+          "success_time_median": 17.75,
+          "success_time_p90": 32.95000000000002
+        }
+      }
+    }
+  },
+  "limits": [
+    "One frozen training seed",
+    "Extension, not a new rule-selection study",
+    "Case IDs reused across cells; cluster intervals accompany McNemar",
+    "No same-case Mamba first5 baseline in this run; no paired rule-effect claim"
+  ]
+}

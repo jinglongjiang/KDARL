@@ -1,0 +1,23 @@
+{
+  "task": "Historical RL preference-formation timeline",
+  "training_authorized": false,
+  "T1": "All existing real RL snapshots ep500/1000 through10000",
+  "T32": "Definition requested; not supplied. No substitute experiment authorized.",
+  "probes": {
+    "419": [
+      1,
+      221
+    ],
+    "443": [
+      239,
+      392
+    ]
+  },
+  "controls": "Original preselected matched success controls, not result-selected",
+  "frozen": "Real original TTC5 history, all80 smoothed commands and original reward/filter",
+  "margin": "Unmasked original r + gamma V. Risk, mask and index0 separate; no probe uses0.",
+  "attribution": "Intervals between saved states only; never reconstruct exact batches from Adam moments.",
+  "no_IL_rerun": true,
+  "no_RL_rerun": true,
+  "reserve92000_untouched": true
+}

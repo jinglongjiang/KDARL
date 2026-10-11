@@ -1,0 +1,2415 @@
+{
+  "status": "VERIFIED_EXISTING_DATA",
+  "rows": [
+    {
+      "n": 500,
+      "b": 0,
+      "c": 1,
+      "p1": 0.996,
+      "p2": 0.998,
+      "disagreement": 0.002,
+      "independent_expectation": 0.005984000000000005,
+      "ratio": 0.334224598930481,
+      "ratio_ci95": [
+        0.0,
+        0.9999999999999991
+      ],
+      "bootstrap_valid_draws": 8752,
+      "net_SR_pp": -0.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 4,
+      "c": 8,
+      "p1": 0.98,
+      "p2": 0.988,
+      "disagreement": 0.024,
+      "independent_expectation": 0.03152000000000003,
+      "ratio": 0.7614213197969537,
+      "ratio_ci95": [
+        0.4737412019491063,
+        1.0130922693266824
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        24
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 1,
+      "p1": 0.996,
+      "p2": 0.988,
+      "disagreement": 0.012,
+      "independent_expectation": 0.015904000000000015,
+      "ratio": 0.7545271629778665,
+      "ratio_ci95": [
+        0.33632286995515664,
+        1.0069044879171452
+      ],
+      "bootstrap_valid_draws": 9985,
+      "net_SR_pp": 0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 1,
+      "c": 5,
+      "p1": 0.988,
+      "p2": 0.996,
+      "disagreement": 0.012,
+      "independent_expectation": 0.015904000000000015,
+      "ratio": 0.7545271629778665,
+      "ratio_ci95": [
+        0.33602150537634384,
+        1.006588579795021
+      ],
+      "bootstrap_valid_draws": 9991,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 1,
+      "c": 1,
+      "p1": 0.996,
+      "p2": 0.996,
+      "disagreement": 0.004,
+      "independent_expectation": 0.007968000000000006,
+      "ratio": 0.5020080321285136,
+      "ratio_ci95": [
+        0.0,
+        1.0040160642570273
+      ],
+      "bootstrap_valid_draws": 9475,
+      "net_SR_pp": 0.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 9,
+      "p1": 0.98,
+      "p2": 0.988,
+      "disagreement": 0.028,
+      "independent_expectation": 0.03152000000000003,
+      "ratio": 0.8883248730964459,
+      "ratio_ci95": [
+        0.643382352941176,
+        1.0183299389002027
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        24
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 0,
+      "p1": 0.998,
+      "p2": 0.988,
+      "disagreement": 0.01,
+      "independent_expectation": 0.013952000000000013,
+      "ratio": 0.7167431192660544,
+      "ratio_ci95": [
+        0.334224598930481,
+        0.9999999999999991
+      ],
+      "bootstrap_valid_draws": 9985,
+      "net_SR_pp": 1.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 1,
+      "c": 5,
+      "p1": 0.988,
+      "p2": 0.996,
+      "disagreement": 0.012,
+      "independent_expectation": 0.015904000000000015,
+      "ratio": 0.7545271629778665,
+      "ratio_ci95": [
+        0.33602150537634384,
+        1.0066100749751874
+      ],
+      "bootstrap_valid_draws": 9994,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 1,
+      "c": 9,
+      "p1": 0.98,
+      "p2": 0.996,
+      "disagreement": 0.02,
+      "independent_expectation": 0.02384000000000002,
+      "ratio": 0.8389261744966435,
+      "ratio_ci95": [
+        0.5359695092901376,
+        1.0075566750629714
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "kda",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 1,
+      "c": 5,
+      "p1": 0.988,
+      "p2": 0.996,
+      "disagreement": 0.012,
+      "independent_expectation": 0.015904000000000015,
+      "ratio": 0.7545271629778665,
+      "ratio_ci95": [
+        0.33602150537634384,
+        1.006588579795021
+      ],
+      "bootstrap_valid_draws": 9997,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 0,
+      "c": 5,
+      "p1": 0.988,
+      "p2": 0.998,
+      "disagreement": 0.01,
+      "independent_expectation": 0.013952000000000013,
+      "ratio": 0.7167431192660544,
+      "ratio_ci95": [
+        0.334224598930481,
+        0.9999999999999991
+      ],
+      "bootstrap_valid_draws": 9971,
+      "net_SR_pp": -1.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 1,
+      "p1": 0.996,
+      "p2": 0.988,
+      "disagreement": 0.012,
+      "independent_expectation": 0.015904000000000015,
+      "ratio": 0.7545271629778665,
+      "ratio_ci95": [
+        0.33602150537634384,
+        1.0065001662175248
+      ],
+      "bootstrap_valid_draws": 9985,
+      "net_SR_pp": 0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 10,
+      "c": 8,
+      "p1": 0.982,
+      "p2": 0.978,
+      "disagreement": 0.036,
+      "independent_expectation": 0.039208000000000034,
+      "ratio": 0.9181799632728006,
+      "ratio_ci95": [
+        0.7103393843725329,
+        1.0238907849829344
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 6,
+      "c": 13,
+      "p1": 0.968,
+      "p2": 0.982,
+      "disagreement": 0.038,
+      "independent_expectation": 0.048848000000000044,
+      "ratio": 0.7779233540779554,
+      "ratio_ci95": [
+        0.5527414029589244,
+        1.0157775456222249
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        24
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 4,
+      "c": 5,
+      "p1": 0.99,
+      "p2": 0.992,
+      "disagreement": 0.018,
+      "independent_expectation": 0.017840000000000016,
+      "ratio": 1.00896860986547,
+      "ratio_ci95": [
+        1.002673796791443,
+        1.0146103896103886
+      ],
+      "bootstrap_valid_draws": 9999,
+      "net_SR_pp": -0.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 9,
+      "c": 7,
+      "p1": 0.982,
+      "p2": 0.978,
+      "disagreement": 0.032,
+      "independent_expectation": 0.039208000000000034,
+      "ratio": 0.8161599673536006,
+      "ratio_ci95": [
+        0.5780308278311772,
+        1.018876018876018
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 3,
+      "c": 7,
+      "p1": 0.982,
+      "p2": 0.99,
+      "disagreement": 0.02,
+      "independent_expectation": 0.027640000000000026,
+      "ratio": 0.7235890014471773,
+      "ratio_ci95": [
+        0.41866028708133934,
+        1.011029411764705
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 7,
+      "c": 14,
+      "p1": 0.968,
+      "p2": 0.982,
+      "disagreement": 0.042,
+      "independent_expectation": 0.048848000000000044,
+      "ratio": 0.8598100229282666,
+      "ratio_ci95": [
+        0.657886496677565,
+        1.0226557583385767
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        24
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 4,
+      "c": 11,
+      "p1": 0.978,
+      "p2": 0.992,
+      "disagreement": 0.03,
+      "independent_expectation": 0.02964800000000003,
+      "ratio": 1.0118726389638415,
+      "ratio_ci95": [
+        1.003440366972476,
+        1.0202098717450436
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 10,
+      "c": 8,
+      "p1": 0.982,
+      "p2": 0.978,
+      "disagreement": 0.036,
+      "independent_expectation": 0.039208000000000034,
+      "ratio": 0.9181799632728006,
+      "ratio_ci95": [
+        0.714282070714431,
+        1.0238907849829344
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 7,
+      "c": 14,
+      "p1": 0.968,
+      "p2": 0.982,
+      "disagreement": 0.042,
+      "independent_expectation": 0.048848000000000044,
+      "ratio": 0.8598100229282666,
+      "ratio_ci95": [
+        0.6563245823389016,
+        1.0230179028132984
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "kda",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 3,
+      "c": 7,
+      "p1": 0.982,
+      "p2": 0.99,
+      "disagreement": 0.02,
+      "independent_expectation": 0.027640000000000026,
+      "ratio": 0.7235890014471773,
+      "ratio_ci95": [
+        0.41766109785202826,
+        1.011029411764705
+      ],
+      "bootstrap_valid_draws": 9999,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 10,
+      "c": 8,
+      "p1": 0.982,
+      "p2": 0.978,
+      "disagreement": 0.036,
+      "independent_expectation": 0.039208000000000034,
+      "ratio": 0.9181799632728006,
+      "ratio_ci95": [
+        0.7231869090281831,
+        1.024032466690421
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 4,
+      "c": 11,
+      "p1": 0.978,
+      "p2": 0.992,
+      "disagreement": 0.03,
+      "independent_expectation": 0.02964800000000003,
+      "ratio": 1.0118726389638415,
+      "ratio_ci95": [
+        1.0035122930255886,
+        1.019865200425682
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 5,
+      "p1": 0.986,
+      "p2": 0.986,
+      "disagreement": 0.02,
+      "independent_expectation": 0.027608000000000025,
+      "ratio": 0.7244277021153283,
+      "ratio_ci95": [
+        0.41886069889899435,
+        1.0121457489878534
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 12,
+      "c": 17,
+      "p1": 0.96,
+      "p2": 0.97,
+      "disagreement": 0.058,
+      "independent_expectation": 0.06760000000000006,
+      "ratio": 0.8579881656804726,
+      "ratio_ci95": [
+        0.6804654493610447,
+        1.0286815112424723
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        24
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 16,
+      "c": 5,
+      "p1": 0.986,
+      "p2": 0.964,
+      "disagreement": 0.042,
+      "independent_expectation": 0.04899200000000005,
+      "ratio": 0.8572828216851722,
+      "ratio_ci95": [
+        0.6501950585175545,
+        1.0194624652455968
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 2.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 4,
+      "c": 8,
+      "p1": 0.976,
+      "p2": 0.984,
+      "disagreement": 0.024,
+      "independent_expectation": 0.03923200000000003,
+      "ratio": 0.6117455138662312,
+      "ratio_ci95": [
+        0.34359538207806456,
+        0.9019165727170229
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 5,
+      "p1": 0.986,
+      "p2": 0.986,
+      "disagreement": 0.02,
+      "independent_expectation": 0.027608000000000025,
+      "ratio": 0.7244277021153283,
+      "ratio_ci95": [
+        0.4182600382409174,
+        1.0121457489878534
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 8,
+      "c": 16,
+      "p1": 0.96,
+      "p2": 0.976,
+      "disagreement": 0.048,
+      "independent_expectation": 0.06208000000000005,
+      "ratio": 0.7731958762886592,
+      "ratio_ci95": [
+        0.5739210284664825,
+        0.9654033607725018
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        24
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 16,
+      "c": 5,
+      "p1": 0.986,
+      "p2": 0.964,
+      "disagreement": 0.042,
+      "independent_expectation": 0.04899200000000005,
+      "ratio": 0.8572828216851722,
+      "ratio_ci95": [
+        0.6563245823389016,
+        1.0192195690157242
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 2.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 6,
+      "c": 13,
+      "p1": 0.97,
+      "p2": 0.984,
+      "disagreement": 0.038,
+      "independent_expectation": 0.04504000000000004,
+      "ratio": 0.843694493783303,
+      "ratio_ci95": [
+        0.6185567010309273,
+        1.0195830900432676
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 18,
+      "p1": 0.96,
+      "p2": 0.986,
+      "disagreement": 0.046,
+      "independent_expectation": 0.05288000000000005,
+      "ratio": 0.8698940998487132,
+      "ratio_ci95": [
+        0.6797080023405909,
+        1.019865200425682
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "kda",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 10,
+      "p1": 0.976,
+      "p2": 0.986,
+      "disagreement": 0.03,
+      "independent_expectation": 0.037328000000000035,
+      "ratio": 0.8036862408915552,
+      "ratio_ci95": [
+        0.5560704355885074,
+        1.0167464114832527
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 5,
+      "c": 13,
+      "p1": 0.97,
+      "p2": 0.986,
+      "disagreement": 0.036,
+      "independent_expectation": 0.04316000000000004,
+      "ratio": 0.834105653382761,
+      "ratio_ci95": [
+        0.6117455138662312,
+        1.0181053072960338
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 13,
+      "c": 3,
+      "p1": 0.984,
+      "p2": 0.964,
+      "disagreement": 0.032,
+      "independent_expectation": 0.050848000000000046,
+      "ratio": 0.6293266205160473,
+      "ratio_ci95": [
+        0.4017099987255273,
+        0.8952551477170988
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 2.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 21,
+      "c": 35,
+      "p1": 0.916,
+      "p2": 0.944,
+      "disagreement": 0.112,
+      "independent_expectation": 0.130592,
+      "ratio": 0.8576329331046312,
+      "ratio_ci95": [
+        0.7222877358490565,
+        0.983660107071124
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 15,
+      "c": 22,
+      "p1": 0.946,
+      "p2": 0.96,
+      "disagreement": 0.074,
+      "independent_expectation": 0.08968000000000008,
+      "ratio": 0.8251561106155211,
+      "ratio_ci95": [
+        0.6653992395437273,
+        0.984685406976092
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        24
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 22,
+      "c": 14,
+      "p1": 0.966,
+      "p2": 0.95,
+      "disagreement": 0.072,
+      "independent_expectation": 0.08060000000000007,
+      "ratio": 0.8933002481389569,
+      "ratio_ci95": [
+        0.7408392459373367,
+        1.0347682119205321
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 1.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 7,
+      "c": 12,
+      "p1": 0.974,
+      "p2": 0.984,
+      "disagreement": 0.038,
+      "independent_expectation": 0.04116800000000004,
+      "ratio": 0.9230470268169443,
+      "ratio_ci95": [
+        0.7253157215664222,
+        1.0241058767921845
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -1.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 10,
+      "c": 35,
+      "p1": 0.916,
+      "p2": 0.966,
+      "disagreement": 0.09,
+      "independent_expectation": 0.112288,
+      "ratio": 0.8015104018238814,
+      "ratio_ci95": [
+        0.6557170835055045,
+        0.9471223601483155
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -5.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 10,
+      "c": 24,
+      "p1": 0.946,
+      "p2": 0.974,
+      "disagreement": 0.068,
+      "independent_expectation": 0.07719200000000007,
+      "ratio": 0.8809203026220327,
+      "ratio_ci95": [
+        0.7199163670351605,
+        1.0284810126582284
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        24
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 20,
+      "c": 23,
+      "p1": 0.944,
+      "p2": 0.95,
+      "disagreement": 0.086,
+      "independent_expectation": 0.10040000000000009,
+      "ratio": 0.8565737051792821,
+      "ratio_ci95": [
+        0.7091695624423806,
+        0.9984785089387616
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -0.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 8,
+      "c": 20,
+      "p1": 0.96,
+      "p2": 0.984,
+      "disagreement": 0.056,
+      "independent_expectation": 0.054720000000000046,
+      "ratio": 1.0233918128654962,
+      "ratio_ci95": [
+        1.0104721660848786,
+        1.0347682119205317
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 38,
+      "c": 23,
+      "p1": 0.946,
+      "p2": 0.916,
+      "disagreement": 0.122,
+      "independent_expectation": 0.12892800000000001,
+      "ratio": 0.9462645817820798,
+      "ratio_ci95": [
+        0.8326315918131176,
+        1.0436272299788871
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 3.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "kda",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 16,
+      "c": 12,
+      "p1": 0.974,
+      "p2": 0.966,
+      "disagreement": 0.056,
+      "independent_expectation": 0.05823200000000005,
+      "ratio": 0.9616705591427386,
+      "ratio_ci95": [
+        0.814820346452748,
+        1.035502958579884
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 25,
+      "c": 17,
+      "p1": 0.96,
+      "p2": 0.944,
+      "disagreement": 0.084,
+      "independent_expectation": 0.09152000000000007,
+      "ratio": 0.9178321678321671,
+      "ratio_ci95": [
+        0.7722324030801206,
+        1.0412328196584775
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 1.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 22,
+      "c": 5,
+      "p1": 0.984,
+      "p2": 0.95,
+      "disagreement": 0.054,
+      "independent_expectation": 0.06440000000000005,
+      "ratio": 0.8385093167701856,
+      "ratio_ci95": [
+        0.6555944055944051,
+        1.0144791414405059
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 3.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 20,
+      "c": 83,
+      "p1": 0.812,
+      "p2": 0.938,
+      "disagreement": 0.206,
+      "independent_expectation": 0.226688,
+      "ratio": 0.9087380011293055,
+      "ratio_ci95": [
+        0.8160009744326596,
+        0.9966000072065343
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -12.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 39,
+      "c": 54,
+      "p1": 0.872,
+      "p2": 0.902,
+      "disagreement": 0.186,
+      "independent_expectation": 0.20091199999999998,
+      "ratio": 0.9257784502667835,
+      "ratio_ci95": [
+        0.8189392198387062,
+        1.0217899800648222
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -3.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        24
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 42,
+      "c": 11,
+      "p1": 0.966,
+      "p2": 0.904,
+      "disagreement": 0.106,
+      "independent_expectation": 0.123472,
+      "ratio": 0.8584942335104315,
+      "ratio_ci95": [
+        0.7263123142951471,
+        0.9807549962990381
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 6.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 26,
+      "c": 37,
+      "p1": 0.9,
+      "p2": 0.922,
+      "disagreement": 0.126,
+      "independent_expectation": 0.16239999999999996,
+      "ratio": 0.7758620689655175,
+      "ratio_ci95": [
+        0.6448938334149451,
+        0.9093840662040209
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 9,
+      "c": 86,
+      "p1": 0.812,
+      "p2": 0.966,
+      "disagreement": 0.19,
+      "independent_expectation": 0.20921599999999996,
+      "ratio": 0.9081523401651883,
+      "ratio_ci95": [
+        0.824102112001227,
+        0.9876918401458747
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -15.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 35,
+      "c": 49,
+      "p1": 0.872,
+      "p2": 0.9,
+      "disagreement": 0.168,
+      "independent_expectation": 0.2024,
+      "ratio": 0.8300395256916997,
+      "ratio_ci95": [
+        0.715372352941282,
+        0.9441401620163238
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        24
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 39,
+      "c": 22,
+      "p1": 0.938,
+      "p2": 0.904,
+      "disagreement": 0.122,
+      "independent_expectation": 0.14609600000000003,
+      "ratio": 0.8350673529733872,
+      "ratio_ci95": [
+        0.7060638514500286,
+        0.9628454916175804
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 3.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 31,
+      "c": 41,
+      "p1": 0.902,
+      "p2": 0.922,
+      "disagreement": 0.144,
+      "independent_expectation": 0.16071199999999994,
+      "ratio": 0.8960127432923494,
+      "ratio_ci95": [
+        0.7788504970604692,
+        1.0074145712443576
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 75,
+      "c": 45,
+      "p1": 0.872,
+      "p2": 0.812,
+      "disagreement": 0.24,
+      "independent_expectation": 0.26787199999999994,
+      "ratio": 0.8959503046231038,
+      "ratio_ci95": [
+        0.7979607500472576,
+        0.9902705868490908
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 6.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "kda",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 11,
+      "c": 44,
+      "p1": 0.9,
+      "p2": 0.966,
+      "disagreement": 0.11,
+      "independent_expectation": 0.1272,
+      "ratio": 0.8647798742138364,
+      "ratio_ci95": [
+        0.7384372282524577,
+        0.9849790691947795
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -6.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 23,
+      "c": 41,
+      "p1": 0.902,
+      "p2": 0.938,
+      "disagreement": 0.128,
+      "independent_expectation": 0.14784800000000003,
+      "ratio": 0.8657540176397379,
+      "ratio_ci95": [
+        0.7394266228423096,
+        0.9840216615422971
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -3.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 39,
+      "c": 30,
+      "p1": 0.922,
+      "p2": 0.904,
+      "disagreement": 0.138,
+      "independent_expectation": 0.15902399999999994,
+      "ratio": 0.867793540597646,
+      "ratio_ci95": [
+        0.7413014230381652,
+        0.9831058385429371
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 1.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle"
+    },
+    {
+      "n": 500,
+      "b": 70,
+      "c": 112,
+      "p1": 0.582,
+      "p2": 0.666,
+      "disagreement": 0.364,
+      "independent_expectation": 0.472776,
+      "ratio": 0.7699206389495237,
+      "ratio_ci95": [
+        0.6841647161884961,
+        0.8566220148317686
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -8.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 97,
+      "c": 68,
+      "p1": 0.768,
+      "p2": 0.71,
+      "disagreement": 0.33,
+      "independent_expectation": 0.38744,
+      "ratio": 0.85174478628949,
+      "ratio_ci95": [
+        0.7606485763411927,
+        0.9439969833027312
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 5.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        24
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 70,
+      "c": 34,
+      "p1": 0.842,
+      "p2": 0.77,
+      "disagreement": 0.208,
+      "independent_expectation": 0.31532,
+      "ratio": 0.6596473423823418,
+      "ratio_ci95": [
+        0.5617240150362028,
+        0.7593726924121293
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 7.2,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 64,
+      "c": 60,
+      "p1": 0.794,
+      "p2": 0.786,
+      "disagreement": 0.248,
+      "independent_expectation": 0.33183199999999996,
+      "ratio": 0.7473661370814147,
+      "ratio_ci95": [
+        0.6500448923380564,
+        0.8472742213530869
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 0.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "A",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 36,
+      "c": 166,
+      "p1": 0.582,
+      "p2": 0.842,
+      "disagreement": 0.404,
+      "independent_expectation": 0.4439120000000001,
+      "ratio": 0.9100902881652219,
+      "ratio_ci95": [
+        0.8373709782496407,
+        0.9823814695718557
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -26.0,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        12
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 60,
+      "c": 73,
+      "p1": 0.768,
+      "p2": 0.794,
+      "disagreement": 0.266,
+      "independent_expectation": 0.34241599999999994,
+      "ratio": 0.7768328582776507,
+      "ratio_ci95": [
+        0.68240861214008,
+        0.8729986752836957
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -2.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        24
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 53,
+      "c": 105,
+      "p1": 0.666,
+      "p2": 0.77,
+      "disagreement": 0.316,
+      "independent_expectation": 0.41035999999999995,
+      "ratio": 0.7700555609708549,
+      "ratio_ci95": [
+        0.6818397122232047,
+        0.8580111688126125
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -10.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        12
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 52,
+      "c": 90,
+      "p1": 0.71,
+      "p2": 0.786,
+      "disagreement": 0.284,
+      "independent_expectation": 0.37988,
+      "ratio": 0.747604506686322,
+      "ratio_ci95": [
+        0.6564315171622298,
+        0.8393118103868005
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -7.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "B",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        24
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 139,
+      "c": 46,
+      "p1": 0.768,
+      "p2": 0.582,
+      "disagreement": 0.37,
+      "independent_expectation": 0.456048,
+      "ratio": 0.8113181068659439,
+      "ratio_ci95": [
+        0.7290781802025819,
+        0.8924510896526058
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 18.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "kda",
+        24
+      ],
+      "second": [
+        419,
+        "kda",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 46,
+      "c": 70,
+      "p1": 0.794,
+      "p2": 0.842,
+      "disagreement": 0.232,
+      "independent_expectation": 0.298904,
+      "ratio": 0.776168937183845,
+      "ratio_ci95": [
+        0.6754623295114714,
+        0.8778671171750034
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": -4.8,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        419,
+        "gru",
+        24
+      ],
+      "second": [
+        419,
+        "gru",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 94,
+      "c": 72,
+      "p1": 0.71,
+      "p2": 0.666,
+      "disagreement": 0.332,
+      "independent_expectation": 0.43028,
+      "ratio": 0.7715905921725389,
+      "ratio_ci95": [
+        0.6833623020952541,
+        0.8619445955591402
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 4.4,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "kda",
+        24
+      ],
+      "second": [
+        443,
+        "kda",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    },
+    {
+      "n": 500,
+      "b": 67,
+      "c": 59,
+      "p1": 0.786,
+      "p2": 0.77,
+      "disagreement": 0.252,
+      "independent_expectation": 0.34556,
+      "ratio": 0.7292510707257785,
+      "ratio_ci95": [
+        0.632111080828006,
+        0.8286643457317929
+      ],
+      "bootstrap_valid_draws": 10000,
+      "net_SR_pp": 1.6,
+      "b_definition": "first succeeds, second does not",
+      "c_definition": "second succeeds, first does not",
+      "family": "C",
+      "first": [
+        443,
+        "gru",
+        24
+      ],
+      "second": [
+        443,
+        "gru",
+        12
+      ],
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square"
+    }
+  ],
+  "A_cell_descriptive_means": [
+    {
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle",
+      "mean_A_disagreement": 0.0125,
+      "mean_A_independent_expectation": 0.017328000000000017,
+      "ratio_of_A_means": 0.7213758079409043,
+      "note": "Four overlapping pairs, not 2000 independent worlds; descriptive mean."
+    },
+    {
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square",
+      "mean_A_disagreement": 0.031,
+      "mean_A_independent_expectation": 0.03627600000000003,
+      "ratio_of_A_means": 0.8545594883669637,
+      "note": "Four overlapping pairs, not 2000 independent worlds; descriptive mean."
+    },
+    {
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle",
+      "mean_A_disagreement": 0.036,
+      "mean_A_independent_expectation": 0.04585800000000004,
+      "ratio_of_A_means": 0.7850320554755978,
+      "note": "Four overlapping pairs, not 2000 independent worlds; descriptive mean."
+    },
+    {
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square",
+      "mean_A_disagreement": 0.074,
+      "mean_A_independent_expectation": 0.08551000000000004,
+      "ratio_of_A_means": 0.8653958601333173,
+      "note": "Four overlapping pairs, not 2000 independent worlds; descriptive mean."
+    },
+    {
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle",
+      "mean_A_disagreement": 0.156,
+      "mean_A_independent_expectation": 0.178368,
+      "ratio_of_A_means": 0.8745963401506996,
+      "note": "Four overlapping pairs, not 2000 independent worlds; descriptive mean."
+    },
+    {
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square",
+      "mean_A_disagreement": 0.2875,
+      "mean_A_independent_expectation": 0.37684199999999995,
+      "ratio_of_A_means": 0.7629192075193317,
+      "note": "Four overlapping pairs, not 2000 independent worlds; descriptive mean."
+    }
+  ],
+  "ABC_cell_descriptive_means": [
+    {
+      "cell": 0,
+      "human_num": 5,
+      "geometry": "circle",
+      "A": 0.0125,
+      "B": 0.013500000000000002,
+      "C": 0.013500000000000002
+    },
+    {
+      "cell": 1,
+      "human_num": 5,
+      "geometry": "square",
+      "A": 0.031,
+      "B": 0.032,
+      "C": 0.032
+    },
+    {
+      "cell": 2,
+      "human_num": 10,
+      "geometry": "circle",
+      "A": 0.036,
+      "B": 0.037000000000000005,
+      "C": 0.036
+    },
+    {
+      "cell": 3,
+      "human_num": 10,
+      "geometry": "square",
+      "A": 0.074,
+      "B": 0.075,
+      "C": 0.079
+    },
+    {
+      "cell": 4,
+      "human_num": 20,
+      "geometry": "circle",
+      "A": 0.156,
+      "B": 0.156,
+      "C": 0.154
+    },
+    {
+      "cell": 5,
+      "human_num": 20,
+      "geometry": "square",
+      "A": 0.2875,
+      "B": 0.3175,
+      "C": 0.2965
+    }
+  ]
+}

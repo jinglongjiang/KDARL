@@ -1,0 +1,15 @@
+{
+  "case_base": 91000,
+  "n_cases_per_cell": 500,
+  "new_episodes": 3000,
+  "training": "NONE",
+  "rule": "first5",
+  "comparator": "existing ttc5 same 3000 cases",
+  "hypothesis_family": [
+    "overall SR",
+    "overall CR",
+    "overall TO"
+  ],
+  "bonferroni_family_size": 3,
+  "script_sha256": "0cfc8c9d016a40547dde59e4ae80680c1cdbd5e8d3306877632392dcae1b1219"
+}

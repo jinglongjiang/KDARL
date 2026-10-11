@@ -1,0 +1,45 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "kda-original-t24",
+    "backbone": "kda",
+    "seed": 419,
+    "length": 24,
+    "weight": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/kda/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/kda.ini",
+    "training": "reused IL50+fresh RL10000",
+    "origin": "original optimized run",
+    "weight_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+    "config_sha256": "6e77ae41f6902672490fa929670ea3c6c703a6db3c4f10eed8fbc75a10fd8749"
+  },
+  "episodes": [
+    {
+      "cell": 3,
+      "case": 90000,
+      "outcome": "success",
+      "steps": 49
+    },
+    {
+      "cell": 3,
+      "case": 90001,
+      "outcome": "success",
+      "steps": 45
+    },
+    {
+      "cell": 3,
+      "case": 90002,
+      "outcome": "collision",
+      "steps": 16
+    }
+  ],
+  "steps": 110,
+  "wall_seconds": 8.57777452468872,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "actions": 80,
+  "smoke": true,
+  "fast_legacy_checked": true,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/smoke/kda-original-t24/cell3.steps.jsonl.gz"
+}

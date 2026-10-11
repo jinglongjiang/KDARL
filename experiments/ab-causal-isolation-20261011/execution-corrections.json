@@ -1,0 +1,44 @@
+{
+  "scope": "Engineering and transport corrections only; no scientific conditions, cases or gates changed",
+  "reference_mamba_initial": {
+    "exit_code": 1,
+    "reason": "Missing SimpleNamespace.case, raised before first episode",
+    "evidence": "execution/supplemental/042.log; original reference-mamba/protocol.json; before/reference-mamba-missing-case.py",
+    "fix": "Explicit case=None; preserve old output and use a separately versioned output directory"
+  },
+  "reference_mamba_v2": {
+    "exit_code": 143,
+    "reason": "Source inspection identified missing inherited work/smoke-accepted.json before formal execution; exact PID intentionally terminated",
+    "evidence": "reference-mamba-v2.log; reference-mamba-v2/protocol.json; before/reference-mamba-v2-missing-gate-path.py",
+    "accepted_scientific_results": false,
+    "fix": "Write the already validated 12-shard smoke gate also to inherited expected path; new v3 directory; rerun complete smoke before formal"
+  },
+  "final_test_invocation": {
+    "discovery": "unittest discover ignored hyphenated module names and ran zero tests; not counted as acceptance",
+    "relative_entry_exit_code": 1,
+    "relative_entry_evidence": "All five test-run-b.py tests passed, but its post-test SHA export raised FileNotFoundError for b/test-run-b.py after the harness changed cwd",
+    "fix": "Invoke the unchanged test script using its absolute path; no code or experimental data modified",
+    "scope": "CPU engineering test entry only, no frozen model inference or new navigation experiment"
+  },
+  "prefix_safety_audit": {
+    "initial_exit_code": 1,
+    "reason": "Expected all 168 executed rollouts in the scientific gzip; it contains 160 scientific rows and deliberately excludes eight duplicate acceptance rollouts",
+    "fix": "Verify exact 160 scientific rows and 80 unique roots; acceptance duplicates remain in their original gate records. No raw data, cases or decisions changed.",
+    "scope": "Offline archival safety qualification, no new environment or network execution"
+  },
+  "reference_evidence_transfer": {
+    "serial_rsync_exit_code": 20,
+    "reason": "Exact local rsync PID 739873 intentionally stopped after preserving completed files; remaining large reference results copied in four disjoint immutable shards",
+    "new_entry": "sync-reference-evidence.py",
+    "transport_pattern_note": "The running immutable-copy job used E1* which also includes E10 files; this can redundantly transfer identical immutable data. The reproducible entry now uses E1.jsonl.*. Final byte-level mirror equality, not transfer job names, is the acceptance condition.",
+    "scientific_runs_affected": false,
+    "source_data_deleted": false
+  },
+  "evidence_transfer": {
+    "serial_rsync_exit_code": 20,
+    "reason": "Intentionally replace slow single-flow local mirror with bounded four-flow copying of disjoint completed folders",
+    "new_entry": "sync-evidence.py",
+    "source_data_deleted": false,
+    "experimental_runs_affected": false
+  }
+}

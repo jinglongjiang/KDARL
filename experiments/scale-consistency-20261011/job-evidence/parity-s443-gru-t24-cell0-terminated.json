@@ -1,0 +1,20 @@
+{
+  "exit_code": -15,
+  "reason": "fail_closed",
+  "args": [
+    "--seed",
+    "443",
+    "--backbone",
+    "gru",
+    "--length",
+    "24",
+    "--cell",
+    "0",
+    "--stage",
+    "parity",
+    "--n-cases",
+    "500",
+    "--out",
+    "/home/abc/workspace/scale-consistency-20261011/parity/5-person/circle_crossing/s443-gru-t24.json"
+  ]
+}

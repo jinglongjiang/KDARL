@@ -1,0 +1,8 @@
+{
+  "status": "PRELAUNCH_CHECK_CORRECTED",
+  "first_prepare_exit_code": 1,
+  "cause": "Seed419 config has no train.seed; launcher protocol supplies419",
+  "fix": "Verify training protocol seed for both arms; additionally assert config seed if present",
+  "outcome_data_used": false,
+  "scientific_method_changed": false
+}

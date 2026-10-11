@@ -1,0 +1,53 @@
+{
+  "question": "At identical 5Circle t5s state and forced action, do history omission and train/deploy continuation change targets or actual outcomes?",
+  "GO": "History fix changes held-out continuation regret/outcome in matched train behavior, or target-mode readout consistently improves held-out G in both seeds; eligible only for bounded controlled validation.",
+  "KILL": "No actual outcome/target benefit in matched arms, or linear readout fails held-out calibration: stop the tested continuation-only candidate, not claim impossibility.",
+  "cases": [
+    90000,
+    90001,
+    90002,
+    90003,
+    90004,
+    90005,
+    90006,
+    90007,
+    90008,
+    90009,
+    90010,
+    90011,
+    90012,
+    90013,
+    90014,
+    90015
+  ],
+  "root_step": 20,
+  "root_time_seconds": 5.0,
+  "denominator_per_model": 16,
+  "arms": [
+    "old-train",
+    "fixed-train",
+    "old-deploy",
+    "fixed-deploy"
+  ],
+  "root": "Replay original saved commands to step20. Force identical archived A0 command once, append observed current frame once. Compare tails starting at the identical resulting true state.",
+  "history_intervention": "Only post-root epsilon early-return history omission vs append-every-real-frame. Initial complete deployment prefix identical. Both arms keep repaired terminal bootstrap.",
+  "buffer_contract": "ReplayBufferMC push_episode rebuilds continuous real-state windows, including epsilon frames. This intervention changes online actor continuation/actions/labels, NOT buffer frame availability. No buffer or training update is performed.",
+  "train_behavior": "phase=train; frozen epsilon=.05, no smoothing/filter/risk according to original phase rules. Same frozen checkpoint. Not a recreation of all past training checkpoints.",
+  "eval_contract": "All four arms keep net.eval(), so dropout is disabled. Does NOT reproduce original train-mode actor dropout, mixtures of historical checkpoints, or replay state noise. A controlled frozen continuation contract, not complete original training-behavior reproduction. No new intervention.",
+  "deploy": "phase=test; epsilon=0; smoothing=.3, clearance=.2, risk=.8; repaired terminal baseline.",
+  "rng": "Per-model/case fixed private NumPy exploration RNG, restored around predict so environment RNG is not consumed by exploration; paired tape same initial seed.",
+  "early_terminal": "Cases ending before t5s retained in all16 denominator, marked PRE_ROOT_TERMINAL; no replacement roots.",
+  "budget": "4 models x16 fixed cases x4 arms; <=201 total env steps/episode; 300 full-batch CPU optimizer steps/head; no IL/RL.",
+  "readout": "Same true next-window latent256, same train/dev/test cases, old V init, linear257 parameters. MC labels independently for each arm. case%5 split; no dev selection.",
+  "scope": "Finite deterministic realizations with one exploration tape, not expected Q or full-learning causal effect.",
+  "sweep_recording": "Read-only synchronous min ||d0+t*(executed robot command-human velocity)||-radii over[0,.25]; env current velocity versus actual displacement/.25. Negative clearance counts collision intervals. Includes forced root command; no decision changes.",
+  "models": [
+    "kda-s419-t24",
+    "kda-s443-t24",
+    "gru-s419-t24",
+    "gru-s443-t24"
+  ],
+  "git_head": "9f062230541cde94b943f56b5ae9021eee042860",
+  "script_sha256": "5c6941071c5bf244f9257efce0edb191640e057ad8b57ab6dce4d0e3e1a997a8",
+  "policy_sha256": "b2f4c77ae795ca321e3c22780573f2e2bbba6ac0caca43744c4d6e49a3a1bdf6"
+}

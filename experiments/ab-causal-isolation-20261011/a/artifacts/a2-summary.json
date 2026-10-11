@@ -1,0 +1,2417 @@
+{
+  "protocol": {
+    "question": "Do pinned physical/reward and actualTTC history corrections remove original strict action-ranking errors?",
+    "GO": "Residual errors survive: proceed only to fixed-budget matched readout isolation, not method training.",
+    "KILL": "No residual strict error survives: stop value/readout cause candidate for these roots.",
+    "budget": "One streaming pass of all 16 frozen branch files, <=20 CPU minutes; no GPU.",
+    "controls": "Unchanged roots, original weights/commands/safety/rewards/continuation; deduplicate candidate index; separate cell and failure/success.",
+    "decomposition": "D(G-Qpred)=D(Qpinned-Qpred)+D(Qactual-Qpinned)+D(G-Qactual); D=alternative-A0.",
+    "limitation": "Algebraic error decomposition, NOT causal attribution fractions. Pinned includes reward and terminal correction.",
+    "tolerance": 1e-06
+  },
+  "wall_seconds": 28.34714937210083,
+  "max_identity_error": 2.220446049250313e-16,
+  "source_sha256": {
+    "/home/abc/workspace/ttc5-causal-20261011/work/roots.json": "665da8a3e170b40f8106e0f634c738b576e2dc7d887c508fab3a922f13adacb2",
+    "/home/abc/workspace/ttc5-causal-20261011/work/real-history-oracle.jsonl.gz": "c1b348d2336a99f923d2735a60328c7c3c83921642070fb074a34982e4f13029",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell0.jsonl.gz": "042a01502dd8a2687821a77edb29342e22a52d1b30de56e38a8aadda54a7b6d8",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell3.jsonl.gz": "b30485dcbd081c866817df97d71477d2a288dc1ced7d40a6040f66286b1161ff",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell4.jsonl.gz": "1c7a35faaae0ccb45020bdf1d4d77cc7f3d1715350826e7724ed9de4ff11785c",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell5.jsonl.gz": "f078771b4673eda754dd1242bd785e27a31e751b5cdcb0f94dcdabde0bbc74cd",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s443-t24-cell0.jsonl.gz": "66070fd3732c6c74c2c2a63b00f1a5098a155f70f9590651b0a21e7021c4f2cb",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s443-t24-cell3.jsonl.gz": "b9a1672d40c22122612324060867482c505074b50ced9884887bbd39cc68d709",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s443-t24-cell4.jsonl.gz": "4488da816a85bc5e12861e226f7c2be603c0b7d6cb6fad2fb66ac08f12fcbdfe",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s443-t24-cell5.jsonl.gz": "b2b14deed0bae40a7464d7e63fd23a7545a119efbcd649d59d5fd88975a2026e",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell0.jsonl.gz": "8a76298348b0138d40fc3a48e43e6ca02f8880a2509c963a95c48e3faedf4331",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell3.jsonl.gz": "41e03491420677b20add588e8f4ea493b20f99ce617176ca5d9c038badaf601a",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell4.jsonl.gz": "361a76aa03f7a22432205413fbd0ec9b5a0df34f9740a79f529a2787db7617cc",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell5.jsonl.gz": "d3a7dc6d0fc9e2fa7f8aa0bbd050f3f4a217ccfe322fd9a6a092695ad2624415",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell0.jsonl.gz": "08f6f1505c0fc5f50c81abad3369841dd614d004f023e480324e1e83268df9ae",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell3.jsonl.gz": "0425c353faa7eb33c8ae5b62a90b900abb8d7268b9f076a29656d19be466d367",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell4.jsonl.gz": "240ae779460d6a440e6cb71d0b5b712e68529cc94a560571c823b0709a663f10",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell5.jsonl.gz": "390295f5e6d6486b92cd1a37db6707bf19c5be92dcbdc1f310e904c104b8d233"
+  },
+  "groups": [
+    {
+      "model": "gru-s419-t24",
+      "cell": 0,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 0,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 3,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "combined_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "history_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 79,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 27,
+          "independent_roots": 20,
+          "independent_cases": 20
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 52,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "actual_correct": {
+          "action_pairs": 44,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "actual_wrong": {
+          "action_pairs": 61,
+          "independent_roots": 34,
+          "independent_cases": 34
+        },
+        "all_pairs": {
+          "action_pairs": 139,
+          "independent_roots": 53,
+          "independent_cases": 53
+        },
+        "combined_correction": {
+          "action_pairs": 27,
+          "independent_roots": 20,
+          "independent_cases": 20
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "history_correction": {
+          "action_pairs": 22,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "history_reverse_correction": {
+          "action_pairs": 10,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "original_strict_error": {
+          "action_pairs": 79,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "physical_correction": {
+          "action_pairs": 11,
+          "independent_roots": 10,
+          "independent_cases": 10
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 5,
+          "independent_roots": 5,
+          "independent_cases": 5
+        },
+        "pinned_correct": {
+          "action_pairs": 32,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "pinned_wrong": {
+          "action_pairs": 73,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "pred_correct": {
+          "action_pairs": 26,
+          "independent_roots": 20,
+          "independent_cases": 20
+        },
+        "pred_wrong": {
+          "action_pairs": 79,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "residual_strict_error": {
+          "action_pairs": 52,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "root_records": {
+          "action_pairs": 53,
+          "independent_roots": 53,
+          "independent_cases": 53
+        },
+        "strict_G_pairs": {
+          "action_pairs": 105,
+          "independent_roots": 46,
+          "independent_cases": 46
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 48,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 16,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 32,
+          "independent_roots": 22,
+          "independent_cases": 22
+        },
+        "actual_correct": {
+          "action_pairs": 61,
+          "independent_roots": 39,
+          "independent_cases": 39
+        },
+        "actual_wrong": {
+          "action_pairs": 56,
+          "independent_roots": 37,
+          "independent_cases": 37
+        },
+        "all_pairs": {
+          "action_pairs": 135,
+          "independent_roots": 51,
+          "independent_cases": 51
+        },
+        "combined_correction": {
+          "action_pairs": 16,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 24,
+          "independent_roots": 20,
+          "independent_cases": 20
+        },
+        "history_correction": {
+          "action_pairs": 17,
+          "independent_roots": 14,
+          "independent_cases": 14
+        },
+        "history_reverse_correction": {
+          "action_pairs": 20,
+          "independent_roots": 17,
+          "independent_cases": 17
+        },
+        "original_strict_error": {
+          "action_pairs": 48,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "physical_correction": {
+          "action_pairs": 3,
+          "independent_roots": 3,
+          "independent_cases": 3
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 8,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "pinned_correct": {
+          "action_pairs": 64,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "pinned_wrong": {
+          "action_pairs": 53,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "pred_correct": {
+          "action_pairs": 69,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "pred_wrong": {
+          "action_pairs": 48,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "residual_strict_error": {
+          "action_pairs": 32,
+          "independent_roots": 22,
+          "independent_cases": 22
+        },
+        "root_records": {
+          "action_pairs": 51,
+          "independent_roots": 51,
+          "independent_cases": 51
+        },
+        "strict_G_pairs": {
+          "action_pairs": 117,
+          "independent_roots": 49,
+          "independent_cases": 49
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 126,
+          "independent_roots": 70,
+          "independent_cases": 70
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 40,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 86,
+          "independent_roots": 49,
+          "independent_cases": 49
+        },
+        "actual_correct": {
+          "action_pairs": 90,
+          "independent_roots": 55,
+          "independent_cases": 55
+        },
+        "actual_wrong": {
+          "action_pairs": 99,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "all_pairs": {
+          "action_pairs": 233,
+          "independent_roots": 92,
+          "independent_cases": 92
+        },
+        "combined_correction": {
+          "action_pairs": 40,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 13,
+          "independent_roots": 12,
+          "independent_cases": 12
+        },
+        "history_correction": {
+          "action_pairs": 29,
+          "independent_roots": 25,
+          "independent_cases": 25
+        },
+        "history_reverse_correction": {
+          "action_pairs": 14,
+          "independent_roots": 14,
+          "independent_cases": 14
+        },
+        "original_strict_error": {
+          "action_pairs": 125,
+          "independent_roots": 70,
+          "independent_cases": 70
+        },
+        "physical_correction": {
+          "action_pairs": 19,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 7,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "pinned_correct": {
+          "action_pairs": 75,
+          "independent_roots": 51,
+          "independent_cases": 51
+        },
+        "pinned_wrong": {
+          "action_pairs": 114,
+          "independent_roots": 68,
+          "independent_cases": 68
+        },
+        "pred_correct": {
+          "action_pairs": 63,
+          "independent_roots": 44,
+          "independent_cases": 44
+        },
+        "pred_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 125,
+          "independent_roots": 70,
+          "independent_cases": 70
+        },
+        "residual_strict_error": {
+          "action_pairs": 85,
+          "independent_roots": 49,
+          "independent_cases": 49
+        },
+        "root_records": {
+          "action_pairs": 92,
+          "independent_roots": 92,
+          "independent_cases": 92
+        },
+        "strict_G_pairs": {
+          "action_pairs": 189,
+          "independent_roots": 83,
+          "independent_cases": 83
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 28,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 68,
+          "independent_roots": 46,
+          "independent_cases": 46
+        },
+        "actual_correct": {
+          "action_pairs": 114,
+          "independent_roots": 71,
+          "independent_cases": 71
+        },
+        "actual_wrong": {
+          "action_pairs": 116,
+          "independent_roots": 73,
+          "independent_cases": 73
+        },
+        "all_pairs": {
+          "action_pairs": 241,
+          "independent_roots": 92,
+          "independent_cases": 92
+        },
+        "combined_correction": {
+          "action_pairs": 28,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 48,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "history_correction": {
+          "action_pairs": 25,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "history_reverse_correction": {
+          "action_pairs": 39,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "original_strict_error": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "physical_correction": {
+          "action_pairs": 12,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 18,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "pinned_correct": {
+          "action_pairs": 128,
+          "independent_roots": 70,
+          "independent_cases": 70
+        },
+        "pinned_wrong": {
+          "action_pairs": 102,
+          "independent_roots": 63,
+          "independent_cases": 63
+        },
+        "pred_correct": {
+          "action_pairs": 134,
+          "independent_roots": 68,
+          "independent_cases": 68
+        },
+        "pred_wrong": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "residual_strict_error": {
+          "action_pairs": 68,
+          "independent_roots": 46,
+          "independent_cases": 46
+        },
+        "root_records": {
+          "action_pairs": 92,
+          "independent_roots": 92,
+          "independent_cases": 92
+        },
+        "strict_G_pairs": {
+          "action_pairs": 230,
+          "independent_roots": 92,
+          "independent_cases": 92
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 3,
+      "scope": "failure",
+      "metrics": {
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "history_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_correct": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 42,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 15,
+          "independent_roots": 12,
+          "independent_cases": 12
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 27,
+          "independent_roots": 18,
+          "independent_cases": 18
+        },
+        "actual_correct": {
+          "action_pairs": 23,
+          "independent_roots": 18,
+          "independent_cases": 18
+        },
+        "actual_wrong": {
+          "action_pairs": 32,
+          "independent_roots": 22,
+          "independent_cases": 22
+        },
+        "all_pairs": {
+          "action_pairs": 73,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "combined_correction": {
+          "action_pairs": 15,
+          "independent_roots": 12,
+          "independent_cases": 12
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 5,
+          "independent_roots": 5,
+          "independent_cases": 5
+        },
+        "history_correction": {
+          "action_pairs": 11,
+          "independent_roots": 9,
+          "independent_cases": 9
+        },
+        "history_reverse_correction": {
+          "action_pairs": 8,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "original_strict_error": {
+          "action_pairs": 42,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "physical_correction": {
+          "action_pairs": 8,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_correct": {
+          "action_pairs": 20,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "pinned_wrong": {
+          "action_pairs": 35,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "pred_correct": {
+          "action_pairs": 13,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "pred_wrong": {
+          "action_pairs": 42,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "residual_strict_error": {
+          "action_pairs": 27,
+          "independent_roots": 18,
+          "independent_cases": 18
+        },
+        "root_records": {
+          "action_pairs": 31,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "strict_G_pairs": {
+          "action_pairs": 55,
+          "independent_roots": 26,
+          "independent_cases": 26
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 38,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 9,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 29,
+          "independent_roots": 20,
+          "independent_cases": 20
+        },
+        "actual_correct": {
+          "action_pairs": 28,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "actual_wrong": {
+          "action_pairs": 40,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "all_pairs": {
+          "action_pairs": 76,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "combined_correction": {
+          "action_pairs": 9,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 11,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "history_correction": {
+          "action_pairs": 4,
+          "independent_roots": 4,
+          "independent_cases": 4
+        },
+        "history_reverse_correction": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "original_strict_error": {
+          "action_pairs": 38,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_correction": {
+          "action_pairs": 10,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 7,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "pinned_correct": {
+          "action_pairs": 33,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "pinned_wrong": {
+          "action_pairs": 35,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "pred_correct": {
+          "action_pairs": 30,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "pred_wrong": {
+          "action_pairs": 38,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "residual_strict_error": {
+          "action_pairs": 29,
+          "independent_roots": 20,
+          "independent_cases": 20
+        },
+        "root_records": {
+          "action_pairs": 31,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "strict_G_pairs": {
+          "action_pairs": 68,
+          "independent_roots": 31,
+          "independent_cases": 31
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 127,
+          "independent_roots": 74,
+          "independent_cases": 74
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 52,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 75,
+          "independent_roots": 51,
+          "independent_cases": 51
+        },
+        "actual_correct": {
+          "action_pairs": 112,
+          "independent_roots": 74,
+          "independent_cases": 74
+        },
+        "actual_wrong": {
+          "action_pairs": 112,
+          "independent_roots": 72,
+          "independent_cases": 72
+        },
+        "all_pairs": {
+          "action_pairs": 283,
+          "independent_roots": 110,
+          "independent_cases": 110
+        },
+        "combined_correction": {
+          "action_pairs": 52,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 37,
+          "independent_roots": 27,
+          "independent_cases": 27
+        },
+        "history_correction": {
+          "action_pairs": 35,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "history_reverse_correction": {
+          "action_pairs": 28,
+          "independent_roots": 25,
+          "independent_cases": 25
+        },
+        "original_strict_error": {
+          "action_pairs": 127,
+          "independent_roots": 74,
+          "independent_cases": 74
+        },
+        "physical_correction": {
+          "action_pairs": 33,
+          "independent_roots": 29,
+          "independent_cases": 29
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 25,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "pinned_correct": {
+          "action_pairs": 105,
+          "independent_roots": 68,
+          "independent_cases": 68
+        },
+        "pinned_wrong": {
+          "action_pairs": 119,
+          "independent_roots": 72,
+          "independent_cases": 72
+        },
+        "pred_correct": {
+          "action_pairs": 97,
+          "independent_roots": 63,
+          "independent_cases": 63
+        },
+        "pred_wrong": {
+          "action_pairs": 127,
+          "independent_roots": 74,
+          "independent_cases": 74
+        },
+        "residual_strict_error": {
+          "action_pairs": 75,
+          "independent_roots": 51,
+          "independent_cases": 51
+        },
+        "root_records": {
+          "action_pairs": 110,
+          "independent_roots": 110,
+          "independent_cases": 110
+        },
+        "strict_G_pairs": {
+          "action_pairs": 224,
+          "independent_roots": 105,
+          "independent_cases": 105
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 126,
+          "independent_roots": 72,
+          "independent_cases": 72
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 40,
+          "independent_roots": 33,
+          "independent_cases": 33
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 86,
+          "independent_roots": 56,
+          "independent_cases": 56
+        },
+        "actual_correct": {
+          "action_pairs": 137,
+          "independent_roots": 86,
+          "independent_cases": 86
+        },
+        "actual_wrong": {
+          "action_pairs": 144,
+          "independent_roots": 90,
+          "independent_cases": 90
+        },
+        "all_pairs": {
+          "action_pairs": 294,
+          "independent_roots": 110,
+          "independent_cases": 110
+        },
+        "combined_correction": {
+          "action_pairs": 40,
+          "independent_roots": 33,
+          "independent_cases": 33
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 58,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "history_correction": {
+          "action_pairs": 28,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "history_reverse_correction": {
+          "action_pairs": 42,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "original_strict_error": {
+          "action_pairs": 126,
+          "independent_roots": 72,
+          "independent_cases": 72
+        },
+        "physical_correction": {
+          "action_pairs": 28,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 32,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "pinned_correct": {
+          "action_pairs": 151,
+          "independent_roots": 88,
+          "independent_cases": 88
+        },
+        "pinned_wrong": {
+          "action_pairs": 130,
+          "independent_roots": 82,
+          "independent_cases": 82
+        },
+        "pred_correct": {
+          "action_pairs": 154,
+          "independent_roots": 84,
+          "independent_cases": 84
+        },
+        "pred_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 126,
+          "independent_roots": 72,
+          "independent_cases": 72
+        },
+        "residual_strict_error": {
+          "action_pairs": 86,
+          "independent_roots": 56,
+          "independent_cases": 56
+        },
+        "root_records": {
+          "action_pairs": 110,
+          "independent_roots": 110,
+          "independent_cases": 110
+        },
+        "strict_G_pairs": {
+          "action_pairs": 281,
+          "independent_roots": 109,
+          "independent_cases": 109
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 3,
+      "scope": "failure",
+      "metrics": {
+        "actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "history_reverse_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 93,
+          "independent_roots": 50,
+          "independent_cases": 50
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 34,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 59,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "actual_correct": {
+          "action_pairs": 42,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "actual_wrong": {
+          "action_pairs": 68,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "all_pairs": {
+          "action_pairs": 125,
+          "independent_roots": 56,
+          "independent_cases": 56
+        },
+        "combined_correction": {
+          "action_pairs": 34,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 9,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "history_correction": {
+          "action_pairs": 20,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "history_reverse_correction": {
+          "action_pairs": 10,
+          "independent_roots": 10,
+          "independent_cases": 10
+        },
+        "original_strict_error": {
+          "action_pairs": 93,
+          "independent_roots": 50,
+          "independent_cases": 50
+        },
+        "physical_correction": {
+          "action_pairs": 17,
+          "independent_roots": 15,
+          "independent_cases": 15
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 2,
+          "independent_roots": 2,
+          "independent_cases": 2
+        },
+        "pinned_correct": {
+          "action_pairs": 32,
+          "independent_roots": 25,
+          "independent_cases": 25
+        },
+        "pinned_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 77,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "pred_correct": {
+          "action_pairs": 17,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "pred_wrong": {
+          "action_pairs": 93,
+          "independent_roots": 50,
+          "independent_cases": 50
+        },
+        "residual_strict_error": {
+          "action_pairs": 59,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "root_records": {
+          "action_pairs": 56,
+          "independent_roots": 56,
+          "independent_cases": 56
+        },
+        "strict_G_pairs": {
+          "action_pairs": 110,
+          "independent_roots": 53,
+          "independent_cases": 53
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 55,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 20,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 35,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "actual_correct": {
+          "action_pairs": 64,
+          "independent_roots": 39,
+          "independent_cases": 39
+        },
+        "actual_wrong": {
+          "action_pairs": 65,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "all_pairs": {
+          "action_pairs": 137,
+          "independent_roots": 56,
+          "independent_cases": 56
+        },
+        "combined_correction": {
+          "action_pairs": 20,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 30,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "history_correction": {
+          "action_pairs": 17,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "history_reverse_correction": {
+          "action_pairs": 26,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "original_strict_error": {
+          "action_pairs": 55,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "physical_correction": {
+          "action_pairs": 11,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 12,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "pinned_correct": {
+          "action_pairs": 73,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "pinned_wrong": {
+          "action_pairs": 56,
+          "independent_roots": 37,
+          "independent_cases": 37
+        },
+        "pred_correct": {
+          "action_pairs": 74,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "pred_wrong": {
+          "action_pairs": 55,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "residual_strict_error": {
+          "action_pairs": 35,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "root_records": {
+          "action_pairs": 56,
+          "independent_roots": 56,
+          "independent_cases": 56
+        },
+        "strict_G_pairs": {
+          "action_pairs": 129,
+          "independent_roots": 55,
+          "independent_cases": 55
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 192,
+          "independent_roots": 96,
+          "independent_cases": 96
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 85,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 107,
+          "independent_roots": 75,
+          "independent_cases": 75
+        },
+        "actual_correct": {
+          "action_pairs": 128,
+          "independent_roots": 80,
+          "independent_cases": 80
+        },
+        "actual_wrong": {
+          "action_pairs": 135,
+          "independent_roots": 87,
+          "independent_cases": 87
+        },
+        "all_pairs": {
+          "action_pairs": 289,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "combined_correction": {
+          "action_pairs": 85,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 28,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "history_correction": {
+          "action_pairs": 62,
+          "independent_roots": 48,
+          "independent_cases": 48
+        },
+        "history_reverse_correction": {
+          "action_pairs": 35,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "original_strict_error": {
+          "action_pairs": 192,
+          "independent_roots": 96,
+          "independent_cases": 96
+        },
+        "physical_correction": {
+          "action_pairs": 37,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 7,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "pinned_correct": {
+          "action_pairs": 101,
+          "independent_roots": 71,
+          "independent_cases": 71
+        },
+        "pinned_wrong": {
+          "action_pairs": 162,
+          "independent_roots": 91,
+          "independent_cases": 91
+        },
+        "pred_correct": {
+          "action_pairs": 71,
+          "independent_roots": 53,
+          "independent_cases": 53
+        },
+        "pred_wrong": {
+          "action_pairs": 192,
+          "independent_roots": 96,
+          "independent_cases": 96
+        },
+        "residual_strict_error": {
+          "action_pairs": 107,
+          "independent_roots": 75,
+          "independent_cases": 75
+        },
+        "root_records": {
+          "action_pairs": 111,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "strict_G_pairs": {
+          "action_pairs": 263,
+          "independent_roots": 109,
+          "independent_cases": 109
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 118,
+          "independent_roots": 67,
+          "independent_cases": 67
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 41,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 77,
+          "independent_roots": 48,
+          "independent_cases": 48
+        },
+        "actual_correct": {
+          "action_pairs": 151,
+          "independent_roots": 91,
+          "independent_cases": 91
+        },
+        "actual_wrong": {
+          "action_pairs": 137,
+          "independent_roots": 84,
+          "independent_cases": 84
+        },
+        "all_pairs": {
+          "action_pairs": 294,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "combined_correction": {
+          "action_pairs": 41,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 60,
+          "independent_roots": 41,
+          "independent_cases": 41
+        },
+        "history_correction": {
+          "action_pairs": 38,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "history_reverse_correction": {
+          "action_pairs": 45,
+          "independent_roots": 33,
+          "independent_cases": 33
+        },
+        "original_strict_error": {
+          "action_pairs": 118,
+          "independent_roots": 67,
+          "independent_cases": 67
+        },
+        "physical_correction": {
+          "action_pairs": 22,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 34,
+          "independent_roots": 27,
+          "independent_cases": 27
+        },
+        "pinned_correct": {
+          "action_pairs": 158,
+          "independent_roots": 91,
+          "independent_cases": 91
+        },
+        "pinned_wrong": {
+          "action_pairs": 130,
+          "independent_roots": 80,
+          "independent_cases": 80
+        },
+        "pred_correct": {
+          "action_pairs": 170,
+          "independent_roots": 90,
+          "independent_cases": 90
+        },
+        "pred_wrong": {
+          "action_pairs": 118,
+          "independent_roots": 67,
+          "independent_cases": 67
+        },
+        "residual_strict_error": {
+          "action_pairs": 77,
+          "independent_roots": 48,
+          "independent_cases": 48
+        },
+        "root_records": {
+          "action_pairs": 111,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "strict_G_pairs": {
+          "action_pairs": 288,
+          "independent_roots": 111,
+          "independent_cases": 111
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 0,
+      "scope": "failure",
+      "metrics": {
+        "all_pairs": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 0,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_correct": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "combined_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_correct": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 3,
+      "scope": "failure",
+      "metrics": {
+        "all_pairs": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "actual_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "all_pairs": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "combined_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "history_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "original_strict_error": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pinned_wrong": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "residual_strict_error": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "root_records": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "strict_G_pairs": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 72,
+          "independent_roots": 35,
+          "independent_cases": 35
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 17,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 55,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "actual_correct": {
+          "action_pairs": 30,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "actual_wrong": {
+          "action_pairs": 61,
+          "independent_roots": 35,
+          "independent_cases": 35
+        },
+        "all_pairs": {
+          "action_pairs": 119,
+          "independent_roots": 44,
+          "independent_cases": 44
+        },
+        "combined_correction": {
+          "action_pairs": 17,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 6,
+          "independent_roots": 5,
+          "independent_cases": 5
+        },
+        "history_correction": {
+          "action_pairs": 13,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "history_reverse_correction": {
+          "action_pairs": 7,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "original_strict_error": {
+          "action_pairs": 72,
+          "independent_roots": 35,
+          "independent_cases": 35
+        },
+        "physical_correction": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 4,
+          "independent_roots": 3,
+          "independent_cases": 3
+        },
+        "pinned_correct": {
+          "action_pairs": 24,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "pinned_wrong": {
+          "action_pairs": 67,
+          "independent_roots": 35,
+          "independent_cases": 35
+        },
+        "pred_correct": {
+          "action_pairs": 19,
+          "independent_roots": 14,
+          "independent_cases": 14
+        },
+        "pred_wrong": {
+          "action_pairs": 72,
+          "independent_roots": 35,
+          "independent_cases": 35
+        },
+        "residual_strict_error": {
+          "action_pairs": 55,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "root_records": {
+          "action_pairs": 44,
+          "independent_roots": 44,
+          "independent_cases": 44
+        },
+        "strict_G_pairs": {
+          "action_pairs": 91,
+          "independent_roots": 40,
+          "independent_cases": 40
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 56,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 18,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 38,
+          "independent_roots": 27,
+          "independent_cases": 27
+        },
+        "actual_correct": {
+          "action_pairs": 59,
+          "independent_roots": 34,
+          "independent_cases": 34
+        },
+        "actual_wrong": {
+          "action_pairs": 53,
+          "independent_roots": 34,
+          "independent_cases": 34
+        },
+        "all_pairs": {
+          "action_pairs": 118,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "combined_correction": {
+          "action_pairs": 18,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 15,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "history_correction": {
+          "action_pairs": 13,
+          "independent_roots": 12,
+          "independent_cases": 12
+        },
+        "history_reverse_correction": {
+          "action_pairs": 17,
+          "independent_roots": 13,
+          "independent_cases": 13
+        },
+        "original_strict_error": {
+          "action_pairs": 56,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "physical_correction": {
+          "action_pairs": 11,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 4,
+          "independent_roots": 4,
+          "independent_cases": 4
+        },
+        "pinned_correct": {
+          "action_pairs": 63,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "pinned_wrong": {
+          "action_pairs": 49,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "pred_correct": {
+          "action_pairs": 56,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "pred_wrong": {
+          "action_pairs": 56,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "residual_strict_error": {
+          "action_pairs": 38,
+          "independent_roots": 27,
+          "independent_cases": 27
+        },
+        "root_records": {
+          "action_pairs": 43,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "strict_G_pairs": {
+          "action_pairs": 112,
+          "independent_roots": 41,
+          "independent_cases": 41
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 216,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 60,
+          "independent_roots": 45,
+          "independent_cases": 45
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 156,
+          "independent_roots": 87,
+          "independent_cases": 87
+        },
+        "actual_correct": {
+          "action_pairs": 124,
+          "independent_roots": 85,
+          "independent_cases": 85
+        },
+        "actual_wrong": {
+          "action_pairs": 177,
+          "independent_roots": 97,
+          "independent_cases": 97
+        },
+        "all_pairs": {
+          "action_pairs": 360,
+          "independent_roots": 138,
+          "independent_cases": 138
+        },
+        "combined_correction": {
+          "action_pairs": 60,
+          "independent_roots": 45,
+          "independent_cases": 45
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 21,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "history_correction": {
+          "action_pairs": 41,
+          "independent_roots": 29,
+          "independent_cases": 29
+        },
+        "history_reverse_correction": {
+          "action_pairs": 32,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "original_strict_error": {
+          "action_pairs": 216,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "physical_correction": {
+          "action_pairs": 38,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 8,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "pinned_correct": {
+          "action_pairs": 115,
+          "independent_roots": 83,
+          "independent_cases": 83
+        },
+        "pinned_wrong": {
+          "action_pairs": 186,
+          "independent_roots": 104,
+          "independent_cases": 104
+        },
+        "pred_correct": {
+          "action_pairs": 84,
+          "independent_roots": 63,
+          "independent_cases": 63
+        },
+        "pred_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "pred_wrong": {
+          "action_pairs": 216,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "residual_strict_error": {
+          "action_pairs": 156,
+          "independent_roots": 87,
+          "independent_cases": 87
+        },
+        "root_records": {
+          "action_pairs": 138,
+          "independent_roots": 138,
+          "independent_cases": 138
+        },
+        "strict_G_pairs": {
+          "action_pairs": 301,
+          "independent_roots": 131,
+          "independent_cases": 131
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "G_improved": {
+          "action_pairs": 164,
+          "independent_roots": 99,
+          "independent_cases": 99
+        },
+        "G_improved_actual_correct": {
+          "action_pairs": 45,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "G_improved_actual_wrong": {
+          "action_pairs": 119,
+          "independent_roots": 78,
+          "independent_cases": 78
+        },
+        "actual_correct": {
+          "action_pairs": 170,
+          "independent_roots": 110,
+          "independent_cases": 110
+        },
+        "actual_wrong": {
+          "action_pairs": 189,
+          "independent_roots": 117,
+          "independent_cases": 117
+        },
+        "all_pairs": {
+          "action_pairs": 372,
+          "independent_roots": 138,
+          "independent_cases": 138
+        },
+        "combined_correction": {
+          "action_pairs": 45,
+          "independent_roots": 38,
+          "independent_cases": 38
+        },
+        "combined_reverse_correction": {
+          "action_pairs": 70,
+          "independent_roots": 55,
+          "independent_cases": 55
+        },
+        "history_correction": {
+          "action_pairs": 43,
+          "independent_roots": 36,
+          "independent_cases": 36
+        },
+        "history_reverse_correction": {
+          "action_pairs": 59,
+          "independent_roots": 48,
+          "independent_cases": 48
+        },
+        "original_strict_error": {
+          "action_pairs": 164,
+          "independent_roots": 99,
+          "independent_cases": 99
+        },
+        "physical_correction": {
+          "action_pairs": 26,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_reverse_correction": {
+          "action_pairs": 35,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "pinned_correct": {
+          "action_pairs": 186,
+          "independent_roots": 109,
+          "independent_cases": 109
+        },
+        "pinned_wrong": {
+          "action_pairs": 173,
+          "independent_roots": 107,
+          "independent_cases": 107
+        },
+        "pred_correct": {
+          "action_pairs": 195,
+          "independent_roots": 105,
+          "independent_cases": 105
+        },
+        "pred_wrong": {
+          "action_pairs": 164,
+          "independent_roots": 99,
+          "independent_cases": 99
+        },
+        "residual_strict_error": {
+          "action_pairs": 119,
+          "independent_roots": 78,
+          "independent_cases": 78
+        },
+        "root_records": {
+          "action_pairs": 138,
+          "independent_roots": 138,
+          "independent_cases": 138
+        },
+        "strict_G_pairs": {
+          "action_pairs": 359,
+          "independent_roots": 137,
+          "independent_cases": 137
+        }
+      }
+    }
+  ],
+  "scientific_verdict": "REFUTED",
+  "proposition": "Combined original pinned physical/reward + actualTTC history correction removes all original strict ranking errors in these frozen pairs.",
+  "research_decision": "GO",
+  "method_level_progress": false,
+  "next_action": "Matched frozen-latent readout diagnostics only; no IL/RL or closed-loop authorized."
+}

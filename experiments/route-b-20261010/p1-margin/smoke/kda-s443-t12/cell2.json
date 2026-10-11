@@ -1,0 +1,45 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "kda-s443-t12",
+    "backbone": "kda",
+    "seed": 443,
+    "length": 12,
+    "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t12/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t12.ini",
+    "training": "fresh IL50+RL10000",
+    "origin": "history-length study",
+    "weight_sha256": "113c33c132de0793f36e1f02aa1a9d8704ab562ae30d645ac17d35d0108b010f",
+    "config_sha256": "e40490e1c82e37a5eb9ebf88667933955552204ec0d38971c0c44b66922446f0"
+  },
+  "episodes": [
+    {
+      "cell": 2,
+      "case": 90000,
+      "outcome": "success",
+      "steps": 57
+    },
+    {
+      "cell": 2,
+      "case": 90001,
+      "outcome": "success",
+      "steps": 54
+    },
+    {
+      "cell": 2,
+      "case": 90002,
+      "outcome": "success",
+      "steps": 62
+    }
+  ],
+  "steps": 173,
+  "wall_seconds": 6.211771011352539,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "actions": 80,
+  "smoke": true,
+  "fast_legacy_checked": true,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/smoke/kda-s443-t12/cell2.steps.jsonl.gz"
+}

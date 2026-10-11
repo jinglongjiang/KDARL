@@ -1,0 +1,16 @@
+{
+  "question": "Does original five-person V retain deployment-continuation target signal recoverable by a matched linear readout?",
+  "GO": "Both model seeds show >=10% held-out case-MSE reduction without fitted-vs-label variance collapse; supports only target calibration follow-up.",
+  "KILL": "No consistent held-out calibration gain: stop continuation-only candidate for this representation/budget.",
+  "budget": "Cases 90000..90029, first <=64 steps, stride8, <=240 frozen windows/model; linear257 parameters, 300 full-batch CPU steps.",
+  "controls": "Original checkpoint and real TTC5 current-state histories, no synthetic CV next appended; baseline rewards and complete deployment continuation.",
+  "split": "case%5 train0/1/2 dev3 test4 across seeds; no dev tuning.",
+  "missing": "Matched training-behavior continuation returns from these identical roots unavailable; cannot establish train/deploy causal mismatch.",
+  "training_continuation_status": "INCOMPLETE",
+  "models": [
+    "gru-s419-t24",
+    "gru-s443-t24"
+  ],
+  "cell": 0,
+  "steps": 300
+}

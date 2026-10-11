@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scope": "Main-agent final CPU engineering and archived-data crosschecks; not additional model training or navigation performance experiments",
+  "tests": [
+    {"entry": "a/test-a.py", "count": 6, "exit_code": 0},
+    {"entry": "a/test-summary-a.py", "count": 5, "exit_code": 0},
+    {"entry": "a/test-count-matched-a.py", "count": 3, "exit_code": 0},
+    {"entry": "b/test-run-b.py (absolute entry path)", "count": 5, "exit_code": 0},
+    {"entry": "b/test-b10.py", "count": 4, "exit_code": 0},
+    {"entry": "b/test-verify-b-raw.py", "count": 3, "exit_code": 0},
+    {"entry": "b/test-verify-b-continuations.py", "count": 6, "exit_code": 0},
+    {"entry": "b/test-final-verifiers.py", "count": 7, "exit_code": 0}
+  ],
+  "total_tests": 39,
+  "a2_fine_split_independent_check": {
+    "status": "PASS",
+    "raw_pairs": 1661,
+    "groups": 23,
+    "checks": ["original strict-error denominator", "four-stage gaps", "ordered telescoping terms", "archived F identity", "all flag counts", "unique root denominators", "summary equality"],
+    "model_invoked": false
+  },
+  "zero_test_discovery_counted": false,
+  "failed_relative_test_invocation_counted": false,
+  "corrections": "execution-corrections.json",
+  "optional_dependency_log": "The local CPU-only source tests log missing mamba_ssm on import; they use stand-in zero values and do not invoke Mamba/KDA kernels. All actual frozen neural runs were executed in the verified 4090 environment."
+}

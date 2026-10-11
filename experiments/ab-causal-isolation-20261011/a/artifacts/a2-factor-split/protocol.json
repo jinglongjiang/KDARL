@@ -1,0 +1,28 @@
+{
+  "question": "Within original strict-loss pairs, how much does pinned F change ranking through pinned physical V, immediate reward, and terminal mask separately?",
+  "denominator": "Exactly original a2-pairs original_strict_error: sign(delta G) nonzero and sign(delta saved Qpred) opposite, tolerance1e-6. Fixed across all stages; not all G-improved pairs.",
+  "stages": [
+    "saved Qpred",
+    "physical-only: original rpred + float32(.99*true pinned V)",
+    "then realReward: real reward + float32(.99*true pinned V)",
+    "then terminal: real reward alone if done"
+  ],
+  "floating": "Old scoring multiplies gamma*V in torch.float32, then adds reward tensor (float64 if any predicted candidate nonterminal; float32 for all-terminal batch). Oracle converts float32 product to Python float before adding real reward. Preserve both actual contracts and report reconstruction/rounding residuals; no float64 gamma*V substitution.",
+  "transition": "Correction=wrong->correct, reverse=correct->wrong relative to fixed realized G. Physical reverse is structurally0 on an initially-wrong denominator; ties tracked separately. Later reverse can undo earlier correction.",
+  "interpretation": "Physical-only changes the oracle-pinned last-frame V, not pure CV position error: all true next human position/velocity fields with pinned IDs affect encoder output. These are ordered algebraic diagnostic replacements, not additive navigation-cause fractions.",
+  "GO": "Reconstruction matches archived P/F within reported floating precision: publish descriptive subdivision only.",
+  "KILL": "Failed reconstruction: invalidate this subdivision; do not infer mechanism or launch new experiments.",
+  "budget": "One CPU streaming pass over existing branch files; no new model invocation, GPU, rollout, optimizer or selection.",
+  "old_source_sha256": "2fd464618507796fdbc1b072d96563c97180e301f842cac1a6e6f75212ff6616",
+  "oracle_source_sha256": "cb2294f1a59e4598c75f004839a245c4090f951a509b5247a1dbad2b311b41fa",
+  "script_sha256": "645a1f9c64167cc58ac7c03b83279b2189b758963514b0d0d0e29c1ffee97fff",
+  "original_pairs_sha256": "b8eec214739de6dbcdaf58e83948556e4a4a342f0bfb70a8861b8240695391d0",
+  "original_summary_sha256": "6109f9069b546165a69a4c8654d38f79d0006c2e60e1f891bd420501de054bf2",
+  "config_sha256": {
+    "/home/abc/workspace/ttc5-causal-20261011/inputs/kda-s443-t24/config.ini": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a",
+    "/home/abc/workspace/ttc5-causal-20261011/inputs/gru-s419-t24/config.ini": "35ccdf1dc1f871b13bacc1b1eb2a8d82c1fcefaf787177bd31905c738f92d61e",
+    "/home/abc/workspace/ttc5-causal-20261011/inputs/gru-s443-t24/config.ini": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f",
+    "/home/abc/workspace/ttc5-causal-20261011/inputs/kda-s419-t24/config.ini": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7"
+  },
+  "tolerance": 1e-06
+}

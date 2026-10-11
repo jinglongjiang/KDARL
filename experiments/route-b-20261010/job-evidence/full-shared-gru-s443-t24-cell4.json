@@ -1,0 +1,14 @@
+{
+  "name": "full-shared-gru-s443-t24-cell4",
+  "pid": 6996,
+  "exit_code": 0,
+  "wall_seconds": 166.0261788368225,
+  "args": [
+    "--id",
+    "gru-s443-t24",
+    "--cell",
+    "4",
+    "--shared"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n"
+}

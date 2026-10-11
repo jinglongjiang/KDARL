@@ -1,0 +1,30 @@
+{
+  "root_id": 654,
+  "case": 90419,
+  "cell": 5,
+  "model": "gru-s419-t24",
+  "split": "test",
+  "step": 21,
+  "type": "timeout",
+  "a0": 43,
+  "N": 20,
+  "N5_bitwise": false,
+  "original_windows_bitwise": true,
+  "spatial_N5_compatibility_bitwise": true,
+  "saved_values_bitwise": false,
+  "saved_values_max_error": 1.1920928955078125e-07,
+  "branch_source": "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell5.jsonl.gz",
+  "baseline_source": "/home/abc/workspace/ttc5-causal-20261011/work/baseline-gru-s419-t24-cell5.jsonl.gz",
+  "labels": {
+    "39": [
+      "A1",
+      "A2"
+    ],
+    "43": [
+      "A0"
+    ],
+    "47": [
+      "A3"
+    ]
+  }
+}

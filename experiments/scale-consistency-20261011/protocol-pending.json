@@ -1,0 +1,128 @@
+{
+  "task": "CROSS_POPULATION_SCALE_CASE_CONSISTENCY",
+  "status": "PENDING_PARITY_RESOLUTION",
+  "training_episodes": 0,
+  "existing_cells": [
+    5,
+    10,
+    20
+  ],
+  "new_human_nums": [
+    12,
+    15
+  ],
+  "geometries": [
+    "circle_crossing",
+    "square_crossing"
+  ],
+  "case_base": 91000,
+  "n_cases_per_cell": 500,
+  "new_evaluation_episodes": 16000,
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "risk_lambda": 0.8,
+  "safety_margin": 0.2,
+  "circle_radius": 4,
+  "square_width": 10,
+  "actual_existing_time_limit": 50,
+  "supplied_text_time_limit": 25,
+  "actions": 80,
+  "weights": [
+    {
+      "seed": 419,
+      "backbone": "kda",
+      "T": 12,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t12/rl_model_ep10000.pth",
+      "sha256": "85f1585e0b86b3aa3386dce0b2f81cd80489ce955f1b7c63cc9eea693356289d",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t12.ini"
+    },
+    {
+      "seed": 419,
+      "backbone": "kda",
+      "T": 24,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t24/rl_model_ep10000.pth",
+      "sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t24.ini"
+    },
+    {
+      "seed": 419,
+      "backbone": "gru",
+      "T": 12,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/gru-t12/rl_model_ep10000.pth",
+      "sha256": "09e223fbef7fd6ae24b27a654578439aa5c1e1cd582e86f7de789566c32a7e7d",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/gru-t12.ini"
+    },
+    {
+      "seed": 419,
+      "backbone": "gru",
+      "T": 24,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/gru-t24/rl_model_ep10000.pth",
+      "sha256": "acc0ea789835105d31eb83275c475e1da0a49bc0e5db86386c32052584dfa93d",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/gru-t24.ini"
+    },
+    {
+      "seed": 443,
+      "backbone": "kda",
+      "T": 12,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t12/rl_model_ep10000.pth",
+      "sha256": "113c33c132de0793f36e1f02aa1a9d8704ab562ae30d645ac17d35d0108b010f",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t12.ini"
+    },
+    {
+      "seed": 443,
+      "backbone": "kda",
+      "T": 24,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t24/rl_model_ep10000.pth",
+      "sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t24.ini"
+    },
+    {
+      "seed": 443,
+      "backbone": "gru",
+      "T": 12,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t12/rl_model_ep10000.pth",
+      "sha256": "8923e9998c8281f5c038c014b9137a936180a0b6556c6b77610c729d99ff4730",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t12.ini"
+    },
+    {
+      "seed": 443,
+      "backbone": "gru",
+      "T": 24,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t24/rl_model_ep10000.pth",
+      "sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t24.ini"
+    }
+  ],
+  "outcome": "binary success versus non-success; not three-way terminal identity",
+  "families": {
+    "A": "same backbone and T, 419 versus 443",
+    "B": "same seed and T, KDA versus GRU",
+    "C": "same seed and backbone, T24 versus T12 (inferred from B/C and T references)"
+  },
+  "bootstrap": {
+    "unit": "paired case ID within each comparison/cell",
+    "draws": 10000,
+    "random_seed": 20261011,
+    "method": "multinomial of four paired outcome categories"
+  },
+  "untouched_confirmation_cases": [
+    92000,
+    92499
+  ],
+  "parity_required": "bitwise argmax trajectory and outcome against existing evaluation",
+  "blocker": "Old evaluation files have no argmax trajectories; selection hash is not an action hash",
+  "restrictions": [
+    "No original project edits",
+    "No training or added seeds",
+    "No grid/reward/filter/TTC/optimizer changes",
+    "No new model"
+  ],
+  "limitations": [
+    "People count and density confounded at fixed field dimensions",
+    "Training seeds evaluated on same worlds",
+    "Two training seeds cannot estimate seed population variance",
+    "Frozen checkpoint intervention has no new training, but compares independently trained weights",
+    "Ratio below one indicates positive success association, not independence",
+    "A flat ratio alone does not establish ceiling effects as the cause"
+  ]
+}

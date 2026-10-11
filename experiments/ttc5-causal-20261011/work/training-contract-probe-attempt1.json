@@ -1,0 +1,10 @@
+{
+  "status": "FAILED_AND_WITHDRAWN",
+  "exit_code": 1,
+  "step": "isolated training-contract unit probe",
+  "failure": "reference.py:79 assert net._phase in ('test', 'val', 'eval'): Selection is evaluation-only",
+  "cause": "Unit test attempted train-phase epsilon=0 using the evaluation-only TTC wrapper instead of the original training methods.",
+  "repair": "Bind original class build/score methods on the isolated five-human unit-test model only; leave all causal evaluation processes and source untouched.",
+  "causal_branch_data_affected": false,
+  "result_file_created": false
+}

@@ -1,0 +1,16 @@
+{
+  "task": "MAMBA_TTC5_FIXED_EXTENSION",
+  "training": "NONE",
+  "seed": 419,
+  "checkpoint_episode": 10000,
+  "rules": ["ttc5"],
+  "case_base": 91000,
+  "n_cases_per_cell": 500,
+  "cells": [[5, "circle_crossing"], [5, "square_crossing"], [10, "circle_crossing"], [10, "square_crossing"], [20, "circle_crossing"], [20, "square_crossing"]],
+  "total_episode_executions": 3000,
+  "selection": "Inherited TTC formula; real-current-state actor indices fixed for current frame and all 80 successors",
+  "changes_to_existing_evaluator": ["Allow mamba CLI backbone", "Add expected Mamba checkpoint hash"],
+  "frozen": ["reward", "filter", "all-unsafe fallback", "smoothing", "history", "grid", "backbone", "checkpoint"],
+  "statistics": "Report overall and six-cell SR/CR/TO, return, clearance and successful navigation time. No paired first5 comparison in this run.",
+  "scope": "Predetermined TTC extension. No new rule selection, no tuning on these results. Previous KDA/GRU verdict and statistical family unchanged."
+}

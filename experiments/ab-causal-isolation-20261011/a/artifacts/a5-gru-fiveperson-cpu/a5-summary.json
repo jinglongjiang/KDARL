@@ -1,0 +1,220 @@
+{
+  "status": "INCOMPLETE",
+  "reason": "Deployment readout completed; matched training-continuation labels absent.",
+  "protocol": {
+    "question": "Does original five-person V retain deployment-continuation target signal recoverable by a matched linear readout?",
+    "GO": "Both model seeds show >=10% held-out case-MSE reduction without fitted-vs-label variance collapse; supports only target calibration follow-up.",
+    "KILL": "No consistent held-out calibration gain: stop continuation-only candidate for this representation/budget.",
+    "budget": "Cases 90000..90029, first <=64 steps, stride8, <=240 frozen windows/model; linear257 parameters, 300 full-batch CPU steps.",
+    "controls": "Original checkpoint and real TTC5 current-state histories, no synthetic CV next appended; baseline rewards and complete deployment continuation.",
+    "split": "case%5 train0/1/2 dev3 test4 across seeds; no dev tuning.",
+    "missing": "Matched training-behavior continuation returns from these identical roots unavailable; cannot establish train/deploy causal mismatch.",
+    "training_continuation_status": "INCOMPLETE",
+    "models": [
+      "gru-s419-t24",
+      "gru-s443-t24"
+    ],
+    "cell": 0,
+    "steps": 300
+  },
+  "results": [
+    {
+      "model": "gru-s419-t24",
+      "weight_sha256": "acc0ea789835105d31eb83275c475e1da0a49bc0e5db86386c32052584dfa93d",
+      "config_sha256": "35ccdf1dc1f871b13bacc1b1eb2a8d82c1fcefaf787177bd31905c738f92d61e",
+      "baseline_sha256": "b7174e64bf23a648da2cf398865a302e412d37ea7b21f65f74afa0677dcde91c",
+      "metrics": [
+        {
+          "split": "train",
+          "arm": "V",
+          "cases": 18,
+          "windows": 100,
+          "case_mean_mse": 0.07083879944357362,
+          "prediction_std": 0.12645028483385334,
+          "target_std": 0.24227550812448614,
+          "correlation": 0.5601792025598608
+        },
+        {
+          "split": "train",
+          "arm": "MC_readout",
+          "cases": 18,
+          "windows": 100,
+          "case_mean_mse": 0.0023663357372008596,
+          "prediction_std": 0.23157540121316855,
+          "target_std": 0.24227550812448614,
+          "correlation": 0.9833244934171551
+        },
+        {
+          "split": "train",
+          "arm": "train_mean",
+          "cases": 18,
+          "windows": 100,
+          "case_mean_mse": 0.09747084803457419,
+          "prediction_std": 0.0,
+          "target_std": 0.24227550812448614,
+          "correlation": null
+        },
+        {
+          "split": "dev",
+          "arm": "V",
+          "cases": 6,
+          "windows": 36,
+          "case_mean_mse": 0.003238257552047614,
+          "prediction_std": 0.12726749737574725,
+          "target_std": 0.11412414728305852,
+          "correlation": 0.9803692092512116
+        },
+        {
+          "split": "dev",
+          "arm": "MC_readout",
+          "cases": 6,
+          "windows": 36,
+          "case_mean_mse": 0.04785251953538769,
+          "prediction_std": 0.287893489166648,
+          "target_std": 0.11412414728305852,
+          "correlation": 0.7334046174337188
+        },
+        {
+          "split": "dev",
+          "arm": "train_mean",
+          "cases": 6,
+          "windows": 36,
+          "case_mean_mse": 0.01409248765659162,
+          "prediction_std": 0.0,
+          "target_std": 0.11412414728305852,
+          "correlation": null
+        },
+        {
+          "split": "test",
+          "arm": "V",
+          "cases": 6,
+          "windows": 36,
+          "case_mean_mse": 0.0037040778225014455,
+          "prediction_std": 0.13053292069868438,
+          "target_std": 0.11278588004021753,
+          "correlation": 0.9875905245902145
+        },
+        {
+          "split": "test",
+          "arm": "MC_readout",
+          "cases": 6,
+          "windows": 36,
+          "case_mean_mse": 0.024305567937718625,
+          "prediction_std": 0.22564704869599694,
+          "target_std": 0.11278588004021753,
+          "correlation": 0.7742662430567153
+        },
+        {
+          "split": "test",
+          "arm": "train_mean",
+          "cases": 6,
+          "windows": 36,
+          "case_mean_mse": 0.014373991171512572,
+          "prediction_std": 0.0,
+          "target_std": 0.11278588004021753,
+          "correlation": null
+        }
+      ]
+    },
+    {
+      "model": "gru-s443-t24",
+      "weight_sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c",
+      "config_sha256": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f",
+      "baseline_sha256": "c59d4684852ea62f82b68daee9f6c787070d21afa0ed2b128a9c015c6f671f20",
+      "metrics": [
+        {
+          "split": "train",
+          "arm": "V",
+          "cases": 18,
+          "windows": 109,
+          "case_mean_mse": 0.004634415352943368,
+          "prediction_std": 0.13378662900201724,
+          "target_std": 0.11357943097975653,
+          "correlation": 0.9818473389973525
+        },
+        {
+          "split": "train",
+          "arm": "MC_readout",
+          "cases": 18,
+          "windows": 109,
+          "case_mean_mse": 5.0486919951677835e-05,
+          "prediction_std": 0.11337762878024413,
+          "target_std": 0.11357943097975653,
+          "correlation": 0.998019700763661
+        },
+        {
+          "split": "train",
+          "arm": "train_mean",
+          "cases": 18,
+          "windows": 109,
+          "case_mean_mse": 0.012692370891805587,
+          "prediction_std": 0.0,
+          "target_std": 0.11357943097975653,
+          "correlation": null
+        },
+        {
+          "split": "dev",
+          "arm": "V",
+          "cases": 6,
+          "windows": 37,
+          "case_mean_mse": 0.004861335308419089,
+          "prediction_std": 0.1325978001230662,
+          "target_std": 0.11473681067817637,
+          "correlation": 0.9880539279908884
+        },
+        {
+          "split": "dev",
+          "arm": "MC_readout",
+          "cases": 6,
+          "windows": 37,
+          "case_mean_mse": 0.00027860272655027266,
+          "prediction_std": 0.1104569602669449,
+          "target_std": 0.11473681067817637,
+          "correlation": 0.9900551498736562
+        },
+        {
+          "split": "dev",
+          "arm": "train_mean",
+          "cases": 6,
+          "windows": 37,
+          "case_mean_mse": 0.012937242259984357,
+          "prediction_std": 0.0,
+          "target_std": 0.11473681067817637,
+          "correlation": null
+        },
+        {
+          "split": "test",
+          "arm": "V",
+          "cases": 6,
+          "windows": 35,
+          "case_mean_mse": 0.024039265230723323,
+          "prediction_std": 0.20121840063237123,
+          "target_std": 0.10880570825372386,
+          "correlation": 0.8117330847011947
+        },
+        {
+          "split": "test",
+          "arm": "MC_readout",
+          "cases": 6,
+          "windows": 35,
+          "case_mean_mse": 0.025448612225670447,
+          "prediction_std": 0.21450379699742672,
+          "target_std": 0.10880570825372386,
+          "correlation": 0.7258058481465632
+        },
+        {
+          "split": "test",
+          "arm": "train_mean",
+          "cases": 6,
+          "windows": 35,
+          "case_mean_mse": 0.011534320709958036,
+          "prediction_std": 0.0,
+          "target_std": 0.10880570825372386,
+          "correlation": null
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 3.7636117935180664,
+  "method_level_progress": false
+}

@@ -1,0 +1,19 @@
+{
+  "exit_code": 0,
+  "pid": 818,
+  "wall_seconds": 20.016911506652832,
+  "log": "/home/abc/workspace/ac3-selection-20261010/logs/smoke-s443-goal-cv1s-cell4.log",
+  "log_bytes": 251,
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n{'status': 'PASS', 'out': '/home/abc/workspace/ac3-selection-20261010/smoke/s443-goal-cv1s/cell4.json', 'episodes': 3, 'wall_seconds': 8.559903383255005}\n",
+  "args": [
+    "--seed",
+    "443",
+    "--rule",
+    "goal-cv1s",
+    "--cell",
+    "4",
+    "--n-cases",
+    "3",
+    "--smoke"
+  ]
+}

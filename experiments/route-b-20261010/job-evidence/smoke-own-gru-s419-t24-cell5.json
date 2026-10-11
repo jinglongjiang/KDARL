@@ -1,0 +1,16 @@
+{
+  "name": "smoke-own-gru-s419-t24-cell5",
+  "pid": 1641,
+  "exit_code": 0,
+  "wall_seconds": 8.005268096923828,
+  "args": [
+    "--id",
+    "gru-s419-t24",
+    "--cell",
+    "5",
+    "--n-cases",
+    "3",
+    "--smoke"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n{\"checkpoint\": \"gru-s419-t24\", \"cell\": 5, \"case\": 90000, \"steps\": 52}\n{\"checkpoint\": \"gru-s419-t24\", \"cell\": 5, \"case\": 90001, \"steps\": 17}\n{\"checkpoint\": \"gru-s419-t24\", \"cell\": 5, \"case\": 90002, \"steps\": 49}\n"
+}

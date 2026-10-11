@@ -1,0 +1,92 @@
+{
+  "status": "已验证通过",
+  "scope": "Existing seed419 development data; NOT second-seed confirmation",
+  "n_paired_episodes": 3000,
+  "n_case_clusters": 500,
+  "bootstrap_replicates": 10000,
+  "sign_convention": "D=(SR_KDA24-SR_KDA12)-(SR_GRU24-SR_GRU12)",
+  "interaction_pp": 5.866666666666666,
+  "descriptive_case_cluster_ci95_pp": [
+    4.1000000000000005,
+    7.666666666666666
+  ],
+  "marginal_log_failure_odds_interaction": -0.8436244303430191,
+  "descriptive_case_cluster_log_odds_ci95": [
+    -1.1226143875206596,
+    -0.5767711942820118
+  ],
+  "failure_odds": {
+    "kda": {
+      "failure_counts": {
+        "12": 363,
+        "24": 253
+      },
+      "failure_percent_t12": 12.1,
+      "failure_percent_t24": 8.433333333333334,
+      "marginal_failure_odds_ratio_t24_vs_t12": 0.6690604626534731
+    },
+    "gru": {
+      "failure_counts": {
+        "12": 127,
+        "24": 193
+      },
+      "failure_percent_t12": 4.2333333333333325,
+      "failure_percent_t24": 6.433333333333333,
+      "marginal_failure_odds_ratio_t24_vs_t12": 1.555416857182129
+    }
+  },
+  "group_tests": {
+    "kda": {
+      "success": {
+        "delta_t24_minus_t12_pp": 3.6666666666666665,
+        "b_t12_only": 155,
+        "c_t24_only": 265,
+        "exact_mcnemar_p": 8.884419026010175e-08,
+        "prior_family6_corrected_p": 5.330651415606106e-07
+      },
+      "collision": {
+        "delta_t24_minus_t12_pp": 2.1666666666666665,
+        "b_t12_only": 51,
+        "c_t24_only": 116,
+        "exact_mcnemar_p": 5.332396108348004e-07,
+        "prior_family6_corrected_p": 3.1994376650088023e-06
+      },
+      "timeout": {
+        "delta_t24_minus_t12_pp": -5.833333333333333,
+        "b_t12_only": 251,
+        "c_t24_only": 76,
+        "exact_mcnemar_p": 5.412162755461872e-23,
+        "prior_family6_corrected_p": 3.2472976532771233e-22
+      }
+    },
+    "gru": {
+      "success": {
+        "delta_t24_minus_t12_pp": -2.2,
+        "b_t12_only": 148,
+        "c_t24_only": 82,
+        "exact_mcnemar_p": 1.6050324982035986e-05,
+        "prior_family6_corrected_p": 9.630194989221591e-05
+      },
+      "collision": {
+        "delta_t24_minus_t12_pp": 0.6333333333333333,
+        "b_t12_only": 36,
+        "c_t24_only": 55,
+        "exact_mcnemar_p": 0.058573528410188806,
+        "prior_family6_corrected_p": 0.3514411704611328
+      },
+      "timeout": {
+        "delta_t24_minus_t12_pp": 1.5666666666666667,
+        "b_t12_only": 49,
+        "c_t24_only": 96,
+        "exact_mcnemar_p": 0.00011759999636577897,
+        "prior_family6_corrected_p": 0.0007055999781946738
+      }
+    }
+  },
+  "limits": [
+    "Intervals are descriptive; new joint confirmatory family has not been specified",
+    "Marginal failure odds ratio is not the matched-pair McNemar odds ratio",
+    "Two training seeds cannot estimate architecture-level seed variance",
+    "History length changes training dynamics, not just deployment memory"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "status": "已验证通过",
+  "n_files": 26,
+  "n_weights": 0,
+  "bytes": 136563,
+  "files": {
+    "ERROR.json": {
+      "bytes": 1204,
+      "sha256": "0690480b89cf151d9fcad2f355d234d5de8c6e8aacaeac451ac84a65fa4c12c4"
+    },
+    "REPORT.md": {
+      "bytes": 1225,
+      "sha256": "e15fb046a3f8d84bf9dc036b38e5a9b20e09d07f352d42d1ecea36d9f75ba83a"
+    },
+    "analyze-results.py": {
+      "bytes": 8165,
+      "sha256": "d7b41ab2a7e885a2db3d42a13d30dae089251a721f4c0a9b7e1ec7b5e8cfe43e"
+    },
+    "analyze-seed419.py": {
+      "bytes": 5185,
+      "sha256": "78b568c480046c86cc36b793b37fd3ccceead6deece5c3848e0acd7605974211"
+    },
+    "archive-selftest.json": {
+      "bytes": 273,
+      "sha256": "863968cc11194b8a3849eb5a2c9f8438ab85b351fc3962c3a3075d3d1285256e"
+    },
+    "controller-pid.json": {
+      "bytes": 120,
+      "sha256": "ca69ec61ddda81114b561c14900afcc0d9fead9226898bd8018ff73db20c9ca3"
+    },
+    "controller.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "controller.log": {
+      "bytes": 1380,
+      "sha256": "b1905fd71686b39ea2755177a859603ef9f084ba9be592ae72a22adab6e5edad"
+    },
+    "execution-freeze.json": {
+      "bytes": 32791,
+      "sha256": "3d54059dbb5244f5f2ca1a9ccc1725cb53e352a4ec65e1892493523674d33234"
+    },
+    "gru-t12.ini": {
+      "bytes": 2838,
+      "sha256": "0d51e4f5e4554fa59d31d3aebb7f081ecc5be34cc13f1d3656c66855bdaa7b62"
+    },
+    "gru-t24.ini": {
+      "bytes": 2838,
+      "sha256": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f"
+    },
+    "job-evidence/kda-t24.json": {
+      "bytes": 1121,
+      "sha256": "40ce429a14790a4aa669712cfb7314632f387fb40f1f6e0aad9e592515e24d84"
+    },
+    "kda-t12.ini": {
+      "bytes": 2838,
+      "sha256": "e40490e1c82e37a5eb9ebf88667933955552204ec0d38971c0c44b66922446f0"
+    },
+    "kda-t24.ini": {
+      "bytes": 2838,
+      "sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a"
+    },
+    "launch.json": {
+      "bytes": 87,
+      "sha256": "d6fa2d5b02528910be00e1fa3ed5e73731dd29a17e0d77a261dc0dc0f6df2888"
+    },
+    "launches/kda-t24.json": {
+      "bytes": 544,
+      "sha256": "4ab18802610ea503e72cfc9f9500dd121b4994db40ff6b4f06f67cb8ade291f3"
+    },
+    "logs/kda-t24.log": {
+      "bytes": 957,
+      "sha256": "d5615085a75b80a852c0a2a91b873e5c31ef56bcb0c21bbacbf37f3dd9227757"
+    },
+    "preparation.json": {
+      "bytes": 35235,
+      "sha256": "eabd0c289f5e525ceeb39c5eeb47119eade2d27b119bc48b4f503f9da6258191"
+    },
+    "prepare-replication.py": {
+      "bytes": 5803,
+      "sha256": "a687dab5d29fd4c6c403a7f2977dcf4812680b05bf0cc8b556eaf6afd1c3e97e"
+    },
+    "protocol.json": {
+      "bytes": 3625,
+      "sha256": "7a809dd604813e92d683cc0f8327ed5df23b858b6331125255b2fcd8038449c3"
+    },
+    "run-replication.py": {
+      "bytes": 14694,
+      "sha256": "1f7b645ddec9109dee312b769807ef94c2887b055c15be6ec301ff8b8837979d"
+    },
+    "runs/kda-t24/tensorboard_logs/events.out.tfevents.1791563658.caj1il53.vm.2815738.0": {
+      "bytes": 88,
+      "sha256": "6fe6e945a183591b14416d77eeda2f82d7d8a43198769e7adce095d5259737b9"
+    },
+    "runs/kda-t24/train.log": {
+      "bytes": 306,
+      "sha256": "dbb490d1761f1f6a8dd8d20176ca616c29f74ee29880aa94e05656655bde89a5"
+    },
+    "seed419-interaction.json": {
+      "bytes": 2928,
+      "sha256": "051c14150f547fcd130433bfb884db89bc2c1bcdfc7f09cda297ae8a442eb674"
+    },
+    "status.json": {
+      "bytes": 490,
+      "sha256": "68cbfbbd24a0fd8c0c825d49ae4901060a0836995e448af376b85a0e0d8c7554"
+    },
+    "sync-and-archive.py": {
+      "bytes": 8990,
+      "sha256": "0bf66a16383d219e85c75705ce17a510e9b7a44e29d690476efc79dfaa114b23"
+    }
+  },
+  "all_files_both_side_sha256_equal": true,
+  "source": "/root/kda-history-replication-20261010",
+  "time": 1791563671.8772807,
+  "scientific_state": {
+    "status": "FAILED",
+    "error": "AssertionError({'name': 'kda-t24', 'kind': 'train', 'exit_code': 1, 'log': '/root/kda-history-replication-20261010/logs/kda-t24.log', 'actual_output_tail': \"Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.\\nPlease upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.\\nUsers of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.\\nSee the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.\\n[10-10 00:34:18] INFO: [TENSORBOARD] Fresh events will be saved to: /root/kda-history-replication-20261010/runs/kda-t24/tensorboard_logs\\n[10-10 00:34:18] INFO: [TEMPORAL-BACKBONE] CLI override: kda\\n[10-10 00:34:18] ERROR: [CONTRACTS] env.config not found: /root/kda-history-replication-20261010/env.config\\n[W1010 00:34:19.402633014 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())\\n\"})",
+    "automatic_restart": false
+  }
+}

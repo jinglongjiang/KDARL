@@ -1,0 +1,10 @@
+kex_exchange_identification: Connection closed by remote host
+lost connection
+Traceback (most recent call last):
+  File "/home/abc/workspace/kda-history-replication-20261010/sync-and-archive.py", line 175, in <module>
+    try:main()
+  File "/home/abc/workspace/kda-history-replication-20261010/sync-and-archive.py", line 166, in main
+    subprocess.run(['scp','-q','-o','BatchMode=yes','-o','ConnectTimeout=15',str(BASE/'archive-expected-weights.json'),HOST+':'+REMOTE+'/archive-expected-weights.json'],check=True,timeout=120)
+  File "/usr/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['scp', '-q', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15', '/home/abc/workspace/kda-history-replication-20261010/archive-expected-weights.json', 'root@45.126.120.6:/root/kda-history-replication-20261010/archive-expected-weights.json']' returned non-zero exit status 1.

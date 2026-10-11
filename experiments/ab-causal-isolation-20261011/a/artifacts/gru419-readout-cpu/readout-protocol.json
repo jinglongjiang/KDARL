@@ -1,0 +1,18 @@
+{
+  "question": "Do matched linear MC/pairwise readouts expose recoverable preference signal beyond original V, and does all-N improve it?",
+  "GO": "Both seeds show >=0.05 test root-mean ranking-accuracy gain over P1 with no success-control regret increase; only finite authorized closed-loop may follow.",
+  "KILL": "No consistent two-seed held-out gain: seal this candidate; no second-round IL/RL.",
+  "budget": {
+    "parameters": 257,
+    "steps": 300,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "batch": "full frozen train partition",
+    "seed": 20261011
+  },
+  "split": "case%5: train 0,1,2; dev 3; test 4, across all model seeds. No dev selection or early stopping.",
+  "label_budget": "Identical candidate G set for MC and pairwise; pairwise uses all unordered pairs within root, never additional rollout labels.",
+  "controls": "Same linear256->1 initialization from old V, encoder frozen; P2/P3 TTC5, P4 full-N MC and pairwise. Predicted vs actual windows separate.",
+  "label_semantics": "q=r_env+.99*(1-terminal)*head(z); target full deployment-policy branch G. P1-native-qpred is a separate raw original score control.",
+  "limitation": "No inference of navigation gain, training-continuation causation, or OOD from complete 20-person branch G."
+}

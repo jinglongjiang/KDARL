@@ -1,0 +1,41 @@
+{
+  "status": "FROZEN_BEFORE_COMPUTATION",
+  "training_authorized": false,
+  "scope": "Shared value-learning decision diagnostics, not KDA-specific attribution.",
+  "original_T1_T4_spec": "NOT LOCATED; this supplement does not amend an unidentified 34-hour plan.",
+  "weights": [
+    "kda-s419-t24",
+    "kda-s443-t24"
+  ],
+  "cells": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "cases": [
+    90000,
+    90019
+  ],
+  "probes": "Existing reference-policy shared-window states; reference original KDA top two unmasked V candidates excluding index0, selected without looking at compared seeds.",
+  "index0": "Reselect top two from indices 1..79; retain original pair and replacement flag.",
+  "M": "gamma*(V(a1)-V(a0)); no hard mask, risk, index0 bias, or immediate reward.",
+  "centered_disagreement": "For each state, median_a |gamma*(V419-mean(V419)) - gamma*(V443-mean(V443))|; then median over states.",
+  "pooled_disagreement": "Also report point median over all state-candidate entries.",
+  "gate": "Any primary ratio >=1 cancels sign-only timeline training on this probe population; both upper95<1 passes this budget gate only; otherwise HOLD. No automatic training.",
+  "caution": "Seed disagreement is not repeated-estimator noise of a verified identical V^pi; even a large ratio does not prove sign disagreement, causation, or value compression.",
+  "bootstrap": {
+    "unit": "cell,case episode cluster",
+    "repeats": 2000,
+    "seed": 20261011
+  },
+  "closedloop_acceptance": {
+    "practical_SR_gain_pp": 6.0,
+    "interpretation": "User-imposed resource threshold, NOT a statistical MDE or seed-noise floor.",
+    "sample_size_and_power": "UNVERIFIED until discordant paired outcomes, alpha, power, families, and protection/noninferiority margins are specified.",
+    "below_threshold": "No GO; not engineering FIX merely because efficacy is unverified."
+  },
+  "resolution": "Use actual branch G as primary comparator; terminal-arrival-only gamma^(L-1) difference only for common-success, unequal-duration pairs. Other rewards reported separately. Signed and absolute gains both retained."
+}

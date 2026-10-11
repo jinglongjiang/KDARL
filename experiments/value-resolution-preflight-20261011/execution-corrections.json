@@ -1,0 +1,23 @@
+{
+  "events": [
+    {
+      "exit_code": 1,
+      "phase": "Python parse, before protocol or numerical computation",
+      "error": "SyntaxError: missing closing square bracket in safe_zero_reward list comprehension",
+      "repair": "Add the missing bracket; no input or protocol changed"
+    },
+    {
+      "exit_code": 0,
+      "phase": "First numerical pass, discovered during raw trace validation",
+      "error": "Branch steps include full pre-root episode prefix; len(steps) was not root-relative remaining duration",
+      "repair": "Preserve initial outputs, select step >= root step, verify summed root reward equals recorded root_return, recompute duration-only gain",
+      "scope": "Cross-seed gap gate unaffected; initial duration-derived gains withdrawn"
+    },
+    {
+      "phase": "Raw all-unsafe validation",
+      "error": "Initial side column called clearance < .2 hard_masked even when all candidates unsafe and policy skips hard masking",
+      "repair": "Separate safety_eligible, all_unsafe, and actually hard_masked; preserve initial probe records",
+      "scope": "Margins, disagreement, preference agreement and training cancellation unaffected"
+    }
+  ]
+}

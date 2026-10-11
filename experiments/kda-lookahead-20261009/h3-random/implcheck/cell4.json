@@ -1,0 +1,4330 @@
+{
+  "status": "已验证通过",
+  "mode": "implcheck",
+  "episodes": [
+    {
+      "cell": 4,
+      "case": 90000,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 56,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 54.0,
+              "actual_safe": 54.0
+            },
+            "oracle": {
+              "final_flip": 22.0,
+              "value_flip": 22.0,
+              "env_clearance_delta": 0.012459010365438061,
+              "actual_clearance_delta": 0.10852361771231595,
+              "progress_delta": 0.30013376416104887,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 54.0,
+              "actual_safe": 55.0
+            },
+            "random_shared": {
+              "final_flip": 18.999999999999964,
+              "value_flip": 20.59999999999996,
+              "env_clearance_delta": 0.14735833229351306,
+              "actual_clearance_delta": 0.19393685161743612,
+              "progress_delta": 0.12317179525002303,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 54.40000000000023,
+              "actual_safe": 54.600000000000236
+            },
+            "random_independent": {
+              "final_flip": 18.399999999999967,
+              "value_flip": 18.599999999999966,
+              "env_clearance_delta": 0.0369804769606562,
+              "actual_clearance_delta": 0.0397471789410625,
+              "progress_delta": 0.14988507300700052,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 53.200000000000216,
+              "actual_safe": 53.60000000000022
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.02213209867477417,
+                22.0
+              ],
+              "new_value_gap": [
+                0.030425667762756348,
+                22.0
+              ],
+              "speed_delta": [
+                1.1417411705227654,
+                22.0
+              ],
+              "command_delta": [
+                5.032407716730597,
+                22.0
+              ],
+              "direction_degrees": [
+                474.32393423334804,
+                22.0
+              ],
+              "env_clearance_delta": [
+                0.012459010365438061,
+                22.0
+              ],
+              "actual_clearance_delta": [
+                0.10852361771231595,
+                22.0
+              ],
+              "progress_delta": [
+                0.30013376416104887,
+                22.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.020042991638183592,
+                18.999999999999964
+              ],
+              "new_value_gap": [
+                0.0237313985824585,
+                18.999999999999964
+              ],
+              "speed_delta": [
+                0.51058308945031,
+                18.999999999999964
+              ],
+              "command_delta": [
+                5.654838037281544,
+                18.999999999999964
+              ],
+              "direction_degrees": [
+                604.3539225089245,
+                18.999999999999964
+              ],
+              "env_clearance_delta": [
+                0.14735833229351306,
+                18.999999999999964
+              ],
+              "actual_clearance_delta": [
+                0.19393685161743612,
+                18.999999999999964
+              ],
+              "progress_delta": [
+                0.12317179525002303,
+                18.999999999999964
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.021483147144317625,
+                18.399999999999967
+              ],
+              "new_value_gap": [
+                0.02120296955108643,
+                18.399999999999967
+              ],
+              "speed_delta": [
+                0.5447877511060892,
+                18.399999999999967
+              ],
+              "command_delta": [
+                5.461225473421211,
+                18.399999999999967
+              ],
+              "direction_degrees": [
+                578.2235401177777,
+                18.399999999999967
+              ],
+              "env_clearance_delta": [
+                0.0369804769606562,
+                18.399999999999967
+              ],
+              "actual_clearance_delta": [
+                0.0397471789410625,
+                18.399999999999967
+              ],
+              "progress_delta": [
+                0.14988507300700052,
+                18.399999999999967
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              16.0,
+              23.0,
+              16.0,
+              20.0,
+              20.0
+            ],
+            "random_independent": [
+              19.0,
+              16.0,
+              17.0,
+              20.0,
+              20.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 56,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 54.0,
+              "actual_safe": 54.0
+            },
+            "oracle": {
+              "final_flip": 22.0,
+              "value_flip": 22.0,
+              "env_clearance_delta": 0.012459010365438061,
+              "actual_clearance_delta": 0.10852361771231595,
+              "progress_delta": 0.30013376416104887,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 54.0,
+              "actual_safe": 55.0
+            },
+            "random_shared": {
+              "final_flip": 18.999999999999964,
+              "value_flip": 20.59999999999996,
+              "env_clearance_delta": 0.14735833229351306,
+              "actual_clearance_delta": 0.19393685161743612,
+              "progress_delta": 0.12317179525002303,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 54.40000000000023,
+              "actual_safe": 54.600000000000236
+            },
+            "random_independent": {
+              "final_flip": 18.399999999999967,
+              "value_flip": 18.599999999999966,
+              "env_clearance_delta": 0.0369804769606562,
+              "actual_clearance_delta": 0.0397471789410625,
+              "progress_delta": 0.14988507300700052,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 53.200000000000216,
+              "actual_safe": 53.60000000000022
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.02213209867477417,
+                22.0
+              ],
+              "new_value_gap": [
+                0.030425667762756348,
+                22.0
+              ],
+              "speed_delta": [
+                1.1417411705227654,
+                22.0
+              ],
+              "command_delta": [
+                5.032407716730597,
+                22.0
+              ],
+              "direction_degrees": [
+                474.32393423334804,
+                22.0
+              ],
+              "env_clearance_delta": [
+                0.012459010365438061,
+                22.0
+              ],
+              "actual_clearance_delta": [
+                0.10852361771231595,
+                22.0
+              ],
+              "progress_delta": [
+                0.30013376416104887,
+                22.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.020042991638183592,
+                18.999999999999964
+              ],
+              "new_value_gap": [
+                0.0237313985824585,
+                18.999999999999964
+              ],
+              "speed_delta": [
+                0.51058308945031,
+                18.999999999999964
+              ],
+              "command_delta": [
+                5.654838037281544,
+                18.999999999999964
+              ],
+              "direction_degrees": [
+                604.3539225089245,
+                18.999999999999964
+              ],
+              "env_clearance_delta": [
+                0.14735833229351306,
+                18.999999999999964
+              ],
+              "actual_clearance_delta": [
+                0.19393685161743612,
+                18.999999999999964
+              ],
+              "progress_delta": [
+                0.12317179525002303,
+                18.999999999999964
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.021483147144317625,
+                18.399999999999967
+              ],
+              "new_value_gap": [
+                0.02120296955108643,
+                18.399999999999967
+              ],
+              "speed_delta": [
+                0.5447877511060892,
+                18.399999999999967
+              ],
+              "command_delta": [
+                5.461225473421211,
+                18.399999999999967
+              ],
+              "direction_degrees": [
+                578.2235401177777,
+                18.399999999999967
+              ],
+              "env_clearance_delta": [
+                0.0369804769606562,
+                18.399999999999967
+              ],
+              "actual_clearance_delta": [
+                0.0397471789410625,
+                18.399999999999967
+              ],
+              "progress_delta": [
+                0.14988507300700052,
+                18.399999999999967
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              16.0,
+              23.0,
+              16.0,
+              20.0,
+              20.0
+            ],
+            "random_independent": [
+              19.0,
+              16.0,
+              17.0,
+              20.0,
+              20.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 4.0,
+              "value_flip": 4.0,
+              "env_clearance_delta": -0.010881741260278632,
+              "actual_clearance_delta": -0.01100080360983724,
+              "progress_delta": 0.05683059256549772,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 5.200000000000002,
+              "value_flip": 5.200000000000002,
+              "env_clearance_delta": -0.002147007091934313,
+              "actual_clearance_delta": -0.002228400810352485,
+              "progress_delta": -0.015799032758327128,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 5.400000000000002,
+              "value_flip": 5.200000000000002,
+              "env_clearance_delta": -0.017862112661816094,
+              "actual_clearance_delta": -0.017980310079081442,
+              "progress_delta": 0.03257702359887973,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.002008676528930664,
+                4.0
+              ],
+              "new_value_gap": [
+                0.001980721950531006,
+                4.0
+              ],
+              "speed_delta": [
+                0.2409255298795998,
+                4.0
+              ],
+              "command_delta": [
+                1.0201139608794025,
+                4.0
+              ],
+              "direction_degrees": [
+                48.98219126266905,
+                4.0
+              ],
+              "env_clearance_delta": [
+                -0.010881741260278632,
+                4.0
+              ],
+              "actual_clearance_delta": [
+                -0.01100080360983724,
+                4.0
+              ],
+              "progress_delta": [
+                0.05683059256549772,
+                4.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0029460906982421865,
+                5.200000000000002
+              ],
+              "new_value_gap": [
+                0.003518962860107421,
+                5.200000000000002
+              ],
+              "speed_delta": [
+                0.04518954605528738,
+                5.200000000000002
+              ],
+              "command_delta": [
+                1.4699305468149688,
+                5.200000000000002
+              ],
+              "direction_degrees": [
+                80.58460041388149,
+                5.200000000000002
+              ],
+              "env_clearance_delta": [
+                -0.002147007091934313,
+                5.200000000000002
+              ],
+              "actual_clearance_delta": [
+                -0.002228400810352485,
+                5.200000000000002
+              ],
+              "progress_delta": [
+                -0.015799032758327128,
+                5.200000000000002
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.00380786657333374,
+                5.400000000000002
+              ],
+              "new_value_gap": [
+                0.0030270576477050785,
+                5.400000000000002
+              ],
+              "speed_delta": [
+                0.18810481117446215,
+                5.400000000000002
+              ],
+              "command_delta": [
+                1.4185030443066462,
+                5.400000000000002
+              ],
+              "direction_degrees": [
+                73.67236085478879,
+                5.400000000000002
+              ],
+              "env_clearance_delta": [
+                -0.017862112661816094,
+                5.400000000000002
+              ],
+              "actual_clearance_delta": [
+                -0.017980310079081442,
+                5.400000000000002
+              ],
+              "progress_delta": [
+                0.03257702359887973,
+                5.400000000000002
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              4.0,
+              6.0,
+              7.0,
+              4.0,
+              5.0
+            ],
+            "random_independent": [
+              4.0,
+              7.0,
+              6.0,
+              6.0,
+              4.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "case": 90001,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 72,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 70.0,
+              "actual_safe": 70.0
+            },
+            "oracle": {
+              "final_flip": 23.0,
+              "value_flip": 24.0,
+              "env_clearance_delta": 0.10430440255543622,
+              "actual_clearance_delta": 0.15187994609658761,
+              "progress_delta": -0.11501305747840496,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.0,
+              "actual_safe": 70.0
+            },
+            "random_shared": {
+              "final_flip": 21.799999999999955,
+              "value_flip": 20.999999999999957,
+              "env_clearance_delta": -0.2066315651517084,
+              "actual_clearance_delta": -0.23066207302943764,
+              "progress_delta": 0.09064510826470819,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.40000000000045,
+              "actual_safe": 69.60000000000045
+            },
+            "random_independent": {
+              "final_flip": 24.399999999999945,
+              "value_flip": 22.99999999999995,
+              "env_clearance_delta": -0.27545798340484934,
+              "actual_clearance_delta": -0.2584518540091328,
+              "progress_delta": 0.23389179677822075,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.80000000000045,
+              "actual_safe": 70.00000000000045
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.10607469081878662,
+                23.0
+              ],
+              "new_value_gap": [
+                0.06124246120452881,
+                23.0
+              ],
+              "speed_delta": [
+                -1.8366929654606807,
+                23.0
+              ],
+              "command_delta": [
+                6.890670578440179,
+                23.0
+              ],
+              "direction_degrees": [
+                796.6870333229735,
+                23.0
+              ],
+              "env_clearance_delta": [
+                0.10430440255543622,
+                23.0
+              ],
+              "actual_clearance_delta": [
+                0.15187994609658761,
+                23.0
+              ],
+              "progress_delta": [
+                -0.11501305747840496,
+                23.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.057137298583984385,
+                21.799999999999955
+              ],
+              "new_value_gap": [
+                0.04367003440856933,
+                21.799999999999955
+              ],
+              "speed_delta": [
+                -0.3036427725574013,
+                21.799999999999955
+              ],
+              "command_delta": [
+                6.633301090548098,
+                21.799999999999955
+              ],
+              "direction_degrees": [
+                698.4748413921625,
+                21.799999999999955
+              ],
+              "env_clearance_delta": [
+                -0.2066315651517084,
+                21.799999999999955
+              ],
+              "actual_clearance_delta": [
+                -0.23066207302943764,
+                21.799999999999955
+              ],
+              "progress_delta": [
+                0.09064510826470819,
+                21.799999999999955
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.08250032663345333,
+                24.399999999999945
+              ],
+              "new_value_gap": [
+                0.06477919816970827,
+                24.399999999999945
+              ],
+              "speed_delta": [
+                -0.7689807090172409,
+                24.399999999999945
+              ],
+              "command_delta": [
+                8.081564672497528,
+                24.399999999999945
+              ],
+              "direction_degrees": [
+                801.0603723546674,
+                24.399999999999945
+              ],
+              "env_clearance_delta": [
+                -0.27545798340484934,
+                24.399999999999945
+              ],
+              "actual_clearance_delta": [
+                -0.2584518540091328,
+                24.399999999999945
+              ],
+              "progress_delta": [
+                0.23389179677822075,
+                24.399999999999945
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              23.0,
+              20.0,
+              21.0,
+              23.0,
+              22.0
+            ],
+            "random_independent": [
+              31.0,
+              24.0,
+              23.0,
+              21.0,
+              23.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 72,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 70.0,
+              "actual_safe": 70.0
+            },
+            "oracle": {
+              "final_flip": 23.0,
+              "value_flip": 24.0,
+              "env_clearance_delta": 0.10430440255543622,
+              "actual_clearance_delta": 0.15187994609658761,
+              "progress_delta": -0.11501305747840496,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.0,
+              "actual_safe": 70.0
+            },
+            "random_shared": {
+              "final_flip": 21.799999999999955,
+              "value_flip": 20.999999999999957,
+              "env_clearance_delta": -0.2066315651517084,
+              "actual_clearance_delta": -0.23066207302943764,
+              "progress_delta": 0.09064510826470819,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.40000000000045,
+              "actual_safe": 69.60000000000045
+            },
+            "random_independent": {
+              "final_flip": 24.399999999999945,
+              "value_flip": 22.99999999999995,
+              "env_clearance_delta": -0.27545798340484934,
+              "actual_clearance_delta": -0.2584518540091328,
+              "progress_delta": 0.23389179677822075,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.80000000000045,
+              "actual_safe": 70.00000000000045
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.10607469081878662,
+                23.0
+              ],
+              "new_value_gap": [
+                0.06124246120452881,
+                23.0
+              ],
+              "speed_delta": [
+                -1.8366929654606807,
+                23.0
+              ],
+              "command_delta": [
+                6.890670578440179,
+                23.0
+              ],
+              "direction_degrees": [
+                796.6870333229735,
+                23.0
+              ],
+              "env_clearance_delta": [
+                0.10430440255543622,
+                23.0
+              ],
+              "actual_clearance_delta": [
+                0.15187994609658761,
+                23.0
+              ],
+              "progress_delta": [
+                -0.11501305747840496,
+                23.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.057137298583984385,
+                21.799999999999955
+              ],
+              "new_value_gap": [
+                0.04367003440856933,
+                21.799999999999955
+              ],
+              "speed_delta": [
+                -0.3036427725574013,
+                21.799999999999955
+              ],
+              "command_delta": [
+                6.633301090548098,
+                21.799999999999955
+              ],
+              "direction_degrees": [
+                698.4748413921625,
+                21.799999999999955
+              ],
+              "env_clearance_delta": [
+                -0.2066315651517084,
+                21.799999999999955
+              ],
+              "actual_clearance_delta": [
+                -0.23066207302943764,
+                21.799999999999955
+              ],
+              "progress_delta": [
+                0.09064510826470819,
+                21.799999999999955
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.08250032663345333,
+                24.399999999999945
+              ],
+              "new_value_gap": [
+                0.06477919816970827,
+                24.399999999999945
+              ],
+              "speed_delta": [
+                -0.7689807090172409,
+                24.399999999999945
+              ],
+              "command_delta": [
+                8.081564672497528,
+                24.399999999999945
+              ],
+              "direction_degrees": [
+                801.0603723546674,
+                24.399999999999945
+              ],
+              "env_clearance_delta": [
+                -0.27545798340484934,
+                24.399999999999945
+              ],
+              "actual_clearance_delta": [
+                -0.2584518540091328,
+                24.399999999999945
+              ],
+              "progress_delta": [
+                0.23389179677822075,
+                24.399999999999945
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              23.0,
+              20.0,
+              21.0,
+              23.0,
+              22.0
+            ],
+            "random_independent": [
+              31.0,
+              24.0,
+              23.0,
+              21.0,
+              23.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 1.0,
+              "value_flip": 1.0,
+              "env_clearance_delta": -0.06471047958904963,
+              "actual_clearance_delta": -0.05156121684412018,
+              "progress_delta": -0.004795842727219668,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 0.8,
+              "value_flip": 0.8,
+              "env_clearance_delta": -0.024107734836308792,
+              "actual_clearance_delta": -0.02113594295038697,
+              "progress_delta": -0.017658609259427305,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 1.4,
+              "value_flip": 1.4,
+              "env_clearance_delta": -0.055911488165363954,
+              "actual_clearance_delta": -0.054755287922192565,
+              "progress_delta": -0.020661398931373042,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.000545203685760498,
+                1.0
+              ],
+              "new_value_gap": [
+                0.00039440393447875977,
+                1.0
+              ],
+              "speed_delta": [
+                -0.005668570439819609,
+                1.0
+              ],
+              "command_delta": [
+                0.2731264508225795,
+                1.0
+              ],
+              "direction_degrees": [
+                15.866130894998715,
+                1.0
+              ],
+              "env_clearance_delta": [
+                -0.06471047958904963,
+                1.0
+              ],
+              "actual_clearance_delta": [
+                -0.05156121684412018,
+                1.0
+              ],
+              "progress_delta": [
+                -0.004795842727219668,
+                1.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.00037764310836792,
+                0.8
+              ],
+              "new_value_gap": [
+                0.00027059316635131837,
+                0.8
+              ],
+              "speed_delta": [
+                -0.05504639832677758,
+                0.8
+              ],
+              "command_delta": [
+                0.3719616066367455,
+                0.8
+              ],
+              "direction_degrees": [
+                22.81415222529584,
+                0.8
+              ],
+              "env_clearance_delta": [
+                -0.024107734836308792,
+                0.8
+              ],
+              "actual_clearance_delta": [
+                -0.02113594295038697,
+                0.8
+              ],
+              "progress_delta": [
+                -0.017658609259427305,
+                0.8
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0006456613540649415,
+                1.4
+              ],
+              "new_value_gap": [
+                0.00031859874725341796,
+                1.4
+              ],
+              "speed_delta": [
+                -0.018277659858228518,
+                1.4
+              ],
+              "command_delta": [
+                0.3823770311516113,
+                1.4
+              ],
+              "direction_degrees": [
+                22.585709127627865,
+                1.4
+              ],
+              "env_clearance_delta": [
+                -0.055911488165363954,
+                1.4
+              ],
+              "actual_clearance_delta": [
+                -0.054755287922192565,
+                1.4
+              ],
+              "progress_delta": [
+                -0.020661398931373042,
+                1.4
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              0.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "random_independent": [
+              2.0,
+              0.0,
+              2.0,
+              0.0,
+              3.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "case": 90002,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 78,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 70.0,
+              "actual_safe": 70.0
+            },
+            "oracle": {
+              "final_flip": 24.0,
+              "value_flip": 21.0,
+              "env_clearance_delta": -0.11747635365792858,
+              "actual_clearance_delta": -0.0657256550841206,
+              "progress_delta": -0.050100277935591464,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 71.0,
+              "actual_safe": 71.0
+            },
+            "random_shared": {
+              "final_flip": 26.599999999999937,
+              "value_flip": 23.999999999999947,
+              "env_clearance_delta": -0.05522595196682435,
+              "actual_clearance_delta": -0.09313881962671655,
+              "progress_delta": 0.19175066462300544,
+              "env_collision": 0.2,
+              "actual_collision": 0.2,
+              "env_safe": 70.20000000000046,
+              "actual_safe": 69.20000000000044
+            },
+            "random_independent": {
+              "final_flip": 29.599999999999927,
+              "value_flip": 27.599999999999934,
+              "env_clearance_delta": -0.11686540821202349,
+              "actual_clearance_delta": -0.11218400807881736,
+              "progress_delta": 0.06584385481997859,
+              "env_collision": 0.6000000000000001,
+              "actual_collision": 0.6000000000000001,
+              "env_safe": 70.60000000000046,
+              "actual_safe": 69.60000000000045
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.31688475608825684,
+                24.0
+              ],
+              "new_value_gap": [
+                0.2337450087070465,
+                24.0
+              ],
+              "speed_delta": [
+                -1.1836909139935083,
+                24.0
+              ],
+              "command_delta": [
+                10.091931981886948,
+                24.0
+              ],
+              "direction_degrees": [
+                1162.2257447298414,
+                24.0
+              ],
+              "env_clearance_delta": [
+                -0.11747635365792858,
+                24.0
+              ],
+              "actual_clearance_delta": [
+                -0.0657256550841206,
+                24.0
+              ],
+              "progress_delta": [
+                -0.050100277935591464,
+                24.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.3439674973487855,
+                26.599999999999937
+              ],
+              "new_value_gap": [
+                0.21124112010002138,
+                26.599999999999937
+              ],
+              "speed_delta": [
+                0.4970175022502875,
+                26.599999999999937
+              ],
+              "command_delta": [
+                8.671909423923852,
+                26.599999999999937
+              ],
+              "direction_degrees": [
+                798.9005602779879,
+                26.599999999999937
+              ],
+              "env_clearance_delta": [
+                -0.05522595196682435,
+                26.599999999999937
+              ],
+              "actual_clearance_delta": [
+                -0.09313881962671655,
+                26.599999999999937
+              ],
+              "progress_delta": [
+                0.19175066462300544,
+                26.599999999999937
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.24003092646598828,
+                29.599999999999927
+              ],
+              "new_value_gap": [
+                0.27004049420356746,
+                29.599999999999927
+              ],
+              "speed_delta": [
+                1.2391300825403018,
+                29.599999999999927
+              ],
+              "command_delta": [
+                9.786221982146031,
+                29.599999999999927
+              ],
+              "direction_degrees": [
+                897.8843259057785,
+                29.599999999999927
+              ],
+              "env_clearance_delta": [
+                -0.11686540821202349,
+                29.599999999999927
+              ],
+              "actual_clearance_delta": [
+                -0.11218400807881736,
+                29.599999999999927
+              ],
+              "progress_delta": [
+                0.06584385481997859,
+                29.599999999999927
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              32.0,
+              23.0,
+              29.0,
+              24.0,
+              25.0
+            ],
+            "random_independent": [
+              31.0,
+              32.0,
+              28.0,
+              30.0,
+              27.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 78,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 70.0,
+              "actual_safe": 70.0
+            },
+            "oracle": {
+              "final_flip": 24.0,
+              "value_flip": 21.0,
+              "env_clearance_delta": -0.11747635365792858,
+              "actual_clearance_delta": -0.0657256550841206,
+              "progress_delta": -0.050100277935591464,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 71.0,
+              "actual_safe": 71.0
+            },
+            "random_shared": {
+              "final_flip": 26.599999999999937,
+              "value_flip": 23.999999999999947,
+              "env_clearance_delta": -0.05522595196682435,
+              "actual_clearance_delta": -0.09313881962671655,
+              "progress_delta": 0.19175066462300544,
+              "env_collision": 0.2,
+              "actual_collision": 0.2,
+              "env_safe": 70.20000000000046,
+              "actual_safe": 69.20000000000044
+            },
+            "random_independent": {
+              "final_flip": 29.599999999999927,
+              "value_flip": 27.599999999999934,
+              "env_clearance_delta": -0.11686540821202349,
+              "actual_clearance_delta": -0.11218400807881736,
+              "progress_delta": 0.06584385481997859,
+              "env_collision": 0.6000000000000001,
+              "actual_collision": 0.6000000000000001,
+              "env_safe": 70.60000000000046,
+              "actual_safe": 69.60000000000045
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.31688475608825684,
+                24.0
+              ],
+              "new_value_gap": [
+                0.2337450087070465,
+                24.0
+              ],
+              "speed_delta": [
+                -1.1836909139935083,
+                24.0
+              ],
+              "command_delta": [
+                10.091931981886948,
+                24.0
+              ],
+              "direction_degrees": [
+                1162.2257447298414,
+                24.0
+              ],
+              "env_clearance_delta": [
+                -0.11747635365792858,
+                24.0
+              ],
+              "actual_clearance_delta": [
+                -0.0657256550841206,
+                24.0
+              ],
+              "progress_delta": [
+                -0.050100277935591464,
+                24.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.3439674973487855,
+                26.599999999999937
+              ],
+              "new_value_gap": [
+                0.21124112010002138,
+                26.599999999999937
+              ],
+              "speed_delta": [
+                0.4970175022502875,
+                26.599999999999937
+              ],
+              "command_delta": [
+                8.671909423923852,
+                26.599999999999937
+              ],
+              "direction_degrees": [
+                798.9005602779879,
+                26.599999999999937
+              ],
+              "env_clearance_delta": [
+                -0.05522595196682435,
+                26.599999999999937
+              ],
+              "actual_clearance_delta": [
+                -0.09313881962671655,
+                26.599999999999937
+              ],
+              "progress_delta": [
+                0.19175066462300544,
+                26.599999999999937
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.24003092646598828,
+                29.599999999999927
+              ],
+              "new_value_gap": [
+                0.27004049420356746,
+                29.599999999999927
+              ],
+              "speed_delta": [
+                1.2391300825403018,
+                29.599999999999927
+              ],
+              "command_delta": [
+                9.786221982146031,
+                29.599999999999927
+              ],
+              "direction_degrees": [
+                897.8843259057785,
+                29.599999999999927
+              ],
+              "env_clearance_delta": [
+                -0.11686540821202349,
+                29.599999999999927
+              ],
+              "actual_clearance_delta": [
+                -0.11218400807881736,
+                29.599999999999927
+              ],
+              "progress_delta": [
+                0.06584385481997859,
+                29.599999999999927
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              32.0,
+              23.0,
+              29.0,
+              24.0,
+              25.0
+            ],
+            "random_independent": [
+              31.0,
+              32.0,
+              28.0,
+              30.0,
+              27.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 0.2,
+              "value_flip": 0.6000000000000001,
+              "env_clearance_delta": 0.012602558148352205,
+              "actual_clearance_delta": 0.012602889128443895,
+              "progress_delta": -0.007638102111321299,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.00010446310043334962,
+                0.2
+              ],
+              "new_value_gap": [
+                5.173683166503907e-06,
+                0.2
+              ],
+              "speed_delta": [
+                -0.005644284399676836,
+                0.2
+              ],
+              "command_delta": [
+                0.05462529016451591,
+                0.2
+              ],
+              "direction_degrees": [
+                3.484290813682398,
+                0.2
+              ],
+              "env_clearance_delta": [
+                0.012602558148352205,
+                0.2
+              ],
+              "actual_clearance_delta": [
+                0.012602889128443895,
+                0.2
+              ],
+              "progress_delta": [
+                -0.007638102111321299,
+                0.2
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "random_independent": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "case": 90003,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 75,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 75.0,
+              "actual_safe": 75.0
+            },
+            "oracle": {
+              "final_flip": 19.0,
+              "value_flip": 23.0,
+              "env_clearance_delta": -0.4050230518503809,
+              "actual_clearance_delta": -0.25243952821721316,
+              "progress_delta": 0.389131405926062,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 73.0,
+              "actual_safe": 75.0
+            },
+            "random_shared": {
+              "final_flip": 23.19999999999995,
+              "value_flip": 22.79999999999995,
+              "env_clearance_delta": -0.2018356156292713,
+              "actual_clearance_delta": -0.1287126458341997,
+              "progress_delta": 0.3836804762190301,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 74.00000000000051,
+              "actual_safe": 74.40000000000052
+            },
+            "random_independent": {
+              "final_flip": 22.59999999999995,
+              "value_flip": 22.199999999999953,
+              "env_clearance_delta": -0.2580691348567409,
+              "actual_clearance_delta": -0.19709980672932537,
+              "progress_delta": 0.013650387182545567,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 73.80000000000051,
+              "actual_safe": 74.80000000000052
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.12231981754302979,
+                19.0
+              ],
+              "new_value_gap": [
+                0.11849969625473022,
+                19.0
+              ],
+              "speed_delta": [
+                0.07144421490713165,
+                19.0
+              ],
+              "command_delta": [
+                9.225134637300966,
+                19.0
+              ],
+              "direction_degrees": [
+                696.8003656768274,
+                19.0
+              ],
+              "env_clearance_delta": [
+                -0.4050230518503809,
+                19.0
+              ],
+              "actual_clearance_delta": [
+                -0.25243952821721316,
+                19.0
+              ],
+              "progress_delta": [
+                0.389131405926062,
+                19.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.07062461376190182,
+                23.19999999999995
+              ],
+              "new_value_gap": [
+                0.057968616485595675,
+                23.19999999999995
+              ],
+              "speed_delta": [
+                -0.06796088335408708,
+                23.19999999999995
+              ],
+              "command_delta": [
+                8.702113521535878,
+                23.19999999999995
+              ],
+              "direction_degrees": [
+                620.4414227641444,
+                23.19999999999995
+              ],
+              "env_clearance_delta": [
+                -0.2018356156292713,
+                23.19999999999995
+              ],
+              "actual_clearance_delta": [
+                -0.1287126458341997,
+                23.19999999999995
+              ],
+              "progress_delta": [
+                0.3836804762190301,
+                23.19999999999995
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.09683521986007694,
+                22.59999999999995
+              ],
+              "new_value_gap": [
+                0.06418168544769287,
+                22.59999999999995
+              ],
+              "speed_delta": [
+                -0.12472786698388247,
+                22.59999999999995
+              ],
+              "command_delta": [
+                9.332113971961816,
+                22.59999999999995
+              ],
+              "direction_degrees": [
+                662.7324225849226,
+                22.59999999999995
+              ],
+              "env_clearance_delta": [
+                -0.2580691348567409,
+                22.59999999999995
+              ],
+              "actual_clearance_delta": [
+                -0.19709980672932537,
+                22.59999999999995
+              ],
+              "progress_delta": [
+                0.013650387182545567,
+                22.59999999999995
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              23.0,
+              23.0,
+              23.0,
+              25.0,
+              22.0
+            ],
+            "random_independent": [
+              23.0,
+              23.0,
+              26.0,
+              20.0,
+              21.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 75,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 75.0,
+              "actual_safe": 75.0
+            },
+            "oracle": {
+              "final_flip": 19.0,
+              "value_flip": 23.0,
+              "env_clearance_delta": -0.4050230518503809,
+              "actual_clearance_delta": -0.25243952821721316,
+              "progress_delta": 0.389131405926062,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 73.0,
+              "actual_safe": 75.0
+            },
+            "random_shared": {
+              "final_flip": 23.19999999999995,
+              "value_flip": 22.79999999999995,
+              "env_clearance_delta": -0.2018356156292713,
+              "actual_clearance_delta": -0.1287126458341997,
+              "progress_delta": 0.3836804762190301,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 74.00000000000051,
+              "actual_safe": 74.40000000000052
+            },
+            "random_independent": {
+              "final_flip": 22.59999999999995,
+              "value_flip": 22.199999999999953,
+              "env_clearance_delta": -0.2580691348567409,
+              "actual_clearance_delta": -0.19709980672932537,
+              "progress_delta": 0.013650387182545567,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 73.80000000000051,
+              "actual_safe": 74.80000000000052
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.12231981754302979,
+                19.0
+              ],
+              "new_value_gap": [
+                0.11849969625473022,
+                19.0
+              ],
+              "speed_delta": [
+                0.07144421490713165,
+                19.0
+              ],
+              "command_delta": [
+                9.225134637300966,
+                19.0
+              ],
+              "direction_degrees": [
+                696.8003656768274,
+                19.0
+              ],
+              "env_clearance_delta": [
+                -0.4050230518503809,
+                19.0
+              ],
+              "actual_clearance_delta": [
+                -0.25243952821721316,
+                19.0
+              ],
+              "progress_delta": [
+                0.389131405926062,
+                19.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.07062461376190182,
+                23.19999999999995
+              ],
+              "new_value_gap": [
+                0.057968616485595675,
+                23.19999999999995
+              ],
+              "speed_delta": [
+                -0.06796088335408708,
+                23.19999999999995
+              ],
+              "command_delta": [
+                8.702113521535878,
+                23.19999999999995
+              ],
+              "direction_degrees": [
+                620.4414227641444,
+                23.19999999999995
+              ],
+              "env_clearance_delta": [
+                -0.2018356156292713,
+                23.19999999999995
+              ],
+              "actual_clearance_delta": [
+                -0.1287126458341997,
+                23.19999999999995
+              ],
+              "progress_delta": [
+                0.3836804762190301,
+                23.19999999999995
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.09683521986007694,
+                22.59999999999995
+              ],
+              "new_value_gap": [
+                0.06418168544769287,
+                22.59999999999995
+              ],
+              "speed_delta": [
+                -0.12472786698388247,
+                22.59999999999995
+              ],
+              "command_delta": [
+                9.332113971961816,
+                22.59999999999995
+              ],
+              "direction_degrees": [
+                662.7324225849226,
+                22.59999999999995
+              ],
+              "env_clearance_delta": [
+                -0.2580691348567409,
+                22.59999999999995
+              ],
+              "actual_clearance_delta": [
+                -0.19709980672932537,
+                22.59999999999995
+              ],
+              "progress_delta": [
+                0.013650387182545567,
+                22.59999999999995
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              23.0,
+              23.0,
+              23.0,
+              25.0,
+              22.0
+            ],
+            "random_independent": [
+              23.0,
+              23.0,
+              26.0,
+              20.0,
+              21.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 7.0,
+              "value_flip": 7.0,
+              "env_clearance_delta": -0.0025627674025496816,
+              "actual_clearance_delta": -0.0022122265751032266,
+              "progress_delta": 0.07513719319309464,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 7.0000000000000036,
+              "value_flip": 7.0000000000000036,
+              "env_clearance_delta": -0.026504406178964712,
+              "actual_clearance_delta": -0.007294577105116407,
+              "progress_delta": 0.028598932614312032,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 6.400000000000003,
+              "value_flip": 6.400000000000003,
+              "env_clearance_delta": -0.04501703585848736,
+              "actual_clearance_delta": -0.02113260251866547,
+              "progress_delta": -0.025457153790016833,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0343361496925354,
+                7.0
+              ],
+              "new_value_gap": [
+                0.01881265640258789,
+                7.0
+              ],
+              "speed_delta": [
+                0.023825967201865694,
+                7.0
+              ],
+              "command_delta": [
+                2.4165570311629203,
+                7.0
+              ],
+              "direction_degrees": [
+                144.67025016266655,
+                7.0
+              ],
+              "env_clearance_delta": [
+                -0.0025627674025496816,
+                7.0
+              ],
+              "actual_clearance_delta": [
+                -0.0022122265751032266,
+                7.0
+              ],
+              "progress_delta": [
+                0.07513719319309464,
+                7.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.015262687206268312,
+                7.0000000000000036
+              ],
+              "new_value_gap": [
+                0.011480784416198736,
+                7.0000000000000036
+              ],
+              "speed_delta": [
+                0.05472561990698092,
+                7.0000000000000036
+              ],
+              "command_delta": [
+                2.012819530839029,
+                7.0000000000000036
+              ],
+              "direction_degrees": [
+                118.869713778796,
+                7.0000000000000036
+              ],
+              "env_clearance_delta": [
+                -0.026504406178964712,
+                7.0000000000000036
+              ],
+              "actual_clearance_delta": [
+                -0.007294577105116407,
+                7.0000000000000036
+              ],
+              "progress_delta": [
+                0.028598932614312032,
+                7.0000000000000036
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.02422137260437012,
+                6.400000000000003
+              ],
+              "new_value_gap": [
+                0.013586711883544924,
+                6.400000000000003
+              ],
+              "speed_delta": [
+                0.004956637120328554,
+                6.400000000000003
+              ],
+              "command_delta": [
+                2.188198948378626,
+                6.400000000000003
+              ],
+              "direction_degrees": [
+                132.51219572701865,
+                6.400000000000003
+              ],
+              "env_clearance_delta": [
+                -0.04501703585848736,
+                6.400000000000003
+              ],
+              "actual_clearance_delta": [
+                -0.02113260251866547,
+                6.400000000000003
+              ],
+              "progress_delta": [
+                -0.025457153790016833,
+                6.400000000000003
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              5.0,
+              7.0,
+              8.0,
+              7.0,
+              8.0
+            ],
+            "random_independent": [
+              5.0,
+              8.0,
+              8.0,
+              5.0,
+              6.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "case": 90004,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 63,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.0,
+              "actual_safe": 63.0
+            },
+            "oracle": {
+              "final_flip": 23.0,
+              "value_flip": 23.0,
+              "env_clearance_delta": -0.42053267094895075,
+              "actual_clearance_delta": -0.4059643532987922,
+              "progress_delta": 0.10646645826728354,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.0,
+              "actual_safe": 63.0
+            },
+            "random_shared": {
+              "final_flip": 20.59999999999996,
+              "value_flip": 21.399999999999956,
+              "env_clearance_delta": -0.11875951213393221,
+              "actual_clearance_delta": -0.14656983961546427,
+              "progress_delta": 0.014522196656549899,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.000000000000355,
+              "actual_safe": 63.000000000000355
+            },
+            "random_independent": {
+              "final_flip": 17.79999999999997,
+              "value_flip": 17.999999999999968,
+              "env_clearance_delta": -0.01634392653300966,
+              "actual_clearance_delta": -0.05553680689223688,
+              "progress_delta": -0.06166334854822042,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.000000000000355,
+              "actual_safe": 63.000000000000355
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.06411761045455933,
+                23.0
+              ],
+              "new_value_gap": [
+                0.04930633306503296,
+                23.0
+              ],
+              "speed_delta": [
+                -0.7866064901167182,
+                23.0
+              ],
+              "command_delta": [
+                6.456478579788338,
+                23.0
+              ],
+              "direction_degrees": [
+                591.3149437678381,
+                23.0
+              ],
+              "env_clearance_delta": [
+                -0.42053267094895075,
+                23.0
+              ],
+              "actual_clearance_delta": [
+                -0.4059643532987922,
+                23.0
+              ],
+              "progress_delta": [
+                0.10646645826728354,
+                23.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.03881541490554808,
+                20.59999999999996
+              ],
+              "new_value_gap": [
+                0.04075837135314944,
+                20.59999999999996
+              ],
+              "speed_delta": [
+                -0.7511785300191689,
+                20.59999999999996
+              ],
+              "command_delta": [
+                5.622213707337543,
+                20.59999999999996
+              ],
+              "direction_degrees": [
+                475.970350185094,
+                20.59999999999996
+              ],
+              "env_clearance_delta": [
+                -0.11875951213393221,
+                20.59999999999996
+              ],
+              "actual_clearance_delta": [
+                -0.14656983961546427,
+                20.59999999999996
+              ],
+              "progress_delta": [
+                0.014522196656549899,
+                20.59999999999996
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.03821026086807249,
+                17.79999999999997
+              ],
+              "new_value_gap": [
+                0.04493923187255861,
+                17.79999999999997
+              ],
+              "speed_delta": [
+                -0.21530815932835318,
+                17.79999999999997
+              ],
+              "command_delta": [
+                5.166760576936459,
+                17.79999999999997
+              ],
+              "direction_degrees": [
+                458.98353761148104,
+                17.79999999999997
+              ],
+              "env_clearance_delta": [
+                -0.01634392653300966,
+                17.79999999999997
+              ],
+              "actual_clearance_delta": [
+                -0.05553680689223688,
+                17.79999999999997
+              ],
+              "progress_delta": [
+                -0.06166334854822042,
+                17.79999999999997
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              20.0,
+              15.0,
+              24.0,
+              19.0,
+              25.0
+            ],
+            "random_independent": [
+              20.0,
+              18.0,
+              15.0,
+              17.0,
+              19.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 63,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.0,
+              "actual_safe": 63.0
+            },
+            "oracle": {
+              "final_flip": 23.0,
+              "value_flip": 23.0,
+              "env_clearance_delta": -0.42053267094895075,
+              "actual_clearance_delta": -0.4059643532987922,
+              "progress_delta": 0.10646645826728354,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.0,
+              "actual_safe": 63.0
+            },
+            "random_shared": {
+              "final_flip": 20.59999999999996,
+              "value_flip": 21.399999999999956,
+              "env_clearance_delta": -0.11875951213393221,
+              "actual_clearance_delta": -0.14656983961546427,
+              "progress_delta": 0.014522196656549899,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.000000000000355,
+              "actual_safe": 63.000000000000355
+            },
+            "random_independent": {
+              "final_flip": 17.79999999999997,
+              "value_flip": 17.999999999999968,
+              "env_clearance_delta": -0.01634392653300966,
+              "actual_clearance_delta": -0.05553680689223688,
+              "progress_delta": -0.06166334854822042,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 63.000000000000355,
+              "actual_safe": 63.000000000000355
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.06411761045455933,
+                23.0
+              ],
+              "new_value_gap": [
+                0.04930633306503296,
+                23.0
+              ],
+              "speed_delta": [
+                -0.7866064901167182,
+                23.0
+              ],
+              "command_delta": [
+                6.456478579788338,
+                23.0
+              ],
+              "direction_degrees": [
+                591.3149437678381,
+                23.0
+              ],
+              "env_clearance_delta": [
+                -0.42053267094895075,
+                23.0
+              ],
+              "actual_clearance_delta": [
+                -0.4059643532987922,
+                23.0
+              ],
+              "progress_delta": [
+                0.10646645826728354,
+                23.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.03881541490554808,
+                20.59999999999996
+              ],
+              "new_value_gap": [
+                0.04075837135314944,
+                20.59999999999996
+              ],
+              "speed_delta": [
+                -0.7511785300191689,
+                20.59999999999996
+              ],
+              "command_delta": [
+                5.622213707337543,
+                20.59999999999996
+              ],
+              "direction_degrees": [
+                475.970350185094,
+                20.59999999999996
+              ],
+              "env_clearance_delta": [
+                -0.11875951213393221,
+                20.59999999999996
+              ],
+              "actual_clearance_delta": [
+                -0.14656983961546427,
+                20.59999999999996
+              ],
+              "progress_delta": [
+                0.014522196656549899,
+                20.59999999999996
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.03821026086807249,
+                17.79999999999997
+              ],
+              "new_value_gap": [
+                0.04493923187255861,
+                17.79999999999997
+              ],
+              "speed_delta": [
+                -0.21530815932835318,
+                17.79999999999997
+              ],
+              "command_delta": [
+                5.166760576936459,
+                17.79999999999997
+              ],
+              "direction_degrees": [
+                458.98353761148104,
+                17.79999999999997
+              ],
+              "env_clearance_delta": [
+                -0.01634392653300966,
+                17.79999999999997
+              ],
+              "actual_clearance_delta": [
+                -0.05553680689223688,
+                17.79999999999997
+              ],
+              "progress_delta": [
+                -0.06166334854822042,
+                17.79999999999997
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              20.0,
+              15.0,
+              24.0,
+              19.0,
+              25.0
+            ],
+            "random_independent": [
+              20.0,
+              18.0,
+              15.0,
+              17.0,
+              19.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 2.0,
+              "value_flip": 2.0,
+              "env_clearance_delta": -0.0536675053787703,
+              "actual_clearance_delta": -0.05253108510670823,
+              "progress_delta": 0.11432827902568712,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 3.0000000000000004,
+              "value_flip": 3.0000000000000004,
+              "env_clearance_delta": -0.03348964214880424,
+              "actual_clearance_delta": -0.0327632116191254,
+              "progress_delta": 0.06253551978010952,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 2.8000000000000003,
+              "value_flip": 2.8000000000000003,
+              "env_clearance_delta": -0.059185248076988654,
+              "actual_clearance_delta": -0.05826980078448117,
+              "progress_delta": 0.08228533154301967,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0002963542938232422,
+                2.0
+              ],
+              "new_value_gap": [
+                0.000809788703918457,
+                2.0
+              ],
+              "speed_delta": [
+                0.18424069755107852,
+                2.0
+              ],
+              "command_delta": [
+                0.4738610592342434,
+                2.0
+              ],
+              "direction_degrees": [
+                17.131844798650253,
+                2.0
+              ],
+              "env_clearance_delta": [
+                -0.0536675053787703,
+                2.0
+              ],
+              "actual_clearance_delta": [
+                -0.05253108510670823,
+                2.0
+              ],
+              "progress_delta": [
+                0.11432827902568712,
+                2.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0014095425605773924,
+                3.0000000000000004
+              ],
+              "new_value_gap": [
+                0.001596617698669434,
+                3.0000000000000004
+              ],
+              "speed_delta": [
+                0.10648949520610845,
+                3.0000000000000004
+              ],
+              "command_delta": [
+                0.7759442470211891,
+                3.0000000000000004
+              ],
+              "direction_degrees": [
+                38.76589480560888,
+                3.0000000000000004
+              ],
+              "env_clearance_delta": [
+                -0.03348964214880424,
+                3.0000000000000004
+              ],
+              "actual_clearance_delta": [
+                -0.0327632116191254,
+                3.0000000000000004
+              ],
+              "progress_delta": [
+                0.06253551978010952,
+                3.0000000000000004
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0010552048683166503,
+                2.8000000000000003
+              ],
+              "new_value_gap": [
+                0.0019811272621154787,
+                2.8000000000000003
+              ],
+              "speed_delta": [
+                0.14992059670424007,
+                2.8000000000000003
+              ],
+              "command_delta": [
+                0.70684058837449,
+                2.8000000000000003
+              ],
+              "direction_degrees": [
+                32.68675211488614,
+                2.8000000000000003
+              ],
+              "env_clearance_delta": [
+                -0.059185248076988654,
+                2.8000000000000003
+              ],
+              "actual_clearance_delta": [
+                -0.05826980078448117,
+                2.8000000000000003
+              ],
+              "progress_delta": [
+                0.08228533154301967,
+                2.8000000000000003
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              3.0,
+              4.0,
+              3.0,
+              2.0,
+              3.0
+            ],
+            "random_independent": [
+              3.0,
+              4.0,
+              1.0,
+              3.0,
+              3.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "case": 90005,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 82,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 80.0,
+              "actual_safe": 79.0
+            },
+            "oracle": {
+              "final_flip": 21.0,
+              "value_flip": 20.0,
+              "env_clearance_delta": 0.24391443518378753,
+              "actual_clearance_delta": 0.268262355591066,
+              "progress_delta": -0.20374519466434116,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 79.0,
+              "actual_safe": 79.0
+            },
+            "random_shared": {
+              "final_flip": 21.599999999999955,
+              "value_flip": 21.799999999999955,
+              "env_clearance_delta": -0.06004166003146061,
+              "actual_clearance_delta": -0.04932219507780963,
+              "progress_delta": 0.11189289529421875,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 79.8000000000006,
+              "actual_safe": 79.00000000000058
+            },
+            "random_independent": {
+              "final_flip": 21.199999999999957,
+              "value_flip": 20.799999999999958,
+              "env_clearance_delta": 0.2451300669157407,
+              "actual_clearance_delta": 0.2653198228855662,
+              "progress_delta": -0.08569377811757642,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 80.4000000000006,
+              "actual_safe": 80.0000000000006
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.10088938474655151,
+                21.0
+              ],
+              "new_value_gap": [
+                0.07543063163757324,
+                21.0
+              ],
+              "speed_delta": [
+                -1.0119423697751713,
+                21.0
+              ],
+              "command_delta": [
+                11.037124223407549,
+                21.0
+              ],
+              "direction_degrees": [
+                946.5545841103051,
+                21.0
+              ],
+              "env_clearance_delta": [
+                0.24391443518378753,
+                21.0
+              ],
+              "actual_clearance_delta": [
+                0.268262355591066,
+                21.0
+              ],
+              "progress_delta": [
+                -0.20374519466434116,
+                21.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.08439048528671263,
+                21.599999999999955
+              ],
+              "new_value_gap": [
+                0.025344270467758175,
+                21.599999999999955
+              ],
+              "speed_delta": [
+                0.3567064128011217,
+                21.599999999999955
+              ],
+              "command_delta": [
+                9.171490561621921,
+                21.599999999999955
+              ],
+              "direction_degrees": [
+                740.94305462925,
+                21.599999999999955
+              ],
+              "env_clearance_delta": [
+                -0.06004166003146061,
+                21.599999999999955
+              ],
+              "actual_clearance_delta": [
+                -0.04932219507780963,
+                21.599999999999955
+              ],
+              "progress_delta": [
+                0.11189289529421875,
+                21.599999999999955
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.06974407434463499,
+                21.199999999999957
+              ],
+              "new_value_gap": [
+                0.044914883375167865,
+                21.199999999999957
+              ],
+              "speed_delta": [
+                -0.13552573773711404,
+                21.199999999999957
+              ],
+              "command_delta": [
+                9.263400492547003,
+                21.199999999999957
+              ],
+              "direction_degrees": [
+                804.4607380564998,
+                21.199999999999957
+              ],
+              "env_clearance_delta": [
+                0.2451300669157407,
+                21.199999999999957
+              ],
+              "actual_clearance_delta": [
+                0.2653198228855662,
+                21.199999999999957
+              ],
+              "progress_delta": [
+                -0.08569377811757642,
+                21.199999999999957
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              22.0,
+              25.0,
+              20.0,
+              23.0,
+              18.0
+            ],
+            "random_independent": [
+              21.0,
+              19.0,
+              23.0,
+              20.0,
+              23.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 82,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 80.0,
+              "actual_safe": 79.0
+            },
+            "oracle": {
+              "final_flip": 21.0,
+              "value_flip": 20.0,
+              "env_clearance_delta": 0.24391443518378753,
+              "actual_clearance_delta": 0.268262355591066,
+              "progress_delta": -0.20374519466434116,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 79.0,
+              "actual_safe": 79.0
+            },
+            "random_shared": {
+              "final_flip": 21.599999999999955,
+              "value_flip": 21.799999999999955,
+              "env_clearance_delta": -0.06004166003146061,
+              "actual_clearance_delta": -0.04932219507780963,
+              "progress_delta": 0.11189289529421875,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 79.8000000000006,
+              "actual_safe": 79.00000000000058
+            },
+            "random_independent": {
+              "final_flip": 21.199999999999957,
+              "value_flip": 20.799999999999958,
+              "env_clearance_delta": 0.2451300669157407,
+              "actual_clearance_delta": 0.2653198228855662,
+              "progress_delta": -0.08569377811757642,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 80.4000000000006,
+              "actual_safe": 80.0000000000006
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.10088938474655151,
+                21.0
+              ],
+              "new_value_gap": [
+                0.07543063163757324,
+                21.0
+              ],
+              "speed_delta": [
+                -1.0119423697751713,
+                21.0
+              ],
+              "command_delta": [
+                11.037124223407549,
+                21.0
+              ],
+              "direction_degrees": [
+                946.5545841103051,
+                21.0
+              ],
+              "env_clearance_delta": [
+                0.24391443518378753,
+                21.0
+              ],
+              "actual_clearance_delta": [
+                0.268262355591066,
+                21.0
+              ],
+              "progress_delta": [
+                -0.20374519466434116,
+                21.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.08439048528671263,
+                21.599999999999955
+              ],
+              "new_value_gap": [
+                0.025344270467758175,
+                21.599999999999955
+              ],
+              "speed_delta": [
+                0.3567064128011217,
+                21.599999999999955
+              ],
+              "command_delta": [
+                9.171490561621921,
+                21.599999999999955
+              ],
+              "direction_degrees": [
+                740.94305462925,
+                21.599999999999955
+              ],
+              "env_clearance_delta": [
+                -0.06004166003146061,
+                21.599999999999955
+              ],
+              "actual_clearance_delta": [
+                -0.04932219507780963,
+                21.599999999999955
+              ],
+              "progress_delta": [
+                0.11189289529421875,
+                21.599999999999955
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.06974407434463499,
+                21.199999999999957
+              ],
+              "new_value_gap": [
+                0.044914883375167865,
+                21.199999999999957
+              ],
+              "speed_delta": [
+                -0.13552573773711404,
+                21.199999999999957
+              ],
+              "command_delta": [
+                9.263400492547003,
+                21.199999999999957
+              ],
+              "direction_degrees": [
+                804.4607380564998,
+                21.199999999999957
+              ],
+              "env_clearance_delta": [
+                0.2451300669157407,
+                21.199999999999957
+              ],
+              "actual_clearance_delta": [
+                0.2653198228855662,
+                21.199999999999957
+              ],
+              "progress_delta": [
+                -0.08569377811757642,
+                21.199999999999957
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              22.0,
+              25.0,
+              20.0,
+              23.0,
+              18.0
+            ],
+            "random_independent": [
+              21.0,
+              19.0,
+              23.0,
+              20.0,
+              23.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "random_independent": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 4,
+      "case": 90006,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 48,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 45.0,
+              "actual_safe": 44.0
+            },
+            "oracle": {
+              "final_flip": 16.0,
+              "value_flip": 12.0,
+              "env_clearance_delta": 0.024440581933443728,
+              "actual_clearance_delta": 0.02417358601370062,
+              "progress_delta": -0.5407140269975528,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 44.0,
+              "actual_safe": 45.0
+            },
+            "random_shared": {
+              "final_flip": 10.399999999999995,
+              "value_flip": 9.2,
+              "env_clearance_delta": -0.04090989664134244,
+              "actual_clearance_delta": -0.06094572518646804,
+              "progress_delta": -0.22229692919998925,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 44.600000000000094,
+              "actual_safe": 44.20000000000009
+            },
+            "random_independent": {
+              "final_flip": 10.399999999999995,
+              "value_flip": 9.2,
+              "env_clearance_delta": 0.02815620972285375,
+              "actual_clearance_delta": 0.01975616663473279,
+              "progress_delta": -0.10927322348923836,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 44.600000000000094,
+              "actual_safe": 44.20000000000009
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.031911253929138184,
+                16.0
+              ],
+              "new_value_gap": [
+                0.0201227068901062,
+                16.0
+              ],
+              "speed_delta": [
+                0.22349056226050268,
+                16.0
+              ],
+              "command_delta": [
+                6.2431437961043255,
+                16.0
+              ],
+              "direction_degrees": [
+                365.7523420254563,
+                16.0
+              ],
+              "env_clearance_delta": [
+                0.024440581933443728,
+                16.0
+              ],
+              "actual_clearance_delta": [
+                0.02417358601370062,
+                16.0
+              ],
+              "progress_delta": [
+                -0.5407140269975528,
+                16.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.012249863147735594,
+                10.399999999999995
+              ],
+              "new_value_gap": [
+                0.016853797435760508,
+                10.399999999999995
+              ],
+              "speed_delta": [
+                0.13992687710404947,
+                10.399999999999995
+              ],
+              "command_delta": [
+                3.6146101385494953,
+                10.399999999999995
+              ],
+              "direction_degrees": [
+                220.27118140631777,
+                10.399999999999995
+              ],
+              "env_clearance_delta": [
+                -0.04090989664134244,
+                10.399999999999995
+              ],
+              "actual_clearance_delta": [
+                -0.06094572518646804,
+                10.399999999999995
+              ],
+              "progress_delta": [
+                -0.22229692919998925,
+                10.399999999999995
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.01577934026718139,
+                10.399999999999995
+              ],
+              "new_value_gap": [
+                0.010138750076293944,
+                10.399999999999995
+              ],
+              "speed_delta": [
+                0.16359380076229424,
+                10.399999999999995
+              ],
+              "command_delta": [
+                3.3335888945822454,
+                10.399999999999995
+              ],
+              "direction_degrees": [
+                197.37727311452778,
+                10.399999999999995
+              ],
+              "env_clearance_delta": [
+                0.02815620972285375,
+                10.399999999999995
+              ],
+              "actual_clearance_delta": [
+                0.01975616663473279,
+                10.399999999999995
+              ],
+              "progress_delta": [
+                -0.10927322348923836,
+                10.399999999999995
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              10.0,
+              11.0,
+              9.0,
+              10.0,
+              12.0
+            ],
+            "random_independent": [
+              13.0,
+              8.0,
+              7.0,
+              11.0,
+              13.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 48,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 45.0,
+              "actual_safe": 44.0
+            },
+            "oracle": {
+              "final_flip": 16.0,
+              "value_flip": 12.0,
+              "env_clearance_delta": 0.024440581933443728,
+              "actual_clearance_delta": 0.02417358601370062,
+              "progress_delta": -0.5407140269975528,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 44.0,
+              "actual_safe": 45.0
+            },
+            "random_shared": {
+              "final_flip": 10.399999999999995,
+              "value_flip": 9.2,
+              "env_clearance_delta": -0.04090989664134244,
+              "actual_clearance_delta": -0.06094572518646804,
+              "progress_delta": -0.22229692919998925,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 44.600000000000094,
+              "actual_safe": 44.20000000000009
+            },
+            "random_independent": {
+              "final_flip": 10.399999999999995,
+              "value_flip": 9.2,
+              "env_clearance_delta": 0.02815620972285375,
+              "actual_clearance_delta": 0.01975616663473279,
+              "progress_delta": -0.10927322348923836,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 44.600000000000094,
+              "actual_safe": 44.20000000000009
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.031911253929138184,
+                16.0
+              ],
+              "new_value_gap": [
+                0.0201227068901062,
+                16.0
+              ],
+              "speed_delta": [
+                0.22349056226050268,
+                16.0
+              ],
+              "command_delta": [
+                6.2431437961043255,
+                16.0
+              ],
+              "direction_degrees": [
+                365.7523420254563,
+                16.0
+              ],
+              "env_clearance_delta": [
+                0.024440581933443728,
+                16.0
+              ],
+              "actual_clearance_delta": [
+                0.02417358601370062,
+                16.0
+              ],
+              "progress_delta": [
+                -0.5407140269975528,
+                16.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.012249863147735594,
+                10.399999999999995
+              ],
+              "new_value_gap": [
+                0.016853797435760508,
+                10.399999999999995
+              ],
+              "speed_delta": [
+                0.13992687710404947,
+                10.399999999999995
+              ],
+              "command_delta": [
+                3.6146101385494953,
+                10.399999999999995
+              ],
+              "direction_degrees": [
+                220.27118140631777,
+                10.399999999999995
+              ],
+              "env_clearance_delta": [
+                -0.04090989664134244,
+                10.399999999999995
+              ],
+              "actual_clearance_delta": [
+                -0.06094572518646804,
+                10.399999999999995
+              ],
+              "progress_delta": [
+                -0.22229692919998925,
+                10.399999999999995
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.01577934026718139,
+                10.399999999999995
+              ],
+              "new_value_gap": [
+                0.010138750076293944,
+                10.399999999999995
+              ],
+              "speed_delta": [
+                0.16359380076229424,
+                10.399999999999995
+              ],
+              "command_delta": [
+                3.3335888945822454,
+                10.399999999999995
+              ],
+              "direction_degrees": [
+                197.37727311452778,
+                10.399999999999995
+              ],
+              "env_clearance_delta": [
+                0.02815620972285375,
+                10.399999999999995
+              ],
+              "actual_clearance_delta": [
+                0.01975616663473279,
+                10.399999999999995
+              ],
+              "progress_delta": [
+                -0.10927322348923836,
+                10.399999999999995
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              10.0,
+              11.0,
+              9.0,
+              10.0,
+              12.0
+            ],
+            "random_independent": [
+              13.0,
+              8.0,
+              7.0,
+              11.0,
+              13.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 5.0,
+              "value_flip": 4.0,
+              "env_clearance_delta": -0.010715392360642506,
+              "actual_clearance_delta": -0.010161815426974252,
+              "progress_delta": 0.003076649545415977,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 2.8000000000000003,
+              "value_flip": 2.4,
+              "env_clearance_delta": -0.004286156944257003,
+              "actual_clearance_delta": -0.004064726170789701,
+              "progress_delta": 0.03679376776151786,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.599999999999962,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 3.2000000000000006,
+              "value_flip": 2.6,
+              "env_clearance_delta": -0.0037406227301856943,
+              "actual_clearance_delta": -0.0035974125960015705,
+              "progress_delta": 0.024292734021993667,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.599999999999962,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.007957100868225098,
+                5.0
+              ],
+              "new_value_gap": [
+                0.0015737414360046387,
+                5.0
+              ],
+              "speed_delta": [
+                0.10858637427058215,
+                5.0
+              ],
+              "command_delta": [
+                1.6609145481635992,
+                5.0
+              ],
+              "direction_degrees": [
+                95.28112626707713,
+                5.0
+              ],
+              "env_clearance_delta": [
+                -0.010715392360642506,
+                5.0
+              ],
+              "actual_clearance_delta": [
+                -0.010161815426974252,
+                5.0
+              ],
+              "progress_delta": [
+                0.003076649545415977,
+                5.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0023251771926879883,
+                2.8000000000000003
+              ],
+              "new_value_gap": [
+                0.002063381671905518,
+                2.8000000000000003
+              ],
+              "speed_delta": [
+                0.09393347778457414,
+                2.8000000000000003
+              ],
+              "command_delta": [
+                0.830340909025794,
+                2.8000000000000003
+              ],
+              "direction_degrees": [
+                47.75558591671004,
+                2.8000000000000003
+              ],
+              "env_clearance_delta": [
+                -0.004286156944257003,
+                2.8000000000000003
+              ],
+              "actual_clearance_delta": [
+                -0.004064726170789701,
+                2.8000000000000003
+              ],
+              "progress_delta": [
+                0.03679376776151786,
+                2.8000000000000003
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0018239855766296388,
+                3.2000000000000006
+              ],
+              "new_value_gap": [
+                0.0011831760406494141,
+                3.2000000000000006
+              ],
+              "speed_delta": [
+                0.0883592266383988,
+                3.2000000000000006
+              ],
+              "command_delta": [
+                0.8870654184571167,
+                3.2000000000000006
+              ],
+              "direction_degrees": [
+                51.146312877456495,
+                3.2000000000000006
+              ],
+              "env_clearance_delta": [
+                -0.0037406227301856943,
+                3.2000000000000006
+              ],
+              "actual_clearance_delta": [
+                -0.0035974125960015705,
+                3.2000000000000006
+              ],
+              "progress_delta": [
+                0.024292734021993667,
+                3.2000000000000006
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              2.0,
+              2.0,
+              3.0,
+              2.0,
+              5.0
+            ],
+            "random_independent": [
+              4.0,
+              1.0,
+              3.0,
+              4.0,
+              4.0
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "checked_steps": 474,
+  "repeats": 5,
+  "checkpoint_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+  "config_sha256": "6e77ae41f6902672490fa929670ea3c6c703a6db3c4f10eed8fbc75a10fd8749",
+  "input_sha256": "46c9d0e44c0258f66ea3017773869749c249d7d2d7f30aa43d2eb134ee162f96",
+  "matched_norm_max_error": 4.753142324176451e-16,
+  "cv_values_argmax_bitwise": true,
+  "oracle_values_argmax_bitwise": true,
+  "command_and_selection_and_history_frozen": true,
+  "per_step": "/root/kda-lookahead-20261009/h3-random/implcheck/cell4.steps.jsonl.gz",
+  "wall_seconds": 130.2945635318756,
+  "steady_seconds_per_step": 0.26199513174451683
+}

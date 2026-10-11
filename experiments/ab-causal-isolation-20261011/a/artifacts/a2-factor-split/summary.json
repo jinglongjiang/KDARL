@@ -1,0 +1,2061 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "question": "Within original strict-loss pairs, how much does pinned F change ranking through pinned physical V, immediate reward, and terminal mask separately?",
+    "denominator": "Exactly original a2-pairs original_strict_error: sign(delta G) nonzero and sign(delta saved Qpred) opposite, tolerance1e-6. Fixed across all stages; not all G-improved pairs.",
+    "stages": [
+      "saved Qpred",
+      "physical-only: original rpred + float32(.99*true pinned V)",
+      "then realReward: real reward + float32(.99*true pinned V)",
+      "then terminal: real reward alone if done"
+    ],
+    "floating": "Old scoring multiplies gamma*V in torch.float32, then adds reward tensor (float64 if any predicted candidate nonterminal; float32 for all-terminal batch). Oracle converts float32 product to Python float before adding real reward. Preserve both actual contracts and report reconstruction/rounding residuals; no float64 gamma*V substitution.",
+    "transition": "Correction=wrong->correct, reverse=correct->wrong relative to fixed realized G. Physical reverse is structurally0 on an initially-wrong denominator; ties tracked separately. Later reverse can undo earlier correction.",
+    "interpretation": "Physical-only changes the oracle-pinned last-frame V, not pure CV position error: all true next human position/velocity fields with pinned IDs affect encoder output. These are ordered algebraic diagnostic replacements, not additive navigation-cause fractions.",
+    "GO": "Reconstruction matches archived P/F within reported floating precision: publish descriptive subdivision only.",
+    "KILL": "Failed reconstruction: invalidate this subdivision; do not infer mechanism or launch new experiments.",
+    "budget": "One CPU streaming pass over existing branch files; no new model invocation, GPU, rollout, optimizer or selection.",
+    "old_source_sha256": "2fd464618507796fdbc1b072d96563c97180e301f842cac1a6e6f75212ff6616",
+    "oracle_source_sha256": "cb2294f1a59e4598c75f004839a245c4090f951a509b5247a1dbad2b311b41fa",
+    "script_sha256": "645a1f9c64167cc58ac7c03b83279b2189b758963514b0d0d0e29c1ffee97fff",
+    "original_pairs_sha256": "b8eec214739de6dbcdaf58e83948556e4a4a342f0bfb70a8861b8240695391d0",
+    "original_summary_sha256": "6109f9069b546165a69a4c8654d38f79d0006c2e60e1f891bd420501de054bf2",
+    "config_sha256": {
+      "/home/abc/workspace/ttc5-causal-20261011/inputs/kda-s443-t24/config.ini": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a",
+      "/home/abc/workspace/ttc5-causal-20261011/inputs/gru-s419-t24/config.ini": "35ccdf1dc1f871b13bacc1b1eb2a8d82c1fcefaf787177bd31905c738f92d61e",
+      "/home/abc/workspace/ttc5-causal-20261011/inputs/gru-s443-t24/config.ini": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f",
+      "/home/abc/workspace/ttc5-causal-20261011/inputs/kda-s419-t24/config.ini": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7"
+    },
+    "tolerance": 1e-06
+  },
+  "source_sha256": {
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell0.jsonl.gz": "042a01502dd8a2687821a77edb29342e22a52d1b30de56e38a8aadda54a7b6d8",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell3.jsonl.gz": "b30485dcbd081c866817df97d71477d2a288dc1ced7d40a6040f66286b1161ff",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell4.jsonl.gz": "1c7a35faaae0ccb45020bdf1d4d77cc7f3d1715350826e7724ed9de4ff11785c",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s419-t24-cell5.jsonl.gz": "f078771b4673eda754dd1242bd785e27a31e751b5cdcb0f94dcdabde0bbc74cd",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s443-t24-cell4.jsonl.gz": "4488da816a85bc5e12861e226f7c2be603c0b7d6cb6fad2fb66ac08f12fcbdfe",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-gru-s443-t24-cell5.jsonl.gz": "b2b14deed0bae40a7464d7e63fd23a7545a119efbcd649d59d5fd88975a2026e",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell3.jsonl.gz": "41e03491420677b20add588e8f4ea493b20f99ce617176ca5d9c038badaf601a",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell4.jsonl.gz": "361a76aa03f7a22432205413fbd0ec9b5a0df34f9740a79f529a2787db7617cc",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s419-t24-cell5.jsonl.gz": "d3a7dc6d0fc9e2fa7f8aa0bbd050f3f4a217ccfe322fd9a6a092695ad2624415",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell0.jsonl.gz": "08f6f1505c0fc5f50c81abad3369841dd614d004f023e480324e1e83268df9ae",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell3.jsonl.gz": "0425c353faa7eb33c8ae5b62a90b900abb8d7268b9f076a29656d19be466d367",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell4.jsonl.gz": "240ae779460d6a440e6cb71d0b5b712e68529cc94a560571c823b0709a663f10",
+    "/home/abc/workspace/ttc5-causal-20261011/work/branches-kda-s443-t24-cell5.jsonl.gz": "390295f5e6d6486b92cd1a37db6707bf19c5be92dcbdc1f310e904c104b8d233"
+  },
+  "processed_pairs": 1661,
+  "rounding": {
+    "max_original80_reconstruction_abs": 0.0,
+    "max_abs_P_reconstruction": 0.0,
+    "max_abs_realReward_vs_archived_unmasked": 0.0,
+    "max_abs_terminal_vs_archived_F": 0.0,
+    "max_abs_gamma32_minus_naive64": 3.874301912620837e-08,
+    "max_abs_realReward_float32add_minus_contract": 2.9549378166571216e-08,
+    "max_telescoping_abs": 0.0
+  },
+  "groups": [
+    {
+      "model": "gru-s419-t24",
+      "cell": 0,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 0,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 3,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_wrong": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 79,
+          "independent_roots": 43,
+          "independent_cases": 43
+        },
+        "physical_only_correct": {
+          "action_pairs": 11,
+          "independent_roots": 10,
+          "independent_cases": 10
+        },
+        "physical_only_wrong": {
+          "action_pairs": 68,
+          "independent_roots": 40,
+          "independent_cases": 40
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 11,
+          "independent_roots": 10,
+          "independent_cases": 10
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 11,
+          "independent_roots": 10,
+          "independent_cases": 10
+        },
+        "realReward_wrong": {
+          "action_pairs": 68,
+          "independent_roots": 40,
+          "independent_cases": 40
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 11,
+          "independent_roots": 10,
+          "independent_cases": 10
+        },
+        "terminal_wrong": {
+          "action_pairs": 68,
+          "independent_roots": 40,
+          "independent_cases": 40
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 48,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "physical_only_correct": {
+          "action_pairs": 3,
+          "independent_roots": 3,
+          "independent_cases": 3
+        },
+        "physical_only_wrong": {
+          "action_pairs": 45,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 3,
+          "independent_roots": 3,
+          "independent_cases": 3
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 3,
+          "independent_roots": 3,
+          "independent_cases": 3
+        },
+        "realReward_wrong": {
+          "action_pairs": 45,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 3,
+          "independent_roots": 3,
+          "independent_cases": 3
+        },
+        "terminal_wrong": {
+          "action_pairs": 45,
+          "independent_roots": 26,
+          "independent_cases": 26
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 125,
+          "independent_roots": 70,
+          "independent_cases": 70
+        },
+        "physical_only_correct": {
+          "action_pairs": 19,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "physical_only_wrong": {
+          "action_pairs": 106,
+          "independent_roots": 66,
+          "independent_cases": 66
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 19,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 19,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "realReward_wrong": {
+          "action_pairs": 106,
+          "independent_roots": 66,
+          "independent_cases": 66
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 19,
+          "independent_roots": 16,
+          "independent_cases": 16
+        },
+        "terminal_wrong": {
+          "action_pairs": 106,
+          "independent_roots": 66,
+          "independent_cases": 66
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s419-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "physical_only_correct": {
+          "action_pairs": 12,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "physical_only_wrong": {
+          "action_pairs": 84,
+          "independent_roots": 52,
+          "independent_cases": 52
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 12,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 12,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "realReward_wrong": {
+          "action_pairs": 84,
+          "independent_roots": 52,
+          "independent_cases": 52
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 12,
+          "independent_roots": 11,
+          "independent_cases": 11
+        },
+        "terminal_wrong": {
+          "action_pairs": 84,
+          "independent_roots": 52,
+          "independent_cases": 52
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 42,
+          "independent_roots": 23,
+          "independent_cases": 23
+        },
+        "physical_only_correct": {
+          "action_pairs": 8,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_only_wrong": {
+          "action_pairs": 34,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 8,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 8,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "realReward_wrong": {
+          "action_pairs": 34,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 8,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "terminal_wrong": {
+          "action_pairs": 34,
+          "independent_roots": 21,
+          "independent_cases": 21
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 38,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_only_correct": {
+          "action_pairs": 10,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_only_wrong": {
+          "action_pairs": 28,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 10,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 10,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "realReward_wrong": {
+          "action_pairs": 28,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 10,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "terminal_wrong": {
+          "action_pairs": 28,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 127,
+          "independent_roots": 74,
+          "independent_cases": 74
+        },
+        "physical_only_correct": {
+          "action_pairs": 31,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "physical_only_wrong": {
+          "action_pairs": 96,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 31,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 33,
+          "independent_roots": 29,
+          "independent_cases": 29
+        },
+        "realReward_wrong": {
+          "action_pairs": 94,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 2,
+          "independent_roots": 2,
+          "independent_cases": 2
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 33,
+          "independent_roots": 29,
+          "independent_cases": 29
+        },
+        "terminal_wrong": {
+          "action_pairs": 94,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "gru-s443-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 126,
+          "independent_roots": 72,
+          "independent_cases": 72
+        },
+        "physical_only_correct": {
+          "action_pairs": 27,
+          "independent_roots": 27,
+          "independent_cases": 27
+        },
+        "physical_only_wrong": {
+          "action_pairs": 99,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 27,
+          "independent_roots": 27,
+          "independent_cases": 27
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 28,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "realReward_wrong": {
+          "action_pairs": 98,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 28,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "terminal_wrong": {
+          "action_pairs": 98,
+          "independent_roots": 58,
+          "independent_cases": 58
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 93,
+          "independent_roots": 50,
+          "independent_cases": 50
+        },
+        "physical_only_correct": {
+          "action_pairs": 17,
+          "independent_roots": 15,
+          "independent_cases": 15
+        },
+        "physical_only_wrong": {
+          "action_pairs": 75,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "physical_only_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correction": {
+          "action_pairs": 17,
+          "independent_roots": 15,
+          "independent_cases": 15
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 17,
+          "independent_roots": 15,
+          "independent_cases": 15
+        },
+        "realReward_wrong": {
+          "action_pairs": 75,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "realReward_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 17,
+          "independent_roots": 15,
+          "independent_cases": 15
+        },
+        "terminal_wrong": {
+          "action_pairs": 75,
+          "independent_roots": 42,
+          "independent_cases": 42
+        },
+        "terminal_tie": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 55,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "physical_only_correct": {
+          "action_pairs": 11,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "physical_only_wrong": {
+          "action_pairs": 44,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 11,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 11,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "realReward_wrong": {
+          "action_pairs": 44,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 11,
+          "independent_roots": 6,
+          "independent_cases": 6
+        },
+        "terminal_wrong": {
+          "action_pairs": 44,
+          "independent_roots": 28,
+          "independent_cases": 28
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 192,
+          "independent_roots": 96,
+          "independent_cases": 96
+        },
+        "physical_only_correct": {
+          "action_pairs": 37,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_only_wrong": {
+          "action_pairs": 155,
+          "independent_roots": 89,
+          "independent_cases": 89
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 37,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 37,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "realReward_wrong": {
+          "action_pairs": 155,
+          "independent_roots": 89,
+          "independent_cases": 89
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 37,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "terminal_wrong": {
+          "action_pairs": 155,
+          "independent_roots": 89,
+          "independent_cases": 89
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s419-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 118,
+          "independent_roots": 67,
+          "independent_cases": 67
+        },
+        "physical_only_correct": {
+          "action_pairs": 22,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "physical_only_wrong": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 22,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 22,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "realReward_wrong": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 22,
+          "independent_roots": 19,
+          "independent_cases": 19
+        },
+        "terminal_wrong": {
+          "action_pairs": 96,
+          "independent_roots": 57,
+          "independent_cases": 57
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 0,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 2,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_wrong": {
+          "action_pairs": 1,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 3,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_wrong": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_wrong": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_wrong": {
+          "action_pairs": 3,
+          "independent_roots": 1,
+          "independent_cases": 1
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 4,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 72,
+          "independent_roots": 35,
+          "independent_cases": 35
+        },
+        "physical_only_correct": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_only_wrong": {
+          "action_pairs": 63,
+          "independent_roots": 33,
+          "independent_cases": 33
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "realReward_wrong": {
+          "action_pairs": 63,
+          "independent_roots": 33,
+          "independent_cases": 33
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 9,
+          "independent_roots": 7,
+          "independent_cases": 7
+        },
+        "terminal_wrong": {
+          "action_pairs": 63,
+          "independent_roots": 33,
+          "independent_cases": 33
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 4,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 56,
+          "independent_roots": 31,
+          "independent_cases": 31
+        },
+        "physical_only_correct": {
+          "action_pairs": 11,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "physical_only_wrong": {
+          "action_pairs": 45,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 11,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 11,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "realReward_wrong": {
+          "action_pairs": 45,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 11,
+          "independent_roots": 8,
+          "independent_cases": 8
+        },
+        "terminal_wrong": {
+          "action_pairs": 45,
+          "independent_roots": 30,
+          "independent_cases": 30
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "scope": "failure",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 216,
+          "independent_roots": 111,
+          "independent_cases": 111
+        },
+        "physical_only_correct": {
+          "action_pairs": 38,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "physical_only_wrong": {
+          "action_pairs": 178,
+          "independent_roots": 100,
+          "independent_cases": 100
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 38,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 38,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "realReward_wrong": {
+          "action_pairs": 178,
+          "independent_roots": 100,
+          "independent_cases": 100
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 38,
+          "independent_roots": 32,
+          "independent_cases": 32
+        },
+        "terminal_wrong": {
+          "action_pairs": 178,
+          "independent_roots": 100,
+          "independent_cases": 100
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    },
+    {
+      "model": "kda-s443-t24",
+      "cell": 5,
+      "scope": "success-control",
+      "metrics": {
+        "denominator": {
+          "action_pairs": 164,
+          "independent_roots": 99,
+          "independent_cases": 99
+        },
+        "physical_only_correct": {
+          "action_pairs": 26,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_only_wrong": {
+          "action_pairs": 138,
+          "independent_roots": 86,
+          "independent_cases": 86
+        },
+        "physical_only_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "physical_only_correction": {
+          "action_pairs": 26,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "physical_only_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correct": {
+          "action_pairs": 26,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "realReward_wrong": {
+          "action_pairs": 138,
+          "independent_roots": 86,
+          "independent_cases": 86
+        },
+        "realReward_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "realReward_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correct": {
+          "action_pairs": 26,
+          "independent_roots": 24,
+          "independent_cases": 24
+        },
+        "terminal_wrong": {
+          "action_pairs": 138,
+          "independent_roots": 86,
+          "independent_cases": 86
+        },
+        "terminal_tie": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        },
+        "terminal_reverse_correction": {
+          "action_pairs": 0,
+          "independent_roots": 0,
+          "independent_cases": 0
+        }
+      }
+    }
+  ],
+  "wall_seconds": 20.608508110046387,
+  "method_level_progress": false
+}

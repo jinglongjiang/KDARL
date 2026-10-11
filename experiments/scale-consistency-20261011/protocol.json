@@ -1,0 +1,258 @@
+{
+  "task": "CROSS_POPULATION_SCALE_CASE_CONSISTENCY",
+  "status": "FROZEN_REVISED_GATE",
+  "training_episodes": 0,
+  "existing_cells": [
+    5,
+    10,
+    20
+  ],
+  "new_human_nums": [
+    12,
+    15
+  ],
+  "geometries": [
+    "circle_crossing",
+    "square_crossing"
+  ],
+  "case_base": 91000,
+  "n_cases_per_cell": 500,
+  "new_evaluation_episodes": 16000,
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "risk_lambda": 0.8,
+  "safety_margin": 0.2,
+  "circle_radius": 4,
+  "square_width": 10,
+  "actual_existing_time_limit": 50,
+  "supplied_text_time_limit": 25,
+  "actions": 80,
+  "weights": [
+    {
+      "seed": 419,
+      "backbone": "kda",
+      "T": 12,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t12/rl_model_ep10000.pth",
+      "sha256": "85f1585e0b86b3aa3386dce0b2f81cd80489ce955f1b7c63cc9eea693356289d",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t12.ini",
+      "config_sha256": "7c7d1386c50287e32ea61a36110180cc732baaeb34e2dcf06ea826efd9f16179"
+    },
+    {
+      "seed": 419,
+      "backbone": "kda",
+      "T": 24,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t24/rl_model_ep10000.pth",
+      "sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t24.ini",
+      "config_sha256": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7"
+    },
+    {
+      "seed": 419,
+      "backbone": "gru",
+      "T": 12,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/gru-t12/rl_model_ep10000.pth",
+      "sha256": "09e223fbef7fd6ae24b27a654578439aa5c1e1cd582e86f7de789566c32a7e7d",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/gru-t12.ini",
+      "config_sha256": "67069d4221d7b900a867c2aeedcbdac0961c46b64097aa7c518e3dc4bf6577da"
+    },
+    {
+      "seed": 419,
+      "backbone": "gru",
+      "T": 24,
+      "path": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/gru-t24/rl_model_ep10000.pth",
+      "sha256": "acc0ea789835105d31eb83275c475e1da0a49bc0e5db86386c32052584dfa93d",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/gru-t24.ini",
+      "config_sha256": "35ccdf1dc1f871b13bacc1b1eb2a8d82c1fcefaf787177bd31905c738f92d61e"
+    },
+    {
+      "seed": 443,
+      "backbone": "kda",
+      "T": 12,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t12/rl_model_ep10000.pth",
+      "sha256": "113c33c132de0793f36e1f02aa1a9d8704ab562ae30d645ac17d35d0108b010f",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t12.ini",
+      "config_sha256": "e40490e1c82e37a5eb9ebf88667933955552204ec0d38971c0c44b66922446f0"
+    },
+    {
+      "seed": 443,
+      "backbone": "kda",
+      "T": 24,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t24/rl_model_ep10000.pth",
+      "sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t24.ini",
+      "config_sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a"
+    },
+    {
+      "seed": 443,
+      "backbone": "gru",
+      "T": 12,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t12/rl_model_ep10000.pth",
+      "sha256": "8923e9998c8281f5c038c014b9137a936180a0b6556c6b77610c729d99ff4730",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t12.ini",
+      "config_sha256": "0d51e4f5e4554fa59d31d3aebb7f081ecc5be34cc13f1d3656c66855bdaa7b62"
+    },
+    {
+      "seed": 443,
+      "backbone": "gru",
+      "T": 24,
+      "path": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t24/rl_model_ep10000.pth",
+      "sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t24.ini",
+      "config_sha256": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f"
+    }
+  ],
+  "outcome": "binary success versus non-success; not three-way terminal identity",
+  "families": {
+    "A": "same backbone and T, 419 versus 443",
+    "B": "same seed and T, KDA versus GRU",
+    "C": "same seed and backbone, T24 versus T12 (inferred from B/C and T references)"
+  },
+  "bootstrap": {
+    "unit": "paired case ID within each comparison/cell",
+    "draws": 10000,
+    "random_seed": 20261011,
+    "method": "multinomial of four paired outcome categories"
+  },
+  "untouched_confirmation_cases": [
+    92000,
+    92499
+  ],
+  "parity_required": "Revised saved-field equivalence, explicitly not bitwise historical actions",
+  "restrictions": [
+    "No original project edits",
+    "No training or added seeds",
+    "No grid/reward/filter/TTC/optimizer changes",
+    "No new model"
+  ],
+  "limitations": [
+    "People count and density confounded at fixed field dimensions",
+    "Training seeds evaluated on same worlds",
+    "Two training seeds cannot estimate seed population variance",
+    "Frozen checkpoint intervention has no new training, but compares independently trained weights",
+    "Ratio below one indicates positive success association, not independence",
+    "A flat ratio alone does not establish ceiling effects as the cause",
+    "No reference per-step actions exist; a mismatching hash cannot identify the first divergent step"
+  ],
+  "purpose": "Test whether normalized paired disagreement remains approximately flat on a finer people-count axis, not locate a variance onset",
+  "C_definition": "Same seed and backbone, T24 versus T12",
+  "cells": [
+    [
+      5,
+      "circle_crossing"
+    ],
+    [
+      5,
+      "square_crossing"
+    ],
+    [
+      10,
+      "circle_crossing"
+    ],
+    [
+      10,
+      "square_crossing"
+    ],
+    [
+      20,
+      "circle_crossing"
+    ],
+    [
+      20,
+      "square_crossing"
+    ],
+    [
+      12,
+      "circle_crossing"
+    ],
+    [
+      12,
+      "square_crossing"
+    ],
+    [
+      15,
+      "circle_crossing"
+    ],
+    [
+      15,
+      "square_crossing"
+    ]
+  ],
+  "parity": {
+    "seed": 443,
+    "models": [
+      "kda-t24",
+      "gru-t24"
+    ],
+    "cells": [
+      0,
+      5
+    ],
+    "cases": [
+      91000,
+      91499
+    ],
+    "required_cases": 2000,
+    "exact_fields": [
+      "outcome",
+      "time",
+      "selection_trace_sha256"
+    ],
+    "tolerance_fields": [
+      "return",
+      "minimum_clearance"
+    ],
+    "same_device_absolute_tolerance": 1e-06,
+    "cross_device_absolute_tolerance": 0.0001,
+    "actual_comparison": "3060 torch2.7.1 versus old seed443 torch2.9.1 evaluations; cross-device tolerance for both arms",
+    "interpretation": "Saved-field equivalence only; NOT historical bitwise action/state trajectory reproduction",
+    "selection_hash_limit": "Many state/action paths can produce the same selected-ID sequence, especially N=5 where the set is constant",
+    "first_divergence_step": "Unavailable if old per-step records do not exist; report first mismatching case and all fields without inventing a step",
+    "stop": "Any field mismatch, nonzero exit, traceback or assertion: no new cells",
+    "no_4090_replay": true,
+    "no_reconstructed_historical_trajectory": true
+  },
+  "smoke": {
+    "cells": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "cases_per_cell": 3,
+    "checkpoints": 8,
+    "episodes": 96,
+    "required": [
+      "actual human count",
+      "80 actions",
+      "50 second limit",
+      "finite metrics",
+      "case pairing",
+      "output files"
+    ]
+  },
+  "scheduling": {
+    "device": "RTX3060",
+    "max_workers": 3,
+    "no_training": true,
+    "full_jobs": 32,
+    "full_episodes": 16000,
+    "fail_closed": true,
+    "automatic_restart": false,
+    "no_4090_usage": true
+  },
+  "time_limit": 50,
+  "engineering_note": "[eval_protocol] time_limit=25 is ignored by this environment/harness; enabling it later would change the historical protocol",
+  "metrics": [
+    "binary-success paired b/c",
+    "disagreement (b+c)/n",
+    "same-marginal independent expectation",
+    "ratio and case-bootstrap CI95",
+    "net SR difference (b-c)/n as cancellation-prone secondary metric"
+  ],
+  "interpretation": {
+    "flat": "No obvious additional count-related increase in normalized disagreement on tested weights; not proof of independence or a causal ceiling-effect explanation",
+    "rising": "Monotonic increase is evidence to revise the upstream descriptive claim",
+    "comparisons": "Report A, B and C side by side, not backbone superiority or seed population variance",
+    "timeout": "50s offers substantial nominal travel-time slack but timeout alone does not prove stalling; detours, interactions and speed reductions remain possible"
+  }
+}

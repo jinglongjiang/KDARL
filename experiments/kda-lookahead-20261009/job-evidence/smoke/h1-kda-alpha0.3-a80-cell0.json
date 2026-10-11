@@ -1,0 +1,8 @@
+{
+  "name": "smoke/h1-kda-alpha0.3-a80-cell0",
+  "exit_code": 0,
+  "output": "/root/kda-lookahead-20261009/smoke/h1/per-case/kda-alpha0.3-a80/cell0.json",
+  "output_bytes": 37464,
+  "log": "/root/kda-lookahead-20261009/logs/smoke/h1-kda-alpha0.3-a80-cell0.log",
+  "actual_stdout_tail": "Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.\nPlease upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.\nUsers of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.\nSee the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.\nWARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.\n{\"status\": \"\\u5df2\\u9a8c\\u8bc1\\u901a\\u8fc7\", \"output\": \"/root/kda-lookahead-20261009/smoke/h1/per-case/kda-alpha0.3-a80/cell0.json\", \"bytes\": 37464}\n[W1009 15:48:05.606910124 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())\n"
+}

@@ -1,0 +1,13 @@
+{
+  "python": "3.11.17",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.35",
+  "torch": "2.7.1+cu126",
+  "cuda": "12.6",
+  "device": "NVIDIA GeForce RTX 3060",
+  "fla_file": "/home/abc/workspace/kda-deps/flash-linear-attention/fla/__init__.py",
+  "image": "nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04",
+  "existing_isolated_environment": "/home/abc/temp/kda-vl-env",
+  "installed_or_upgraded_packages": false,
+  "home_mount": "readonly except AC3workdir",
+  "cross_machine_numerical_parity": "NOT_VERIFIED"
+}

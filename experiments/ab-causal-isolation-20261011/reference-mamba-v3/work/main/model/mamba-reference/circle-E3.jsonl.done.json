@@ -1,0 +1,308 @@
+{
+  "status": "PASS",
+  "episodes": 16,
+  "wall_seconds": 12.137173756957054,
+  "output_sha256": "31d1b3026f1fd6713b68ba67976b7a975869795134ac074cea1bc8ee3baa2007",
+  "provenance": {
+    "contract_sha256": "c89f0ca680e17d77470ee572f8608567aa00e4240cb20be1c08e47b979ed6ac2",
+    "script_sha256": "8b4ee9d18c5014e43d30fb7f8944625dae4104b23c0713c4bdddaee19099dece",
+    "project_commit": "9f062230541cde94b943f56b5ae9021eee042860",
+    "source_sha256": {
+      "crowd_sim/envs/crowd_sim.py": "115aac6e660d0c7fff4425e448f5b9c97683159fe2cb8f9d43ecbfb07a3554dc",
+      "crowd_sim/envs/policy/orca.py": "3d4eab21a556a8767f0fcfc962b444652385c21d29b2ea22a38b711d6df50967",
+      "crowd_nav/policy/mamba_rl.py": "f12e600c4a6873b0a57e95e722e1a02766cb72df39b0d59311e8a52f05092801",
+      "crowd_nav/contracts.py": "ccc72fcb4adc6407e10608657a910e6af9c6240d31184b7459b6b9a492901d8e"
+    },
+    "python": "3.10.19 (main, Oct 21 2025, 16:43:05) [GCC 11.2.0]",
+    "started_unix": 1791713025.1669447,
+    "model": {
+      "id": "mamba-reference",
+      "backbone": "mamba",
+      "seed": 419,
+      "weight": "/root/ab-causal-isolation-20261011/reference-mamba/inputs/rl_model_ep10000.pth",
+      "config": "/root/ab-causal-isolation-20261011/reference-mamba/inputs/mamba.ini",
+      "weight_sha256": "f23e411effac2f1959eead081fa49c908a85532642172c50a34427fe40bff2b9",
+      "config_sha256": "cc2a64237e77404ee8d9808af9640b44c415527ddfdde6d5c82839ae8fd13a25"
+    },
+    "phase": "main",
+    "cases": [
+      90000,
+      90001,
+      90002,
+      90003,
+      90004,
+      90005,
+      90006,
+      90007,
+      90008,
+      90009,
+      90010,
+      90011,
+      90012,
+      90013,
+      90014,
+      90015
+    ],
+    "controller": "model",
+    "acceptance": {
+      "status": "PASS",
+      "history_test": "PASS",
+      "terminal_test": "PASS",
+      "tested_commit": "9f06223",
+      "torch": "2.9.1+cu128",
+      "device": "NVIDIA GeForce RTX 4090",
+      "original_replay_episodes": 8,
+      "comparisons": [
+        {
+          "model": "kda-s419-t24",
+          "case": 90000,
+          "variants": {
+            "original": {
+              "outcome": "success",
+              "time": 18.25,
+              "return": 0.4308727299589876,
+              "trajectory_sha256": "ab71d9183f28ced7ab20da451cf6ec9134a02d2137a933e427c485ff65f161c9",
+              "selection_trace_sha256": "559d9de2f78c9942d7581db399c32f2cefd8834a9ebe4b961ccc697ca8b32f0b",
+              "steps": 73
+            },
+            "history_only": {
+              "outcome": "success",
+              "time": 18.25,
+              "return": 0.4308727299589876,
+              "trajectory_sha256": "ab71d9183f28ced7ab20da451cf6ec9134a02d2137a933e427c485ff65f161c9",
+              "selection_trace_sha256": "559d9de2f78c9942d7581db399c32f2cefd8834a9ebe4b961ccc697ca8b32f0b",
+              "steps": 73
+            },
+            "terminal_fixed": {
+              "outcome": "success",
+              "time": 18.25,
+              "return": 0.4308727299589876,
+              "trajectory_sha256": "5187823c1cf2a1ef1fe37f4695e37ee76bf5a837ae431276918647e4c0538459",
+              "selection_trace_sha256": "559d9de2f78c9942d7581db399c32f2cefd8834a9ebe4b961ccc697ca8b32f0b",
+              "steps": 73,
+              "first_changed_action": 72
+            }
+          }
+        },
+        {
+          "model": "kda-s419-t24",
+          "case": 90001,
+          "variants": {
+            "original": {
+              "outcome": "timeout",
+              "time": 50.25,
+              "return": -0.1198842216041467,
+              "trajectory_sha256": "e9b0777886269d8660e21c218dd7a701c25690324cfa48d2ceb9e4c5e48e809f",
+              "selection_trace_sha256": "1742e92e51e8c58e7d0a5607ca02bd82cf0b38858a109ff0a87dd98eefdca3ab",
+              "steps": 201
+            },
+            "history_only": {
+              "outcome": "timeout",
+              "time": 50.25,
+              "return": -0.1198842216041467,
+              "trajectory_sha256": "e9b0777886269d8660e21c218dd7a701c25690324cfa48d2ceb9e4c5e48e809f",
+              "selection_trace_sha256": "1742e92e51e8c58e7d0a5607ca02bd82cf0b38858a109ff0a87dd98eefdca3ab",
+              "steps": 201
+            },
+            "terminal_fixed": {
+              "outcome": "timeout",
+              "time": 50.25,
+              "return": -0.1198842216041467,
+              "trajectory_sha256": "849c39f0bb67f4cc9ab0515d9f537f5ab6a63a9f9ab16dd04f1bb0e161d9806d",
+              "selection_trace_sha256": "1742e92e51e8c58e7d0a5607ca02bd82cf0b38858a109ff0a87dd98eefdca3ab",
+              "steps": 201,
+              "first_changed_action": 200
+            }
+          }
+        },
+        {
+          "model": "kda-s443-t24",
+          "case": 90000,
+          "variants": {
+            "original": {
+              "outcome": "success",
+              "time": 20.25,
+              "return": 0.4475232137638106,
+              "trajectory_sha256": "fbaa83d5731b31a08a4bac9f231f28fd4c797c82f2180142999469cfe63437cb",
+              "selection_trace_sha256": "435d74fff0fe9b6d4d0ce7d87f4e28529bc4e05ced6b29a8796457a5d72952c9",
+              "steps": 81
+            },
+            "history_only": {
+              "outcome": "success",
+              "time": 20.25,
+              "return": 0.4475232137638106,
+              "trajectory_sha256": "fbaa83d5731b31a08a4bac9f231f28fd4c797c82f2180142999469cfe63437cb",
+              "selection_trace_sha256": "435d74fff0fe9b6d4d0ce7d87f4e28529bc4e05ced6b29a8796457a5d72952c9",
+              "steps": 81
+            },
+            "terminal_fixed": {
+              "outcome": "success",
+              "time": 20.25,
+              "return": 0.4475232137638106,
+              "trajectory_sha256": "74b2aa711f275445cc1eb6000b2334e4710b4d4690572a8b1b7100b70d520d42",
+              "selection_trace_sha256": "435d74fff0fe9b6d4d0ce7d87f4e28529bc4e05ced6b29a8796457a5d72952c9",
+              "steps": 81,
+              "first_changed_action": 80
+            }
+          }
+        },
+        {
+          "model": "kda-s443-t24",
+          "case": 90001,
+          "variants": {
+            "original": {
+              "outcome": "collision",
+              "time": 5.0,
+              "return": -0.44503738354645334,
+              "trajectory_sha256": "7de34fc6a203b4d1c51f03066a1388f5e7eb0adc0cdab3ca23eb56eab7900cbb",
+              "selection_trace_sha256": "0c9a421d7b0157607a1682e28172edba1155a1ac79e668f0cb438b2ecb88adf0",
+              "steps": 20
+            },
+            "history_only": {
+              "outcome": "collision",
+              "time": 5.0,
+              "return": -0.44503738354645334,
+              "trajectory_sha256": "7de34fc6a203b4d1c51f03066a1388f5e7eb0adc0cdab3ca23eb56eab7900cbb",
+              "selection_trace_sha256": "0c9a421d7b0157607a1682e28172edba1155a1ac79e668f0cb438b2ecb88adf0",
+              "steps": 20
+            },
+            "terminal_fixed": {
+              "outcome": "collision",
+              "time": 5.0,
+              "return": -0.44503738354645334,
+              "trajectory_sha256": "f0f4739bbd79d81e73a77109db589667a2af736b01c3166ab4daf45036447659",
+              "selection_trace_sha256": "0c9a421d7b0157607a1682e28172edba1155a1ac79e668f0cb438b2ecb88adf0",
+              "steps": 20,
+              "first_changed_action": 19
+            }
+          }
+        },
+        {
+          "model": "gru-s419-t24",
+          "case": 90000,
+          "variants": {
+            "original": {
+              "outcome": "success",
+              "time": 13.0,
+              "return": 0.598956006466161,
+              "trajectory_sha256": "6b506208e20263e527a69f1d01a35471241cd5daeeaaf0b2d4a13dc2e4781882",
+              "selection_trace_sha256": "e717ad1fd5fec999720f79f957d11345071586d9807f30502520ab90bbe65cfd",
+              "steps": 52
+            },
+            "history_only": {
+              "outcome": "success",
+              "time": 13.0,
+              "return": 0.598956006466161,
+              "trajectory_sha256": "6b506208e20263e527a69f1d01a35471241cd5daeeaaf0b2d4a13dc2e4781882",
+              "selection_trace_sha256": "e717ad1fd5fec999720f79f957d11345071586d9807f30502520ab90bbe65cfd",
+              "steps": 52
+            },
+            "terminal_fixed": {
+              "outcome": "success",
+              "time": 13.0,
+              "return": 0.598956006466161,
+              "trajectory_sha256": "6b506208e20263e527a69f1d01a35471241cd5daeeaaf0b2d4a13dc2e4781882",
+              "selection_trace_sha256": "e717ad1fd5fec999720f79f957d11345071586d9807f30502520ab90bbe65cfd",
+              "steps": 52,
+              "first_changed_action": null
+            }
+          }
+        },
+        {
+          "model": "gru-s419-t24",
+          "case": 90001,
+          "variants": {
+            "original": {
+              "outcome": "collision",
+              "time": 4.25,
+              "return": -0.4471341574299535,
+              "trajectory_sha256": "50b4b3b776d2f62d3897c7b0267b7834a22117a1af2d2ba2a3c3cc9e59d8bf54",
+              "selection_trace_sha256": "69ae4c4aff7a81878a08b87b481e9bc0049af491d34b652b9ba5693dcf5df672",
+              "steps": 17
+            },
+            "history_only": {
+              "outcome": "collision",
+              "time": 4.25,
+              "return": -0.4471341574299535,
+              "trajectory_sha256": "50b4b3b776d2f62d3897c7b0267b7834a22117a1af2d2ba2a3c3cc9e59d8bf54",
+              "selection_trace_sha256": "69ae4c4aff7a81878a08b87b481e9bc0049af491d34b652b9ba5693dcf5df672",
+              "steps": 17
+            },
+            "terminal_fixed": {
+              "outcome": "collision",
+              "time": 4.25,
+              "return": -0.4471341574299535,
+              "trajectory_sha256": "50b4b3b776d2f62d3897c7b0267b7834a22117a1af2d2ba2a3c3cc9e59d8bf54",
+              "selection_trace_sha256": "69ae4c4aff7a81878a08b87b481e9bc0049af491d34b652b9ba5693dcf5df672",
+              "steps": 17,
+              "first_changed_action": null
+            }
+          }
+        },
+        {
+          "model": "gru-s443-t24",
+          "case": 90000,
+          "variants": {
+            "original": {
+              "outcome": "success",
+              "time": 24.25,
+              "return": 0.32653342050500417,
+              "trajectory_sha256": "d413b9a80fcb20c97c662086e5631c824a063940f6de2470d1dbe4939fc94492",
+              "selection_trace_sha256": "be72421f9e32a50f7216da551ad7f7cf59e94868d618bcc1430ce230585a64a9",
+              "steps": 97
+            },
+            "history_only": {
+              "outcome": "success",
+              "time": 24.25,
+              "return": 0.32653342050500417,
+              "trajectory_sha256": "d413b9a80fcb20c97c662086e5631c824a063940f6de2470d1dbe4939fc94492",
+              "selection_trace_sha256": "be72421f9e32a50f7216da551ad7f7cf59e94868d618bcc1430ce230585a64a9",
+              "steps": 97
+            },
+            "terminal_fixed": {
+              "outcome": "success",
+              "time": 24.25,
+              "return": 0.32653342050500417,
+              "trajectory_sha256": "e5b4ceb27ff87d94a15e7045685396afb9416ccc89876eea1c53ee359b0d2f54",
+              "selection_trace_sha256": "be72421f9e32a50f7216da551ad7f7cf59e94868d618bcc1430ce230585a64a9",
+              "steps": 97,
+              "first_changed_action": 96
+            }
+          }
+        },
+        {
+          "model": "gru-s443-t24",
+          "case": 90001,
+          "variants": {
+            "original": {
+              "outcome": "timeout",
+              "time": 50.25,
+              "return": -0.07639025797265579,
+              "trajectory_sha256": "c8d526569470892a88bd33bb2d841cd18185cbeac08da81f55d065e179a75662",
+              "selection_trace_sha256": "3a5a51b809bda4645d92016078a9c1169631c2520ad42f471ab8cd2064c0b101",
+              "steps": 201
+            },
+            "history_only": {
+              "outcome": "timeout",
+              "time": 50.25,
+              "return": -0.07639025797265579,
+              "trajectory_sha256": "c8d526569470892a88bd33bb2d841cd18185cbeac08da81f55d065e179a75662",
+              "selection_trace_sha256": "3a5a51b809bda4645d92016078a9c1169631c2520ad42f471ab8cd2064c0b101",
+              "steps": 201
+            },
+            "terminal_fixed": {
+              "outcome": "timeout",
+              "time": 50.25,
+              "return": -0.07639025797265579,
+              "trajectory_sha256": "fcb30e0aee570e99962d483b20926d7d5cfb210e12b1163d8a16119661dedcf1",
+              "selection_trace_sha256": "3a5a51b809bda4645d92016078a9c1169631c2520ad42f471ab8cd2064c0b101",
+              "steps": 201,
+              "first_changed_action": 200
+            }
+          }
+        }
+      ],
+      "scope": "Frozen epsilon-zero original/history-only actions, history/windows, scores and outcomes match original full-step data; terminal variant is a distinct baseline. Terminal physical model contracts remain unchanged."
+    }
+  }
+}

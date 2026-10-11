@@ -1,0 +1,15 @@
+{
+  "name": "smoke-shared-gru-s443-t12-cell2",
+  "pid": 3768,
+  "exit_code": 0,
+  "wall_seconds": 8.004019975662231,
+  "args": [
+    "--id",
+    "gru-s443-t12",
+    "--cell",
+    "2",
+    "--shared",
+    "--smoke"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n"
+}

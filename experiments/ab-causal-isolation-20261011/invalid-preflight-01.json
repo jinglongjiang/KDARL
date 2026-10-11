@@ -1,0 +1,10 @@
+{
+  "status": "INVALID_ENGINEERING_RUN",
+  "exit_code": 1,
+  "command": "Remote check-contracts.py invoked while initial rsync session 5885 was still transferring engine files",
+  "error": "ModuleNotFoundError: No module named 'crowd_nav.policy.mamba_rl'",
+  "cause": "Source tree transfer incomplete, not checkpoint or algorithm failure",
+  "repair": "Waited for rsync exit code 0, then repeated the same contract tests",
+  "accepted_rerun": "contracts.json: PASS, exit code 0",
+  "scientific_results_used": false
+}

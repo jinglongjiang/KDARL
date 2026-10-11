@@ -1,0 +1,1105 @@
+{
+  "status": "已验证通过",
+  "warning": "当前KDA-VL代码不等于第一篇Mamba-VL投稿版本。本表只陈述当前代码事实，不作为第一篇勘误依据。论文符号未提供，全部留空。",
+  "shape": [
+    1,
+    8,
+    13
+  ],
+  "source": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/crowd_nav/contracts.py",
+  "source_sha256": "ccc72fcb4adc6407e10608657a910e6af9c6240d31184b7459b6b9a492901d8e",
+  "rows": [
+    {
+      "row": 0,
+      "column": 0,
+      "code_field": "px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "code_field": "py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "code_field": "vx",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "code_field": "vy",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 4,
+      "code_field": "radius",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 5,
+      "code_field": "gx",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 6,
+      "code_field": "gy",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 7,
+      "code_field": "v_pref (raw)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 8,
+      "code_field": "theta",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 9,
+      "code_field": "sqrt((gx-px)^2+(gy-py)^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 10,
+      "code_field": "sqrt(vx^2+vy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 11,
+      "code_field": "clip(v_pref,0,3)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 0,
+      "column": 12,
+      "code_field": "1 (robot flag)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "code_field": "gx-px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "code_field": "gy-py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "code_field": "sqrt(dx^2+dy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "code_field": "atan2(dy,dx)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 4,
+      "code_field": "cos(goal angle)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 5,
+      "code_field": "sin(goal angle)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 6,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 7,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 8,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 1,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "code_field": "speed if speed>1e-6 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "code_field": "atan2(vy,vx) if speed>1e-6 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "code_field": "cos(motion angle) if speed>1e-6 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "code_field": "sin(motion angle) if speed>1e-6 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 4,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 5,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 6,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 7,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 8,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 2,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": null
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "code_field": "human.px-robot.px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "code_field": "human.py-robot.py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "code_field": "sqrt(rel_x^2+rel_y^2+1e-6)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "code_field": "human.vx (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 4,
+      "code_field": "human.vy (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 5,
+      "code_field": "sqrt(human.vx^2+human.vy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 6,
+      "code_field": "human.radius",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 7,
+      "code_field": "inverse TTC: dist/closing; clamp TTC>=0.1; receding=0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 8,
+      "code_field": "1 if dist<2 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 3,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 0,
+      "code_field": "human.px-robot.px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 1,
+      "code_field": "human.py-robot.py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 2,
+      "code_field": "sqrt(rel_x^2+rel_y^2+1e-6)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 3,
+      "code_field": "human.vx (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 4,
+      "code_field": "human.vy (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 5,
+      "code_field": "sqrt(human.vx^2+human.vy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 6,
+      "code_field": "human.radius",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 7,
+      "code_field": "inverse TTC: dist/closing; clamp TTC>=0.1; receding=0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 8,
+      "code_field": "1 if dist<2 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 4,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 0,
+      "code_field": "human.px-robot.px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 1,
+      "code_field": "human.py-robot.py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 2,
+      "code_field": "sqrt(rel_x^2+rel_y^2+1e-6)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 3,
+      "code_field": "human.vx (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 4,
+      "code_field": "human.vy (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 5,
+      "code_field": "sqrt(human.vx^2+human.vy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 6,
+      "code_field": "human.radius",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 7,
+      "code_field": "inverse TTC: dist/closing; clamp TTC>=0.1; receding=0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 8,
+      "code_field": "1 if dist<2 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 5,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 0,
+      "code_field": "human.px-robot.px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 1,
+      "code_field": "human.py-robot.py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 2,
+      "code_field": "sqrt(rel_x^2+rel_y^2+1e-6)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 3,
+      "code_field": "human.vx (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 4,
+      "code_field": "human.vy (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 5,
+      "code_field": "sqrt(human.vx^2+human.vy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 6,
+      "code_field": "human.radius",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 7,
+      "code_field": "inverse TTC: dist/closing; clamp TTC>=0.1; receding=0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 8,
+      "code_field": "1 if dist<2 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 6,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 0,
+      "code_field": "human.px-robot.px",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 1,
+      "code_field": "human.py-robot.py",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 2,
+      "code_field": "sqrt(rel_x^2+rel_y^2+1e-6)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 3,
+      "code_field": "human.vx (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 4,
+      "code_field": "human.vy (absolute)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 5,
+      "code_field": "sqrt(human.vx^2+human.vy^2)",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 6,
+      "code_field": "human.radius",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 7,
+      "code_field": "inverse TTC: dist/closing; clamp TTC>=0.1; receding=0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 8,
+      "code_field": "1 if dist<2 else 0",
+      "paper_symbol": null,
+      "always_zero": false,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 9,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 10,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 11,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    },
+    {
+      "row": 7,
+      "column": 12,
+      "code_field": "0",
+      "paper_symbol": null,
+      "always_zero": true,
+      "actor_order": "existing TTC order within selected five"
+    }
+  ],
+  "assignments": [
+    {
+      "line": 421,
+      "code": "tokens_batch[:, 0, :9] = state_batch[:, :9]"
+    },
+    {
+      "line": 422,
+      "code": "tokens_batch[:, 0, 9] = np.sqrt((robot_gx - robot_px)**2 + (robot_gy - robot_py)**2)"
+    },
+    {
+      "line": 423,
+      "code": "tokens_batch[:, 0, 10] = np.sqrt(robot_vx**2 + robot_vy**2)"
+    },
+    {
+      "line": 424,
+      "code": "tokens_batch[:, 0, 11] = robot_v_pref"
+    },
+    {
+      "line": 425,
+      "code": "tokens_batch[:, 0, 12] = 1.0"
+    },
+    {
+      "line": 433,
+      "code": "tokens_batch[:, 1, 0] = goal_dx"
+    },
+    {
+      "line": 434,
+      "code": "tokens_batch[:, 1, 1] = goal_dy"
+    },
+    {
+      "line": 435,
+      "code": "tokens_batch[:, 1, 2] = goal_dist"
+    },
+    {
+      "line": 436,
+      "code": "tokens_batch[:, 1, 3] = goal_angle"
+    },
+    {
+      "line": 437,
+      "code": "tokens_batch[:, 1, 4] = np.cos(goal_angle)"
+    },
+    {
+      "line": 438,
+      "code": "tokens_batch[:, 1, 5] = np.sin(goal_angle)"
+    },
+    {
+      "line": 445,
+      "code": "tokens_batch[:, 2, 0] = np.where(motion_mask, robot_speed, 0.0)"
+    },
+    {
+      "line": 446,
+      "code": "tokens_batch[:, 2, 1] = np.where(motion_mask, motion_angle, 0.0)"
+    },
+    {
+      "line": 447,
+      "code": "tokens_batch[:, 2, 2] = np.where(motion_mask, np.cos(motion_angle), 0.0)"
+    },
+    {
+      "line": 448,
+      "code": "tokens_batch[:, 2, 3] = np.where(motion_mask, np.sin(motion_angle), 0.0)"
+    },
+    {
+      "line": 489,
+      "code": "tokens_batch[b, row, 0] = rel_x"
+    },
+    {
+      "line": 490,
+      "code": "tokens_batch[b, row, 1] = rel_y"
+    },
+    {
+      "line": 491,
+      "code": "tokens_batch[b, row, 2] = dist"
+    },
+    {
+      "line": 492,
+      "code": "tokens_batch[b, row, 3] = hvx"
+    },
+    {
+      "line": 493,
+      "code": "tokens_batch[b, row, 4] = hvy"
+    },
+    {
+      "line": 494,
+      "code": "tokens_batch[b, row, 5] = np.sqrt(hvx**2 + hvy**2)"
+    },
+    {
+      "line": 495,
+      "code": "tokens_batch[b, row, 6] = hradius"
+    },
+    {
+      "line": 510,
+      "code": "tokens_batch[b, row, 7] = ttc_inv"
+    },
+    {
+      "line": 511,
+      "code": "tokens_batch[b, row, 8] = 1.0 if dist < 2.0 else 0.0"
+    }
+  ],
+  "synthetic_input": [
+    [
+      1.0,
+      2.0,
+      0.6,
+      0.8,
+      0.3,
+      4.0,
+      6.0,
+      4.0,
+      0.2,
+      3.0,
+      4.0,
+      -0.0,
+      0.3,
+      0.2,
+      4.0,
+      3.0,
+      -0.2,
+      0.3,
+      0.2,
+      5.0,
+      2.0,
+      -0.4,
+      0.3,
+      0.2,
+      6.0,
+      1.0,
+      -0.6000000000000001,
+      0.3,
+      0.2,
+      7.0,
+      0.0,
+      -0.8,
+      0.3,
+      0.2
+    ]
+  ],
+  "synthetic_output": [
+    [
+      [
+        1.0,
+        2.0,
+        0.6000000238418579,
+        0.800000011920929,
+        0.30000001192092896,
+        4.0,
+        6.0,
+        4.0,
+        0.20000000298023224,
+        5.0,
+        1.0,
+        3.0,
+        1.0
+      ],
+      [
+        3.0,
+        4.0,
+        5.0,
+        0.9272952079772949,
+        0.6000000238418579,
+        0.800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.9272952079772949,
+        0.6000000238418579,
+        0.800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        1.0,
+        3.162277936935425,
+        -0.20000000298023224,
+        0.30000001192092896,
+        0.36055514216423035,
+        0.20000000298023224,
+        0.28999996185302734,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.0,
+        2.0,
+        2.828427314758301,
+        -0.0,
+        0.30000001192092896,
+        0.30000001192092896,
+        0.20000000298023224,
+        0.2749999761581421,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        4.0,
+        0.0,
+        4.0,
+        -0.4000000059604645,
+        0.30000001192092896,
+        0.5,
+        0.20000000298023224,
+        0.2499999850988388,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        5.0,
+        -1.0,
+        5.099019527435303,
+        -0.6000000238418579,
+        0.30000001192092896,
+        0.670820415019989,
+        0.20000000298023224,
+        0.21153844892978668,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        6.0,
+        -2.0,
+        6.324555397033691,
+        -0.800000011920929,
+        0.30000001192092896,
+        0.8544003963470459,
+        0.20000000298023224,
+        0.1850000023841858,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  ]
+}

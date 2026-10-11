@@ -1,0 +1,147 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "kda-s419-t12",
+    "backbone": "kda",
+    "seed": 419,
+    "length": 12,
+    "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t12/rl_model_ep10000.pth",
+    "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t12.ini",
+    "training": "fresh IL50+RL10000",
+    "origin": "history-length study",
+    "weight_sha256": "85f1585e0b86b3aa3386dce0b2f81cd80489ce955f1b7c63cc9eea693356289d",
+    "config_sha256": "7c7d1386c50287e32ea61a36110180cc732baaeb34e2dcf06ea826efd9f16179"
+  },
+  "episodes": [
+    {
+      "cell": 2,
+      "case": 90000,
+      "outcome": "success",
+      "steps": 56
+    },
+    {
+      "cell": 2,
+      "case": 90001,
+      "outcome": "success",
+      "steps": 52
+    },
+    {
+      "cell": 2,
+      "case": 90002,
+      "outcome": "success",
+      "steps": 66
+    },
+    {
+      "cell": 2,
+      "case": 90003,
+      "outcome": "success",
+      "steps": 51
+    },
+    {
+      "cell": 2,
+      "case": 90004,
+      "outcome": "success",
+      "steps": 45
+    },
+    {
+      "cell": 2,
+      "case": 90005,
+      "outcome": "success",
+      "steps": 61
+    },
+    {
+      "cell": 2,
+      "case": 90006,
+      "outcome": "success",
+      "steps": 54
+    },
+    {
+      "cell": 2,
+      "case": 90007,
+      "outcome": "success",
+      "steps": 70
+    },
+    {
+      "cell": 2,
+      "case": 90008,
+      "outcome": "success",
+      "steps": 50
+    },
+    {
+      "cell": 2,
+      "case": 90009,
+      "outcome": "success",
+      "steps": 63
+    },
+    {
+      "cell": 2,
+      "case": 90010,
+      "outcome": "success",
+      "steps": 55
+    },
+    {
+      "cell": 2,
+      "case": 90011,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "cell": 2,
+      "case": 90012,
+      "outcome": "success",
+      "steps": 65
+    },
+    {
+      "cell": 2,
+      "case": 90013,
+      "outcome": "success",
+      "steps": 53
+    },
+    {
+      "cell": 2,
+      "case": 90014,
+      "outcome": "success",
+      "steps": 51
+    },
+    {
+      "cell": 2,
+      "case": 90015,
+      "outcome": "success",
+      "steps": 50
+    },
+    {
+      "cell": 2,
+      "case": 90016,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "cell": 2,
+      "case": 90017,
+      "outcome": "success",
+      "steps": 58
+    },
+    {
+      "cell": 2,
+      "case": 90018,
+      "outcome": "success",
+      "steps": 57
+    },
+    {
+      "cell": 2,
+      "case": 90019,
+      "outcome": "success",
+      "steps": 51
+    }
+  ],
+  "steps": 1103,
+  "wall_seconds": 24.822270154953003,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "actions": 80,
+  "smoke": false,
+  "fast_legacy_checked": false,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/per-checkpoint/kda-s419-t12/cell2.steps.jsonl.gz"
+}

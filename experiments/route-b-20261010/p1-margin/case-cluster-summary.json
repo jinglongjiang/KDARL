@@ -1,0 +1,954 @@
+{
+  "status": "已验证通过",
+  "scope": "Supplemental descriptive CIs, not new confirmatory tests or 11 independent runs",
+  "bootstrap_unit": "case ID, jointly retaining all six cells and all steps",
+  "bootstrap_repeats": 2000,
+  "checkpoints": {
+    "kda-s419-t12": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 8828,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0007808506488800049,
+            "case_cluster_bootstrap_ci95": [
+              0.0006581239402294159,
+              0.0009012535214424133
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0010782319107109789,
+            "case_cluster_bootstrap_ci95": [
+              0.0008839401114969115,
+              0.0012431314872388705
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10116408507877739,
+            "case_cluster_bootstrap_ci95": [
+              0.09624914507738767,
+              0.10607632594558411
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.03939314314077125,
+            "case_cluster_bootstrap_ci95": [
+              0.03158663378217513,
+              0.04748213750656843
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04088425746003396,
+            "case_cluster_bootstrap_ci95": [
+              0.03245337786276047,
+              0.048837960620500276
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0009786784648895264,
+            "case_cluster_bootstrap_ci95": [
+              0.0008522182703018189,
+              0.0010920405387878417
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0013365968015085932,
+            "case_cluster_bootstrap_ci95": [
+              0.0011458942901931071,
+              0.0015058502109132122
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.11137753280719145,
+            "case_cluster_bootstrap_ci95": [
+              0.10266560370439914,
+              0.11863249990869312
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04716789496842,
+            "case_cluster_bootstrap_ci95": [
+              0.037740160759298716,
+              0.05238145000211279
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.0480714842804697,
+            "case_cluster_bootstrap_ci95": [
+              0.039024745897068794,
+              0.05387247230686265
+            ]
+          }
+        }
+      }
+    },
+    "kda-s419-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 7292,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0007734596729278564,
+            "case_cluster_bootstrap_ci95": [
+              0.0006644591689109802,
+              0.000868130475282669
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.001025974295634112,
+            "case_cluster_bootstrap_ci95": [
+              0.0008957326141906293,
+              0.0011596321127763185
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.1024962868052417,
+            "case_cluster_bootstrap_ci95": [
+              0.09987170561873966,
+              0.10643767630951384
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.0465875364764351,
+            "case_cluster_bootstrap_ci95": [
+              0.0374089754696328,
+              0.05177809584899959
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04804613550047643,
+            "case_cluster_bootstrap_ci95": [
+              0.039252108744374764,
+              0.05295229515710379
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0008188784122467041,
+            "case_cluster_bootstrap_ci95": [
+              0.0007420167326927185,
+              0.0009056478738784789
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0011555347900788454,
+            "case_cluster_bootstrap_ci95": [
+              0.0010660534566653947,
+              0.0012458063568328858
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10928279093761936,
+            "case_cluster_bootstrap_ci95": [
+              0.10314784275911215,
+              0.11489758791791473
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.05321230809008359,
+            "case_cluster_bootstrap_ci95": [
+              0.04888888632970626,
+              0.05657105956332453
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.053724797906250954,
+            "case_cluster_bootstrap_ci95": [
+              0.04977452568574242,
+              0.05706936578768676
+            ]
+          }
+        }
+      }
+    },
+    "gru-s419-t12": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 7346,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0005609691143035889,
+            "case_cluster_bootstrap_ci95": [
+              0.0004758983850479126,
+              0.0006702162325382231
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0007948617728127656,
+            "case_cluster_bootstrap_ci95": [
+              0.0006663265982175947,
+              0.0009476900359283453
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.101877271403646,
+            "case_cluster_bootstrap_ci95": [
+              0.09558780958774225,
+              0.10927719172807941
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04726289118773039,
+            "case_cluster_bootstrap_ci95": [
+              0.038403917407513206,
+              0.05274754823901499
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04796158609870582,
+            "case_cluster_bootstrap_ci95": [
+              0.03936484110109574,
+              0.05310782605619565
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0006763674318790436,
+            "case_cluster_bootstrap_ci95": [
+              0.0006120100617408753,
+              0.0007450029253959655
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0010607576910447482,
+            "case_cluster_bootstrap_ci95": [
+              0.0009569351646687504,
+              0.0011651262678687628
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10639587998057298,
+            "case_cluster_bootstrap_ci95": [
+              0.1005671066623488,
+              0.11230473174678965
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.046181449633329485,
+            "case_cluster_bootstrap_ci95": [
+              0.03703063166739906,
+              0.05380802298265852
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.047675457470394256,
+            "case_cluster_bootstrap_ci95": [
+              0.03824658793358318,
+              0.054985017902946014
+            ]
+          }
+        }
+      }
+    },
+    "gru-s419-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6745,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.00044292211532592773,
+            "case_cluster_bootstrap_ci95": [
+              0.00039589256048202517,
+              0.0005011558532714844
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0006076410963833743,
+            "case_cluster_bootstrap_ci95": [
+              0.0005447157863581005,
+              0.0006829653094613864
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10530030070980412,
+            "case_cluster_bootstrap_ci95": [
+              0.1022811689862243,
+              0.10940918017098511
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04978848795488644,
+            "case_cluster_bootstrap_ci95": [
+              0.04260255847551525,
+              0.05360589607646271
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.05028932165643646,
+            "case_cluster_bootstrap_ci95": [
+              0.04347412495610711,
+              0.05443751199232216
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0005132555961608887,
+            "case_cluster_bootstrap_ci95": [
+              0.000440467894077301,
+              0.0005866460502147674
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0007212496562245348,
+            "case_cluster_bootstrap_ci95": [
+              0.0006429367785165276,
+              0.0008269182845771057
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10989702036203952,
+            "case_cluster_bootstrap_ci95": [
+              0.10275202988579268,
+              0.1169806827394061
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.0542067321908212,
+            "case_cluster_bootstrap_ci95": [
+              0.04716620656858305,
+              0.059626362771447276
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.054910307320802154,
+            "case_cluster_bootstrap_ci95": [
+              0.04782279626542822,
+              0.0606351573159824
+            ]
+          }
+        }
+      }
+    },
+    "kda-s443-t12": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 7710,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0008984506130218506,
+            "case_cluster_bootstrap_ci95": [
+              0.0008130557835102081,
+              0.000977635383605957
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0012503240941574094,
+            "case_cluster_bootstrap_ci95": [
+              0.001173009676283095,
+              0.0013483362257567352
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.11858722016222112,
+            "case_cluster_bootstrap_ci95": [
+              0.1136168359623182,
+              0.12175742663667401
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.0548301089110641,
+            "case_cluster_bootstrap_ci95": [
+              0.05185539554068397,
+              0.05741458865795546
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.056038410544684614,
+            "case_cluster_bootstrap_ci95": [
+              0.053062009545411674,
+              0.058758949997146696
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0009239017963409424,
+            "case_cluster_bootstrap_ci95": [
+              0.0008375048637390137,
+              0.001016341149806976
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0013747490526959645,
+            "case_cluster_bootstrap_ci95": [
+              0.0012405176976681915,
+              0.0015540984168323983
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10931463789508566,
+            "case_cluster_bootstrap_ci95": [
+              0.10275148070865181,
+              0.11439603634411849
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04867257441309583,
+            "case_cluster_bootstrap_ci95": [
+              0.04205740236174216,
+              0.053224354923795174
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04957569149763452,
+            "case_cluster_bootstrap_ci95": [
+              0.04323008885532248,
+              0.05447075973465091
+            ]
+          }
+        }
+      }
+    },
+    "kda-s443-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 7358,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0006915628910064697,
+            "case_cluster_bootstrap_ci95": [
+              0.0006046205759048462,
+              0.0007621847093105315
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0010397012691427611,
+            "case_cluster_bootstrap_ci95": [
+              0.0009268886313757835,
+              0.0011491619814185119
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10209900269253486,
+            "case_cluster_bootstrap_ci95": [
+              0.09614398759612733,
+              0.10869326771673919
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04423446951350174,
+            "case_cluster_bootstrap_ci95": [
+              0.03626870846152033,
+              0.0521714159206851
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04533023195915151,
+            "case_cluster_bootstrap_ci95": [
+              0.036942082065478325,
+              0.053089133367233074
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0008272528648376465,
+            "case_cluster_bootstrap_ci95": [
+              0.0007366538047790527,
+              0.0009323358535766602
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0011968240485448398,
+            "case_cluster_bootstrap_ci95": [
+              0.001049585597021977,
+              0.0013612804519070399
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.11729026707320467,
+            "case_cluster_bootstrap_ci95": [
+              0.11314506793925228,
+              0.12070458359766878
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.046692548682676804,
+            "case_cluster_bootstrap_ci95": [
+              0.03671353229250426,
+              0.054867252765703395
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04764276176670443,
+            "case_cluster_bootstrap_ci95": [
+              0.03833664333587303,
+              0.05569739915017912
+            ]
+          }
+        }
+      }
+    },
+    "gru-s443-t12": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6742,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0004175901412963867,
+            "case_cluster_bootstrap_ci95": [
+              0.00035115033388137816,
+              0.00048553943634033203
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0005597156691751153,
+            "case_cluster_bootstrap_ci95": [
+              0.0004692582497778625,
+              0.0006434834970047203
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10775118002865969,
+            "case_cluster_bootstrap_ci95": [
+              0.1035686181282417,
+              0.11067139596119722
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.042621948593906556,
+            "case_cluster_bootstrap_ci95": [
+              0.033218802109870604,
+              0.05130944999591463
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04510318079336706,
+            "case_cluster_bootstrap_ci95": [
+              0.03421569228776629,
+              0.05324177438934497
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0005480647087097168,
+            "case_cluster_bootstrap_ci95": [
+              0.00047164708375930787,
+              0.0006246030330657958
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0007500657416125169,
+            "case_cluster_bootstrap_ci95": [
+              0.0006417533506305215,
+              0.0008575725525975733
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10535046671040046,
+            "case_cluster_bootstrap_ci95": [
+              0.10207085030341359,
+              0.11015135577656399
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04740336788643751,
+            "case_cluster_bootstrap_ci95": [
+              0.03751159960201259,
+              0.05471308377142965
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.049045352591857605,
+            "case_cluster_bootstrap_ci95": [
+              0.03864280927391758,
+              0.05608019229238283
+            ]
+          }
+        }
+      }
+    },
+    "gru-s443-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 7037,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.00039249658584594727,
+            "case_cluster_bootstrap_ci95": [
+              0.0003440976142883301,
+              0.00044262781739234924
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0005398767532874755,
+            "case_cluster_bootstrap_ci95": [
+              0.00047351297335262126,
+              0.0006205226270677474
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.102053267681111,
+            "case_cluster_bootstrap_ci95": [
+              0.0976863894390214,
+              0.10684887890903205
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04194623087911675,
+            "case_cluster_bootstrap_ci95": [
+              0.03597654144648446,
+              0.04892756573440138
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04286208945296549,
+            "case_cluster_bootstrap_ci95": [
+              0.03683988965522132,
+              0.04971667636418726
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.00044530630111694336,
+            "case_cluster_bootstrap_ci95": [
+              0.0003821834921836853,
+              0.0005236335098743438
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0006292052490210712,
+            "case_cluster_bootstrap_ci95": [
+              0.0005294493532572004,
+              0.0007396950933898881
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10015491294146395,
+            "case_cluster_bootstrap_ci95": [
+              0.09638350353907232,
+              0.10303260978025564
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.042605858238664945,
+            "case_cluster_bootstrap_ci95": [
+              0.034979288140310594,
+              0.051639308182917565
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04405289172857521,
+            "case_cluster_bootstrap_ci95": [
+              0.036121304383034895,
+              0.053040245480182664
+            ]
+          }
+        }
+      }
+    },
+    "kda-original-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0006841421127319336,
+            "case_cluster_bootstrap_ci95": [
+              0.0006244182586669922,
+              0.0007686614990234375
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0009337087727797721,
+            "case_cluster_bootstrap_ci95": [
+              0.000872326652486989,
+              0.0010189612724417034
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10579925669442314,
+            "case_cluster_bootstrap_ci95": [
+              0.09972090540484468,
+              0.1131626315305114
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.05080104953448947,
+            "case_cluster_bootstrap_ci95": [
+              0.0416681825640871,
+              0.056180285169243616
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.051462542743201056,
+            "case_cluster_bootstrap_ci95": [
+              0.043789444284695986,
+              0.056784062924557954
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0006841421127319336,
+            "case_cluster_bootstrap_ci95": [
+              0.0006244182586669922,
+              0.0007686614990234375
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0009337087727797721,
+            "case_cluster_bootstrap_ci95": [
+              0.000872326652486989,
+              0.0010189612724417034
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10579925669442314,
+            "case_cluster_bootstrap_ci95": [
+              0.09972090540484468,
+              0.1131626315305114
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.05080104953448947,
+            "case_cluster_bootstrap_ci95": [
+              0.0416681825640871,
+              0.056180285169243616
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.051462542743201056,
+            "case_cluster_bootstrap_ci95": [
+              0.043789444284695986,
+              0.056784062924557954
+            ]
+          }
+        }
+      }
+    },
+    "gru-original-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 7710,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.00047129392623901367,
+            "case_cluster_bootstrap_ci95": [
+              0.000408172607421875,
+              0.0005401402711868286
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0006539626479443626,
+            "case_cluster_bootstrap_ci95": [
+              0.0005472411399723299,
+              0.0007572195514242175
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.1111629837206159,
+            "case_cluster_bootstrap_ci95": [
+              0.10529355250746314,
+              0.11844803416926289
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.050744244833752894,
+            "case_cluster_bootstrap_ci95": [
+              0.045445912747812664,
+              0.05416882781980814
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.05134467802708231,
+            "case_cluster_bootstrap_ci95": [
+              0.04628231472345423,
+              0.055072320249546676
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0006577372550964355,
+            "case_cluster_bootstrap_ci95": [
+              0.0005362331867218018,
+              0.0007935799658298492
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0009509541715328423,
+            "case_cluster_bootstrap_ci95": [
+              0.0007870887047989001,
+              0.0011690468772245154
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.1060978827640093,
+            "case_cluster_bootstrap_ci95": [
+              0.10276495425533194,
+              0.11050050005980837
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04717315026584748,
+            "case_cluster_bootstrap_ci95": [
+              0.03971542827903596,
+              0.05352345211255392
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04867188549256829,
+            "case_cluster_bootstrap_ci95": [
+              0.041527683685236294,
+              0.05449812827239054
+            ]
+          }
+        }
+      }
+    },
+    "mamba-original-t24": {
+      "own": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 8402,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.000817030668258667,
+            "case_cluster_bootstrap_ci95": [
+              0.0007427491247653962,
+              0.0009090457111597061
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0011282424550510275,
+            "case_cluster_bootstrap_ci95": [
+              0.0010107448262948234,
+              0.0012663875225624119
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.09553653269439166,
+            "case_cluster_bootstrap_ci95": [
+              0.09119943886818914,
+              0.10020232407106132
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.04566342792027622,
+            "case_cluster_bootstrap_ci95": [
+              0.04044289467609095,
+              0.050790584930794636
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.047374607348945635,
+            "case_cluster_bootstrap_ci95": [
+              0.04118518507598002,
+              0.05244352725740069
+            ]
+          }
+        }
+      },
+      "shared": {
+        "case_clusters": 20,
+        "episodes": 120,
+        "steps": 6264,
+        "metrics": {
+          "v_gap": {
+            "pooled_step_median": 0.0008346736431121826,
+            "case_cluster_bootstrap_ci95": [
+              0.000744379311800003,
+              0.0009544581174850464
+            ]
+          },
+          "gap_relative": {
+            "pooled_step_median": 0.0011575322004346049,
+            "case_cluster_bootstrap_ci95": [
+              0.0010335726106410106,
+              0.0013139986612267663
+            ]
+          },
+          "endpoint_spread": {
+            "pooled_step_median": 0.10137105416543024,
+            "case_cluster_bootstrap_ci95": [
+              0.09817758632419693,
+              0.10313934327948016
+            ]
+          },
+          "env_swept_spread": {
+            "pooled_step_median": 0.039164615452603524,
+            "case_cluster_bootstrap_ci95": [
+              0.028897010476037932,
+              0.04873422974507732
+            ]
+          },
+          "actual_swept_spread": {
+            "pooled_step_median": 0.04123655682905311,
+            "case_cluster_bootstrap_ci95": [
+              0.03044768223158778,
+              0.04982321404924156
+            ]
+          }
+        }
+      }
+    }
+  }
+}

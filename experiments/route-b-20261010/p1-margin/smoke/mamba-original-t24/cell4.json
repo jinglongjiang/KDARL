@@ -1,0 +1,45 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "mamba-original-t24",
+    "backbone": "mamba",
+    "seed": 419,
+    "length": 24,
+    "weight": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/mamba/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/artifacts/vl-optimized-20261007/mamba.ini",
+    "training": "reused IL50+fresh RL10000",
+    "origin": "original optimized run",
+    "weight_sha256": "f23e411effac2f1959eead081fa49c908a85532642172c50a34427fe40bff2b9",
+    "config_sha256": "cc2a64237e77404ee8d9808af9640b44c415527ddfdde6d5c82839ae8fd13a25"
+  },
+  "episodes": [
+    {
+      "cell": 4,
+      "case": 90000,
+      "outcome": "success",
+      "steps": 57
+    },
+    {
+      "cell": 4,
+      "case": 90001,
+      "outcome": "success",
+      "steps": 66
+    },
+    {
+      "cell": 4,
+      "case": 90002,
+      "outcome": "success",
+      "steps": 88
+    }
+  ],
+  "steps": 211,
+  "wall_seconds": 15.17358660697937,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "actions": 80,
+  "smoke": true,
+  "fast_legacy_checked": true,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/smoke/mamba-original-t24/cell4.steps.jsonl.gz"
+}

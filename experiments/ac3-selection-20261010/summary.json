@@ -1,0 +1,113 @@
+{
+  "status": "RESOURCE_LIMIT",
+  "scientific_verdict": "NOT_EVALUATED",
+  "correctness": "PASS",
+  "smoke": "PASS",
+  "smoke_episodes": 36,
+  "formal_episodes_completed": 0,
+  "formal_episodes_requested": 6000,
+  "training_episodes": 0,
+  "cost_gate": {
+    "status": "RESOURCE_LIMIT",
+    "smoke_episodes": 36,
+    "smoke_worker_seconds": 132.82874751091003,
+    "wall_elapsed_seconds": 174.8927607536316,
+    "projected_full_wall_seconds": 7379.374861717224,
+    "projected_total_seconds": 7674.267622470856,
+    "limit_seconds": 7200,
+    "workers": 3,
+    "outcome_metrics_not_used_for_budget_decision": true,
+    "uncertainty": "3episodes/cell estimate, not throughput guarantee; hard deadline enforced"
+  },
+  "correctness_by_seed": [
+    {
+      "fast_legacy": 36,
+      "five_person_score_equal": 12,
+      "five_person_trajectory_equal": 4,
+      "current_selected_once": true,
+      "full_crowd_safety_unchanged": true,
+      "status": "PASS",
+      "seed": 419,
+      "weight_sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e"
+    },
+    {
+      "fast_legacy": 36,
+      "five_person_score_equal": 12,
+      "five_person_trajectory_equal": 4,
+      "current_selected_once": true,
+      "full_crowd_safety_unchanged": true,
+      "status": "PASS",
+      "seed": 443,
+      "weight_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd"
+    }
+  ],
+  "checkpoints": [
+    {
+      "seed": 419,
+      "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t24/rl_model_ep10000.pth",
+      "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t24.ini",
+      "training": "fresh IL50 + RL10000",
+      "weight_sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+      "config_sha256": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7",
+      "training_protocol": "/home/abc/4090_backup_20261009/root/kda-history-20261009/protocol.json"
+    },
+    {
+      "seed": 443,
+      "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t24/rl_model_ep10000.pth",
+      "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t24.ini",
+      "training": "fresh IL50 + RL10000",
+      "weight_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+      "config_sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a",
+      "training_protocol": "/home/abc/workspace/kda-history-replication-20261010/protocol.json"
+    }
+  ],
+  "frozen_files_verified": 875,
+  "reserved92000_92499_untouched": true,
+  "source_project_modified": false,
+  "parameter_search": false,
+  "smoke_outcomes_not_used_for_method_acceptance": true,
+  "weights_not_original_optimized_seed419": true,
+  "weight_note": "Both use fresh IL50+RL10000 history-study T24; original optimized cb2e checkpoint is not used",
+  "sources": {
+    "protocol": "/home/abc/workspace/ac3-selection-20261010/protocol.json",
+    "cost_gate": "/home/abc/workspace/ac3-selection-20261010/cost-gate.json",
+    "job_exit_evidence": [
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/correctness-s419.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/correctness-s443.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s419-ac3-cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s419-ac3-cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s419-goal-cv1s-cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s419-goal-cv1s-cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s419-ttc5-cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s419-ttc5-cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s443-ac3-cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s443-ac3-cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s443-goal-cv1s-cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s443-goal-cv1s-cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s443-ttc5-cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/job-evidence/smoke-s443-ttc5-cell5.json"
+    ],
+    "smoke_results": [
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s419-ac3/cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s419-ac3/cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s419-goal-cv1s/cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s419-goal-cv1s/cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s419-ttc5/cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s419-ttc5/cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s443-ac3/cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s443-ac3/cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s443-goal-cv1s/cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s443-goal-cv1s/cell5.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s443-ttc5/cell4.json",
+      "/home/abc/workspace/ac3-selection-20261010/smoke/s443-ttc5/cell5.json"
+    ]
+  },
+  "failure_record": "First runtime image lackedCcompiler beforemodelconstruction; archived. A subsequent manifestguard failure also archived. Correctness rerun only afterdevelimage andmanifestfix. Originalbudgetclock preserved.",
+  "limitations": [
+    "No AC3 vs TTC5/Goal navigationeffect estimate",
+    "No paired full-caseCI or rescue/damage conclusion",
+    "No novelty conclusion",
+    "3case/cell throughput projection has sampling uncertainty"
+  ],
+  "recommendation": "Need larger authorized wall budget or a faster available GPU; no automatic restart or sample reduction"
+}

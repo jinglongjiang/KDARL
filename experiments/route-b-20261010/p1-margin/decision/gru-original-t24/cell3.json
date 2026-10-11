@@ -1,0 +1,116 @@
+{
+  "status": "已验证通过",
+  "checkpoint": "gru-original-t24",
+  "cell": 3,
+  "episodes": [
+    {
+      "case": 90000,
+      "outcome": "success",
+      "steps": 44
+    },
+    {
+      "case": 90001,
+      "outcome": "timeout",
+      "steps": 201
+    },
+    {
+      "case": 90002,
+      "outcome": "success",
+      "steps": 53
+    },
+    {
+      "case": 90003,
+      "outcome": "success",
+      "steps": 60
+    },
+    {
+      "case": 90004,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "case": 90005,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "case": 90006,
+      "outcome": "success",
+      "steps": 58
+    },
+    {
+      "case": 90007,
+      "outcome": "success",
+      "steps": 43
+    },
+    {
+      "case": 90008,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "case": 90009,
+      "outcome": "success",
+      "steps": 56
+    },
+    {
+      "case": 90010,
+      "outcome": "collision",
+      "steps": 2
+    },
+    {
+      "case": 90011,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "case": 90012,
+      "outcome": "success",
+      "steps": 57
+    },
+    {
+      "case": 90013,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "case": 90014,
+      "outcome": "success",
+      "steps": 43
+    },
+    {
+      "case": 90015,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "case": 90016,
+      "outcome": "success",
+      "steps": 52
+    },
+    {
+      "case": 90017,
+      "outcome": "success",
+      "steps": 48
+    },
+    {
+      "case": 90018,
+      "outcome": "success",
+      "steps": 56
+    },
+    {
+      "case": 90019,
+      "outcome": "success",
+      "steps": 44
+    }
+  ],
+  "steps": 1102,
+  "wall_seconds": 2.9465670585632324,
+  "source_sha256": "dfb30b7fa7e7c116c020c0991a300d597bf18e335c8e49946fdeb04444525ce7",
+  "geometry_bitwise": true,
+  "selected_actions_identical": true,
+  "training": 0,
+  "nn_forward_calls": 0,
+  "new_policy_rollouts": 0,
+  "robot_visible": false
+}

@@ -1,0 +1,16 @@
+{
+  "name": "smoke-own-kda-s419-t12-cell2",
+  "pid": 918,
+  "exit_code": 0,
+  "wall_seconds": 19.009856939315796,
+  "args": [
+    "--id",
+    "kda-s419-t12",
+    "--cell",
+    "2",
+    "--n-cases",
+    "3",
+    "--smoke"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n{\"checkpoint\": \"kda-s419-t12\", \"cell\": 2, \"case\": 90000, \"steps\": 56}\n{\"checkpoint\": \"kda-s419-t12\", \"cell\": 2, \"case\": 90001, \"steps\": 52}\n{\"checkpoint\": \"kda-s419-t12\", \"cell\": 2, \"case\": 90002, \"steps\": 66}\n"
+}

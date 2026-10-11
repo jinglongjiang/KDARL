@@ -1,0 +1,25 @@
+{
+  "pid": 2817772,
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-B",
+    "/root/kda-history-20261009/train-worker.py",
+    "--project",
+    "/root/cc-diag-20261008/code",
+    "--deadline",
+    "1791590829.6947935",
+    "--config",
+    "/root/kda-history-replication-20261010/gru-t24.ini",
+    "--outdir",
+    "/root/kda-history-replication-20261010/runs/gru-t24",
+    "--device",
+    "cuda",
+    "--seed",
+    "443",
+    "--temporal-backbone",
+    "gru"
+  ],
+  "core": 1,
+  "started": 1791563889.8347092,
+  "kind": "train"
+}

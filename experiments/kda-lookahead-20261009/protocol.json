@@ -1,0 +1,110 @@
+{
+  "version": "kda-lookahead-diag-v1-20261009",
+  "train_episodes": 0,
+  "baseline": "ttc5; selection anchored to actual current state, frozen within all candidates",
+  "case_base": 90000,
+  "cases_per_cell": 500,
+  "cells": [
+    [
+      5,
+      "circle_crossing"
+    ],
+    [
+      5,
+      "square_crossing"
+    ],
+    [
+      10,
+      "circle_crossing"
+    ],
+    [
+      10,
+      "square_crossing"
+    ],
+    [
+      20,
+      "circle_crossing"
+    ],
+    [
+      20,
+      "square_crossing"
+    ]
+  ],
+  "forbidden_case_blocks": [
+    [
+      91000,
+      91499
+    ],
+    [
+      92000,
+      92499
+    ]
+  ],
+  "H1": {
+    "arms": [
+      "kda",
+      "mamba",
+      "gru"
+    ],
+    "alpha": [
+      0.3,
+      0.0
+    ],
+    "n": 18000
+  },
+  "H3": {
+    "arm": "kda",
+    "alpha": 0.3,
+    "cases_per_cell": 50,
+    "n": 300,
+    "tail_K": 20,
+    "oracle": "actual next human observations after the same root real step; root/history/previous action restored for shadow scoring",
+    "deployment": "CV unchanged; oracle never executed",
+    "no_expansion_below_flip_fraction": 0.01
+  },
+  "H2": {
+    "arms": [
+      "kda",
+      "mamba"
+    ],
+    "candidate_counts": [
+      80,
+      81
+    ],
+    "zero_stop_index": 80,
+    "original_80_mapping_preserved": true,
+    "alpha_selection": "H1 corrected Pareto winner; otherwise alpha0 primary and alpha0.3 descriptive secondary",
+    "total_per_alpha": 12000,
+    "additional_per_alpha": 6000,
+    "reuse": "exact H1 same-config same-case 80-action baseline",
+    "extra_candidate_scored_separately": "preserves bitwise values/windows of original 80; filter recomputed over all81",
+    "adoption": "KDA SR gain corrected p<0.05, observed CR and TO no higher than baseline; this does not prove statistical noninferiority"
+  },
+  "family": {
+    "arm": "kda",
+    "tests": 6,
+    "comparisons": [
+      "H1 off vs on",
+      "H2 primary81 vs80"
+    ],
+    "metrics": [
+      "success",
+      "collision",
+      "timeout"
+    ],
+    "alpha": 0.008333333333333333,
+    "statistic": "exact paired McNemar; episode key=(cell,case)",
+    "case_clustering": "same numeric case repeated across cells: additionally report case-cluster bootstrap intervals; pooled McNemar independence remains a limitation"
+  },
+  "H1_winner": "at least one corrected favorable SR/CR/TO change and no corrected unfavorable change; mixed tradeoffs mean no clear winner",
+  "controls": "Mamba/GRU descriptive only, never included in testing family or adoption",
+  "smoke": {
+    "cases_per_cell": 3,
+    "all_cells": true,
+    "every_variant_before_formal": true
+  },
+  "no_novelty_claim": true,
+  "no_training_testing_consistency_claim": true,
+  "H3_negative_scope": "only current frozen value consumer at0.25s; not all prediction/multistep planning",
+  "final_choice": "at most one; among validated H1/H2 Pareto gains choose larger KDA SR gain, ties favor H1; otherwise H3 sensitivity is only an unvalidated lead"
+}

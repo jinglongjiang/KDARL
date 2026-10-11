@@ -1,0 +1,31 @@
+{
+  "steps": [
+    {
+      "step": "L0-A-token-fields",
+      "status": "已验证通过",
+      "exit_code": 0,
+      "output": "/home/abc/workspace/kda-lookahead-20261009/L0-A-token-fields.json",
+      "bytes": 25014
+    },
+    {
+      "step": "L0-B-action-set",
+      "status": "已验证通过",
+      "exit_code": 0,
+      "output": "/home/abc/workspace/kda-lookahead-20261009/L0-B-action-set.json",
+      "bytes": 110414
+    },
+    {
+      "step": "L0-C-provenance",
+      "status": "已验证通过",
+      "exit_code": 0,
+      "output": "/home/abc/workspace/kda-lookahead-20261009/L0-C-provenance.json",
+      "bytes": 1383807
+    }
+  ],
+  "actual_stdout_local": [
+    "include_stop=False: actions=80 index0=(0.12885124808584156, 0.0)",
+    "include_stop=True: actions=81 index0=(0.0, 0.0)"
+  ],
+  "actual_stdout_remote": "remote_entries=598, kda/mamba/gru raw_episodes=128 each; oscillation_metrics_available=true",
+  "first_attempt_failure": "L0-C-attempt1-error.json"
+}

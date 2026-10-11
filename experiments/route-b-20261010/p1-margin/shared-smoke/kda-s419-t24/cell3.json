@@ -1,0 +1,24 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "kda-s419-t24",
+    "backbone": "kda",
+    "seed": 419,
+    "length": 24,
+    "weight": "/home/abc/4090_backup_20261009/root/kda-history-20261009/runs/kda-t24/rl_model_ep10000.pth",
+    "config": "/home/abc/4090_backup_20261009/root/kda-history-20261009/kda-t24.ini",
+    "training": "fresh IL50+RL10000",
+    "origin": "history-length study",
+    "weight_sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+    "config_sha256": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7"
+  },
+  "steps": 110,
+  "episodes": 3,
+  "wall_seconds": 5.233792543411255,
+  "same_reference_values_bitwise_steps": 0,
+  "reference": "kda-original-t24",
+  "alpha": 0.3,
+  "selection": "ttc5",
+  "actions": 80,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/shared-smoke/kda-s419-t24/cell3.steps.jsonl.gz"
+}

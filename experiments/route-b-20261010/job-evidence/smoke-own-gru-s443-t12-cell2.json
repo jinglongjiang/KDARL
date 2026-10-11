@@ -1,0 +1,16 @@
+{
+  "name": "smoke-own-gru-s443-t12-cell2",
+  "pid": 2208,
+  "exit_code": 0,
+  "wall_seconds": 9.004158735275269,
+  "args": [
+    "--id",
+    "gru-s443-t12",
+    "--cell",
+    "2",
+    "--n-cases",
+    "3",
+    "--smoke"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n{\"checkpoint\": \"gru-s443-t12\", \"cell\": 2, \"case\": 90000, \"steps\": 53}\n{\"checkpoint\": \"gru-s443-t12\", \"cell\": 2, \"case\": 90001, \"steps\": 56}\n{\"checkpoint\": \"gru-s443-t12\", \"cell\": 2, \"case\": 90002, \"steps\": 70}\n"
+}

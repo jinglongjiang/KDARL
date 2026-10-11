@@ -1,0 +1,48 @@
+{
+  "question": "Do matched known ORCA and existing Mamba-VL controllers also lose return when the physical crowd increases?",
+  "motivation": "The frozen custom CV-MPC reference is not an official mature navigation baseline. Preserve its poor results; add an existing value-lookahead reference to meet the requested evidence level, not to replace any preregistered candidate gate.",
+  "model": "Existing optimized Mamba-VL T24, seed419; different training run from fresh-history KDA/GRU. Descriptive reference, not a matched architectural performance comparison or full submitted-paper reproduction.",
+  "cases": [
+    90000,
+    90001,
+    90002,
+    90003,
+    90004,
+    90005,
+    90006,
+    90007,
+    90008,
+    90009,
+    90010,
+    90011,
+    90012,
+    90013,
+    90014,
+    90015
+  ],
+  "smoke_cases": [
+    90000,
+    90001,
+    90002
+  ],
+  "geometries": [
+    "circle",
+    "square"
+  ],
+  "conditions": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E10"
+  ],
+  "formal_episodes": 192,
+  "smoke_episodes": 36,
+  "checkpoint_sha256": "f23e411effac2f1959eead081fa49c908a85532642172c50a34427fe40bff2b9",
+  "config_sha256": "cc2a64237e77404ee8d9808af9640b44c415527ddfdde6d5c82839ae8fd13a25",
+  "script_sha256": "b793ad9b57b51f1760963a0bb11ae0dd01503b9a2850a4fd2cb6d905cf4589d0",
+  "frozen_b_driver_sha256": "8b4ee9d18c5014e43d30fb7f8944625dae4104b23c0713c4bdddaee19099dece",
+  "controls": "Same accepted terminal/history maintenance, legal TTC5,80 actions,alpha.3,margin.2,risk.8,original reward,50s,8m robot task. No training, tuning, hidden observations or 92000 cases.",
+  "decision": "E1-to-E2 decline in both existing Mamba-VL and ORCA corroborates physical task difficulty for those references. No optimality or unavoidable-failure claim. Disagreement makes this reference corroboration inconclusive. Never retroactively change the B candidate gate."
+}

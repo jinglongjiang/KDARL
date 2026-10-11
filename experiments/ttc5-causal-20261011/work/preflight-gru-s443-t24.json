@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "evidence": [
+    {
+      "cell": 0,
+      "case": 91000,
+      "historical_summary_exact": true,
+      "rebuilt_action_history_scores_exact": true,
+      "steps": 47
+    },
+    {
+      "cell": 5,
+      "case": 91000,
+      "historical_summary_exact": true,
+      "rebuilt_action_history_scores_exact": true,
+      "steps": 61
+    },
+    {
+      "cell": 5,
+      "case": 90000,
+      "historical_step_trace": false,
+      "A0_exact": true,
+      "steps": 97
+    },
+    {
+      "cell": 5,
+      "case": 90001,
+      "historical_step_trace": false,
+      "A0_exact": true,
+      "steps": 201
+    },
+    {
+      "cell": 5,
+      "case": 90002,
+      "historical_step_trace": false,
+      "A0_exact": true,
+      "steps": 94
+    },
+    {
+      "oracle_identity_cv_bitwise": true,
+      "steps": 3
+    }
+  ],
+  "torch": "2.9.1+cu128",
+  "device": "NVIDIA GeForce RTX 4090",
+  "weight_sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c"
+}

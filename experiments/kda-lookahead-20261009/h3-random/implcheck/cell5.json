@@ -1,0 +1,4330 @@
+{
+  "status": "已验证通过",
+  "mode": "implcheck",
+  "episodes": [
+    {
+      "cell": 5,
+      "case": 90000,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 71,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 71.0,
+              "actual_safe": 71.0
+            },
+            "oracle": {
+              "final_flip": 14.0,
+              "value_flip": 11.0,
+              "env_clearance_delta": -0.20061954388730552,
+              "actual_clearance_delta": -0.12958390485412796,
+              "progress_delta": 0.01718598699739715,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.0,
+              "actual_safe": 69.0
+            },
+            "random_shared": {
+              "final_flip": 12.999999999999986,
+              "value_flip": 11.99999999999999,
+              "env_clearance_delta": -0.010667295915042528,
+              "actual_clearance_delta": 0.07037317322485115,
+              "progress_delta": -0.3242281732059249,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 70.40000000000046,
+              "actual_safe": 70.40000000000046
+            },
+            "random_independent": {
+              "final_flip": 14.999999999999979,
+              "value_flip": 12.199999999999989,
+              "env_clearance_delta": -0.20304624089665846,
+              "actual_clearance_delta": -0.18564086337850463,
+              "progress_delta": -0.019188550094041606,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.00000000000044,
+              "actual_safe": 69.00000000000044
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.027086913585662842,
+                14.0
+              ],
+              "new_value_gap": [
+                0.03959178924560547,
+                14.0
+              ],
+              "speed_delta": [
+                0.16636958601956514,
+                14.0
+              ],
+              "command_delta": [
+                4.324669882885848,
+                14.0
+              ],
+              "direction_degrees": [
+                466.48390205924153,
+                14.0
+              ],
+              "env_clearance_delta": [
+                -0.20061954388730552,
+                14.0
+              ],
+              "actual_clearance_delta": [
+                -0.12958390485412796,
+                14.0
+              ],
+              "progress_delta": [
+                0.01718598699739715,
+                14.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.02739170789718627,
+                12.999999999999986
+              ],
+              "new_value_gap": [
+                0.03244929313659669,
+                12.999999999999986
+              ],
+              "speed_delta": [
+                -0.886077814983505,
+                12.999999999999986
+              ],
+              "command_delta": [
+                5.0185224474708825,
+                12.999999999999986
+              ],
+              "direction_degrees": [
+                366.5955568316026,
+                12.999999999999986
+              ],
+              "env_clearance_delta": [
+                -0.010667295915042528,
+                12.999999999999986
+              ],
+              "actual_clearance_delta": [
+                0.07037317322485115,
+                12.999999999999986
+              ],
+              "progress_delta": [
+                -0.3242281732059249,
+                12.999999999999986
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.019101274013519284,
+                14.999999999999979
+              ],
+              "new_value_gap": [
+                0.03832570314407349,
+                14.999999999999979
+              ],
+              "speed_delta": [
+                -0.5090127740298391,
+                14.999999999999979
+              ],
+              "command_delta": [
+                5.259798871832341,
+                14.999999999999979
+              ],
+              "direction_degrees": [
+                439.13128933715615,
+                14.999999999999979
+              ],
+              "env_clearance_delta": [
+                -0.20304624089665846,
+                14.999999999999979
+              ],
+              "actual_clearance_delta": [
+                -0.18564086337850463,
+                14.999999999999979
+              ],
+              "progress_delta": [
+                -0.019188550094041606,
+                14.999999999999979
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              11.0,
+              15.0,
+              15.0,
+              12.0,
+              12.0
+            ],
+            "random_independent": [
+              12.0,
+              16.0,
+              17.0,
+              15.0,
+              15.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 71,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 71.0,
+              "actual_safe": 71.0
+            },
+            "oracle": {
+              "final_flip": 14.0,
+              "value_flip": 11.0,
+              "env_clearance_delta": -0.20061954388730552,
+              "actual_clearance_delta": -0.12958390485412796,
+              "progress_delta": 0.01718598699739715,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.0,
+              "actual_safe": 69.0
+            },
+            "random_shared": {
+              "final_flip": 12.999999999999986,
+              "value_flip": 11.99999999999999,
+              "env_clearance_delta": -0.010667295915042528,
+              "actual_clearance_delta": 0.07037317322485115,
+              "progress_delta": -0.3242281732059249,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 70.40000000000046,
+              "actual_safe": 70.40000000000046
+            },
+            "random_independent": {
+              "final_flip": 14.999999999999979,
+              "value_flip": 12.199999999999989,
+              "env_clearance_delta": -0.20304624089665846,
+              "actual_clearance_delta": -0.18564086337850463,
+              "progress_delta": -0.019188550094041606,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 69.00000000000044,
+              "actual_safe": 69.00000000000044
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.027086913585662842,
+                14.0
+              ],
+              "new_value_gap": [
+                0.03959178924560547,
+                14.0
+              ],
+              "speed_delta": [
+                0.16636958601956514,
+                14.0
+              ],
+              "command_delta": [
+                4.324669882885848,
+                14.0
+              ],
+              "direction_degrees": [
+                466.48390205924153,
+                14.0
+              ],
+              "env_clearance_delta": [
+                -0.20061954388730552,
+                14.0
+              ],
+              "actual_clearance_delta": [
+                -0.12958390485412796,
+                14.0
+              ],
+              "progress_delta": [
+                0.01718598699739715,
+                14.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.02739170789718627,
+                12.999999999999986
+              ],
+              "new_value_gap": [
+                0.03244929313659669,
+                12.999999999999986
+              ],
+              "speed_delta": [
+                -0.886077814983505,
+                12.999999999999986
+              ],
+              "command_delta": [
+                5.0185224474708825,
+                12.999999999999986
+              ],
+              "direction_degrees": [
+                366.5955568316026,
+                12.999999999999986
+              ],
+              "env_clearance_delta": [
+                -0.010667295915042528,
+                12.999999999999986
+              ],
+              "actual_clearance_delta": [
+                0.07037317322485115,
+                12.999999999999986
+              ],
+              "progress_delta": [
+                -0.3242281732059249,
+                12.999999999999986
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.019101274013519284,
+                14.999999999999979
+              ],
+              "new_value_gap": [
+                0.03832570314407349,
+                14.999999999999979
+              ],
+              "speed_delta": [
+                -0.5090127740298391,
+                14.999999999999979
+              ],
+              "command_delta": [
+                5.259798871832341,
+                14.999999999999979
+              ],
+              "direction_degrees": [
+                439.13128933715615,
+                14.999999999999979
+              ],
+              "env_clearance_delta": [
+                -0.20304624089665846,
+                14.999999999999979
+              ],
+              "actual_clearance_delta": [
+                -0.18564086337850463,
+                14.999999999999979
+              ],
+              "progress_delta": [
+                -0.019188550094041606,
+                14.999999999999979
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              11.0,
+              15.0,
+              15.0,
+              12.0,
+              12.0
+            ],
+            "random_independent": [
+              12.0,
+              16.0,
+              17.0,
+              15.0,
+              15.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "random_independent": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "case": 90001,
+      "outcome": "collision",
+      "groups": {
+        "all": {
+          "n_steps": 16,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 7.0,
+              "actual_safe": 7.0
+            },
+            "oracle": {
+              "final_flip": 4.0,
+              "value_flip": 5.0,
+              "env_clearance_delta": -0.22560608260932175,
+              "actual_clearance_delta": -0.20338026893869832,
+              "progress_delta": -0.045539079308919206,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 7.0,
+              "actual_safe": 7.0
+            },
+            "random_shared": {
+              "final_flip": 4.200000000000001,
+              "value_flip": 4.200000000000001,
+              "env_clearance_delta": -0.10629924301594401,
+              "actual_clearance_delta": -0.09986288925444581,
+              "progress_delta": -0.004105085698027214,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 6.600000000000003,
+              "actual_safe": 6.600000000000003
+            },
+            "random_independent": {
+              "final_flip": 3.2000000000000006,
+              "value_flip": 3.800000000000001,
+              "env_clearance_delta": -0.03243105724973307,
+              "actual_clearance_delta": -0.029216916389448642,
+              "progress_delta": -0.026568212063331126,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 6.800000000000003,
+              "actual_safe": 6.800000000000003
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.02918553352355957,
+                4.0
+              ],
+              "new_value_gap": [
+                0.0521969199180603,
+                4.0
+              ],
+              "speed_delta": [
+                0.4787552025959525,
+                4.0
+              ],
+              "command_delta": [
+                3.00269921227764,
+                4.0
+              ],
+              "direction_degrees": [
+                344.0836564925585,
+                4.0
+              ],
+              "env_clearance_delta": [
+                -0.22560608260932175,
+                4.0
+              ],
+              "actual_clearance_delta": [
+                -0.20338026893869832,
+                4.0
+              ],
+              "progress_delta": [
+                -0.045539079308919206,
+                4.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.025801503658294676,
+                4.200000000000001
+              ],
+              "new_value_gap": [
+                0.03627800941467286,
+                4.200000000000001
+              ],
+              "speed_delta": [
+                0.1373869509986205,
+                4.200000000000001
+              ],
+              "command_delta": [
+                1.8975578667421074,
+                4.200000000000001
+              ],
+              "direction_degrees": [
+                189.06650205968882,
+                4.200000000000001
+              ],
+              "env_clearance_delta": [
+                -0.10629924301594401,
+                4.200000000000001
+              ],
+              "actual_clearance_delta": [
+                -0.09986288925444581,
+                4.200000000000001
+              ],
+              "progress_delta": [
+                -0.004105085698027214,
+                4.200000000000001
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.014045774936676025,
+                3.2000000000000006
+              ],
+              "new_value_gap": [
+                0.033363091945648196,
+                3.2000000000000006
+              ],
+              "speed_delta": [
+                0.22995863856696713,
+                3.2000000000000006
+              ],
+              "command_delta": [
+                1.4266794801962563,
+                3.2000000000000006
+              ],
+              "direction_degrees": [
+                125.65706014009534,
+                3.2000000000000006
+              ],
+              "env_clearance_delta": [
+                -0.03243105724973307,
+                3.2000000000000006
+              ],
+              "actual_clearance_delta": [
+                -0.029216916389448642,
+                3.2000000000000006
+              ],
+              "progress_delta": [
+                -0.026568212063331126,
+                3.2000000000000006
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              3.0,
+              4.0,
+              4.0,
+              4.0,
+              6.0
+            ],
+            "random_independent": [
+              2.0,
+              4.0,
+              4.0,
+              3.0,
+              3.0
+            ]
+          }
+        },
+        "collision_all": {
+          "n_steps": 16,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 7.0,
+              "actual_safe": 7.0
+            },
+            "oracle": {
+              "final_flip": 4.0,
+              "value_flip": 5.0,
+              "env_clearance_delta": -0.22560608260932175,
+              "actual_clearance_delta": -0.20338026893869832,
+              "progress_delta": -0.045539079308919206,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 7.0,
+              "actual_safe": 7.0
+            },
+            "random_shared": {
+              "final_flip": 4.200000000000001,
+              "value_flip": 4.200000000000001,
+              "env_clearance_delta": -0.10629924301594401,
+              "actual_clearance_delta": -0.09986288925444581,
+              "progress_delta": -0.004105085698027214,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 6.600000000000003,
+              "actual_safe": 6.600000000000003
+            },
+            "random_independent": {
+              "final_flip": 3.2000000000000006,
+              "value_flip": 3.800000000000001,
+              "env_clearance_delta": -0.03243105724973307,
+              "actual_clearance_delta": -0.029216916389448642,
+              "progress_delta": -0.026568212063331126,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 6.800000000000003,
+              "actual_safe": 6.800000000000003
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.02918553352355957,
+                4.0
+              ],
+              "new_value_gap": [
+                0.0521969199180603,
+                4.0
+              ],
+              "speed_delta": [
+                0.4787552025959525,
+                4.0
+              ],
+              "command_delta": [
+                3.00269921227764,
+                4.0
+              ],
+              "direction_degrees": [
+                344.0836564925585,
+                4.0
+              ],
+              "env_clearance_delta": [
+                -0.22560608260932175,
+                4.0
+              ],
+              "actual_clearance_delta": [
+                -0.20338026893869832,
+                4.0
+              ],
+              "progress_delta": [
+                -0.045539079308919206,
+                4.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.025801503658294676,
+                4.200000000000001
+              ],
+              "new_value_gap": [
+                0.03627800941467286,
+                4.200000000000001
+              ],
+              "speed_delta": [
+                0.1373869509986205,
+                4.200000000000001
+              ],
+              "command_delta": [
+                1.8975578667421074,
+                4.200000000000001
+              ],
+              "direction_degrees": [
+                189.06650205968882,
+                4.200000000000001
+              ],
+              "env_clearance_delta": [
+                -0.10629924301594401,
+                4.200000000000001
+              ],
+              "actual_clearance_delta": [
+                -0.09986288925444581,
+                4.200000000000001
+              ],
+              "progress_delta": [
+                -0.004105085698027214,
+                4.200000000000001
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.014045774936676025,
+                3.2000000000000006
+              ],
+              "new_value_gap": [
+                0.033363091945648196,
+                3.2000000000000006
+              ],
+              "speed_delta": [
+                0.22995863856696713,
+                3.2000000000000006
+              ],
+              "command_delta": [
+                1.4266794801962563,
+                3.2000000000000006
+              ],
+              "direction_degrees": [
+                125.65706014009534,
+                3.2000000000000006
+              ],
+              "env_clearance_delta": [
+                -0.03243105724973307,
+                3.2000000000000006
+              ],
+              "actual_clearance_delta": [
+                -0.029216916389448642,
+                3.2000000000000006
+              ],
+              "progress_delta": [
+                -0.026568212063331126,
+                3.2000000000000006
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              3.0,
+              4.0,
+              4.0,
+              4.0,
+              6.0
+            ],
+            "random_independent": [
+              2.0,
+              4.0,
+              4.0,
+              3.0,
+              3.0
+            ]
+          }
+        },
+        "collision_last20": {
+          "n_steps": 16,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 7.0,
+              "actual_safe": 7.0
+            },
+            "oracle": {
+              "final_flip": 4.0,
+              "value_flip": 5.0,
+              "env_clearance_delta": -0.22560608260932175,
+              "actual_clearance_delta": -0.20338026893869832,
+              "progress_delta": -0.045539079308919206,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 7.0,
+              "actual_safe": 7.0
+            },
+            "random_shared": {
+              "final_flip": 4.200000000000001,
+              "value_flip": 4.200000000000001,
+              "env_clearance_delta": -0.10629924301594401,
+              "actual_clearance_delta": -0.09986288925444581,
+              "progress_delta": -0.004105085698027214,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 6.600000000000003,
+              "actual_safe": 6.600000000000003
+            },
+            "random_independent": {
+              "final_flip": 3.2000000000000006,
+              "value_flip": 3.800000000000001,
+              "env_clearance_delta": -0.03243105724973307,
+              "actual_clearance_delta": -0.029216916389448642,
+              "progress_delta": -0.026568212063331126,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 6.800000000000003,
+              "actual_safe": 6.800000000000003
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.02918553352355957,
+                4.0
+              ],
+              "new_value_gap": [
+                0.0521969199180603,
+                4.0
+              ],
+              "speed_delta": [
+                0.4787552025959525,
+                4.0
+              ],
+              "command_delta": [
+                3.00269921227764,
+                4.0
+              ],
+              "direction_degrees": [
+                344.0836564925585,
+                4.0
+              ],
+              "env_clearance_delta": [
+                -0.22560608260932175,
+                4.0
+              ],
+              "actual_clearance_delta": [
+                -0.20338026893869832,
+                4.0
+              ],
+              "progress_delta": [
+                -0.045539079308919206,
+                4.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.025801503658294676,
+                4.200000000000001
+              ],
+              "new_value_gap": [
+                0.03627800941467286,
+                4.200000000000001
+              ],
+              "speed_delta": [
+                0.1373869509986205,
+                4.200000000000001
+              ],
+              "command_delta": [
+                1.8975578667421074,
+                4.200000000000001
+              ],
+              "direction_degrees": [
+                189.06650205968882,
+                4.200000000000001
+              ],
+              "env_clearance_delta": [
+                -0.10629924301594401,
+                4.200000000000001
+              ],
+              "actual_clearance_delta": [
+                -0.09986288925444581,
+                4.200000000000001
+              ],
+              "progress_delta": [
+                -0.004105085698027214,
+                4.200000000000001
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.014045774936676025,
+                3.2000000000000006
+              ],
+              "new_value_gap": [
+                0.033363091945648196,
+                3.2000000000000006
+              ],
+              "speed_delta": [
+                0.22995863856696713,
+                3.2000000000000006
+              ],
+              "command_delta": [
+                1.4266794801962563,
+                3.2000000000000006
+              ],
+              "direction_degrees": [
+                125.65706014009534,
+                3.2000000000000006
+              ],
+              "env_clearance_delta": [
+                -0.03243105724973307,
+                3.2000000000000006
+              ],
+              "actual_clearance_delta": [
+                -0.029216916389448642,
+                3.2000000000000006
+              ],
+              "progress_delta": [
+                -0.026568212063331126,
+                3.2000000000000006
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              3.0,
+              4.0,
+              4.0,
+              4.0,
+              6.0
+            ],
+            "random_independent": [
+              2.0,
+              4.0,
+              4.0,
+              3.0,
+              3.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "case": 90002,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 63,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 59.0,
+              "actual_safe": 60.0
+            },
+            "oracle": {
+              "final_flip": 9.0,
+              "value_flip": 9.0,
+              "env_clearance_delta": 0.03518556525895927,
+              "actual_clearance_delta": 0.10523115465743915,
+              "progress_delta": 0.03957094592381205,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 57.0,
+              "actual_safe": 59.0
+            },
+            "random_shared": {
+              "final_flip": 9.2,
+              "value_flip": 8.200000000000003,
+              "env_clearance_delta": 0.009134898247454202,
+              "actual_clearance_delta": 0.0332386680882806,
+              "progress_delta": -0.015826521327381667,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 57.400000000000276,
+              "actual_safe": 59.0000000000003
+            },
+            "random_independent": {
+              "final_flip": 12.199999999999989,
+              "value_flip": 10.199999999999996,
+              "env_clearance_delta": -0.019845818995955014,
+              "actual_clearance_delta": 0.025506261749785347,
+              "progress_delta": 0.05642405632474098,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 58.000000000000284,
+              "actual_safe": 58.60000000000029
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.012641489505767822,
+                9.0
+              ],
+              "new_value_gap": [
+                0.023435652256011963,
+                9.0
+              ],
+              "speed_delta": [
+                -0.2200202101282699,
+                9.0
+              ],
+              "command_delta": [
+                2.8557206248764397,
+                9.0
+              ],
+              "direction_degrees": [
+                212.29121063629228,
+                9.0
+              ],
+              "env_clearance_delta": [
+                0.03518556525895927,
+                9.0
+              ],
+              "actual_clearance_delta": [
+                0.10523115465743915,
+                9.0
+              ],
+              "progress_delta": [
+                0.03957094592381205,
+                9.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.03449696302413941,
+                9.2
+              ],
+              "new_value_gap": [
+                0.022046196460723873,
+                9.2
+              ],
+              "speed_delta": [
+                -0.008860651639976666,
+                9.2
+              ],
+              "command_delta": [
+                3.1107119937304275,
+                9.2
+              ],
+              "direction_degrees": [
+                252.62876876374258,
+                9.2
+              ],
+              "env_clearance_delta": [
+                0.009134898247454202,
+                9.2
+              ],
+              "actual_clearance_delta": [
+                0.0332386680882806,
+                9.2
+              ],
+              "progress_delta": [
+                -0.015826521327381667,
+                9.2
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.023762118816375712,
+                12.199999999999989
+              ],
+              "new_value_gap": [
+                0.024247598648071286,
+                12.199999999999989
+              ],
+              "speed_delta": [
+                0.10361677709531064,
+                12.199999999999989
+              ],
+              "command_delta": [
+                3.7360123032333057,
+                12.199999999999989
+              ],
+              "direction_degrees": [
+                299.2250612461726,
+                12.199999999999989
+              ],
+              "env_clearance_delta": [
+                -0.019845818995955014,
+                12.199999999999989
+              ],
+              "actual_clearance_delta": [
+                0.025506261749785347,
+                12.199999999999989
+              ],
+              "progress_delta": [
+                0.05642405632474098,
+                12.199999999999989
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              10.0,
+              8.0,
+              8.0,
+              11.0,
+              9.0
+            ],
+            "random_independent": [
+              11.0,
+              12.0,
+              13.0,
+              12.0,
+              13.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 63,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 59.0,
+              "actual_safe": 60.0
+            },
+            "oracle": {
+              "final_flip": 9.0,
+              "value_flip": 9.0,
+              "env_clearance_delta": 0.03518556525895927,
+              "actual_clearance_delta": 0.10523115465743915,
+              "progress_delta": 0.03957094592381205,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 57.0,
+              "actual_safe": 59.0
+            },
+            "random_shared": {
+              "final_flip": 9.2,
+              "value_flip": 8.200000000000003,
+              "env_clearance_delta": 0.009134898247454202,
+              "actual_clearance_delta": 0.0332386680882806,
+              "progress_delta": -0.015826521327381667,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 57.400000000000276,
+              "actual_safe": 59.0000000000003
+            },
+            "random_independent": {
+              "final_flip": 12.199999999999989,
+              "value_flip": 10.199999999999996,
+              "env_clearance_delta": -0.019845818995955014,
+              "actual_clearance_delta": 0.025506261749785347,
+              "progress_delta": 0.05642405632474098,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 58.000000000000284,
+              "actual_safe": 58.60000000000029
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.012641489505767822,
+                9.0
+              ],
+              "new_value_gap": [
+                0.023435652256011963,
+                9.0
+              ],
+              "speed_delta": [
+                -0.2200202101282699,
+                9.0
+              ],
+              "command_delta": [
+                2.8557206248764397,
+                9.0
+              ],
+              "direction_degrees": [
+                212.29121063629228,
+                9.0
+              ],
+              "env_clearance_delta": [
+                0.03518556525895927,
+                9.0
+              ],
+              "actual_clearance_delta": [
+                0.10523115465743915,
+                9.0
+              ],
+              "progress_delta": [
+                0.03957094592381205,
+                9.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.03449696302413941,
+                9.2
+              ],
+              "new_value_gap": [
+                0.022046196460723873,
+                9.2
+              ],
+              "speed_delta": [
+                -0.008860651639976666,
+                9.2
+              ],
+              "command_delta": [
+                3.1107119937304275,
+                9.2
+              ],
+              "direction_degrees": [
+                252.62876876374258,
+                9.2
+              ],
+              "env_clearance_delta": [
+                0.009134898247454202,
+                9.2
+              ],
+              "actual_clearance_delta": [
+                0.0332386680882806,
+                9.2
+              ],
+              "progress_delta": [
+                -0.015826521327381667,
+                9.2
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.023762118816375712,
+                12.199999999999989
+              ],
+              "new_value_gap": [
+                0.024247598648071286,
+                12.199999999999989
+              ],
+              "speed_delta": [
+                0.10361677709531064,
+                12.199999999999989
+              ],
+              "command_delta": [
+                3.7360123032333057,
+                12.199999999999989
+              ],
+              "direction_degrees": [
+                299.2250612461726,
+                12.199999999999989
+              ],
+              "env_clearance_delta": [
+                -0.019845818995955014,
+                12.199999999999989
+              ],
+              "actual_clearance_delta": [
+                0.025506261749785347,
+                12.199999999999989
+              ],
+              "progress_delta": [
+                0.05642405632474098,
+                12.199999999999989
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              10.0,
+              8.0,
+              8.0,
+              11.0,
+              9.0
+            ],
+            "random_independent": [
+              11.0,
+              12.0,
+              13.0,
+              12.0,
+              13.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 0.8,
+              "value_flip": 0.8,
+              "env_clearance_delta": -0.02452374889554538,
+              "actual_clearance_delta": -0.024523745784984063,
+              "progress_delta": 0.03370435970397337,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 1.7999999999999998,
+              "value_flip": 1.7999999999999998,
+              "env_clearance_delta": -0.0004690962010097891,
+              "actual_clearance_delta": -0.00046905579951972594,
+              "progress_delta": 0.04327549342627094,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                8.273124694824219e-05,
+                0.8
+              ],
+              "new_value_gap": [
+                2.6237964630126956e-05,
+                0.8
+              ],
+              "speed_delta": [
+                0.07825742154342408,
+                0.8
+              ],
+              "command_delta": [
+                0.13535914933538745,
+                0.8
+              ],
+              "direction_degrees": [
+                3.4531350374145475,
+                0.8
+              ],
+              "env_clearance_delta": [
+                -0.02452374889554538,
+                0.8
+              ],
+              "actual_clearance_delta": [
+                -0.024523745784984063,
+                0.8
+              ],
+              "progress_delta": [
+                0.03370435970397337,
+                0.8
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.00011839866638183592,
+                1.7999999999999998
+              ],
+              "new_value_gap": [
+                0.00010089874267578125,
+                1.7999999999999998
+              ],
+              "speed_delta": [
+                -0.06218700090898351,
+                1.7999999999999998
+              ],
+              "command_delta": [
+                0.40772119721536093,
+                1.7999999999999998
+              ],
+              "direction_degrees": [
+                35.82105307631936,
+                1.7999999999999998
+              ],
+              "env_clearance_delta": [
+                -0.0004690962010097891,
+                1.7999999999999998
+              ],
+              "actual_clearance_delta": [
+                -0.00046905579951972594,
+                1.7999999999999998
+              ],
+              "progress_delta": [
+                0.04327549342627094,
+                1.7999999999999998
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              1.0,
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "random_independent": [
+              2.0,
+              3.0,
+              1.0,
+              1.0,
+              2.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "case": 90003,
+      "outcome": "timeout",
+      "groups": {
+        "all": {
+          "n_steps": 201,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 195.0,
+              "actual_safe": 195.0
+            },
+            "oracle": {
+              "final_flip": 17.0,
+              "value_flip": 19.0,
+              "env_clearance_delta": -0.1673507989908713,
+              "actual_clearance_delta": -0.1355602764415471,
+              "progress_delta": -0.3877362444984884,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 192.0,
+              "actual_safe": 195.0
+            },
+            "random_shared": {
+              "final_flip": 20.999999999999957,
+              "value_flip": 19.99999999999996,
+              "env_clearance_delta": -0.21498091103613234,
+              "actual_clearance_delta": -0.2626294597413459,
+              "progress_delta": 0.1606058448507726,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 191.99999999999764,
+              "actual_safe": 191.99999999999764
+            },
+            "random_independent": {
+              "final_flip": 18.999999999999964,
+              "value_flip": 18.599999999999966,
+              "env_clearance_delta": -0.1905915488882658,
+              "actual_clearance_delta": -0.26768189715691915,
+              "progress_delta": -0.052188434338747404,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 191.79999999999765,
+              "actual_safe": 192.5999999999976
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.020616650581359863,
+                17.0
+              ],
+              "new_value_gap": [
+                0.0966981053352356,
+                17.0
+              ],
+              "speed_delta": [
+                -1.0900174627199635,
+                17.0
+              ],
+              "command_delta": [
+                7.33314374705724,
+                17.0
+              ],
+              "direction_degrees": [
+                672.2576734809627,
+                17.0
+              ],
+              "env_clearance_delta": [
+                -0.1673507989908713,
+                17.0
+              ],
+              "actual_clearance_delta": [
+                -0.1355602764415471,
+                17.0
+              ],
+              "progress_delta": [
+                -0.3877362444984884,
+                17.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.07675232887268062,
+                20.999999999999957
+              ],
+              "new_value_gap": [
+                0.09832830429077145,
+                20.999999999999957
+              ],
+              "speed_delta": [
+                -0.49488455590473235,
+                20.999999999999957
+              ],
+              "command_delta": [
+                8.619889612501673,
+                20.999999999999957
+              ],
+              "direction_degrees": [
+                698.1748333678781,
+                20.999999999999957
+              ],
+              "env_clearance_delta": [
+                -0.21498091103613234,
+                20.999999999999957
+              ],
+              "actual_clearance_delta": [
+                -0.2626294597413459,
+                20.999999999999957
+              ],
+              "progress_delta": [
+                0.1606058448507726,
+                20.999999999999957
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0795951843261719,
+                18.999999999999964
+              ],
+              "new_value_gap": [
+                0.09156676530838014,
+                18.999999999999964
+              ],
+              "speed_delta": [
+                -0.7352860179326548,
+                18.999999999999964
+              ],
+              "command_delta": [
+                7.485641014257713,
+                18.999999999999964
+              ],
+              "direction_degrees": [
+                606.3129903333256,
+                18.999999999999964
+              ],
+              "env_clearance_delta": [
+                -0.1905915488882658,
+                18.999999999999964
+              ],
+              "actual_clearance_delta": [
+                -0.26768189715691915,
+                18.999999999999964
+              ],
+              "progress_delta": [
+                -0.052188434338747404,
+                18.999999999999964
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              17.0,
+              20.0,
+              27.0,
+              19.0,
+              22.0
+            ],
+            "random_independent": [
+              15.0,
+              20.0,
+              17.0,
+              23.0,
+              20.0
+            ]
+          }
+        },
+        "timeout_all": {
+          "n_steps": 201,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 195.0,
+              "actual_safe": 195.0
+            },
+            "oracle": {
+              "final_flip": 17.0,
+              "value_flip": 19.0,
+              "env_clearance_delta": -0.1673507989908713,
+              "actual_clearance_delta": -0.1355602764415471,
+              "progress_delta": -0.3877362444984884,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 192.0,
+              "actual_safe": 195.0
+            },
+            "random_shared": {
+              "final_flip": 20.999999999999957,
+              "value_flip": 19.99999999999996,
+              "env_clearance_delta": -0.21498091103613234,
+              "actual_clearance_delta": -0.2626294597413459,
+              "progress_delta": 0.1606058448507726,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 191.99999999999764,
+              "actual_safe": 191.99999999999764
+            },
+            "random_independent": {
+              "final_flip": 18.999999999999964,
+              "value_flip": 18.599999999999966,
+              "env_clearance_delta": -0.1905915488882658,
+              "actual_clearance_delta": -0.26768189715691915,
+              "progress_delta": -0.052188434338747404,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 191.79999999999765,
+              "actual_safe": 192.5999999999976
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.020616650581359863,
+                17.0
+              ],
+              "new_value_gap": [
+                0.0966981053352356,
+                17.0
+              ],
+              "speed_delta": [
+                -1.0900174627199635,
+                17.0
+              ],
+              "command_delta": [
+                7.33314374705724,
+                17.0
+              ],
+              "direction_degrees": [
+                672.2576734809627,
+                17.0
+              ],
+              "env_clearance_delta": [
+                -0.1673507989908713,
+                17.0
+              ],
+              "actual_clearance_delta": [
+                -0.1355602764415471,
+                17.0
+              ],
+              "progress_delta": [
+                -0.3877362444984884,
+                17.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.07675232887268062,
+                20.999999999999957
+              ],
+              "new_value_gap": [
+                0.09832830429077145,
+                20.999999999999957
+              ],
+              "speed_delta": [
+                -0.49488455590473235,
+                20.999999999999957
+              ],
+              "command_delta": [
+                8.619889612501673,
+                20.999999999999957
+              ],
+              "direction_degrees": [
+                698.1748333678781,
+                20.999999999999957
+              ],
+              "env_clearance_delta": [
+                -0.21498091103613234,
+                20.999999999999957
+              ],
+              "actual_clearance_delta": [
+                -0.2626294597413459,
+                20.999999999999957
+              ],
+              "progress_delta": [
+                0.1606058448507726,
+                20.999999999999957
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0795951843261719,
+                18.999999999999964
+              ],
+              "new_value_gap": [
+                0.09156676530838014,
+                18.999999999999964
+              ],
+              "speed_delta": [
+                -0.7352860179326548,
+                18.999999999999964
+              ],
+              "command_delta": [
+                7.485641014257713,
+                18.999999999999964
+              ],
+              "direction_degrees": [
+                606.3129903333256,
+                18.999999999999964
+              ],
+              "env_clearance_delta": [
+                -0.1905915488882658,
+                18.999999999999964
+              ],
+              "actual_clearance_delta": [
+                -0.26768189715691915,
+                18.999999999999964
+              ],
+              "progress_delta": [
+                -0.052188434338747404,
+                18.999999999999964
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              17.0,
+              20.0,
+              27.0,
+              19.0,
+              22.0
+            ],
+            "random_independent": [
+              15.0,
+              20.0,
+              17.0,
+              23.0,
+              20.0
+            ]
+          }
+        },
+        "timeout_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "oracle": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 20.0,
+              "actual_safe": 20.0
+            },
+            "random_shared": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            },
+            "random_independent": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 19.99999999999996,
+              "actual_safe": 19.99999999999996
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "random_independent": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "case": 90004,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 68,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 51.0,
+              "actual_safe": 47.0
+            },
+            "oracle": {
+              "final_flip": 18.0,
+              "value_flip": 18.0,
+              "env_clearance_delta": -0.06578677641035263,
+              "actual_clearance_delta": 0.1750957461230624,
+              "progress_delta": -0.291043557353746,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 50.0,
+              "actual_safe": 50.0
+            },
+            "random_shared": {
+              "final_flip": 16.599999999999973,
+              "value_flip": 17.39999999999997,
+              "env_clearance_delta": -0.06694740186736116,
+              "actual_clearance_delta": -0.030957339959152858,
+              "progress_delta": 0.015561734501736094,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 49.80000000000017,
+              "actual_safe": 47.400000000000134
+            },
+            "random_independent": {
+              "final_flip": 19.199999999999964,
+              "value_flip": 16.99999999999997,
+              "env_clearance_delta": -0.0711762903602813,
+              "actual_clearance_delta": 0.008438998223158528,
+              "progress_delta": 0.05321116210683219,
+              "env_collision": 0.0,
+              "actual_collision": 0.2,
+              "env_safe": 50.00000000000017,
+              "actual_safe": 49.000000000000156
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.04159530997276306,
+                18.0
+              ],
+              "new_value_gap": [
+                0.042297929525375366,
+                18.0
+              ],
+              "speed_delta": [
+                -0.6056439172446632,
+                18.0
+              ],
+              "command_delta": [
+                4.733081933754407,
+                18.0
+              ],
+              "direction_degrees": [
+                426.3459368425788,
+                18.0
+              ],
+              "env_clearance_delta": [
+                -0.06578677641035263,
+                18.0
+              ],
+              "actual_clearance_delta": [
+                0.1750957461230624,
+                18.0
+              ],
+              "progress_delta": [
+                -0.291043557353746,
+                18.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.019456088542938232,
+                16.599999999999973
+              ],
+              "new_value_gap": [
+                0.037707525491714494,
+                16.599999999999973
+              ],
+              "speed_delta": [
+                0.1936367280091416,
+                16.599999999999973
+              ],
+              "command_delta": [
+                4.6235189248893676,
+                16.599999999999973
+              ],
+              "direction_degrees": [
+                372.2060949817424,
+                16.599999999999973
+              ],
+              "env_clearance_delta": [
+                -0.06694740186736116,
+                16.599999999999973
+              ],
+              "actual_clearance_delta": [
+                -0.030957339959152858,
+                16.599999999999973
+              ],
+              "progress_delta": [
+                0.015561734501736094,
+                16.599999999999973
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.03319686651229859,
+                19.199999999999964
+              ],
+              "new_value_gap": [
+                0.0673652708530426,
+                19.199999999999964
+              ],
+              "speed_delta": [
+                0.026079816328969205,
+                19.199999999999964
+              ],
+              "command_delta": [
+                6.149219603840621,
+                19.199999999999964
+              ],
+              "direction_degrees": [
+                488.16992108079546,
+                19.199999999999964
+              ],
+              "env_clearance_delta": [
+                -0.0711762903602813,
+                19.199999999999964
+              ],
+              "actual_clearance_delta": [
+                0.008438998223158528,
+                19.199999999999964
+              ],
+              "progress_delta": [
+                0.05321116210683219,
+                19.199999999999964
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              17.0,
+              21.0,
+              15.0,
+              14.0,
+              16.0
+            ],
+            "random_independent": [
+              18.0,
+              21.0,
+              19.0,
+              18.0,
+              20.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 68,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 51.0,
+              "actual_safe": 47.0
+            },
+            "oracle": {
+              "final_flip": 18.0,
+              "value_flip": 18.0,
+              "env_clearance_delta": -0.06578677641035263,
+              "actual_clearance_delta": 0.1750957461230624,
+              "progress_delta": -0.291043557353746,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 50.0,
+              "actual_safe": 50.0
+            },
+            "random_shared": {
+              "final_flip": 16.599999999999973,
+              "value_flip": 17.39999999999997,
+              "env_clearance_delta": -0.06694740186736116,
+              "actual_clearance_delta": -0.030957339959152858,
+              "progress_delta": 0.015561734501736094,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 49.80000000000017,
+              "actual_safe": 47.400000000000134
+            },
+            "random_independent": {
+              "final_flip": 19.199999999999964,
+              "value_flip": 16.99999999999997,
+              "env_clearance_delta": -0.0711762903602813,
+              "actual_clearance_delta": 0.008438998223158528,
+              "progress_delta": 0.05321116210683219,
+              "env_collision": 0.0,
+              "actual_collision": 0.2,
+              "env_safe": 50.00000000000017,
+              "actual_safe": 49.000000000000156
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.04159530997276306,
+                18.0
+              ],
+              "new_value_gap": [
+                0.042297929525375366,
+                18.0
+              ],
+              "speed_delta": [
+                -0.6056439172446632,
+                18.0
+              ],
+              "command_delta": [
+                4.733081933754407,
+                18.0
+              ],
+              "direction_degrees": [
+                426.3459368425788,
+                18.0
+              ],
+              "env_clearance_delta": [
+                -0.06578677641035263,
+                18.0
+              ],
+              "actual_clearance_delta": [
+                0.1750957461230624,
+                18.0
+              ],
+              "progress_delta": [
+                -0.291043557353746,
+                18.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.019456088542938232,
+                16.599999999999973
+              ],
+              "new_value_gap": [
+                0.037707525491714494,
+                16.599999999999973
+              ],
+              "speed_delta": [
+                0.1936367280091416,
+                16.599999999999973
+              ],
+              "command_delta": [
+                4.6235189248893676,
+                16.599999999999973
+              ],
+              "direction_degrees": [
+                372.2060949817424,
+                16.599999999999973
+              ],
+              "env_clearance_delta": [
+                -0.06694740186736116,
+                16.599999999999973
+              ],
+              "actual_clearance_delta": [
+                -0.030957339959152858,
+                16.599999999999973
+              ],
+              "progress_delta": [
+                0.015561734501736094,
+                16.599999999999973
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.03319686651229859,
+                19.199999999999964
+              ],
+              "new_value_gap": [
+                0.0673652708530426,
+                19.199999999999964
+              ],
+              "speed_delta": [
+                0.026079816328969205,
+                19.199999999999964
+              ],
+              "command_delta": [
+                6.149219603840621,
+                19.199999999999964
+              ],
+              "direction_degrees": [
+                488.16992108079546,
+                19.199999999999964
+              ],
+              "env_clearance_delta": [
+                -0.0711762903602813,
+                19.199999999999964
+              ],
+              "actual_clearance_delta": [
+                0.008438998223158528,
+                19.199999999999964
+              ],
+              "progress_delta": [
+                0.05321116210683219,
+                19.199999999999964
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              17.0,
+              21.0,
+              15.0,
+              14.0,
+              16.0
+            ],
+            "random_independent": [
+              18.0,
+              21.0,
+              19.0,
+              18.0,
+              20.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 18.0,
+              "actual_safe": 18.0
+            },
+            "oracle": {
+              "final_flip": 1.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 1.6140055275837284e-05,
+              "actual_clearance_delta": -0.0001545565459075693,
+              "progress_delta": -0.04762875729655969,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 18.0,
+              "actual_safe": 18.0
+            },
+            "random_shared": {
+              "final_flip": 0.2,
+              "value_flip": 0.2,
+              "env_clearance_delta": 3.228011055167457e-06,
+              "actual_clearance_delta": -3.0911309181513856e-05,
+              "progress_delta": -0.009525751459311938,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 17.999999999999968,
+              "actual_safe": 17.999999999999968
+            },
+            "random_independent": {
+              "final_flip": 0.8,
+              "value_flip": 1.0,
+              "env_clearance_delta": 9.684033165502372e-06,
+              "actual_clearance_delta": -9.273392754454156e-05,
+              "progress_delta": -0.062194805591904254,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 17.999999999999968,
+              "actual_safe": 17.999999999999968
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                3.4689903259277344e-05,
+                1.0
+              ],
+              "new_value_gap": [
+                0.00010782480239868164,
+                1.0
+              ],
+              "speed_delta": [
+                -0.20073440803521636,
+                1.0
+              ],
+              "command_delta": [
+                0.2007346084116638,
+                1.0
+              ],
+              "direction_degrees": [
+                0.018203322807557768,
+                1.0
+              ],
+              "env_clearance_delta": [
+                1.6140055275837284e-05,
+                1.0
+              ],
+              "actual_clearance_delta": [
+                -0.0001545565459075693,
+                1.0
+              ],
+              "progress_delta": [
+                -0.04762875729655969,
+                1.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                6.937980651855469e-06,
+                0.2
+              ],
+              "new_value_gap": [
+                9.512901306152344e-05,
+                0.2
+              ],
+              "speed_delta": [
+                -0.04014688160704327,
+                0.2
+              ],
+              "command_delta": [
+                0.04014692168233276,
+                0.2
+              ],
+              "direction_degrees": [
+                0.003640664561511554,
+                0.2
+              ],
+              "env_clearance_delta": [
+                3.228011055167457e-06,
+                0.2
+              ],
+              "actual_clearance_delta": [
+                -3.0911309181513856e-05,
+                0.2
+              ],
+              "progress_delta": [
+                -0.009525751459311938,
+                0.2
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.00020412206649780276,
+                0.8
+              ],
+              "new_value_gap": [
+                0.000201261043548584,
+                0.8
+              ],
+              "speed_delta": [
+                -0.16100319410800806,
+                0.8
+              ],
+              "command_delta": [
+                0.31843066377923157,
+                0.8
+              ],
+              "direction_degrees": [
+                13.263427064663633,
+                0.8
+              ],
+              "env_clearance_delta": [
+                9.684033165502372e-06,
+                0.8
+              ],
+              "actual_clearance_delta": [
+                -9.273392754454156e-05,
+                0.8
+              ],
+              "progress_delta": [
+                -0.062194805591904254,
+                0.8
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              0.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "random_independent": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "case": 90005,
+      "outcome": "success",
+      "groups": {
+        "all": {
+          "n_steps": 59,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 55.0,
+              "actual_safe": 53.0
+            },
+            "oracle": {
+              "final_flip": 26.0,
+              "value_flip": 22.0,
+              "env_clearance_delta": 0.20745589241338225,
+              "actual_clearance_delta": 0.300858832236029,
+              "progress_delta": -0.2437545441313984,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 56.0,
+              "actual_safe": 56.0
+            },
+            "random_shared": {
+              "final_flip": 21.199999999999957,
+              "value_flip": 19.599999999999962,
+              "env_clearance_delta": -0.27676125821806036,
+              "actual_clearance_delta": -0.26909871084786974,
+              "progress_delta": 0.4014296893593641,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 55.40000000000025,
+              "actual_safe": 54.00000000000023
+            },
+            "random_independent": {
+              "final_flip": 22.399999999999952,
+              "value_flip": 19.79999999999996,
+              "env_clearance_delta": 0.052261038600120345,
+              "actual_clearance_delta": 0.0073205551818687035,
+              "progress_delta": 0.09662080046125857,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 55.40000000000025,
+              "actual_safe": 54.600000000000236
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.08537089824676514,
+                26.0
+              ],
+              "new_value_gap": [
+                0.06535452604293823,
+                26.0
+              ],
+              "speed_delta": [
+                -1.4664687370354015,
+                26.0
+              ],
+              "command_delta": [
+                8.596664352446501,
+                26.0
+              ],
+              "direction_degrees": [
+                895.0143468684764,
+                26.0
+              ],
+              "env_clearance_delta": [
+                0.20745589241338225,
+                26.0
+              ],
+              "actual_clearance_delta": [
+                0.300858832236029,
+                26.0
+              ],
+              "progress_delta": [
+                -0.2437545441313984,
+                26.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.07957268953323367,
+                21.199999999999957
+              ],
+              "new_value_gap": [
+                0.07434393167495726,
+                21.199999999999957
+              ],
+              "speed_delta": [
+                0.7187765509957635,
+                21.199999999999957
+              ],
+              "command_delta": [
+                8.811102173792724,
+                21.199999999999957
+              ],
+              "direction_degrees": [
+                793.900067066618,
+                21.199999999999957
+              ],
+              "env_clearance_delta": [
+                -0.27676125821806036,
+                21.199999999999957
+              ],
+              "actual_clearance_delta": [
+                -0.26909871084786974,
+                21.199999999999957
+              ],
+              "progress_delta": [
+                0.4014296893593641,
+                21.199999999999957
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.07644501924514775,
+                22.399999999999952
+              ],
+              "new_value_gap": [
+                0.07444293498992924,
+                22.399999999999952
+              ],
+              "speed_delta": [
+                0.041504663220561594,
+                22.399999999999952
+              ],
+              "command_delta": [
+                10.05331986979213,
+                22.399999999999952
+              ],
+              "direction_degrees": [
+                924.5597763410482,
+                22.399999999999952
+              ],
+              "env_clearance_delta": [
+                0.052261038600120345,
+                22.399999999999952
+              ],
+              "actual_clearance_delta": [
+                0.0073205551818687035,
+                22.399999999999952
+              ],
+              "progress_delta": [
+                0.09662080046125857,
+                22.399999999999952
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              22.0,
+              20.0,
+              20.0,
+              20.0,
+              24.0
+            ],
+            "random_independent": [
+              23.0,
+              21.0,
+              22.0,
+              26.0,
+              20.0
+            ]
+          }
+        },
+        "success_all": {
+          "n_steps": 59,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 55.0,
+              "actual_safe": 53.0
+            },
+            "oracle": {
+              "final_flip": 26.0,
+              "value_flip": 22.0,
+              "env_clearance_delta": 0.20745589241338225,
+              "actual_clearance_delta": 0.300858832236029,
+              "progress_delta": -0.2437545441313984,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 56.0,
+              "actual_safe": 56.0
+            },
+            "random_shared": {
+              "final_flip": 21.199999999999957,
+              "value_flip": 19.599999999999962,
+              "env_clearance_delta": -0.27676125821806036,
+              "actual_clearance_delta": -0.26909871084786974,
+              "progress_delta": 0.4014296893593641,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 55.40000000000025,
+              "actual_safe": 54.00000000000023
+            },
+            "random_independent": {
+              "final_flip": 22.399999999999952,
+              "value_flip": 19.79999999999996,
+              "env_clearance_delta": 0.052261038600120345,
+              "actual_clearance_delta": 0.0073205551818687035,
+              "progress_delta": 0.09662080046125857,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 55.40000000000025,
+              "actual_safe": 54.600000000000236
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.08537089824676514,
+                26.0
+              ],
+              "new_value_gap": [
+                0.06535452604293823,
+                26.0
+              ],
+              "speed_delta": [
+                -1.4664687370354015,
+                26.0
+              ],
+              "command_delta": [
+                8.596664352446501,
+                26.0
+              ],
+              "direction_degrees": [
+                895.0143468684764,
+                26.0
+              ],
+              "env_clearance_delta": [
+                0.20745589241338225,
+                26.0
+              ],
+              "actual_clearance_delta": [
+                0.300858832236029,
+                26.0
+              ],
+              "progress_delta": [
+                -0.2437545441313984,
+                26.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.07957268953323367,
+                21.199999999999957
+              ],
+              "new_value_gap": [
+                0.07434393167495726,
+                21.199999999999957
+              ],
+              "speed_delta": [
+                0.7187765509957635,
+                21.199999999999957
+              ],
+              "command_delta": [
+                8.811102173792724,
+                21.199999999999957
+              ],
+              "direction_degrees": [
+                793.900067066618,
+                21.199999999999957
+              ],
+              "env_clearance_delta": [
+                -0.27676125821806036,
+                21.199999999999957
+              ],
+              "actual_clearance_delta": [
+                -0.26909871084786974,
+                21.199999999999957
+              ],
+              "progress_delta": [
+                0.4014296893593641,
+                21.199999999999957
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.07644501924514775,
+                22.399999999999952
+              ],
+              "new_value_gap": [
+                0.07444293498992924,
+                22.399999999999952
+              ],
+              "speed_delta": [
+                0.041504663220561594,
+                22.399999999999952
+              ],
+              "command_delta": [
+                10.05331986979213,
+                22.399999999999952
+              ],
+              "direction_degrees": [
+                924.5597763410482,
+                22.399999999999952
+              ],
+              "env_clearance_delta": [
+                0.052261038600120345,
+                22.399999999999952
+              ],
+              "actual_clearance_delta": [
+                0.0073205551818687035,
+                22.399999999999952
+              ],
+              "progress_delta": [
+                0.09662080046125857,
+                22.399999999999952
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              22.0,
+              20.0,
+              20.0,
+              20.0,
+              24.0
+            ],
+            "random_independent": [
+              23.0,
+              21.0,
+              22.0,
+              26.0,
+              20.0
+            ]
+          }
+        },
+        "success_last20": {
+          "n_steps": 20,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 18.0,
+              "actual_safe": 16.0
+            },
+            "oracle": {
+              "final_flip": 7.0,
+              "value_flip": 4.0,
+              "env_clearance_delta": 0.044416608290374304,
+              "actual_clearance_delta": 0.15035649387998606,
+              "progress_delta": 0.03518807166639726,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 18.0,
+              "actual_safe": 18.0
+            },
+            "random_shared": {
+              "final_flip": 6.600000000000003,
+              "value_flip": 5.8000000000000025,
+              "env_clearance_delta": -0.016447599222711953,
+              "actual_clearance_delta": 0.02858134092872916,
+              "progress_delta": -0.05492770521610931,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 17.999999999999968,
+              "actual_safe": 16.599999999999973
+            },
+            "random_independent": {
+              "final_flip": 7.800000000000004,
+              "value_flip": 6.200000000000003,
+              "env_clearance_delta": 0.05827995117440554,
+              "actual_clearance_delta": 0.025646880448636087,
+              "progress_delta": 0.052576838626514674,
+              "env_collision": 0.0,
+              "actual_collision": 0.0,
+              "env_safe": 17.999999999999968,
+              "actual_safe": 17.19999999999997
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.052170515060424805,
+                7.0
+              ],
+              "new_value_gap": [
+                0.022982478141784668,
+                7.0
+              ],
+              "speed_delta": [
+                -0.6365200927097094,
+                7.0
+              ],
+              "command_delta": [
+                2.6859931097007297,
+                7.0
+              ],
+              "direction_degrees": [
+                256.54545926439374,
+                7.0
+              ],
+              "env_clearance_delta": [
+                0.044416608290374304,
+                7.0
+              ],
+              "actual_clearance_delta": [
+                0.15035649387998606,
+                7.0
+              ],
+              "progress_delta": [
+                0.03518807166639726,
+                7.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.03208391666412354,
+                6.600000000000003
+              ],
+              "new_value_gap": [
+                0.013353848457336422,
+                6.600000000000003
+              ],
+              "speed_delta": [
+                -0.04065742272273942,
+                6.600000000000003
+              ],
+              "command_delta": [
+                1.9935541227951952,
+                6.600000000000003
+              ],
+              "direction_degrees": [
+                127.25395026883105,
+                6.600000000000003
+              ],
+              "env_clearance_delta": [
+                -0.016447599222711953,
+                6.600000000000003
+              ],
+              "actual_clearance_delta": [
+                0.02858134092872916,
+                6.600000000000003
+              ],
+              "progress_delta": [
+                -0.05492770521610931,
+                6.600000000000003
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.037941694259643555,
+                7.800000000000004
+              ],
+              "new_value_gap": [
+                0.025859248638153073,
+                7.800000000000004
+              ],
+              "speed_delta": [
+                0.2822758097070457,
+                7.800000000000004
+              ],
+              "command_delta": [
+                3.3087030449769284,
+                7.800000000000004
+              ],
+              "direction_degrees": [
+                325.6947766282472,
+                7.800000000000004
+              ],
+              "env_clearance_delta": [
+                0.05827995117440554,
+                7.800000000000004
+              ],
+              "actual_clearance_delta": [
+                0.025646880448636087,
+                7.800000000000004
+              ],
+              "progress_delta": [
+                0.052576838626514674,
+                7.800000000000004
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              7.0,
+              4.0,
+              8.0,
+              7.0,
+              7.0
+            ],
+            "random_independent": [
+              8.0,
+              7.0,
+              9.0,
+              9.0,
+              6.0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "cell": 5,
+      "case": 90006,
+      "outcome": "collision",
+      "groups": {
+        "all": {
+          "n_steps": 12,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.0,
+              "actual_safe": 8.0
+            },
+            "oracle": {
+              "final_flip": 6.0,
+              "value_flip": 6.0,
+              "env_clearance_delta": 0.043044503460375694,
+              "actual_clearance_delta": 0.13780312555877128,
+              "progress_delta": -0.11358425438186615,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.0,
+              "actual_safe": 8.0
+            },
+            "random_shared": {
+              "final_flip": 5.000000000000002,
+              "value_flip": 6.600000000000003,
+              "env_clearance_delta": 0.08167616729299869,
+              "actual_clearance_delta": 0.14230069375651205,
+              "progress_delta": 0.02627024856799419,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.000000000000004,
+              "actual_safe": 8.000000000000004
+            },
+            "random_independent": {
+              "final_flip": 4.600000000000001,
+              "value_flip": 6.000000000000003,
+              "env_clearance_delta": 0.1885966989106513,
+              "actual_clearance_delta": 0.24417767539421079,
+              "progress_delta": 0.16856654148528388,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.000000000000004,
+              "actual_safe": 8.000000000000004
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.011501669883728027,
+                6.0
+              ],
+              "new_value_gap": [
+                0.020050048828125,
+                6.0
+              ],
+              "speed_delta": [
+                0.08622894347735999,
+                6.0
+              ],
+              "command_delta": [
+                2.6075761995350395,
+                6.0
+              ],
+              "direction_degrees": [
+                299.3821927940971,
+                6.0
+              ],
+              "env_clearance_delta": [
+                0.043044503460375694,
+                6.0
+              ],
+              "actual_clearance_delta": [
+                0.13780312555877128,
+                6.0
+              ],
+              "progress_delta": [
+                -0.11358425438186615,
+                6.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.011063051223754882,
+                5.000000000000002
+              ],
+              "new_value_gap": [
+                0.02563992738723755,
+                5.000000000000002
+              ],
+              "speed_delta": [
+                -0.04457044042802205,
+                5.000000000000002
+              ],
+              "command_delta": [
+                3.1313069564434013,
+                5.000000000000002
+              ],
+              "direction_degrees": [
+                337.6372699790529,
+                5.000000000000002
+              ],
+              "env_clearance_delta": [
+                0.08167616729299869,
+                5.000000000000002
+              ],
+              "actual_clearance_delta": [
+                0.14230069375651205,
+                5.000000000000002
+              ],
+              "progress_delta": [
+                0.02627024856799419,
+                5.000000000000002
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.010445523262023925,
+                4.600000000000001
+              ],
+              "new_value_gap": [
+                0.017177510261535644,
+                4.600000000000001
+              ],
+              "speed_delta": [
+                -0.06277431717833913,
+                4.600000000000001
+              ],
+              "command_delta": [
+                2.82336696727101,
+                4.600000000000001
+              ],
+              "direction_degrees": [
+                315.6977317354125,
+                4.600000000000001
+              ],
+              "env_clearance_delta": [
+                0.1885966989106513,
+                4.600000000000001
+              ],
+              "actual_clearance_delta": [
+                0.24417767539421079,
+                4.600000000000001
+              ],
+              "progress_delta": [
+                0.16856654148528388,
+                4.600000000000001
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "random_independent": [
+              3.0,
+              3.0,
+              6.0,
+              5.0,
+              6.0
+            ]
+          }
+        },
+        "collision_all": {
+          "n_steps": 12,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.0,
+              "actual_safe": 8.0
+            },
+            "oracle": {
+              "final_flip": 6.0,
+              "value_flip": 6.0,
+              "env_clearance_delta": 0.043044503460375694,
+              "actual_clearance_delta": 0.13780312555877128,
+              "progress_delta": -0.11358425438186615,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.0,
+              "actual_safe": 8.0
+            },
+            "random_shared": {
+              "final_flip": 5.000000000000002,
+              "value_flip": 6.600000000000003,
+              "env_clearance_delta": 0.08167616729299869,
+              "actual_clearance_delta": 0.14230069375651205,
+              "progress_delta": 0.02627024856799419,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.000000000000004,
+              "actual_safe": 8.000000000000004
+            },
+            "random_independent": {
+              "final_flip": 4.600000000000001,
+              "value_flip": 6.000000000000003,
+              "env_clearance_delta": 0.1885966989106513,
+              "actual_clearance_delta": 0.24417767539421079,
+              "progress_delta": 0.16856654148528388,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.000000000000004,
+              "actual_safe": 8.000000000000004
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.011501669883728027,
+                6.0
+              ],
+              "new_value_gap": [
+                0.020050048828125,
+                6.0
+              ],
+              "speed_delta": [
+                0.08622894347735999,
+                6.0
+              ],
+              "command_delta": [
+                2.6075761995350395,
+                6.0
+              ],
+              "direction_degrees": [
+                299.3821927940971,
+                6.0
+              ],
+              "env_clearance_delta": [
+                0.043044503460375694,
+                6.0
+              ],
+              "actual_clearance_delta": [
+                0.13780312555877128,
+                6.0
+              ],
+              "progress_delta": [
+                -0.11358425438186615,
+                6.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.011063051223754882,
+                5.000000000000002
+              ],
+              "new_value_gap": [
+                0.02563992738723755,
+                5.000000000000002
+              ],
+              "speed_delta": [
+                -0.04457044042802205,
+                5.000000000000002
+              ],
+              "command_delta": [
+                3.1313069564434013,
+                5.000000000000002
+              ],
+              "direction_degrees": [
+                337.6372699790529,
+                5.000000000000002
+              ],
+              "env_clearance_delta": [
+                0.08167616729299869,
+                5.000000000000002
+              ],
+              "actual_clearance_delta": [
+                0.14230069375651205,
+                5.000000000000002
+              ],
+              "progress_delta": [
+                0.02627024856799419,
+                5.000000000000002
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.010445523262023925,
+                4.600000000000001
+              ],
+              "new_value_gap": [
+                0.017177510261535644,
+                4.600000000000001
+              ],
+              "speed_delta": [
+                -0.06277431717833913,
+                4.600000000000001
+              ],
+              "command_delta": [
+                2.82336696727101,
+                4.600000000000001
+              ],
+              "direction_degrees": [
+                315.6977317354125,
+                4.600000000000001
+              ],
+              "env_clearance_delta": [
+                0.1885966989106513,
+                4.600000000000001
+              ],
+              "actual_clearance_delta": [
+                0.24417767539421079,
+                4.600000000000001
+              ],
+              "progress_delta": [
+                0.16856654148528388,
+                4.600000000000001
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "random_independent": [
+              3.0,
+              3.0,
+              6.0,
+              5.0,
+              6.0
+            ]
+          }
+        },
+        "collision_last20": {
+          "n_steps": 12,
+          "sums": {
+            "cv": {
+              "final_flip": 0.0,
+              "value_flip": 0.0,
+              "env_clearance_delta": 0.0,
+              "actual_clearance_delta": 0.0,
+              "progress_delta": 0.0,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.0,
+              "actual_safe": 8.0
+            },
+            "oracle": {
+              "final_flip": 6.0,
+              "value_flip": 6.0,
+              "env_clearance_delta": 0.043044503460375694,
+              "actual_clearance_delta": 0.13780312555877128,
+              "progress_delta": -0.11358425438186615,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.0,
+              "actual_safe": 8.0
+            },
+            "random_shared": {
+              "final_flip": 5.000000000000002,
+              "value_flip": 6.600000000000003,
+              "env_clearance_delta": 0.08167616729299869,
+              "actual_clearance_delta": 0.14230069375651205,
+              "progress_delta": 0.02627024856799419,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.000000000000004,
+              "actual_safe": 8.000000000000004
+            },
+            "random_independent": {
+              "final_flip": 4.600000000000001,
+              "value_flip": 6.000000000000003,
+              "env_clearance_delta": 0.1885966989106513,
+              "actual_clearance_delta": 0.24417767539421079,
+              "progress_delta": 0.16856654148528388,
+              "env_collision": 1.0,
+              "actual_collision": 1.0,
+              "env_safe": 8.000000000000004,
+              "actual_safe": 8.000000000000004
+            }
+          },
+          "conditional": {
+            "cv": {
+              "cv_value_gap": [
+                0.0,
+                0.0
+              ],
+              "new_value_gap": [
+                0.0,
+                0.0
+              ],
+              "speed_delta": [
+                0.0,
+                0.0
+              ],
+              "command_delta": [
+                0.0,
+                0.0
+              ],
+              "direction_degrees": [
+                0.0,
+                0.0
+              ],
+              "env_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "actual_clearance_delta": [
+                0.0,
+                0.0
+              ],
+              "progress_delta": [
+                0.0,
+                0.0
+              ]
+            },
+            "oracle": {
+              "cv_value_gap": [
+                0.011501669883728027,
+                6.0
+              ],
+              "new_value_gap": [
+                0.020050048828125,
+                6.0
+              ],
+              "speed_delta": [
+                0.08622894347735999,
+                6.0
+              ],
+              "command_delta": [
+                2.6075761995350395,
+                6.0
+              ],
+              "direction_degrees": [
+                299.3821927940971,
+                6.0
+              ],
+              "env_clearance_delta": [
+                0.043044503460375694,
+                6.0
+              ],
+              "actual_clearance_delta": [
+                0.13780312555877128,
+                6.0
+              ],
+              "progress_delta": [
+                -0.11358425438186615,
+                6.0
+              ]
+            },
+            "random_shared": {
+              "cv_value_gap": [
+                0.011063051223754882,
+                5.000000000000002
+              ],
+              "new_value_gap": [
+                0.02563992738723755,
+                5.000000000000002
+              ],
+              "speed_delta": [
+                -0.04457044042802205,
+                5.000000000000002
+              ],
+              "command_delta": [
+                3.1313069564434013,
+                5.000000000000002
+              ],
+              "direction_degrees": [
+                337.6372699790529,
+                5.000000000000002
+              ],
+              "env_clearance_delta": [
+                0.08167616729299869,
+                5.000000000000002
+              ],
+              "actual_clearance_delta": [
+                0.14230069375651205,
+                5.000000000000002
+              ],
+              "progress_delta": [
+                0.02627024856799419,
+                5.000000000000002
+              ]
+            },
+            "random_independent": {
+              "cv_value_gap": [
+                0.010445523262023925,
+                4.600000000000001
+              ],
+              "new_value_gap": [
+                0.017177510261535644,
+                4.600000000000001
+              ],
+              "speed_delta": [
+                -0.06277431717833913,
+                4.600000000000001
+              ],
+              "command_delta": [
+                2.82336696727101,
+                4.600000000000001
+              ],
+              "direction_degrees": [
+                315.6977317354125,
+                4.600000000000001
+              ],
+              "env_clearance_delta": [
+                0.1885966989106513,
+                4.600000000000001
+              ],
+              "actual_clearance_delta": [
+                0.24417767539421079,
+                4.600000000000001
+              ],
+              "progress_delta": [
+                0.16856654148528388,
+                4.600000000000001
+              ]
+            }
+          },
+          "repeat_flips": {
+            "random_shared": [
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "random_independent": [
+              3.0,
+              3.0,
+              6.0,
+              5.0,
+              6.0
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "checked_steps": 490,
+  "repeats": 5,
+  "checkpoint_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+  "config_sha256": "6e77ae41f6902672490fa929670ea3c6c703a6db3c4f10eed8fbc75a10fd8749",
+  "input_sha256": "3e71058093d3f167eb194f7708146e2c56941e839ca0b0530fbe7cb3ec1a8f1b",
+  "matched_norm_max_error": 5.828670879282072e-16,
+  "cv_values_argmax_bitwise": true,
+  "oracle_values_argmax_bitwise": true,
+  "command_and_selection_and_history_frozen": true,
+  "per_step": "/root/kda-lookahead-20261009/h3-random/implcheck/cell5.steps.jsonl.gz",
+  "wall_seconds": 134.07694363594055,
+  "steady_seconds_per_step": 0.26152905267958504
+}

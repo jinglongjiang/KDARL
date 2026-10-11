@@ -1,0 +1,45 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "gru-s443-t12",
+    "backbone": "gru",
+    "seed": 443,
+    "length": 12,
+    "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t12/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t12.ini",
+    "training": "fresh IL50+RL10000",
+    "origin": "history-length study",
+    "weight_sha256": "8923e9998c8281f5c038c014b9137a936180a0b6556c6b77610c729d99ff4730",
+    "config_sha256": "0d51e4f5e4554fa59d31d3aebb7f081ecc5be34cc13f1d3656c66855bdaa7b62"
+  },
+  "episodes": [
+    {
+      "cell": 0,
+      "case": 90000,
+      "outcome": "success",
+      "steps": 47
+    },
+    {
+      "cell": 0,
+      "case": 90001,
+      "outcome": "success",
+      "steps": 40
+    },
+    {
+      "cell": 0,
+      "case": 90002,
+      "outcome": "success",
+      "steps": 44
+    }
+  ],
+  "steps": 131,
+  "wall_seconds": 2.38433837890625,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "selection": "ttc5",
+  "alpha": 0.3,
+  "actions": 80,
+  "smoke": true,
+  "fast_legacy_checked": true,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/smoke/gru-s443-t12/cell0.steps.jsonl.gz"
+}

@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "/home/abc/workspace/ac3-selection-20261010/evaluate.py", line 260, in <module>
+    correctness(args.seed)
+  File "/home/abc/workspace/ac3-selection-20261010/evaluate.py", line 130, in correctness
+    item, cfg, net, digest = load(seed, 'ttc5')
+                             ^^^^^^^^^^^^^^^^^^
+  File "/home/abc/workspace/ac3-selection-20261010/evaluate.py", line 122, in load
+    cfg, net, digest = REF.load(args)
+                       ^^^^^^^^^^^^^^
+  File "/home/abc/workspace/kda-history-20261009/evaluate-history.py", line 93, in load
+    pin(args.project)
+  File "/home/abc/workspace/kda-history-20261009/evaluate-history.py", line 41, in pin
+    import crowd_nav, crowd_sim, crowd_nav.policy.mamba_rl as policy
+  File "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav/crowd_nav/policy/mamba_rl.py", line 25, in <module>
+    from mamba_ssm.modules.mamba_simple import Mamba
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/mamba_ssm/__init__.py", line 3, in <module>
+    from mamba_ssm.ops.selective_scan_interface import selective_scan_fn, mamba_inner_fn
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/mamba_ssm/ops/selective_scan_interface.py", line 18, in <module>
+    from mamba_ssm.ops.triton.layer_norm import _layer_norm_fwd
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/mamba_ssm/ops/triton/layer_norm.py", line 169, in <module>
+    @triton.autotune(
+     ^^^^^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/runtime/autotuner.py", line 378, in decorator
+    return Autotuner(fn, fn.arg_names, configs, key, reset_to_zero, restore_value, pre_hook=pre_hook,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/runtime/autotuner.py", line 130, in __init__
+    self.do_bench = driver.active.get_benchmarker()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/runtime/driver.py", line 23, in __getattr__
+    self._initialize_obj()
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/runtime/driver.py", line 20, in _initialize_obj
+    self._obj = self._init_fn()
+                ^^^^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/runtime/driver.py", line 9, in _create_driver
+    return actives[0]()
+           ^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/backends/nvidia/driver.py", line 535, in __init__
+    self.utils = CudaUtils()  # TODO: make static
+                 ^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/backends/nvidia/driver.py", line 89, in __init__
+    mod = compile_module_from_src(Path(os.path.join(dirname, "driver.c")).read_text(), "cuda_utils")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/backends/nvidia/driver.py", line 66, in compile_module_from_src
+    so = _build(name, src_path, tmpdir, library_dirs(), include_dir, libraries)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abc/temp/kda-vl-env/lib/python3.11/site-packages/triton/runtime/build.py", line 18, in _build
+    raise RuntimeError("Failed to find C compiler. Please specify via CC environment variable.")
+RuntimeError: Failed to find C compiler. Please specify via CC environment variable.

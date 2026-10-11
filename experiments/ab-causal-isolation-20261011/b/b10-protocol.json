@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "status": "FROZEN_BEFORE_N10_SCENE_OR_OUTCOME_COLLECTION",
+  "reason": "Complete the user's original B5 paired5/10/20 request, not selected from B-main outcomes.",
+  "parent_driver_sha256": "8b4ee9d18c5014e43d30fb7f8944625dae4104b23c0713c4bdddaee19099dece",
+  "parent_contract_sha256": "c89f0ca680e17d77470ee572f8608567aa00e4240cb20be1c08e47b979ed6ac2",
+  "training_authorized": false,
+  "gpu_launch_owner": "Main Agent only, serial after original B branches",
+  "overrides": {
+    "conditions": ["E10"],
+    "cases": [90000,90001,90002,90003,90004,90005,90006,90007,90008,90009,90010,90011,90012,90013,90014,90015],
+    "smoke_cases": [90000,90001,90002],
+    "geometries": ["circle","square"]
+  },
+  "expected": {"smoke_episodes":36,"formal_model_episodes":128,"formal_reference_episodes":64,"formal_episodes":192,"baseline_shards":12,"branch_shards":8},
+  "scene": "Native CrowdSim human_num10 with original config and circle/square reset(case); circle R4/square width10; robot(0,-4)->(0,4). No truncation fromN20, relocation, density tuning, overlap repair, or old10S outcome reuse.",
+  "fixed_interface": {"time_limit":50,"dt":0.25,"actual_max_steps":201,"actions":80,"alpha":0.3,"TTC_value_humans":5,"history":24,"margin":0.2,"risk":0.8,"gamma":0.99,"progress_reward":0},
+  "controllers": ["kda-s419-t24","kda-s443-t24","gru-s419-t24","gru-s443-t24","orca-grid","cv-mpc"],
+  "reference_evidence_level": "Same adapted local ORCA and custom standard CV-MPC as parent; not official second mature baseline reproduction.",
+  "cpu_gate": "All32 native N10 initial full human/robot states and ORCA parameters bitwise match original reference.environment N10 reset; original conditions forwarded unchanged. No learned inference. All native legal observations use inherited TTC5 and80 commands.",
+  "smoke_gate": "All36 smoke episodes with done/output SHA plus all32 CPU qualification PASS required before full16 cases. No sample changes on smoke outcomes.",
+  "roots": "Unchanged parent eligible/A1/calipers. Per model/geometry/E10 first2 case-ordered eligible failure roots plus up to2 phenotype/caliper-matched success controls without replacement. Freeze all N10 model baseline roots before any of its branches. Keep all failure/no-root/cap/unmatched denominators.",
+  "continuations": "Unchanged parent A0 full raw/history/scores/actions/returns replay exact excluding latencies. Change A1 once with actual last command updated and resume frozen policy. No additional optimizer or environment reward change.",
+  "cross_N_matching": "Within each model/geometry match E1N5/E10N10/E2N20 roots of same phenotype under unchanged time2s/dgoal1m/safe_count16/crowd2m2 calipers, without replacement, prioritize same case if eligible then normalized distance/case/step. Report pairs and strict triples plus unmatched denominators. Zero or insufficient strict opportunities => INCOMPLETE/NOT IDENTIFIED, never pool different failure sets as amplification evidence.",
+  "decisions": "All parent quantitative difficulty/excess/A1 thresholds retained. N10 only fills the requested paired arm; no new GO threshold and no post-hoc re-selection. Missing mature second-reference requirement remains separate INCOMPLETE. B4 unauthorized.",
+  "budget": "Inherit parent's original started_unix and8h absolute deadline; never restart8h at extension. Main owns GPU sequencing. Preserve INCOMPLETE if deadline prevents completion.",
+  "prohibited": ["92000 cases","new baseline training","modify run-b.py","modify b-contract.json","GPU launch by B"]
+}

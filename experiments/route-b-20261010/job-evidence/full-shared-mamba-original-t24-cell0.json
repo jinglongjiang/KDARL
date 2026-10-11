@@ -1,0 +1,14 @@
+{
+  "name": "full-shared-mamba-original-t24-cell0",
+  "pid": 7036,
+  "exit_code": 0,
+  "wall_seconds": 76.00931453704834,
+  "args": [
+    "--id",
+    "mamba-original-t24",
+    "--cell",
+    "0",
+    "--shared"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n"
+}

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "input_sha_end_verification": true,
+  "steps": 6264,
+  "episode_clusters": 120,
+  "resolution_action_pairs": 1812,
+  "training_or_GPU_used": false,
+  "protocol_unchanged": true,
+  "checks": [
+    "unmasked margins",
+    "index0 exclusions",
+    "all-unsafe mask semantics",
+    "additive-offset invariance",
+    "large disagreement without pair flip counterexample",
+    "root-relative duration gain arithmetic"
+  ]
+}

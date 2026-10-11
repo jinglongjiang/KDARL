@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_BEFORE_RUN",
+  "roots": [
+    1,
+    8,
+    229,
+    234,
+    499,
+    508,
+    682,
+    685
+  ],
+  "worlds": [
+    "original",
+    "omitted_goals_rotate_plus90",
+    "omitted_goals_rotate_minus90"
+  ],
+  "root_actions": [
+    "A0",
+    "A1"
+  ],
+  "intervention": "At the root only, rotate omitted humans goal-displacement vectors. Positions, velocities, selected-human goals, robot, history, commands, CV rewards and filter are identical. All future motion uses actual ORCA.",
+  "decision": "If the same observed root/action pair reverses its realized-return ordering between hidden-intent worlds, KILL interpreting each realized difference as a universal observable-Q error. Otherwise KILL this bounded hidden-intent explanation, not all POMDP ambiguity.",
+  "limitations": "Artificial hidden-goal change, not a sample from original static-goal distribution; demonstrates sensitivity or a counterexample, not actual-distribution probability or primary causal share. Not a five-slot-vs-all-human input intervention.",
+  "original_baseline": "New independent terminal-fixed deployment; original archival Q/G not mixed.",
+  "sources": {
+    "/root/ttc5-causal-20261011/work/roots.json": "665da8a3e170b40f8106e0f634c738b576e2dc7d887c508fab3a922f13adacb2",
+    "/root/ab-causal-isolation-20261011/engine/crowd_nav/policy/mamba_rl.py": "f12e600c4a6873b0a57e95e722e1a02766cb72df39b0d59311e8a52f05092801"
+  }
+}

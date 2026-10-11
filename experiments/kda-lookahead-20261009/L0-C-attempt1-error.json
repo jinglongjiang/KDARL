@@ -1,0 +1,8 @@
+{
+  "status": "已确认失败",
+  "exit_code": 1,
+  "step": "L0-C provenance enumeration",
+  "error": "PermissionError: [Errno 13] Permission denied: /home/abc/4090_backup_20261008/root/bayes-vl-optimized-20261007/crowd_nav/runs/bayes-matched-v1",
+  "fix": "Do not follow external legacy symlinks; record the unresolved asset as missing evidence. No permission or source change.",
+  "formal_evaluation_started": false
+}

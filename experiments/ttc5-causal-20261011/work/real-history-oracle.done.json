@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "roots": 1279,
+  "sha256": "c1b348d2336a99f923d2735a60328c7c3c83921642070fb074a34982e4f13029",
+  "protocol": {
+    "reason": "Pinned-root IDs with true positions are not necessarily the actually observed next TTC frame. Preserve that control and additionally reconstruct the real next-frame selection.",
+    "unchanged": "All weights, baseline trajectories, roots, executed interventions, rewards and return labels remain unchanged.",
+    "oracle_control": "Original root-pinned true-human oracle must reproduce its saved batch80 values bitwise.",
+    "actual_oracle": "Same actual-history prefix; next real robot/humans encoded by the original current-frame TTC selector at that next state.",
+    "interpretation": "Two-term user decomposition uses actual next history. Three-term split separates physical/reward substitution, selection transition, and remaining future value error.",
+    "limitation": "Offline future information only. No oracle action is executed. This does not establish a deployable improvement or identify training versus input sufficiency.",
+    "script_sha256": "006b7659f1447fa97ade6bd8090a1a05fbb72969e3f166e0214c3489d219d2c1"
+  }
+}

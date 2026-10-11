@@ -1,0 +1,391 @@
+{
+  "filter_probe": {
+    "status": "PASS",
+    "sources_sha256": {
+      "plan.json": "a68377652a9a77b312dc6b8c540d6609538067b6e5c083f6040c8a18b87aaec8",
+      "records.jsonl.gz": "6fa770a593662e7aa6ffae1b054c80e9d67ee2a8758ac2aa5693c603643a9c80",
+      "summary.json": "aa0c77dc2abdfb31a19bcdb8efdce94ce11ceb4318577a32e910ef01487e54d3"
+    },
+    "roots": 16,
+    "episodes": 32,
+    "pairs": [
+      {
+        "root_id": 42,
+        "model": "kda-s419-t24",
+        "case": 90070,
+        "scope": "timeout",
+        "delta_G": 0.44927845775973585,
+        "flags": {
+          "rescued": true,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": true,
+          "G_worse": false
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "success",
+        "filtered_candidate": 70,
+        "predicted_clearance": 0.18161335486718333,
+        "baseline_actual_swept_min": 0.18357354528462866,
+        "filtered_actual_swept_min": 0.15974051751397622
+      },
+      {
+        "root_id": 45,
+        "model": "kda-s419-t24",
+        "case": 90075,
+        "scope": "timeout",
+        "delta_G": -0.008450903728167328,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 6,
+        "predicted_clearance": 0.1841322462429522,
+        "baseline_actual_swept_min": 0.19785802908236116,
+        "filtered_actual_swept_min": 0.1690634822036261
+      },
+      {
+        "root_id": 20,
+        "model": "kda-s419-t24",
+        "case": 90029,
+        "scope": "success-control",
+        "delta_G": 0.013682098615262817,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": true,
+          "G_worse": false
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "success",
+        "filtered_candidate": 43,
+        "predicted_clearance": 0.1991859502666784,
+        "baseline_actual_swept_min": 0.13583497254333865,
+        "filtered_actual_swept_min": 0.19183582509973907
+      },
+      {
+        "root_id": 43,
+        "model": "kda-s419-t24",
+        "case": 90071,
+        "scope": "success-control",
+        "delta_G": -0.00034333026283550616,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "success",
+        "filtered_candidate": 57,
+        "predicted_clearance": 0.19681585715882777,
+        "baseline_actual_swept_min": 0.18999152674351405,
+        "filtered_actual_swept_min": 0.18405856403648613
+      },
+      {
+        "root_id": 284,
+        "model": "kda-s443-t24",
+        "case": 90090,
+        "scope": "timeout",
+        "delta_G": 0.6933188518387354,
+        "flags": {
+          "rescued": true,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": true,
+          "G_worse": false
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "success",
+        "filtered_candidate": 3,
+        "predicted_clearance": 0.19657651933945763,
+        "baseline_actual_swept_min": 0.12099402100635825,
+        "filtered_actual_swept_min": 0.1508879191148701
+      },
+      {
+        "root_id": 310,
+        "model": "kda-s443-t24",
+        "case": 90148,
+        "scope": "timeout",
+        "delta_G": -0.0009891976163987487,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 69,
+        "predicted_clearance": 0.17229610676898477,
+        "baseline_actual_swept_min": 0.15380344657380352,
+        "filtered_actual_swept_min": 0.17394354628210074
+      },
+      {
+        "root_id": 312,
+        "model": "kda-s443-t24",
+        "case": 90151,
+        "scope": "success-control",
+        "delta_G": 0.006186977612625433,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": true,
+          "G_worse": false
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "success",
+        "filtered_candidate": 54,
+        "predicted_clearance": 0.17792182885206353,
+        "baseline_actual_swept_min": 0.1757748220593104,
+        "filtered_actual_swept_min": 0.17794339207930387
+      },
+      {
+        "root_id": 336,
+        "model": "kda-s443-t24",
+        "case": 90201,
+        "scope": "success-control",
+        "delta_G": -0.5829919201027363,
+        "flags": {
+          "rescued": false,
+          "destroyed": true,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 71,
+        "predicted_clearance": 0.16820595863580834,
+        "baseline_actual_swept_min": 0.133018251239303,
+        "filtered_actual_swept_min": 0.12782256364072797
+      },
+      {
+        "root_id": 515,
+        "model": "gru-s419-t24",
+        "case": 90037,
+        "scope": "timeout",
+        "delta_G": -0.0009683433247864165,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 15,
+        "predicted_clearance": 0.1999458592002995,
+        "baseline_actual_swept_min": 0.1949476781411943,
+        "filtered_actual_swept_min": 0.1930966161085177
+      },
+      {
+        "root_id": 516,
+        "model": "gru-s419-t24",
+        "case": 90042,
+        "scope": "timeout",
+        "delta_G": -0.010123578907425948,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 14,
+        "predicted_clearance": 0.1477949847331349,
+        "baseline_actual_swept_min": 0.1846068006966325,
+        "filtered_actual_swept_min": 0.1542848429078041
+      },
+      {
+        "root_id": 523,
+        "model": "gru-s419-t24",
+        "case": 90062,
+        "scope": "success-control",
+        "delta_G": 0.011839783743441634,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": true,
+          "G_worse": false
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "success",
+        "filtered_candidate": 9,
+        "predicted_clearance": 0.18616903113141103,
+        "baseline_actual_swept_min": 0.21025858870436315,
+        "filtered_actual_swept_min": 0.17810272766284063
+      },
+      {
+        "root_id": 543,
+        "model": "gru-s419-t24",
+        "case": 90116,
+        "scope": "success-control",
+        "delta_G": -0.0011450315895911167,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "success",
+        "filtered_candidate": 15,
+        "predicted_clearance": 0.19837935825424702,
+        "baseline_actual_swept_min": 0.19311976176075019,
+        "filtered_actual_swept_min": 0.18759006972279568
+      },
+      {
+        "root_id": 708,
+        "model": "gru-s443-t24",
+        "case": 90050,
+        "scope": "timeout",
+        "delta_G": -0.5046467872974655,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": true,
+          "added_actual_physical_collision": true,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "collision",
+        "filtered_candidate": 33,
+        "predicted_clearance": 0.02676324357180815,
+        "baseline_actual_swept_min": 0.20156229438832646,
+        "filtered_actual_swept_min": -0.013073822743385755
+      },
+      {
+        "root_id": 715,
+        "model": "gru-s443-t24",
+        "case": 90066,
+        "scope": "timeout",
+        "delta_G": -0.0025530222858941992,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "timeout",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 36,
+        "predicted_clearance": 0.19847764347169206,
+        "baseline_actual_swept_min": 0.18794061551276164,
+        "filtered_actual_swept_min": 0.17356369209354983
+      },
+      {
+        "root_id": 716,
+        "model": "gru-s443-t24",
+        "case": 90067,
+        "scope": "success-control",
+        "delta_G": -0.38953803478133503,
+        "flags": {
+          "rescued": false,
+          "destroyed": true,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": false,
+          "G_worse": true
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "timeout",
+        "filtered_candidate": 36,
+        "predicted_clearance": 0.19907502282665768,
+        "baseline_actual_swept_min": 0.2016406178200874,
+        "filtered_actual_swept_min": 0.1900437262707455
+      },
+      {
+        "root_id": 735,
+        "model": "gru-s443-t24",
+        "case": 90102,
+        "scope": "success-control",
+        "delta_G": 0.029715146234446155,
+        "flags": {
+          "rescued": false,
+          "destroyed": false,
+          "new_collision": false,
+          "added_actual_physical_collision": false,
+          "G_improved": true,
+          "G_worse": false
+        },
+        "baseline_outcome": "success",
+        "filtered_outcome": "success",
+        "filtered_candidate": 32,
+        "predicted_clearance": 0.17974023684282747,
+        "baseline_actual_swept_min": 0.2073760652922923,
+        "filtered_actual_swept_min": 0.1857603628423785
+      }
+    ],
+    "per_model": {
+      "kda-s419-t24": {
+        "roots": 4,
+        "rescued": 1,
+        "destroyed": 0,
+        "new_collision": 0,
+        "added_actual_physical_collision": 0,
+        "G_improved": 2,
+        "G_worse": 2
+      },
+      "kda-s443-t24": {
+        "roots": 4,
+        "rescued": 1,
+        "destroyed": 1,
+        "new_collision": 0,
+        "added_actual_physical_collision": 0,
+        "G_improved": 2,
+        "G_worse": 2
+      },
+      "gru-s419-t24": {
+        "roots": 4,
+        "rescued": 0,
+        "destroyed": 0,
+        "new_collision": 0,
+        "added_actual_physical_collision": 0,
+        "G_improved": 1,
+        "G_worse": 3
+      },
+      "gru-s443-t24": {
+        "roots": 4,
+        "rescued": 0,
+        "destroyed": 1,
+        "new_collision": 1,
+        "added_actual_physical_collision": 1,
+        "G_improved": 1,
+        "G_worse": 3
+      }
+    },
+    "protection_gate": "FAIL",
+    "bypass_decision": "KILL",
+    "limitation": "Existing protection gate only. Return gains do not prove a filter error: forced commands violate original .2 margin. Fixed selected roots cannot estimate natural attribution; no production filter change."
+  }
+}

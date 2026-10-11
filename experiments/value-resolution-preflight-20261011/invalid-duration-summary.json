@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "execution": "CPU archived-data analysis only",
+  "overall": {
+    "steps": 6264,
+    "episodes": 120,
+    "median_abs_M419": 0.002021959125995636,
+    "median_abs_M443": 0.002787868604063988,
+    "median_state_disagreement": 0.005253937505185659,
+    "ratios": [
+      2.598439027593379,
+      1.8845714240358329
+    ],
+    "median_pair_disagreement": 0.003337850868701935,
+    "preference_agreement": 0.5767879948914432,
+    "ties419": 0,
+    "ties443": 0,
+    "cluster_bootstrap": {
+      "unit": "(cell, case), whole episode clusters; not training-seed uncertainty",
+      "repeats": 2000,
+      "ratios95": [
+        [
+          2.307970493198367,
+          2.8689051469235154
+        ],
+        [
+          1.7472139246035039,
+          2.0236272331474865
+        ]
+      ],
+      "preference_agreement95": [
+        0.5495200174519043,
+        0.6053226466622381
+      ]
+    },
+    "median_pooled_candidate_disagreement": 0.004847737804055197,
+    "pooled_candidate_ratios": [
+      2.3975449066845576,
+      1.7388688250904132
+    ]
+  },
+  "by_cell": {
+    "0": {
+      "steps": 851,
+      "episodes": 20,
+      "median_abs_M419": 0.0013548964262008667,
+      "median_abs_M443": 0.002041756510734558,
+      "median_state_disagreement": 0.0031608840823173522,
+      "ratios": [
+        2.332934105657419,
+        1.5481199965318921
+      ],
+      "median_pair_disagreement": 0.0022445690631866452,
+      "preference_agreement": 0.5628672150411281,
+      "ties419": 0,
+      "ties443": 0
+    },
+    "1": {
+      "steps": 867,
+      "episodes": 20,
+      "median_abs_M419": 0.001343979835510254,
+      "median_abs_M443": 0.0017002147436141967,
+      "median_state_disagreement": 0.0033164750039577483,
+      "ratios": [
+        2.467652353354408,
+        1.950621247353625
+      ],
+      "median_pair_disagreement": 0.00201248824596405,
+      "preference_agreement": 0.5432525951557093,
+      "ties419": 0,
+      "ties443": 0
+    },
+    "2": {
+      "steps": 988,
+      "episodes": 20,
+      "median_abs_M419": 0.001634862720966339,
+      "median_abs_M443": 0.003031242191791534,
+      "median_state_disagreement": 0.004739973720163096,
+      "ratios": [
+        2.8993099294363867,
+        1.5637066985273327
+      ],
+      "median_pair_disagreement": 0.003404412567615509,
+      "preference_agreement": 0.5708502024291497,
+      "ties419": 0,
+      "ties443": 0
+    },
+    "3": {
+      "steps": 951,
+      "episodes": 20,
+      "median_abs_M419": 0.0019999194145202638,
+      "median_abs_M443": 0.002469745874404907,
+      "median_state_disagreement": 0.005187900245189623,
+      "ratios": [
+        2.5940546441637924,
+        2.100580589668831
+      ],
+      "median_pair_disagreement": 0.003096299171447754,
+      "preference_agreement": 0.562565720294427,
+      "ties419": 0,
+      "ties443": 0
+    },
+    "4": {
+      "steps": 1447,
+      "episodes": 20,
+      "median_abs_M419": 0.0026636481285095214,
+      "median_abs_M443": 0.003559221625328064,
+      "median_state_disagreement": 0.006950529858469896,
+      "ratios": [
+        2.6094024147097667,
+        1.9528230018071002
+      ],
+      "median_pair_disagreement": 0.004272871613502502,
+      "preference_agreement": 0.6275051831375259,
+      "ties419": 0,
+      "ties443": 0
+    },
+    "5": {
+      "steps": 1160,
+      "episodes": 20,
+      "median_abs_M419": 0.0028904476761817933,
+      "median_abs_M443": 0.00391825944185257,
+      "median_state_disagreement": 0.008723034560680389,
+      "ratios": [
+        3.0178835730399007,
+        2.2262524189965585
+      ],
+      "median_pair_disagreement": 0.005003737360239029,
+      "preference_agreement": 0.5655172413793104,
+      "ties419": 0,
+      "ties443": 0
+    }
+  },
+  "safe_zero_reward": {
+    "steps": 5301,
+    "episodes": 120,
+    "median_abs_M419": 0.0018829643726348878,
+    "median_abs_M443": 0.0025512367486953736,
+    "median_state_disagreement": 0.004816930890083313,
+    "ratios": [
+      2.558163585083046,
+      1.8880767896380248
+    ],
+    "median_pair_disagreement": 0.0030318617820739744,
+    "preference_agreement": 0.5851726089417091,
+    "ties419": 0,
+    "ties443": 0
+  },
+  "index0_reselected_steps": 11,
+  "gate": "CANCEL_SIGN_ONLY_TIMELINE",
+  "resolution": {
+    "kda-s419-t24": {
+      "action_pairs": 844,
+      "roots": 334,
+      "episodes": 334,
+      "common_success_nonzero_duration_pairs": 319,
+      "common_success_roots": 155,
+      "median_signed_arrival_gain": 0.0078356184364704,
+      "median_abs_arrival_gain": 0.16202397745384872,
+      "opposite_sign_pairs": 146,
+      "absolute_gain_below_point1_pairs": 135,
+      "median_abs_remaining_steps_difference": 6.0,
+      "fraction_remaining_steps_difference_above1": 0.8338557993730408,
+      "median_abs_other_rewards_difference": 0.008389143770585195
+    },
+    "kda-s443-t24": {
+      "action_pairs": 968,
+      "roots": 363,
+      "episodes": 363,
+      "common_success_nonzero_duration_pairs": 385,
+      "common_success_roots": 172,
+      "median_signed_arrival_gain": -0.006596026275685441,
+      "median_abs_arrival_gain": 0.13900530739211497,
+      "opposite_sign_pairs": 210,
+      "absolute_gain_below_point1_pairs": 166,
+      "median_abs_remaining_steps_difference": 5.0,
+      "fraction_remaining_steps_difference_above1": 0.7844155844155845,
+      "median_abs_other_rewards_difference": 0.005453837521263494
+    }
+  },
+  "training_started": false,
+  "wall_seconds": 23.81482195854187
+}

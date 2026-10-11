@@ -1,0 +1,19 @@
+{
+  "command": "PYTHONPATH=/root/kda-vl-deps/flash-linear-attention PYTHONDONTWRITEBYTECODE=1 /root/miniconda3/envs/mamba/bin/python -u /root/ttc5-causal-20261011/reproduce-case.py --model kda-s419-t24 --cell 5 --case 90001 --label A1",
+  "exit_code": 0,
+  "status": "PASS",
+  "model": "kda-s419-t24",
+  "case": 90001,
+  "cell": 5,
+  "root_time": 7.0,
+  "original_action": 67,
+  "alternative_action": 5,
+  "original_root_return": -0.08881815828266938,
+  "alternative_root_return": 0.6135768081842218,
+  "original_outcome": "timeout",
+  "alternative_outcome": "success",
+  "original_time": 50.25,
+  "alternative_time": 19.0,
+  "trajectory_sha256": "91af55b78bd589f72c2f6a5a2e9adfcfb249e5aab2292492788c135cbd6586c5",
+  "scope": "Additional exact replay of an already frozen and completed branch, not a newly selected intervention. Values transcribed from successful tool execution and the original branch."
+}

@@ -1,0 +1,14 @@
+{
+  "protocol_sha256": "c57eee434fcb9c9b5ab0881a89d678bb7ce12d0d0200931d0a8134ecf3a8e984",
+  "scripts": {
+    "train-worker.py": "ff7d5340c8abbd79ab88f9f6cdccb9f32beb1445593612380d5ed4877f3d4fc1",
+    "prepare-preflight.py": "f5bd8da9bfc3ca44b7116205008bb2e306effd663b0dd5df355f7552a6406e79",
+    "run-overnight.py": "d16f583c8e5e2d84c727239858a631bd1ee5ba820a240c6b26b721c1572909bc",
+    "evaluate-history.py": "bcf1df7ce4fcd8d40f4f0e365caa2d2dea22275d6b85f6adebbaf2abb1f87309",
+    "evaluate-safety.py": "7403b35c027e5b23b66d193b3a0785478e8dc99293bc0a9153cbc93f0fe38daf",
+    "resume-preflight.py": "08e5a1ce07b559640a4684d0d10519ffce3154ea8e82dc620d5042b48ef786e5"
+  },
+  "known_resource_limit": "At most 3 simultaneous IL phases; four RL arms may overlap",
+  "actual_deadline": 1791510688.6328998,
+  "stop_request_time": 1791508888.6328998
+}

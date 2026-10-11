@@ -1,0 +1,28 @@
+{
+  "task": "A/B deep causal isolation, first round",
+  "started_local": "2026-10-11T17:02:00+09:00",
+  "deadline_local": "2026-10-12T01:02:00+09:00",
+  "max_wall_seconds": 28800,
+  "status": "RUNNING_FIRST_ROUND",
+  "original_project_read_only": "/home/abc/workspace/nav_data/mamba/camrl/CrowdNav",
+  "engine_baseline": "cd8b793",
+  "independent_fixes": {"exploration_history": "184f6f0", "predicted_terminal_bootstrap": "9f06223"},
+  "models": ["kda-s419-t24", "kda-s443-t24", "gru-s419-t24", "gru-s443-t24"],
+  "deployment": {"selection": "ttc5", "actions": 80, "smoothing": 0.3, "margin": 0.2, "risk": 0.8, "time_limit": 50, "gamma": 0.99},
+  "cases": {"development": [90000,90499], "reserved_never_use": [92000,92499]},
+  "public_gate": "Independent history and terminal unit tests, frozen-checkpoint epsilon-zero original replay, history-only parity, terminal-before/after separate trajectories. Preserve invalid runs.",
+  "A": {
+    "existing_action_pairs": "Reuse all original frozen roots, branches and actual-history-oracle; no recollection",
+    "new_inputs": "Minimal variable-human relation/attention/maxpool preserving 256 dimensions and weights; N=5 exact gate",
+    "readouts": "Case-grouped train/dev/test across seeds, fixed latent capacity and optimizer budget, MC versus pair-supervision and TTC5 versus legal all-human representation. Diagnostic fit only, not navigation IL/RL or OOD evidence.",
+    "closed_loop": "Fixed root sequence, replay A0 before intervention; same commands, safety, reward; success controls mandatory for protected-benefit claims",
+    "hidden_intent": "Artificial hidden-goal intervention, root-visible history and scores unchanged; separate from natural conditional expected-Q conclusions",
+    "GO": "Specific intervention improves held-out ranking and actual continuation without success destruction; only bounded development eligibility, not method-level achievement",
+    "KILL": "No outcome benefit or benefit matched by simple control; do not revive rejected AC3/gap/backbone routes"
+  },
+  "B_contract": "b/b-contract.json, frozen scenes/cases/negative controls/continuations and acquisition decisions",
+  "resource_policy": "Main agent exclusively schedules remote RTX4090; no simultaneous full training; bounded inference after public gate, CPU scene checks allowed beforehand",
+  "round2": {"authorized": false, "required_contract": "Explicit arms, >=2 matched seeds, equal IL/RL interaction and optimizer budget, cost from actual logs, GRU input x train-population factorial first; KDA conditional confirmation"},
+  "incomplete_rule": "Unexecuted required isolation or unauthorized retraining must be INCOMPLETE, never imply completed root attribution",
+  "prior_invalid_preflight": {"exit_code": 1, "reason": "Contract test invoked before rsync completed; missing crowd_nav.policy.mamba_rl. No experiment result accepted. Transfer completed and test rerun independently."}
+}

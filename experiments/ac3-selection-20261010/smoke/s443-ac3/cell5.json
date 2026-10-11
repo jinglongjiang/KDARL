@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "episodes": [
+    {
+      "seed": 443,
+      "rule": "ac3",
+      "cell": 5,
+      "case": 90000,
+      "outcome": "success",
+      "return_": 0.4801414565714212,
+      "time": 18.5,
+      "minimum_clearance": 0.21325203772898643,
+      "steps": 74,
+      "trajectory_sha256": "c717ef7e88f5cd4c9ef0aa1970ee8e0e3fc27da7d58759618a201f1931d87d27"
+    },
+    {
+      "seed": 443,
+      "rule": "ac3",
+      "cell": 5,
+      "case": 90001,
+      "outcome": "success",
+      "return_": 0.3828295462406354,
+      "time": 22.5,
+      "minimum_clearance": 0.11558887478985291,
+      "steps": 90,
+      "trajectory_sha256": "0b452170a6f1efc3a22d2b5a04e5708a6ff6c763c2a5f6e7081920dc6d0714ad"
+    },
+    {
+      "seed": 443,
+      "rule": "ac3",
+      "cell": 5,
+      "case": 90002,
+      "outcome": "success",
+      "return_": 0.45204365026647536,
+      "time": 20.0,
+      "minimum_clearance": 0.21143199954382036,
+      "steps": 80,
+      "trajectory_sha256": "06773e57a4254dd5754661331d0eabe722f4b022a4ea9813e59a57393922c0a4"
+    }
+  ],
+  "checkpoint": {
+    "seed": 443,
+    "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/kda-t24/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/kda-history-replication-20261010/kda-t24.ini",
+    "training": "fresh IL50 + RL10000",
+    "weight_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+    "config_sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a",
+    "training_protocol": "/home/abc/workspace/kda-history-replication-20261010/protocol.json"
+  },
+  "actions": 80,
+  "alpha": 0.3,
+  "all_crowd_filter": true,
+  "torch": "2.7.1+cu126",
+  "device": "NVIDIA GeForce RTX 3060",
+  "wall_seconds": 11.56140923500061,
+  "steps": 244
+}

@@ -1,0 +1,43 @@
+{
+  "checkpoint_sha256": "ba8f3276421e5672479ea3fec20fe01dd6d53c8a4ac9bd0fb662423fd14376eb",
+  "episodes": [
+    {
+      "case": 89000,
+      "human_num": 5,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.661740358997899,
+      "minimum_clearance": 0.20074048484038226,
+      "time": 10.5
+    },
+    {
+      "case": 89001,
+      "human_num": 5,
+      "geometry": "circle_crossing",
+      "outcome": "success",
+      "return": 0.6620633496064098,
+      "minimum_clearance": 0.20725586180691896,
+      "time": 10.5
+    }
+  ],
+  "wall_seconds": 1.0887038707733154,
+  "policy_latency_ms_median": 10.157869488466531,
+  "policy_latency_ms_p95": 10.719616996357217,
+  "latency_includes_full_80_action_scoring": true,
+  "backbone": "gru",
+  "arm_dir": "premerge/gru",
+  "budget": 10000,
+  "protocol": {
+    "cells": [
+      [
+        5,
+        "circle_crossing"
+      ]
+    ],
+    "cases": [
+      89000,
+      89001
+    ],
+    "n_cases": 2
+  }
+}

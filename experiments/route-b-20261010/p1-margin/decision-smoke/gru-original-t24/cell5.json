@@ -1,0 +1,31 @@
+{
+  "status": "已验证通过",
+  "checkpoint": "gru-original-t24",
+  "cell": 5,
+  "episodes": [
+    {
+      "case": 90000,
+      "outcome": "success",
+      "steps": 136
+    },
+    {
+      "case": 90001,
+      "outcome": "success",
+      "steps": 101
+    },
+    {
+      "case": 90002,
+      "outcome": "success",
+      "steps": 49
+    }
+  ],
+  "steps": 286,
+  "wall_seconds": 1.494913101196289,
+  "source_sha256": "163fbaa37ab82a0686756b3ca798a5a02786a545ce676abb053fd041db9a5a7e",
+  "geometry_bitwise": true,
+  "selected_actions_identical": true,
+  "training": 0,
+  "nn_forward_calls": 0,
+  "new_policy_rollouts": 0,
+  "robot_visible": false
+}

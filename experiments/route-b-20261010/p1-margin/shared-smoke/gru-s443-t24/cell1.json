@@ -1,0 +1,24 @@
+{
+  "status": "已验证通过",
+  "checkpoint": {
+    "id": "gru-s443-t24",
+    "backbone": "gru",
+    "seed": 443,
+    "length": 24,
+    "weight": "/home/abc/workspace/kda-history-replication-20261010/runs/gru-t24/rl_model_ep10000.pth",
+    "config": "/home/abc/workspace/kda-history-replication-20261010/gru-t24.ini",
+    "training": "fresh IL50+RL10000",
+    "origin": "history-length study",
+    "weight_sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c",
+    "config_sha256": "764aab6d4b5d5a2767d28e43c4d7e85b5fa85302d7372c0dcc0169f64c5e277f"
+  },
+  "steps": 120,
+  "episodes": 3,
+  "wall_seconds": 2.0454916954040527,
+  "same_reference_values_bitwise_steps": 0,
+  "reference": "kda-original-t24",
+  "alpha": 0.3,
+  "selection": "ttc5",
+  "actions": 80,
+  "per_step_file": "/home/abc/workspace/route-b-20261010/p1-margin/shared-smoke/gru-s443-t24/cell1.steps.jsonl.gz"
+}

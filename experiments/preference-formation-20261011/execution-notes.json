@@ -1,0 +1,15 @@
+{
+  "remote_copy": {
+    "status": "INTENTIONALLY_STOPPED",
+    "exit_code": 20,
+    "reason": "Upload throughput too low; no scientific inference or training launched remotely",
+    "partial_remote_inputs": "/root/preference-formation-20261011/"
+  },
+  "inference_amendment": {
+    "device": "Local RTX3060, existing isolated kda-vl-env in Ubuntu22.04 CUDA container",
+    "training": false,
+    "pre_registered_cross_device_final_value_max_error": 0.000001,
+    "failure_rule": "Stop on parity above threshold; do not relax it to obtain a timeline",
+    "unchanged": "Historical weights, fixed windows, root identities, all80 candidates and reward/filter"
+  }
+}

@@ -1,0 +1,8 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[10-10 00:34:18] INFO: [TENSORBOARD] Fresh events will be saved to: /root/kda-history-replication-20261010/runs/kda-t24/tensorboard_logs
+[10-10 00:34:18] INFO: [TEMPORAL-BACKBONE] CLI override: kda
+[10-10 00:34:18] ERROR: [CONTRACTS] env.config not found: /root/kda-history-replication-20261010/env.config
+[W1010 00:34:19.402633014 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

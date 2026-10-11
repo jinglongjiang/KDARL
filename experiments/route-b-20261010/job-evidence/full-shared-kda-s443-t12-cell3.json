@@ -1,0 +1,14 @@
+{
+  "name": "full-shared-kda-s443-t12-cell3",
+  "pid": 6485,
+  "exit_code": 0,
+  "wall_seconds": 86.01142501831055,
+  "args": [
+    "--id",
+    "kda-s443-t12",
+    "--cell",
+    "3",
+    "--shared"
+  ],
+  "actual_output_tail": "WARNING:root:[policy_factory] DSRNN not registered: ModuleNotFoundError(\"No module named 'gym'\")\n"
+}

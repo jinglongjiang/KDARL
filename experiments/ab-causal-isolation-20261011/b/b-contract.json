@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "started_unix": 1791705882,
+  "status": "FROZEN_BEFORE_SCENE_OR_OUTCOME_COLLECTION",
+  "budget_wall_seconds": 28800,
+  "training_authorized": false,
+  "geometries": ["circle", "square"],
+  "conditions": ["E1", "E2", "E3", "E4", "E5"],
+  "cases": [90000,90001,90002,90003,90004,90005,90006,90007,90008,90009,90010,90011,90012,90013,90014,90015],
+  "smoke_cases": [90000,90001,90002],
+  "models": ["kda-s419-t24", "kda-s443-t24", "gru-s419-t24", "gru-s443-t24"],
+  "references": ["orca-grid", "cv-mpc"],
+  "reserved_92000": "DO_NOT_READ_OR_EXECUTE",
+  "physics": {"dt": 0.25, "time_limit": 50, "robot_start": [0,-4], "robot_goal": [0,4]},
+  "decision_interface": {"actions": 80,"alpha": 0.3,"margin": 0.2,"risk": 0.8,"gamma": 0.99,"progress_reward": 0},
+  "scenes": {
+    "E1": "Original seeded 5 humans, original circle R4 / square width10; do not repair inherited overlaps.",
+    "E2": "Original seeded 20 humans, same field; assert first5 identical to E1 at reset, not throughout.",
+    "E3": "Keep E1 first5 exact. Additional15 on separated lanes x=10000+20*i, y=0, goals same x,y=4. Original ORCA policies untouched. Verify observed neighbors and full first5 states each step, including post-terminal horizon in CPU qualification. Reject any first5, local TTC token, command/reward/clearance discrepancy; do not force human trajectories.",
+    "E4": "Keep E2 first5. Relocate extra15 to fixed 0.85m grid x=-2.55..2.55,y=-2.55..2.55, sorted by distance to robot path then center and coordinates. Reject starts overlapping first5/robot by radius sum+.2; choose first15; goals reflected x. No outcome-dependent tuning.",
+    "E5": "E2 humans positions AND goals multiplied by2 about origin. Circle nominal R4->R8, square width10->20; robot unchanged8m. Nominal20/4area=5/area, not equality of local encountered density. Same velocities/radii/policies."
+  },
+  "reference_contract": {
+    "observations": "Same current legal all-human ObservableState used by original safety calculation; no human goals, simulator future, IDs-as-intent or outcome labels. TTC5 limits learned value input, not original safety observations.",
+    "orca-grid": "Existing ORCA predicts on legal all-human state; nearest of same80 smoothed commands, then identical .2 hard mask (only if any safe), .8 risk and index0 tie penalty. Quantization/filter adaptation, not unconstrained ORCA performance.",
+    "cv-mpc": "Finite horizon4steps, beam width4, CV humans; environment Robot.compute_position/step for kinematics; branch each beam over same80 grid commands with branch-local alpha.3. Cost cumulative goal-distance reduction minus .05*dt and2*max(.2-clearance,0)*dt minus100*collision, plus same hard safety/risk filter at each stage. No environment reward change. Receding horizon first command; not mathematical optimality or complete RGL reproduction."
+  },
+  "E3_negative_control": {
+    "full_horizon_steps": 201,
+    "commands": "CPU qualification: deterministic repeating grid indices [24,4,44,64] every20steps, smoothed alpha.3; then policy-specific identical E1 commands in E3 shadow on GPU. Continue CPU physical updates after done solely for isolation qualification, never score such continuation as navigation.",
+    "exact": ["robot", "first5 position/velocity/goal/radius/vpref/theta", "ORCA parameters", "actual local agent-neighbor ID sets", "TTC5 indices", "visible token", "visible history", "80 commands", "80 immediate rewards", "80 clearance"],
+    "added_human_guard": "minimum far-far clearance>=0; all remote x>9000; actual ORCA local graph contains no remote ID; record raw max discrepancies and first mismatch",
+    "gate": "All steps exact else E3 INELIGIBLE, FIX scene once only for implementation error; no global-N causal inference from failed gate."
+  },
+  "continuation": {
+    "case_scope": "Only main evaluation cases; no additional case sampling; max2 failure roots plus2 matched success controls per model/geometry/condition, selected and frozen from all completed baselines before any continuation.",
+    "root": "Same prior audit rule: timeout first t>=5 with dgoal>1, safe progress>=.02 exists and chosen progress<.02; collision earliest safe-forward opportunity within12steps preceding first all-unsafe, otherwise no root retained in failure denominator.",
+    "A1": "Highest raw-score safe candidate with progress>=.02; ties smallest index; change once, update actual last command, resume same frozen policy. A0 exact replay mandatory.",
+    "success_matching": "Same model/geometry/condition, without replacement, time caliper2s, dgoal1m, safe_count16,crowd2m2. Timeout controls same low-progress phenotype; collision controls safe-forward phenotype. Smallest normalized distance, ties case/step. Missing controls counted and disqualify protected-benefit claim.",
+    "cross_condition": "Report strict opportunity matches under same calipers, case-paired where possible. Zero matches means NOT IDENTIFIED, never pool unmatched roots.",
+    "returned_metrics": ["original episode discounted return", "root discounted return", "A1-A0 return loss", "failure-to-success", "success-to-failure", "physical swept collisions", "time", "path_length", "compute_ms"]
+  },
+  "metrics": ["SR","CR","TO","undiscounted_return","discounted_return_gamma99","navigation_time","path_length","minimum_endpoint_clearance","minimum_CV_swept_clearance","minimum_actual_swept_clearance","n_safe80","crowd2m","inference_ms_p50_p95","total_wall_seconds"],
+  "statistics": "Each training seed separate; circle/square separate; paired case deltas and deterministic case-bootstrap2000 seed41995; roots not independent episodes; no seed-population CI from2 seeds.",
+  "decisions": {
+    "E3": "GO global-N isolation only if every negative-control equality passes; any discrepancy -> KILL claim that this scene isolates global N (engineering FIX allowed, not positive evidence). Exact same legal scoring input/r/clearance implies no direct hidden N pathway, not general proof of20human adequacy.",
+    "difficulty": "GO task-difficulty explanation if both references show E2-E1 or E4-E2 SR decrease>=2/16 or mean return decrease>.05 per geometry; else KILL strong difficulty-alone claim at this resolution. Report CIs, not significance claim.",
+    "excess_transfer": "GO a bounded transfer-loss follow-up only if KDA E2-E1 degradation exceeds BOTH reference degradations by>=2/16 success or>.05 mean discounted return, replicated in both seeds, and paired opportunity A1 net rescues>=2 with zero matched-success destruction. Otherwise KILL this round's extra-value-transfer candidate; not mathematical refutation of all transfer mechanisms.",
+    "A1": "GO bounded mechanism development only if >=2 failure-to-success across both KDAseeds with positive paired mean return and zero matched-success destruction; all baselines/negative controls valid. Otherwise KILL A1 intervention as protected candidate. Never declare representation/coverage cause without second-round factorial."
+  },
+  "required_public_acceptance": ["184f6f0", "9f06223"],
+  "formal_gate": "Main supplies public acceptance JSON with status PASS, tested commit and independent history+terminal tests. Freeze code/config/weight hashes per run. Before acceptance only CPU scene/kinematic checks; no model baselines.",
+  "B4": "Second round unauthorized. Contract only: GRU four arms R1/R2 x5/mixed(5,10,20), seeds419443; same interaction/optimizer/IL budgets and reward, independent histories, start checkpoints, case split and computational accounting. KDA only if authorized after GRU result. Never train from this entrypoint."
+}

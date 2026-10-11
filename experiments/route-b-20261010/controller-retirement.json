@@ -1,0 +1,11 @@
+{
+  "status": "controlled-orchestration-transition",
+  "controller": "run-decision-supplement.py",
+  "exit_code": 143,
+  "reason": "Own deterministic replay completed with 66 successful cell records. The idle shared-stage waiter was intentionally terminated to transfer shared processing to an independent container; original container PID1 exits after its primary collector finishes.",
+  "completed_own_cells": 66,
+  "inflight_measurement_when_stopped": false,
+  "data_deleted_or_overwritten": false,
+  "successor_controller": "run-shared-decision-supplement.py",
+  "scientific_result": "No experiment verdict inferred from this orchestration transition. Verify all cell evidence separately."
+}

@@ -1,0 +1,31 @@
+{
+  "status": "已验证通过",
+  "checkpoint": "mamba-original-t24",
+  "cell": 1,
+  "episodes": [
+    {
+      "case": 90000,
+      "outcome": "success",
+      "steps": 40
+    },
+    {
+      "case": 90001,
+      "outcome": "success",
+      "steps": 38
+    },
+    {
+      "case": 90002,
+      "outcome": "success",
+      "steps": 47
+    }
+  ],
+  "steps": 125,
+  "wall_seconds": 0.2250969409942627,
+  "source_sha256": "cdb90a9ec2a7e98117699430735a8c7de53ae4f30152a78da25e3c2ca22fea2b",
+  "geometry_bitwise": true,
+  "selected_actions_identical": true,
+  "training": 0,
+  "nn_forward_calls": 0,
+  "new_policy_rollouts": 0,
+  "robot_visible": false
+}
