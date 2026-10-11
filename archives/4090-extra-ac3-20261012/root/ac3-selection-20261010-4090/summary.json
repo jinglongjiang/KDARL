@@ -1,0 +1,1009 @@
+{
+  "status": "COMPLETED",
+  "verdict": "REJECT",
+  "total_episodes": 6000,
+  "training_episodes": 0,
+  "absolute": {
+    "s419-ttc5": {
+      "overall": {
+        "n": 1000,
+        "counts": {
+          "success": 833,
+          "timeout": 93,
+          "collision": 74
+        },
+        "SR": 83.3,
+        "CR": 7.4,
+        "TO": 9.3,
+        "mean_return": 0.3610504465105107,
+        "median_minimum_endpoint_clearance": 0.19493241662940314,
+        "success_navtime_mean": 18.138355342136855
+      },
+      "cells": {
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 444,
+            "timeout": 21,
+            "collision": 35
+          },
+          "SR": 88.8,
+          "CR": 7.0,
+          "TO": 4.2,
+          "mean_return": 0.4068532357370169,
+          "median_minimum_endpoint_clearance": 0.19955853611741736,
+          "success_navtime_mean": 17.523085585585587
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 389,
+            "timeout": 72,
+            "collision": 39
+          },
+          "SR": 77.8,
+          "CR": 7.8,
+          "TO": 14.4,
+          "mean_return": 0.3152476572840046,
+          "median_minimum_endpoint_clearance": 0.18415995813816916,
+          "success_navtime_mean": 18.840616966580978
+        }
+      }
+    },
+    "s419-goal-cv1s": {
+      "overall": {
+        "n": 1000,
+        "counts": {
+          "success": 799,
+          "collision": 107,
+          "timeout": 94
+        },
+        "SR": 79.9,
+        "CR": 10.7,
+        "TO": 9.4,
+        "mean_return": 0.33780931476111226,
+        "median_minimum_endpoint_clearance": 0.19260696345644862,
+        "success_navtime_mean": 17.616708385481854
+      },
+      "cells": {
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 416,
+            "collision": 56,
+            "timeout": 28
+          },
+          "SR": 83.2,
+          "CR": 11.2,
+          "TO": 5.6,
+          "mean_return": 0.3585671359258299,
+          "median_minimum_endpoint_clearance": 0.1988371902579179,
+          "success_navtime_mean": 17.60877403846154
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "collision": 51,
+            "timeout": 66,
+            "success": 383
+          },
+          "SR": 76.6,
+          "CR": 10.2,
+          "TO": 13.2,
+          "mean_return": 0.31705149359639456,
+          "median_minimum_endpoint_clearance": 0.18400114980862903,
+          "success_navtime_mean": 17.62532637075718
+        }
+      }
+    },
+    "s419-ac3": {
+      "overall": {
+        "n": 1000,
+        "counts": {
+          "success": 844,
+          "collision": 73,
+          "timeout": 83
+        },
+        "SR": 84.4,
+        "CR": 7.3,
+        "TO": 8.3,
+        "mean_return": 0.3695743883956991,
+        "median_minimum_endpoint_clearance": 0.19542004026887988,
+        "success_navtime_mean": 17.904917061611375
+      },
+      "cells": {
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 445,
+            "collision": 31,
+            "timeout": 24
+          },
+          "SR": 89.0,
+          "CR": 6.2,
+          "TO": 4.8,
+          "mean_return": 0.4118597845807377,
+          "median_minimum_endpoint_clearance": 0.2008886698085129,
+          "success_navtime_mean": 17.48876404494382
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 399,
+            "collision": 42,
+            "timeout": 59
+          },
+          "SR": 79.8,
+          "CR": 8.4,
+          "TO": 11.8,
+          "mean_return": 0.3272889922106605,
+          "median_minimum_endpoint_clearance": 0.17956218429066995,
+          "success_navtime_mean": 18.36904761904762
+        }
+      }
+    },
+    "s443-ttc5": {
+      "overall": {
+        "n": 1000,
+        "counts": {
+          "success": 818,
+          "collision": 51,
+          "timeout": 131
+        },
+        "SR": 81.8,
+        "CR": 5.1,
+        "TO": 13.1,
+        "mean_return": 0.35597807285066074,
+        "median_minimum_endpoint_clearance": 0.19640652820978677,
+        "success_navtime_mean": 18.60635696821516
+      },
+      "cells": {
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 456,
+            "collision": 12,
+            "timeout": 32
+          },
+          "SR": 91.2,
+          "CR": 2.4,
+          "TO": 6.4,
+          "mean_return": 0.4364176871506497,
+          "median_minimum_endpoint_clearance": 0.20047140686875037,
+          "success_navtime_mean": 17.75877192982456
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 362,
+            "collision": 39,
+            "timeout": 99
+          },
+          "SR": 72.4,
+          "CR": 7.8,
+          "TO": 19.8,
+          "mean_return": 0.27553845855067177,
+          "median_minimum_endpoint_clearance": 0.18308525185585173,
+          "success_navtime_mean": 19.674033149171272
+        }
+      }
+    },
+    "s443-goal-cv1s": {
+      "overall": {
+        "n": 1000,
+        "counts": {
+          "success": 834,
+          "collision": 52,
+          "timeout": 114
+        },
+        "SR": 83.4,
+        "CR": 5.2,
+        "TO": 11.4,
+        "mean_return": 0.36230435907444486,
+        "median_minimum_endpoint_clearance": 0.200010943298717,
+        "success_navtime_mean": 18.778776978417266
+      },
+      "cells": {
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 444,
+            "collision": 25,
+            "timeout": 31
+          },
+          "SR": 88.8,
+          "CR": 5.0,
+          "TO": 6.2,
+          "mean_return": 0.4052040142079994,
+          "median_minimum_endpoint_clearance": 0.20137464159461532,
+          "success_navtime_mean": 18.14527027027027
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 390,
+            "timeout": 83,
+            "collision": 27
+          },
+          "SR": 78.0,
+          "CR": 5.4,
+          "TO": 16.6,
+          "mean_return": 0.31940470394089027,
+          "median_minimum_endpoint_clearance": 0.19236254420596477,
+          "success_navtime_mean": 19.5
+        }
+      }
+    },
+    "s443-ac3": {
+      "overall": {
+        "n": 1000,
+        "counts": {
+          "success": 820,
+          "collision": 42,
+          "timeout": 138
+        },
+        "SR": 82.0,
+        "CR": 4.2,
+        "TO": 13.8,
+        "mean_return": 0.36749823058733544,
+        "median_minimum_endpoint_clearance": 0.19868219821040062,
+        "success_navtime_mean": 18.16280487804878
+      },
+      "cells": {
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 463,
+            "collision": 11,
+            "timeout": 26
+          },
+          "SR": 92.6,
+          "CR": 2.2,
+          "TO": 5.2,
+          "mean_return": 0.45252972643323686,
+          "median_minimum_endpoint_clearance": 0.20173435354054853,
+          "success_navtime_mean": 17.360151187904968
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 357,
+            "collision": 31,
+            "timeout": 112
+          },
+          "SR": 71.4,
+          "CR": 6.2,
+          "TO": 22.4,
+          "mean_return": 0.28246673474143413,
+          "median_minimum_endpoint_clearance": 0.1898403163586802,
+          "success_navtime_mean": 19.20378151260504
+        }
+      }
+    }
+  },
+  "paired_comparisons": {
+    "419": {
+      "ac3-ttc5": {
+        "n_pairs": 1000,
+        "training_seeds": [
+          419
+        ],
+        "candidate": "ac3",
+        "baseline": "ttc5",
+        "return": {
+          "mean": 0.008523941885188362,
+          "ci95": [
+            -0.011475539837024965,
+            0.028721984865077103
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": 1.1,
+          "ci95": [
+            -1.5,
+            3.7
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": -0.1,
+          "ci95": [
+            -2.0,
+            1.9
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": -1.0,
+          "ci95": [
+            -3.0,
+            1.0
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 92,
+        "damage": 81,
+        "common_success_n": 752,
+        "common_success_navtime_delta": {
+          "mean": -0.21143617021276595,
+          "ci95": [
+            -0.5795941906044673,
+            0.15526840190863556
+          ]
+        }
+      },
+      "ac3-goal-cv1s": {
+        "n_pairs": 1000,
+        "training_seeds": [
+          419
+        ],
+        "candidate": "ac3",
+        "baseline": "goal-cv1s",
+        "return": {
+          "mean": 0.03176507363458683,
+          "ci95": [
+            0.007247499684930823,
+            0.056139005456377865
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": 4.5,
+          "ci95": [
+            1.4,
+            7.5
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": -3.4,
+          "ci95": [
+            -5.7,
+            -1.1
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": -1.1,
+          "ci95": [
+            -3.2,
+            1.0
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 137,
+        "damage": 92,
+        "common_success_n": 707,
+        "common_success_navtime_delta": {
+          "mean": -0.034653465346534656,
+          "ci95": [
+            -0.4395186173969967,
+            0.36373561916050756
+          ]
+        }
+      },
+      "goal-cv1s-ttc5": {
+        "n_pairs": 1000,
+        "training_seeds": [
+          419
+        ],
+        "candidate": "goal-cv1s",
+        "baseline": "ttc5",
+        "return": {
+          "mean": -0.023241131749398472,
+          "ci95": [
+            -0.046689923704602274,
+            0.0002757688969935626
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": -3.4,
+          "ci95": [
+            -6.4,
+            -0.5
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": 3.3,
+          "ci95": [
+            1.1,
+            5.6
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": 0.1,
+          "ci95": [
+            -1.9,
+            2.2
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 92,
+        "damage": 126,
+        "common_success_n": 707,
+        "common_success_navtime_delta": {
+          "mean": -0.5127298444130127,
+          "ci95": [
+            -0.9640300690482098,
+            -0.0695998045615732
+          ]
+        }
+      }
+    },
+    "443": {
+      "ac3-ttc5": {
+        "n_pairs": 1000,
+        "training_seeds": [
+          443
+        ],
+        "candidate": "ac3",
+        "baseline": "ttc5",
+        "return": {
+          "mean": 0.011520157736674764,
+          "ci95": [
+            -0.005831267272915542,
+            0.029238438547211313
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": 0.2,
+          "ci95": [
+            -2.4,
+            2.8
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": -0.9,
+          "ci95": [
+            -2.5,
+            0.6
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": 0.7,
+          "ci95": [
+            -1.6,
+            3.1
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 88,
+        "damage": 86,
+        "common_success_n": 732,
+        "common_success_navtime_delta": {
+          "mean": -0.30703551912568305,
+          "ci95": [
+            -0.640627701417704,
+            0.028136873555442577
+          ]
+        }
+      },
+      "ac3-goal-cv1s": {
+        "n_pairs": 1000,
+        "training_seeds": [
+          443
+        ],
+        "candidate": "ac3",
+        "baseline": "goal-cv1s",
+        "return": {
+          "mean": 0.005193871512890647,
+          "ci95": [
+            -0.014681645947369664,
+            0.025303385877340625
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": -1.4,
+          "ci95": [
+            -4.3,
+            1.5
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": -1.0,
+          "ci95": [
+            -2.7,
+            0.7
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": 2.4,
+          "ci95": [
+            -0.1,
+            4.9
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 106,
+        "damage": 120,
+        "common_success_n": 714,
+        "common_success_navtime_delta": {
+          "mean": -0.47654061624649857,
+          "ci95": [
+            -0.9218213978131506,
+            -0.047354855913055584
+          ]
+        }
+      },
+      "goal-cv1s-ttc5": {
+        "n_pairs": 1000,
+        "training_seeds": [
+          443
+        ],
+        "candidate": "goal-cv1s",
+        "baseline": "ttc5",
+        "return": {
+          "mean": 0.006326286223784118,
+          "ci95": [
+            -0.014038561731140776,
+            0.02689329871563841
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": 1.6,
+          "ci95": [
+            -1.2,
+            4.5
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": 0.1,
+          "ci95": [
+            -1.7,
+            1.8
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": -1.7,
+          "ci95": [
+            -4.2,
+            0.8
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 112,
+        "damage": 96,
+        "common_success_n": 722,
+        "common_success_navtime_delta": {
+          "mean": 0.1481994459833795,
+          "ci95": [
+            -0.3304524271162018,
+            0.6349228009981285
+          ]
+        }
+      }
+    },
+    "419+443": {
+      "ac3-ttc5": {
+        "n_pairs": 2000,
+        "training_seeds": [
+          419,
+          443
+        ],
+        "candidate": "ac3",
+        "baseline": "ttc5",
+        "return": {
+          "mean": 0.010022049810931563,
+          "ci95": [
+            -0.0031089462898878087,
+            0.023390218240102536
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": 0.65,
+          "ci95": [
+            -1.2,
+            2.5
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": -0.5,
+          "ci95": [
+            -1.7,
+            0.7
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": -0.15,
+          "ci95": [
+            -1.65,
+            1.35
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 180,
+        "damage": 167,
+        "common_success_n": 1484,
+        "common_success_navtime_delta": {
+          "mean": -0.25859164420485176,
+          "ci95": [
+            -0.5137063616896614,
+            -0.0010195765875210135
+          ]
+        }
+      },
+      "ac3-goal-cv1s": {
+        "n_pairs": 2000,
+        "training_seeds": [
+          419,
+          443
+        ],
+        "candidate": "ac3",
+        "baseline": "goal-cv1s",
+        "return": {
+          "mean": 0.018479472573738744,
+          "ci95": [
+            0.0036399530667080866,
+            0.03360100167450012
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": 1.55,
+          "ci95": [
+            -0.5,
+            3.65
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": -2.2,
+          "ci95": [
+            -3.6,
+            -0.85
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": 0.65,
+          "ci95": [
+            -1.0,
+            2.3
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 243,
+        "damage": 212,
+        "common_success_n": 1421,
+        "common_success_navtime_delta": {
+          "mean": -0.2566854327938072,
+          "ci95": [
+            -0.5483717044212872,
+            0.028734992206023525
+          ]
+        }
+      },
+      "goal-cv1s-ttc5": {
+        "n_pairs": 2000,
+        "training_seeds": [
+          419,
+          443
+        ],
+        "candidate": "goal-cv1s",
+        "baseline": "ttc5",
+        "return": {
+          "mean": -0.008457422762807178,
+          "ci95": [
+            -0.02355155783958083,
+            0.006871082053935371
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "SR_pp": {
+          "mean": -0.9,
+          "ci95": [
+            -2.9,
+            1.1
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "CR_pp": {
+          "mean": 1.7,
+          "ci95": [
+            0.3,
+            3.1
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "TO_pp": {
+          "mean": -0.8,
+          "ci95": [
+            -2.4,
+            0.8
+          ],
+          "unit": "caseID cluster; correlated cells/seeds retained",
+          "clusters": 500
+        },
+        "rescue": 204,
+        "damage": 222,
+        "common_success_n": 1429,
+        "common_success_navtime_delta": {
+          "mean": -0.1787963610916725,
+          "ci95": [
+            -0.5097315138464451,
+            0.1472172212475739
+          ]
+        }
+      }
+    }
+  },
+  "diagnostics": {
+    "s419-ttc5": {
+      "counts": {
+        "steps": 80887,
+        "selection_differs": 0,
+        "ttc_omits_cv": 21314,
+        "selected_includes_cv": 59573,
+        "ttc_omits_actual": 21318,
+        "selected_includes_actual": 59569,
+        "all_unsafe": 1642,
+        "補選_cv": 0,
+        "補選_actual": 0,
+        "補選_actual_success": 0,
+        "補選_actual_timeout": 0,
+        "補選_actual_collision": 0
+      },
+      "rates": {
+        "selection_differs": 0.0,
+        "ttc_omits_cv": 0.2635034059861288,
+        "selected_includes_cv": 0.7364965940138712,
+        "ttc_omits_actual": 0.26355285769035813,
+        "selected_includes_actual": 0.7364471423096418,
+        "all_unsafe": 0.020299924586151052,
+        "補選_cv": 0.0,
+        "補選_actual": 0.0,
+        "補選_actual_success": 0.0,
+        "補選_actual_timeout": 0.0,
+        "補選_actual_collision": 0.0
+      },
+      "interpretation": "On-policy state distribution; 補選/outcome association, not isolated step causal rescue"
+    },
+    "s419-goal-cv1s": {
+      "counts": {
+        "steps": 77750,
+        "selection_differs": 64236,
+        "ttc_omits_cv": 20014,
+        "selected_includes_cv": 77456,
+        "ttc_omits_actual": 20026,
+        "selected_includes_actual": 77454,
+        "all_unsafe": 1846,
+        "補選_cv": 19885,
+        "補選_actual": 19893,
+        "補選_actual_success": 16467,
+        "補選_actual_collision": 1066,
+        "補選_actual_timeout": 2360
+      },
+      "rates": {
+        "selection_differs": 0.8261864951768488,
+        "ttc_omits_cv": 0.25741479099678455,
+        "selected_includes_cv": 0.9962186495176849,
+        "ttc_omits_actual": 0.25756913183279745,
+        "selected_includes_actual": 0.9961929260450161,
+        "all_unsafe": 0.023742765273311896,
+        "補選_cv": 0.2557556270096463,
+        "補選_actual": 0.2558585209003215,
+        "補選_actual_success": 0.21179421221864952,
+        "補選_actual_collision": 0.013710610932475885,
+        "補選_actual_timeout": 0.03035369774919614
+      },
+      "interpretation": "On-policy state distribution; 補選/outcome association, not isolated step causal rescue"
+    },
+    "s419-ac3": {
+      "counts": {
+        "steps": 78820,
+        "selection_differs": 15685,
+        "ttc_omits_cv": 20984,
+        "selected_includes_cv": 67860,
+        "ttc_omits_actual": 20949,
+        "selected_includes_actual": 67896,
+        "all_unsafe": 1774,
+        "補選_cv": 10170,
+        "補選_actual": 10166,
+        "補選_actual_success": 8320,
+        "補選_actual_collision": 358,
+        "補選_actual_timeout": 1488
+      },
+      "rates": {
+        "selection_differs": 0.19899771631565594,
+        "ttc_omits_cv": 0.26622684597817814,
+        "selected_includes_cv": 0.8609489977163156,
+        "ttc_omits_actual": 0.265782796244608,
+        "selected_includes_actual": 0.8614057345851307,
+        "all_unsafe": 0.022506977924384674,
+        "補選_cv": 0.1290281654402436,
+        "補選_actual": 0.12897741689926415,
+        "補選_actual_success": 0.10555696523724943,
+        "補選_actual_collision": 0.004541994417660492,
+        "補選_actual_timeout": 0.018878457244354226
+      },
+      "interpretation": "On-policy state distribution; 補選/outcome association, not isolated step causal rescue"
+    },
+    "s443-ttc5": {
+      "counts": {
+        "steps": 88276,
+        "selection_differs": 0,
+        "ttc_omits_cv": 22032,
+        "selected_includes_cv": 66244,
+        "ttc_omits_actual": 22042,
+        "selected_includes_actual": 66234,
+        "all_unsafe": 1438,
+        "補選_cv": 0,
+        "補選_actual": 0,
+        "補選_actual_success": 0,
+        "補選_actual_collision": 0,
+        "補選_actual_timeout": 0
+      },
+      "rates": {
+        "selection_differs": 0.0,
+        "ttc_omits_cv": 0.2495808600299062,
+        "selected_includes_cv": 0.7504191399700938,
+        "ttc_omits_actual": 0.24969414110290453,
+        "selected_includes_actual": 0.7503058588970954,
+        "all_unsafe": 0.01628981829715891,
+        "補選_cv": 0.0,
+        "補選_actual": 0.0,
+        "補選_actual_success": 0.0,
+        "補選_actual_collision": 0.0,
+        "補選_actual_timeout": 0.0
+      },
+      "interpretation": "On-policy state distribution; 補選/outcome association, not isolated step causal rescue"
+    },
+    "s443-goal-cv1s": {
+      "counts": {
+        "steps": 86755,
+        "selection_differs": 71922,
+        "ttc_omits_cv": 21157,
+        "selected_includes_cv": 86607,
+        "ttc_omits_actual": 21183,
+        "selected_includes_actual": 86601,
+        "all_unsafe": 1254,
+        "補選_cv": 21081,
+        "補選_actual": 21107,
+        "補選_actual_success": 17799,
+        "補選_actual_collision": 436,
+        "補選_actual_timeout": 2872
+      },
+      "rates": {
+        "selection_differs": 0.8290242637311971,
+        "ttc_omits_cv": 0.24387067027837012,
+        "selected_includes_cv": 0.9982940464526541,
+        "ttc_omits_actual": 0.24417036482047144,
+        "selected_includes_actual": 0.9982248861737075,
+        "all_unsafe": 0.014454498299809809,
+        "補選_cv": 0.24299464007838165,
+        "補選_actual": 0.24329433462048297,
+        "補選_actual_success": 0.2051639674946689,
+        "補選_actual_collision": 0.005025646936775978,
+        "補選_actual_timeout": 0.033104720189038095
+      },
+      "interpretation": "On-policy state distribution; 補選/outcome association, not isolated step causal rescue"
+    },
+    "s443-ac3": {
+      "counts": {
+        "steps": 88334,
+        "selection_differs": 14643,
+        "ttc_omits_cv": 21882,
+        "selected_includes_cv": 75728,
+        "ttc_omits_actual": 21885,
+        "selected_includes_actual": 75727,
+        "all_unsafe": 1196,
+        "補選_cv": 9368,
+        "補選_actual": 9370,
+        "補選_actual_success": 7101,
+        "補選_actual_collision": 176,
+        "補選_actual_timeout": 2093
+      },
+      "rates": {
+        "selection_differs": 0.16576856023728123,
+        "ttc_omits_cv": 0.2477188851404895,
+        "selected_includes_cv": 0.8572916430819391,
+        "ttc_omits_actual": 0.2477528471483234,
+        "selected_includes_actual": 0.857280322412661,
+        "all_unsafe": 0.013539520456449385,
+        "補選_cv": 0.10605202979600153,
+        "補選_actual": 0.10607467113455747,
+        "補選_actual_success": 0.08038807254284873,
+        "補選_actual_collision": 0.0019924377929223178,
+        "補選_actual_timeout": 0.023694160798786425
+      },
+      "interpretation": "On-policy state distribution; 補選/outcome association, not isolated step causal rescue"
+    }
+  },
+  "decision_checks": [
+    {
+      "seed": 419,
+      "baseline": "ttc5",
+      "return_positive": true,
+      "SR_nonnegative": true,
+      "CR_nonincrease": true
+    },
+    {
+      "seed": 419,
+      "baseline": "goal-cv1s",
+      "return_positive": true,
+      "SR_nonnegative": true,
+      "CR_nonincrease": true
+    },
+    {
+      "seed": 443,
+      "baseline": "ttc5",
+      "return_positive": true,
+      "SR_nonnegative": true,
+      "CR_nonincrease": true
+    },
+    {
+      "seed": 443,
+      "baseline": "goal-cv1s",
+      "return_positive": true,
+      "SR_nonnegative": false,
+      "CR_nonincrease": true
+    }
+  ],
+  "sources": [
+    "/root/ac3-selection-20261010-4090/per-case/s419-ac3/cell4.json",
+    "/root/ac3-selection-20261010-4090/per-case/s419-ac3/cell5.json",
+    "/root/ac3-selection-20261010-4090/per-case/s419-goal-cv1s/cell4.json",
+    "/root/ac3-selection-20261010-4090/per-case/s419-goal-cv1s/cell5.json",
+    "/root/ac3-selection-20261010-4090/per-case/s419-ttc5/cell4.json",
+    "/root/ac3-selection-20261010-4090/per-case/s419-ttc5/cell5.json",
+    "/root/ac3-selection-20261010-4090/per-case/s443-ac3/cell4.json",
+    "/root/ac3-selection-20261010-4090/per-case/s443-ac3/cell5.json",
+    "/root/ac3-selection-20261010-4090/per-case/s443-goal-cv1s/cell4.json",
+    "/root/ac3-selection-20261010-4090/per-case/s443-goal-cv1s/cell5.json",
+    "/root/ac3-selection-20261010-4090/per-case/s443-ttc5/cell4.json",
+    "/root/ac3-selection-20261010-4090/per-case/s443-ttc5/cell5.json"
+  ],
+  "frozen_files_verified": 875,
+  "protocol_sha256": "ece4c701112b85a8c700641cb4a1aab3a27e030b375df06d4ed83491d59f8b09"
+}

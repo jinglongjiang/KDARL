@@ -1,0 +1,115 @@
+{
+  "task": "AC3_ACTION_COVERAGE_SELECTION",
+  "created": 1791637737.2827573,
+  "checkpoints": [
+    {
+      "seed": 419,
+      "weight": "/root/ac3-selection-20261010-4090/inputs/s419/rl_model_ep10000.pth",
+      "config": "/root/ac3-selection-20261010-4090/inputs/s419/kda-t24.ini",
+      "training": "fresh IL50 + RL10000",
+      "weight_sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+      "config_sha256": "4fbc0fedba6d88c287a4822a5db0aebef3de0dbe2798e455aa2d1805bc84f6c7",
+      "training_protocol": "/root/ac3-selection-20261010-4090/inputs/s419/training-protocol.json"
+    },
+    {
+      "seed": 443,
+      "weight": "/root/ac3-selection-20261010-4090/inputs/s443/rl_model_ep10000.pth",
+      "config": "/root/ac3-selection-20261010-4090/inputs/s443/kda-t24.ini",
+      "training": "fresh IL50 + RL10000",
+      "weight_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+      "config_sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a",
+      "training_protocol": "/root/ac3-selection-20261010-4090/inputs/s443/training-protocol.json"
+    }
+  ],
+  "amendment": "Latest user instruction supersedes downloaded384-episode plan:6000episodes.",
+  "rules": [
+    "ttc5",
+    "goal-cv1s",
+    "ac3"
+  ],
+  "cells": [
+    4,
+    5
+  ],
+  "case_base": 90000,
+  "n_cases": 500,
+  "total_episodes": 6000,
+  "training_episodes": 0,
+  "reserved92000_92499_untouched": true,
+  "selection_anchor": "true current state once; same identities for current and80successors",
+  "selection_budget": 5,
+  "alpha": 0.3,
+  "risk_lambda": 0.8,
+  "filter_margin": 0.2,
+  "dt": 0.25,
+  "horizon": 1.0,
+  "max_episode_steps": 201,
+  "gamma": 0.99,
+  "time_limit": 50.0,
+  "goal_cv": "robot v_pref along current goal direction; same-time closest approach over1s; lowest5clearances",
+  "ac3": "Downloaded reference risk saturation coverage; canonical TTC fallback/zero-gain fill",
+  "ttc_rounding": "Existing TTC5 robot float32 roundtrip and np.argsort; preserve source-order selectedIDs",
+  "all_unsafe": "AC3 returns exact current TTC5; parent fallback unchanged",
+  "five_person_bypass": "all3selectors original5; identical tokens/values/actions/trajectories",
+  "forbidden": [
+    "training",
+    "project edits",
+    "future features",
+    "reward/filter/grid/network changes",
+    "threshold/horizon search",
+    "reserved confirmation cases",
+    "additionalseeds"
+  ],
+  "primary": "original task discountedReturn",
+  "secondary": "SR",
+  "contrasts": [
+    [
+      "ac3",
+      "ttc5"
+    ],
+    [
+      "ac3",
+      "goal-cv1s"
+    ],
+    [
+      "goal-cv1s",
+      "ttc5"
+    ]
+  ],
+  "inference": "caseID cluster pairedbootstrap, retain2cells and2seeds withincluster;10000draws;95%two-sidedCI",
+  "intervals": "descriptive; same developmentblock, not fresh confirmation; n_training_seeds=2",
+  "decision": {
+    "require_return_positive_vs_both_each_seed": true,
+    "require_SR_nonnegative_vs_both_each_seed": true,
+    "require_collision_count_nonincrease_vs_both_each_seed": true,
+    "safety_note": "Conservative explicit implementation of no unacceptablecollisionincrease; not a significance claim",
+    "positive_label": "PROTOTYPE_ENTRY_NOT_CONFIRMED",
+    "negative_label": "REJECT",
+    "no_parameter_search_after_results": true
+  },
+  "runtime": "remote RTX4090; existing Python3.10/torch2.9.1+cu128/FLA; no environment updates",
+  "cost_gate": {
+    "budget_seconds": 7200,
+    "starts": "first correctness worker launch",
+    "smoke_episodes": 36,
+    "max_workers": 3,
+    "projection": "full6000episodes from parallel smoke throughput, plus measuredchecks and120sanalysisreserve",
+    "insufficient": "RESOURCE_LIMIT; do not reduce500cases or startfull"
+  },
+  "missing_prior_omission_measurement": "11737step/23.48% user-provided context, not independently verified by this protocol",
+  "limitations": [
+    "Coveragehit is not navigationbenefit",
+    "CV1s is not learned interactionprediction",
+    "Selectionchanges are distribution shifts with frozenweights",
+    "Outcome-associated補選 statistics do not establish isolatedstepcausality",
+    "No noveltyclaim; separate precisionprioraudit only if prototype passes"
+  ],
+  "migration": {
+    "authorization": "User explicitly requested migration to4090",
+    "previous": "3060 RESOURCE_LIMIT; no6000episode results",
+    "weights_and_methods_unchanged": true,
+    "source_project_files": 340,
+    "old_protocol_sha256": "4238fc48f941a8e4061d5bcb3c9f4534449783c79e70852f1cc3dea4b829fd5c",
+    "time_budget": "new authorized4090attempt,7200s from firstcorrectnessworker"
+  }
+}

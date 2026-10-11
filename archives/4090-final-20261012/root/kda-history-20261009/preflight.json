@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "forward_backward_save_load": "PASS",
+  "replay_ring_and_rng_roundtrip": "PASS",
+  "shared_initialization": "PASS",
+  "grid": 80,
+  "full_il_epoch_measurements": {
+    "kda-t12": {
+      "stage": "IL",
+      "number": 1,
+      "boundary_seconds": 266.1196973323822,
+      "wall_seconds": 266.1197073459625,
+      "peak_rss_kib": 9815408,
+      "cuda_max_allocated_bytes": 4095030272,
+      "cuda_max_reserved_bytes": 4173332480,
+      "checkpoint_includes_rng": true,
+      "checkpoint_includes_replay": false,
+      "complete_probe_wall_seconds": 396.96588611602783,
+      "dataset_size": 749318
+    },
+    "gru-t24": {
+      "stage": "IL",
+      "number": 1,
+      "boundary_seconds": 266.47757267951965,
+      "wall_seconds": 266.4775836467743,
+      "peak_rss_kib": 16890456,
+      "cuda_max_allocated_bytes": 7985199616,
+      "cuda_max_reserved_bytes": 8103395328,
+      "checkpoint_includes_rng": true,
+      "checkpoint_includes_replay": false,
+      "complete_probe_wall_seconds": 374.1006202697754,
+      "dataset_size": 749318
+    }
+  },
+  "wall_seconds": 790.1383752822876,
+  "weights_are_isolated_and_never_reused": true
+}

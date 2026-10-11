@@ -1,0 +1,809 @@
+{
+  "status": "已验证通过",
+  "scope": "Second training seed, same development cases; not independent case confirmation",
+  "n_paired_episodes": 3000,
+  "n_case_clusters": 500,
+  "bootstrap_replicates": 10000,
+  "sign_convention": "D=(SR_KDA24-SR_KDA12)-(SR_GRU24-SR_GRU12)",
+  "interaction_pp": -1.3333333333333333,
+  "descriptive_case_cluster_ci95_pp": [
+    -3.0666666666666664,
+    0.36749999999998806
+  ],
+  "marginal_log_failure_odds_interaction": 0.22065916008882258,
+  "descriptive_case_cluster_log_odds_ci95": [
+    -0.02979381028601794,
+    0.47458240723363365
+  ],
+  "failure_odds": {
+    "kda": {
+      "failure_counts": {
+        "12": 245,
+        "24": 244
+      },
+      "failure_percent_t12": 8.166666666666666,
+      "failure_percent_t24": 8.133333333333333,
+      "marginal_failure_odds_ratio_t24_vs_t12": 0.995557003643257
+    },
+    "gru": {
+      "failure_counts": {
+        "12": 216,
+        "24": 175
+      },
+      "failure_percent_t12": 7.199999999999999,
+      "failure_percent_t24": 5.833333333333333,
+      "marginal_failure_odds_ratio_t24_vs_t12": 0.7984267453294002
+    }
+  },
+  "group_tests": {
+    "kda": {
+      "success": {
+        "delta_t24_minus_t12_pp": 0.03333333333333333,
+        "b_t12_only": 156,
+        "c_t24_only": 157,
+        "exact_mcnemar_p": 1.0,
+        "prior_family6_corrected_p": 1.0
+      },
+      "collision": {
+        "delta_t24_minus_t12_pp": 0.06666666666666667,
+        "b_t12_only": 55,
+        "c_t24_only": 57,
+        "exact_mcnemar_p": 0.9247750936572267,
+        "prior_family6_corrected_p": 1.0
+      },
+      "timeout": {
+        "delta_t24_minus_t12_pp": -0.1,
+        "b_t12_only": 115,
+        "c_t24_only": 112,
+        "exact_mcnemar_p": 0.8944334241384718,
+        "prior_family6_corrected_p": 1.0
+      }
+    },
+    "gru": {
+      "success": {
+        "delta_t24_minus_t12_pp": 1.3666666666666667,
+        "b_t12_only": 109,
+        "c_t24_only": 150,
+        "exact_mcnemar_p": 0.012786774269086199,
+        "prior_family6_corrected_p": 0.07672064561451719
+      },
+      "collision": {
+        "delta_t24_minus_t12_pp": -1.1,
+        "b_t12_only": 80,
+        "c_t24_only": 47,
+        "exact_mcnemar_p": 0.004330818115086333,
+        "prior_family6_corrected_p": 0.025984908690517998
+      },
+      "timeout": {
+        "delta_t24_minus_t12_pp": -0.26666666666666666,
+        "b_t12_only": 82,
+        "c_t24_only": 74,
+        "exact_mcnemar_p": 0.5753154836552095,
+        "prior_family6_corrected_p": 1.0
+      }
+    }
+  },
+  "limits": [
+    "D is the single primary test; six within-backbone outcome tests are a separate secondary family",
+    "Marginal failure odds ratio is not the matched-pair McNemar odds ratio",
+    "Two training seeds cannot estimate architecture-level seed variance",
+    "History length changes training dynamics, not just deployment memory"
+  ],
+  "seed": 443,
+  "primary_family_size": 1,
+  "secondary_family_size": 6,
+  "stage2_started": false,
+  "interaction_test": "Directional D>0 evaluated using paired case-cluster two-sided 95% bootstrap interval as specified",
+  "scale_direction_definition": "SR D>0 corresponds to failure-log-odds interaction<0",
+  "verdict": "NOT_CONFIRMED",
+  "reasons": [
+    "D is not positive with its entire 95% interval above zero"
+  ],
+  "previous_seed419": {
+    "status": "已验证通过",
+    "scope": "Existing seed419 development data; NOT second-seed confirmation",
+    "n_paired_episodes": 3000,
+    "n_case_clusters": 500,
+    "bootstrap_replicates": 10000,
+    "sign_convention": "D=(SR_KDA24-SR_KDA12)-(SR_GRU24-SR_GRU12)",
+    "interaction_pp": 5.866666666666666,
+    "descriptive_case_cluster_ci95_pp": [
+      4.1000000000000005,
+      7.666666666666666
+    ],
+    "marginal_log_failure_odds_interaction": -0.8436244303430191,
+    "descriptive_case_cluster_log_odds_ci95": [
+      -1.1226143875206596,
+      -0.5767711942820118
+    ],
+    "failure_odds": {
+      "kda": {
+        "failure_counts": {
+          "12": 363,
+          "24": 253
+        },
+        "failure_percent_t12": 12.1,
+        "failure_percent_t24": 8.433333333333334,
+        "marginal_failure_odds_ratio_t24_vs_t12": 0.6690604626534731
+      },
+      "gru": {
+        "failure_counts": {
+          "12": 127,
+          "24": 193
+        },
+        "failure_percent_t12": 4.2333333333333325,
+        "failure_percent_t24": 6.433333333333333,
+        "marginal_failure_odds_ratio_t24_vs_t12": 1.555416857182129
+      }
+    },
+    "group_tests": {
+      "kda": {
+        "success": {
+          "delta_t24_minus_t12_pp": 3.6666666666666665,
+          "b_t12_only": 155,
+          "c_t24_only": 265,
+          "exact_mcnemar_p": 8.884419026010175e-08,
+          "prior_family6_corrected_p": 5.330651415606106e-07
+        },
+        "collision": {
+          "delta_t24_minus_t12_pp": 2.1666666666666665,
+          "b_t12_only": 51,
+          "c_t24_only": 116,
+          "exact_mcnemar_p": 5.332396108348004e-07,
+          "prior_family6_corrected_p": 3.1994376650088023e-06
+        },
+        "timeout": {
+          "delta_t24_minus_t12_pp": -5.833333333333333,
+          "b_t12_only": 251,
+          "c_t24_only": 76,
+          "exact_mcnemar_p": 5.412162755461872e-23,
+          "prior_family6_corrected_p": 3.2472976532771233e-22
+        }
+      },
+      "gru": {
+        "success": {
+          "delta_t24_minus_t12_pp": -2.2,
+          "b_t12_only": 148,
+          "c_t24_only": 82,
+          "exact_mcnemar_p": 1.6050324982035986e-05,
+          "prior_family6_corrected_p": 9.630194989221591e-05
+        },
+        "collision": {
+          "delta_t24_minus_t12_pp": 0.6333333333333333,
+          "b_t12_only": 36,
+          "c_t24_only": 55,
+          "exact_mcnemar_p": 0.058573528410188806,
+          "prior_family6_corrected_p": 0.3514411704611328
+        },
+        "timeout": {
+          "delta_t24_minus_t12_pp": 1.5666666666666667,
+          "b_t12_only": 49,
+          "c_t24_only": 96,
+          "exact_mcnemar_p": 0.00011759999636577897,
+          "prior_family6_corrected_p": 0.0007055999781946738
+        }
+      }
+    },
+    "limits": [
+      "Intervals are descriptive; new joint confirmatory family has not been specified",
+      "Marginal failure odds ratio is not the matched-pair McNemar odds ratio",
+      "Two training seeds cannot estimate architecture-level seed variance",
+      "History length changes training dynamics, not just deployment memory"
+    ]
+  },
+  "cross_seed": "n=2: sign replication only; no architecture-level seed variance or pooled significance claim",
+  "arms": {
+    "kda-t12": {
+      "overall": {
+        "n": 3000,
+        "counts": {
+          "success": 2755,
+          "collision": 62,
+          "timeout": 183
+        },
+        "rates_percent": {
+          "success": 91.83333333333333,
+          "collision": 2.066666666666667,
+          "timeout": 6.1
+        },
+        "mean_return": 0.5078142868792217,
+        "median_minimum_clearance": 0.20456139382290445,
+        "success_time_mean": 14.495644283121598,
+        "success_time_median": 13.25,
+        "success_time_p90": 19.5
+      },
+      "cells": {
+        "0": {
+          "n": 500,
+          "counts": {
+            "success": 499,
+            "collision": 0,
+            "timeout": 1
+          },
+          "rates_percent": {
+            "success": 99.8,
+            "collision": 0.0,
+            "timeout": 0.2
+          },
+          "mean_return": 0.6378231854609923,
+          "median_minimum_clearance": 0.23156730567845446,
+          "success_time_mean": 11.37374749498998,
+          "success_time_median": 11.25,
+          "success_time_p90": 12.75
+        },
+        "1": {
+          "n": 500,
+          "counts": {
+            "success": 489,
+            "collision": 4,
+            "timeout": 7
+          },
+          "rates_percent": {
+            "success": 97.8,
+            "collision": 0.8,
+            "timeout": 1.4
+          },
+          "mean_return": 0.6235871476161762,
+          "median_minimum_clearance": 0.20888361099616898,
+          "success_time_mean": 11.294478527607362,
+          "success_time_median": 11.0,
+          "success_time_p90": 13.549999999999997
+        },
+        "2": {
+          "n": 500,
+          "counts": {
+            "success": 493,
+            "collision": 4,
+            "timeout": 3
+          },
+          "rates_percent": {
+            "success": 98.6,
+            "collision": 0.8,
+            "timeout": 0.6
+          },
+          "mean_return": 0.5618513360430867,
+          "median_minimum_clearance": 0.20985880546653796,
+          "success_time_mean": 14.096348884381339,
+          "success_time_median": 13.75,
+          "success_time_p90": 16.0
+        },
+        "3": {
+          "n": 500,
+          "counts": {
+            "success": 472,
+            "collision": 5,
+            "timeout": 23
+          },
+          "rates_percent": {
+            "success": 94.4,
+            "collision": 1.0,
+            "timeout": 4.6
+          },
+          "mean_return": 0.5324384978387497,
+          "median_minimum_clearance": 0.2030348922203316,
+          "success_time_mean": 14.140360169491526,
+          "success_time_median": 13.25,
+          "success_time_p90": 17.25
+        },
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 469,
+            "collision": 17,
+            "timeout": 14
+          },
+          "rates_percent": {
+            "success": 93.8,
+            "collision": 3.4,
+            "timeout": 2.8
+          },
+          "mean_return": 0.4426315829019297,
+          "median_minimum_clearance": 0.20070178837155267,
+          "success_time_mean": 17.95362473347548,
+          "success_time_median": 17.5,
+          "success_time_p90": 21.299999999999997
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 333,
+            "collision": 32,
+            "timeout": 135
+          },
+          "rates_percent": {
+            "success": 66.6,
+            "collision": 6.4,
+            "timeout": 27.0
+          },
+          "mean_return": 0.2485539714143952,
+          "median_minimum_clearance": 0.19586558216070854,
+          "success_time_mean": 20.0990990990991,
+          "success_time_median": 18.25,
+          "success_time_p90": 29.200000000000003
+        }
+      },
+      "twenty_person": {
+        "n": 1000,
+        "counts": {
+          "success": 802,
+          "collision": 49,
+          "timeout": 149
+        },
+        "rates_percent": {
+          "success": 80.2,
+          "collision": 4.9,
+          "timeout": 14.9
+        },
+        "mean_return": 0.34559277715816245,
+        "median_minimum_clearance": 0.19992937113331305,
+        "success_time_mean": 18.844451371571072,
+        "success_time_median": 17.5,
+        "success_time_p90": 24.5
+      },
+      "checkpoint_sha256": "113c33c132de0793f36e1f02aa1a9d8704ab562ae30d645ac17d35d0108b010f",
+      "training": {
+        "status": "COMPLETED",
+        "wall_seconds": 19909.891766786575
+      }
+    },
+    "kda-t24": {
+      "overall": {
+        "n": 3000,
+        "counts": {
+          "success": 2756,
+          "collision": 64,
+          "timeout": 180
+        },
+        "rates_percent": {
+          "success": 91.86666666666666,
+          "collision": 2.1333333333333333,
+          "timeout": 6.0
+        },
+        "mean_return": 0.5129696889429444,
+        "median_minimum_clearance": 0.20270347253865068,
+        "success_time_mean": 14.230950653120464,
+        "success_time_median": 13.25,
+        "success_time_p90": 19.25
+      },
+      "cells": {
+        "0": {
+          "n": 500,
+          "counts": {
+            "success": 494,
+            "collision": 3,
+            "timeout": 3
+          },
+          "rates_percent": {
+            "success": 98.8,
+            "collision": 0.6,
+            "timeout": 0.6
+          },
+          "mean_return": 0.6263929384213691,
+          "median_minimum_clearance": 0.2210400927226755,
+          "success_time_mean": 11.515688259109313,
+          "success_time_median": 11.25,
+          "success_time_p90": 12.75
+        },
+        "1": {
+          "n": 500,
+          "counts": {
+            "success": 491,
+            "collision": 6,
+            "timeout": 3
+          },
+          "rates_percent": {
+            "success": 98.2,
+            "collision": 1.2,
+            "timeout": 0.6
+          },
+          "mean_return": 0.6376284217174291,
+          "median_minimum_clearance": 0.20690320275477986,
+          "success_time_mean": 10.629837067209776,
+          "success_time_median": 10.5,
+          "success_time_p90": 12.75
+        },
+        "2": {
+          "n": 500,
+          "counts": {
+            "success": 485,
+            "collision": 3,
+            "timeout": 12
+          },
+          "rates_percent": {
+            "success": 97.0,
+            "collision": 0.6,
+            "timeout": 2.4
+          },
+          "mean_return": 0.5541895348717308,
+          "median_minimum_clearance": 0.20387807353008308,
+          "success_time_mean": 14.005670103092784,
+          "success_time_median": 13.75,
+          "success_time_p90": 16.0
+        },
+        "3": {
+          "n": 500,
+          "counts": {
+            "success": 480,
+            "collision": 7,
+            "timeout": 13
+          },
+          "rates_percent": {
+            "success": 96.0,
+            "collision": 1.4,
+            "timeout": 2.6
+          },
+          "mean_return": 0.5504914007865471,
+          "median_minimum_clearance": 0.20151069194219812,
+          "success_time_mean": 13.644791666666666,
+          "success_time_median": 12.75,
+          "success_time_p90": 17.25
+        },
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 451,
+            "collision": 16,
+            "timeout": 33
+          },
+          "rates_percent": {
+            "success": 90.2,
+            "collision": 3.2,
+            "timeout": 6.6
+          },
+          "mean_return": 0.42064533945025734,
+          "median_minimum_clearance": 0.2002183210948279,
+          "success_time_mean": 18.397450110864746,
+          "success_time_median": 17.5,
+          "success_time_p90": 21.25
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 355,
+            "collision": 29,
+            "timeout": 116
+          },
+          "rates_percent": {
+            "success": 71.0,
+            "collision": 5.8,
+            "timeout": 23.2
+          },
+          "mean_return": 0.28847049841033234,
+          "median_minimum_clearance": 0.1878158254504147,
+          "success_time_mean": 18.79718309859155,
+          "success_time_median": 17.25,
+          "success_time_p90": 24.650000000000006
+        }
+      },
+      "twenty_person": {
+        "n": 1000,
+        "counts": {
+          "success": 806,
+          "collision": 45,
+          "timeout": 149
+        },
+        "rates_percent": {
+          "success": 80.6,
+          "collision": 4.5,
+          "timeout": 14.9
+        },
+        "mean_return": 0.3545579189302948,
+        "median_minimum_clearance": 0.19700549670409906,
+        "success_time_mean": 18.573511166253102,
+        "success_time_median": 17.25,
+        "success_time_p90": 23.0
+      },
+      "checkpoint_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+      "training": {
+        "status": "COMPLETED",
+        "wall_seconds": 20616.1522128582
+      }
+    },
+    "gru-t12": {
+      "overall": {
+        "n": 3000,
+        "counts": {
+          "success": 2784,
+          "collision": 91,
+          "timeout": 125
+        },
+        "rates_percent": {
+          "success": 92.8,
+          "collision": 3.033333333333333,
+          "timeout": 4.166666666666667
+        },
+        "mean_return": 0.530089506992521,
+        "median_minimum_clearance": 0.20191031059641912,
+        "success_time_mean": 13.334680316091953,
+        "success_time_median": 12.5,
+        "success_time_p90": 17.5
+      },
+      "cells": {
+        "0": {
+          "n": 500,
+          "counts": {
+            "success": 494,
+            "collision": 1,
+            "timeout": 5
+          },
+          "rates_percent": {
+            "success": 98.8,
+            "collision": 0.2,
+            "timeout": 1.0
+          },
+          "mean_return": 0.6357042888087149,
+          "median_minimum_clearance": 0.22871087558067776,
+          "success_time_mean": 11.15080971659919,
+          "success_time_median": 11.25,
+          "success_time_p90": 12.5
+        },
+        "1": {
+          "n": 500,
+          "counts": {
+            "success": 496,
+            "collision": 2,
+            "timeout": 2
+          },
+          "rates_percent": {
+            "success": 99.2,
+            "collision": 0.4,
+            "timeout": 0.4
+          },
+          "mean_return": 0.6533958366463635,
+          "median_minimum_clearance": 0.20471071262602075,
+          "success_time_mean": 10.44203629032258,
+          "success_time_median": 10.25,
+          "success_time_p90": 12.25
+        },
+        "2": {
+          "n": 500,
+          "counts": {
+            "success": 482,
+            "collision": 3,
+            "timeout": 15
+          },
+          "rates_percent": {
+            "success": 96.4,
+            "collision": 0.6,
+            "timeout": 3.0
+          },
+          "mean_return": 0.5652914191099788,
+          "median_minimum_clearance": 0.2031942162054075,
+          "success_time_mean": 13.262966804979254,
+          "success_time_median": 13.25,
+          "success_time_p90": 15.0
+        },
+        "3": {
+          "n": 500,
+          "counts": {
+            "success": 475,
+            "collision": 17,
+            "timeout": 8
+          },
+          "rates_percent": {
+            "success": 95.0,
+            "collision": 3.4,
+            "timeout": 1.6
+          },
+          "mean_return": 0.5549335959111457,
+          "median_minimum_clearance": 0.20078066496822428,
+          "success_time_mean": 12.600526315789473,
+          "success_time_median": 12.25,
+          "success_time_p90": 15.5
+        },
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 452,
+            "collision": 21,
+            "timeout": 27
+          },
+          "rates_percent": {
+            "success": 90.4,
+            "collision": 4.2,
+            "timeout": 5.4
+          },
+          "mean_return": 0.44495943852993297,
+          "median_minimum_clearance": 0.1975439007497864,
+          "success_time_mean": 16.537610619469028,
+          "success_time_median": 16.5,
+          "success_time_p90": 19.0
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 385,
+            "collision": 47,
+            "timeout": 68
+          },
+          "rates_percent": {
+            "success": 77.0,
+            "collision": 9.4,
+            "timeout": 13.6
+          },
+          "mean_return": 0.3262524629489898,
+          "median_minimum_clearance": 0.18033985179152184,
+          "success_time_mean": 17.0987012987013,
+          "success_time_median": 16.0,
+          "success_time_p90": 22.900000000000006
+        }
+      },
+      "twenty_person": {
+        "n": 1000,
+        "counts": {
+          "success": 837,
+          "collision": 68,
+          "timeout": 95
+        },
+        "rates_percent": {
+          "success": 83.7,
+          "collision": 6.8,
+          "timeout": 9.5
+        },
+        "mean_return": 0.38560595073946136,
+        "median_minimum_clearance": 0.1915166723368949,
+        "success_time_mean": 16.795698924731184,
+        "success_time_median": 16.25,
+        "success_time_p90": 20.25
+      },
+      "checkpoint_sha256": "8923e9998c8281f5c038c014b9137a936180a0b6556c6b77610c729d99ff4730",
+      "training": {
+        "status": "COMPLETED",
+        "wall_seconds": 11291.472473859787
+      }
+    },
+    "gru-t24": {
+      "overall": {
+        "n": 3000,
+        "counts": {
+          "success": 2825,
+          "collision": 58,
+          "timeout": 117
+        },
+        "rates_percent": {
+          "success": 94.16666666666667,
+          "collision": 1.9333333333333333,
+          "timeout": 3.9
+        },
+        "mean_return": 0.5346010517575693,
+        "median_minimum_clearance": 0.2017333360790466,
+        "success_time_mean": 13.840530973451328,
+        "success_time_median": 13.0,
+        "success_time_p90": 18.25
+      },
+      "cells": {
+        "0": {
+          "n": 500,
+          "counts": {
+            "success": 498,
+            "collision": 1,
+            "timeout": 1
+          },
+          "rates_percent": {
+            "success": 99.6,
+            "collision": 0.2,
+            "timeout": 0.2
+          },
+          "mean_return": 0.6432753172690763,
+          "median_minimum_clearance": 0.22242539052624272,
+          "success_time_mean": 11.088353413654618,
+          "success_time_median": 11.0,
+          "success_time_p90": 12.325000000000003
+        },
+        "1": {
+          "n": 500,
+          "counts": {
+            "success": 489,
+            "collision": 1,
+            "timeout": 10
+          },
+          "rates_percent": {
+            "success": 97.8,
+            "collision": 0.2,
+            "timeout": 2.0
+          },
+          "mean_return": 0.6265337709627941,
+          "median_minimum_clearance": 0.2028185624776449,
+          "success_time_mean": 11.153374233128835,
+          "success_time_median": 10.75,
+          "success_time_p90": 13.25
+        },
+        "2": {
+          "n": 500,
+          "counts": {
+            "success": 492,
+            "collision": 1,
+            "timeout": 7
+          },
+          "rates_percent": {
+            "success": 98.4,
+            "collision": 0.2,
+            "timeout": 1.4
+          },
+          "mean_return": 0.5842139339519602,
+          "median_minimum_clearance": 0.2028826824118239,
+          "success_time_mean": 13.120426829268293,
+          "success_time_median": 13.0,
+          "success_time_p90": 15.0
+        },
+        "3": {
+          "n": 500,
+          "counts": {
+            "success": 492,
+            "collision": 4,
+            "timeout": 4
+          },
+          "rates_percent": {
+            "success": 98.4,
+            "collision": 0.8,
+            "timeout": 0.8
+          },
+          "mean_return": 0.5672646012458245,
+          "median_minimum_clearance": 0.2008705298617332,
+          "success_time_mean": 13.522865853658537,
+          "success_time_median": 13.0,
+          "success_time_p90": 16.75
+        },
+        "4": {
+          "n": 500,
+          "counts": {
+            "success": 461,
+            "collision": 14,
+            "timeout": 25
+          },
+          "rates_percent": {
+            "success": 92.2,
+            "collision": 2.8,
+            "timeout": 5.0
+          },
+          "mean_return": 0.4583363160489138,
+          "median_minimum_clearance": 0.19949006572344768,
+          "success_time_mean": 16.800976138828634,
+          "success_time_median": 16.75,
+          "success_time_p90": 19.75
+        },
+        "5": {
+          "n": 500,
+          "counts": {
+            "success": 393,
+            "collision": 37,
+            "timeout": 70
+          },
+          "rates_percent": {
+            "success": 78.6,
+            "collision": 7.4,
+            "timeout": 14.0
+          },
+          "mean_return": 0.3279823710668469,
+          "median_minimum_clearance": 0.1853167867963305,
+          "success_time_mean": 18.498091603053435,
+          "success_time_median": 17.0,
+          "success_time_p90": 25.5
+        }
+      },
+      "twenty_person": {
+        "n": 1000,
+        "counts": {
+          "success": 854,
+          "collision": 51,
+          "timeout": 95
+        },
+        "rates_percent": {
+          "success": 85.4,
+          "collision": 5.1,
+          "timeout": 9.5
+        },
+        "mean_return": 0.39315934355788035,
+        "median_minimum_clearance": 0.19551930146377727,
+        "success_time_mean": 17.581967213114755,
+        "success_time_median": 16.75,
+        "success_time_p90": 21.5
+      },
+      "checkpoint_sha256": "212bf66c5d90a3930ef69e027de848da18e32663bbbe78483f51821d7de6713c",
+      "training": {
+        "status": "COMPLETED",
+        "wall_seconds": 15611.655003070831
+      }
+    }
+  }
+}

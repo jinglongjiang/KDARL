@@ -1,0 +1,70 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{"root_id": 14, "model": "kda-s419-t24", "case": 90019, "scope": "failure", "world": "natural", "label": "A0", "candidate": 19, "return_": -0.5000674610496013, "outcome": "collision", "time": 5.25}
+{"root_id": 14, "model": "kda-s419-t24", "case": 90019, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 24, "return_": -0.4797952946055528, "outcome": "collision", "time": 3.0}
+{"root_id": 14, "model": "kda-s419-t24", "case": 90019, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 19, "return_": 0.6270150963765803, "outcome": "success", "time": 11.75}
+{"root_id": 14, "model": "kda-s419-t24", "case": 90019, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6292304927893844, "outcome": "success", "time": 11.75}
+{"root_id": 63, "model": "kda-s419-t24", "case": 90122, "scope": "failure", "world": "natural", "label": "A0", "candidate": 35, "return_": -0.5540261078195463, "outcome": "collision", "time": 3.5}
+{"root_id": 63, "model": "kda-s419-t24", "case": 90122, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 30, "return_": -0.5408279240784339, "outcome": "collision", "time": 3.25}
+{"root_id": 63, "model": "kda-s419-t24", "case": 90122, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 35, "return_": 0.41913073363543507, "outcome": "success", "time": 15.0}
+{"root_id": 63, "model": "kda-s419-t24", "case": 90122, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 30, "return_": 0.4199554133821828, "outcome": "success", "time": 15.0}
+{"root_id": 0, "model": "kda-s419-t24", "case": 90000, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 24, "return_": 0.4308727299589876, "outcome": "success", "time": 18.25}
+{"root_id": 0, "model": "kda-s419-t24", "case": 90000, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 19, "return_": 0.6153138833863202, "outcome": "success", "time": 12.25}
+{"root_id": 0, "model": "kda-s419-t24", "case": 90000, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 24, "return_": 0.7105532272722921, "outcome": "success", "time": 8.75}
+{"root_id": 0, "model": "kda-s419-t24", "case": 90000, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 19, "return_": -0.0685530134942547, "outcome": "timeout", "time": 50.25}
+{"root_id": 2, "model": "kda-s419-t24", "case": 90002, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 24, "return_": 0.595283214636224, "outcome": "success", "time": 12.5}
+{"root_id": 2, "model": "kda-s419-t24", "case": 90002, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 19, "return_": 0.5133253733807948, "outcome": "success", "time": 16.75}
+{"root_id": 2, "model": "kda-s419-t24", "case": 90002, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 24, "return_": 0.6305843931000606, "outcome": "success", "time": 11.0}
+{"root_id": 2, "model": "kda-s419-t24", "case": 90002, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 19, "return_": 0.6423697903644541, "outcome": "success", "time": 11.0}
+{"root_id": 232, "model": "kda-s443-t24", "case": 90012, "scope": "failure", "world": "natural", "label": "A0", "candidate": 17, "return_": -0.467952122220419, "outcome": "collision", "time": 4.25}
+{"root_id": 232, "model": "kda-s443-t24", "case": 90012, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.45932774083303696, "outcome": "success", "time": 19.25}
+{"root_id": 232, "model": "kda-s443-t24", "case": 90012, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 17, "return_": 0.617290140942288, "outcome": "success", "time": 12.25}
+{"root_id": 232, "model": "kda-s443-t24", "case": 90012, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6177533660174155, "outcome": "success", "time": 11.75}
+{"root_id": 237, "model": "kda-s443-t24", "case": 90019, "scope": "failure", "world": "natural", "label": "A0", "candidate": 19, "return_": -0.5236701681720158, "outcome": "collision", "time": 5.0}
+{"root_id": 237, "model": "kda-s443-t24", "case": 90019, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 24, "return_": -0.17698970610068376, "outcome": "timeout", "time": 50.25}
+{"root_id": 237, "model": "kda-s443-t24", "case": 90019, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 19, "return_": 0.5639051904523875, "outcome": "success", "time": 14.5}
+{"root_id": 237, "model": "kda-s443-t24", "case": 90019, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.5111844917493371, "outcome": "success", "time": 16.75}
+{"root_id": 222, "model": "kda-s443-t24", "case": 90000, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 23, "return_": 0.4475232137638106, "outcome": "success", "time": 20.25}
+{"root_id": 222, "model": "kda-s443-t24", "case": 90000, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.15280722491547083, "outcome": "success", "time": 45.5}
+{"root_id": 222, "model": "kda-s443-t24", "case": 90000, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 23, "return_": 0.5596128859516203, "outcome": "success", "time": 14.25}
+{"root_id": 222, "model": "kda-s443-t24", "case": 90000, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.7177305325982749, "outcome": "success", "time": 8.5}
+{"root_id": 226, "model": "kda-s443-t24", "case": 90006, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 23, "return_": 0.5286579837721035, "outcome": "success", "time": 15.75}
+{"root_id": 226, "model": "kda-s443-t24", "case": 90006, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.5414486605193778, "outcome": "success", "time": 15.5}
+{"root_id": 226, "model": "kda-s443-t24", "case": 90006, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 23, "return_": 0.6155828389291904, "outcome": "success", "time": 12.25}
+{"root_id": 226, "model": "kda-s443-t24", "case": 90006, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.5983762718710858, "outcome": "success", "time": 13.0}
+{"root_id": 504, "model": "gru-s419-t24", "case": 90009, "scope": "failure", "world": "natural", "label": "A0", "candidate": 29, "return_": -0.5035910128919037, "outcome": "collision", "time": 2.75}
+{"root_id": 504, "model": "gru-s419-t24", "case": 90009, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.5416850759668536, "outcome": "success", "time": 15.5}
+{"root_id": 504, "model": "gru-s419-t24", "case": 90009, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 29, "return_": 0.5974626598468223, "outcome": "success", "time": 13.0}
+{"root_id": 504, "model": "gru-s419-t24", "case": 90009, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.5918478580288921, "outcome": "success", "time": 12.75}
+{"root_id": 527, "model": "gru-s419-t24", "case": 90071, "scope": "failure", "world": "natural", "label": "A0", "candidate": 12, "return_": -0.458912475784128, "outcome": "collision", "time": 3.5}
+{"root_id": 527, "model": "gru-s419-t24", "case": 90071, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.48173306663667853, "outcome": "success", "time": 18.0}
+{"root_id": 527, "model": "gru-s419-t24", "case": 90071, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 12, "return_": 0.5725609118916054, "outcome": "success", "time": 14.0}
+{"root_id": 527, "model": "gru-s419-t24", "case": 90071, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6396681406488773, "outcome": "success", "time": 11.25}
+{"root_id": 498, "model": "gru-s419-t24", "case": 90000, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 29, "return_": 0.598956006466161, "outcome": "success", "time": 13.0}
+{"root_id": 498, "model": "gru-s419-t24", "case": 90000, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.6757290490602831, "outcome": "success", "time": 10.0}
+{"root_id": 498, "model": "gru-s419-t24", "case": 90000, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 29, "return_": 0.7249803359578534, "outcome": "success", "time": 8.25}
+{"root_id": 498, "model": "gru-s419-t24", "case": 90000, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.7249803359578534, "outcome": "success", "time": 8.25}
+{"root_id": 500, "model": "gru-s419-t24", "case": 90002, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 29, "return_": 0.6158157053984343, "outcome": "success", "time": 12.25}
+{"root_id": 500, "model": "gru-s419-t24", "case": 90002, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.6170707316533741, "outcome": "success", "time": 12.25}
+{"root_id": 500, "model": "gru-s419-t24", "case": 90002, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 29, "return_": 0.6291197435538781, "outcome": "success", "time": 11.75}
+{"root_id": 500, "model": "gru-s419-t24", "case": 90002, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6295177637999675, "outcome": "success", "time": 11.75}
+{"root_id": 685, "model": "gru-s443-t24", "case": 90009, "scope": "failure", "world": "natural", "label": "A0", "candidate": 45, "return_": -0.46838957279591603, "outcome": "collision", "time": 2.5}
+{"root_id": 685, "model": "gru-s443-t24", "case": 90009, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 36, "return_": -0.4865696527865852, "outcome": "collision", "time": 2.75}
+{"root_id": 685, "model": "gru-s443-t24", "case": 90009, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 45, "return_": -0.48884190747373607, "outcome": "collision", "time": 1.75}
+{"root_id": 685, "model": "gru-s443-t24", "case": 90009, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 36, "return_": -0.4848245673025927, "outcome": "collision", "time": 1.75}
+{"root_id": 691, "model": "gru-s443-t24", "case": 90019, "scope": "failure", "world": "natural", "label": "A0", "candidate": 34, "return_": -0.5233070073016391, "outcome": "collision", "time": 5.25}
+{"root_id": 691, "model": "gru-s443-t24", "case": 90019, "scope": "failure", "world": "natural", "label": "alternative", "candidate": 24, "return_": -0.5123856428342288, "outcome": "collision", "time": 5.0}
+{"root_id": 691, "model": "gru-s443-t24", "case": 90019, "scope": "failure", "world": "far-omitted", "label": "A0", "candidate": 34, "return_": 0.6298236312032323, "outcome": "success", "time": 11.75}
+{"root_id": 691, "model": "gru-s443-t24", "case": 90019, "scope": "failure", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6288760966899597, "outcome": "success", "time": 11.75}
+{"root_id": 683, "model": "gru-s443-t24", "case": 90002, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 29, "return_": 0.39212035042302523, "outcome": "success", "time": 23.5}
+{"root_id": 683, "model": "gru-s443-t24", "case": 90002, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 24, "return_": -0.07968080968599978, "outcome": "timeout", "time": 50.25}
+{"root_id": 683, "model": "gru-s443-t24", "case": 90002, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 29, "return_": 0.6109627423925652, "outcome": "success", "time": 12.5}
+{"root_id": 683, "model": "gru-s443-t24", "case": 90002, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6011652542242109, "outcome": "success", "time": 12.75}
+{"root_id": 684, "model": "gru-s443-t24", "case": 90007, "scope": "success-control", "world": "natural", "label": "A0", "candidate": 27, "return_": 0.6087244610425422, "outcome": "success", "time": 12.5}
+{"root_id": 684, "model": "gru-s443-t24", "case": 90007, "scope": "success-control", "world": "natural", "label": "alternative", "candidate": 24, "return_": 0.5293969705365812, "outcome": "success", "time": 16.0}
+{"root_id": 684, "model": "gru-s443-t24", "case": 90007, "scope": "success-control", "world": "far-omitted", "label": "A0", "candidate": 27, "return_": 0.6259377719047886, "outcome": "success", "time": 11.5}
+{"root_id": 684, "model": "gru-s443-t24", "case": 90007, "scope": "success-control", "world": "far-omitted", "label": "alternative", "candidate": 24, "return_": 0.6085430149897243, "outcome": "success", "time": 12.0}
+[W1011 16:46:05.957795357 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

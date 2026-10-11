@@ -1,0 +1,501 @@
+"""Loader for the ONE formal training config (Order C2.1).
+
+``train_intent_bdvl.config`` is the single source of truth for a formal
+V6 run. Real problem this fixes (plan 2.2 point 3): the CLI carried its
+OWN hyperparameter defaults (online_iters=0, batch 32, lr 1e-3, gamma
+0.95, fixed epsilon 0.2, buffer 20000) which were smoke-test values
+silently diverging from the project's actual training configuration
+(5000 IL / 10000 RL / batch 256 / lr 1e-4 / gamma 0.99 / epsilon
+0.30->0.05 / buffer 200000). With two places able to define a formal
+run's hyperparameters, "what did we actually train with" was unanswerable.
+
+This module is belief-free and imports no scenario/env machinery, so it
+can be loaded by a preflight check without building CrowdSim.
+"""
+
+from __future__ import annotations
+
+import configparser
+import hashlib
+from dataclasses import asdict, dataclass, field
+from pathlib import Path
+from typing import Tuple
+
+
+class IntentConfigError(ValueError):
+    pass
+
+
+DEFAULT_TRAINING_CONFIG = Path("crowd_nav/configs/train_intent_bdvl.config")
+
+
+@dataclass(frozen=True)
+class IntentTrainingConfig:
+    # [schema]
+    feature_schema: str
+    training_contract_schema: str
+    checkpoint_schema: str
+    scenario_registry_id: str
+    # [il]
+    il_episodes_total: int
+    il_episodes_circle: int
+    il_episodes_square: int
+    robot_visible: bool
+    training_crowd_salt: str
+    training_crowd_sampler_version: int
+    training_crowd_ranges: str
+    il_episodes_junction_crowd: int
+    il_passes: int
+    # [online]
+    online_episodes_total: int
+    mix_standard: float
+    mix_junction_crowd: float
+    updates_per_episode: int
+    # [optim]
+    batch_size: int
+    demo_sample_ratio: float
+    demo_capacity: int
+    replay_capacity: int
+    learning_rate: float
+    gamma: float
+    grad_clip_norm: float
+    # [exploration]
+    epsilon_start: float
+    epsilon_end: float
+    epsilon_decay_episodes: int
+    # [ranking]
+    ranking_margin: float
+    ranking_batch_size: int
+    gradient_diagnostic_interval: int
+    # [iqn]
+    # Order 14C: iqn_mc_quantiles is the RANDOM tau count for MC value
+    # regression; iqn_action_quantiles is the single FIXED midpoint grid
+    # shared by ranking, warm-up, audit and deployment. The retired names
+    # iqn_train_quantiles / iqn_eval_quantiles are NOT accepted -- a config
+    # still carrying them fails closed at load.
+    iqn_mc_quantiles: int
+    iqn_action_quantiles: int
+    # [belief]
+    future_horizon: int
+    future_n_samples: int
+    tracker_sigma: float
+    tracker_persistence: float
+    tracker_waypoint_radius: float
+    missing_timeout_steps: int
+    tracker_speed_prior: float
+    tracker_estimate_speed: bool
+    tracker_speed_ema_alpha: float
+    tracker_speed_min: float
+    tracker_speed_max: float
+    max_candidate_goals: int
+    # [ema]
+    ema_decay: float
+    # [checkpoint]
+    checkpoint_interval_episodes: int
+    # [monitoring]
+    monitor_rolling_windows: Tuple[int, ...]
+    monitor_plot_interval_episodes: int
+    development_eval_interval_episodes: int
+    tensorboard_enabled: bool
+    # [seeds]
+    training_seeds: Tuple[int, ...]
+    validation_seeds: Tuple[int, ...]
+    # Order 2R/3R: projected-gradient balance, warm-up and effect-based health
+    rank_cap_rho: float = 0.5
+    audit_episodes_per_scenario: int = 50
+    rank_zero_tolerance: float = 1e-8
+    warmup_max_steps: int = 750
+    warmup_check_interval: int = 50
+    warmup_rank_loss_max: float = 0.05
+    audit_interval: int = 100
+    # provenance
+    source_path: str = ""
+    source_sha256: str = ""
+
+    def epsilon_at(self, online_episode_index: int) -> float:
+        """Linear decay across ``epsilon_decay_episodes``, then flat at
+        ``epsilon_end``. ``online_episode_index`` is the GLOBAL count of
+        online episodes already completed (so resume continues the
+        schedule rather than restarting it -- plan 2.2 point 4)."""
+        if online_episode_index < 0:
+            raise IntentConfigError(f"online_episode_index must be >= 0, got {online_episode_index}")
+        if self.epsilon_decay_episodes <= 0:
+            return self.epsilon_end
+        frac = min(1.0, float(online_episode_index) / float(self.epsilon_decay_episodes))
+        return float(self.epsilon_start + (self.epsilon_end - self.epsilon_start) * frac)
+
+    #: Fields that actually determine the RAW ORCA corpus. Everything else
+    #: -- optimizer settings, rank_share, gate thresholds, EMA, epsilon --
+    #: provably cannot change a single recorded transition, so it must not
+    #: be able to invalidate 5000 episodes of collection. Measured cost of
+    #: getting this wrong: a config edit renamed the corpus file AND the
+    #: in-file guard rejected the old one, making reuse impossible.
+    CORPUS_IDENTITY_FIELDS = (
+        "il_episodes_total", "il_episodes_circle", "il_episodes_square",
+        "il_episodes_junction_crowd", "robot_visible", "training_crowd_salt",
+        "training_crowd_ranges",
+        "gamma", "future_horizon", "future_n_samples",
+        "feature_schema", "checkpoint_schema", "max_candidate_goals",
+    )
+
+    def corpus_identity_hash(self) -> str:
+        """Identity of the RAW ORCA corpus: environment, teacher, reward,
+        gamma, action table, scenes and seeds -- not training knobs."""
+        payload = {k: getattr(self, k) for k in self.CORPUS_IDENTITY_FIELDS}
+        blob = repr(sorted(payload.items())).encode("utf-8")
+        return hashlib.sha256(blob).hexdigest()
+
+    def content_hash(self) -> str:
+        payload = {k: v for k, v in asdict(self).items() if k not in ("source_path", "source_sha256")}
+        blob = repr(sorted(payload.items())).encode("utf-8")
+        return hashlib.sha256(blob).hexdigest()
+
+
+def _seed_tuple(raw: str, field_name: str) -> Tuple[int, ...]:
+    try:
+        seeds = tuple(int(tok.strip()) for tok in raw.split(",") if tok.strip())
+    except ValueError as exc:
+        raise IntentConfigError(f"{field_name} must be a comma-separated integer list, got {raw!r}") from exc
+    if not seeds:
+        raise IntentConfigError(f"{field_name} must not be empty")
+    if len(set(seeds)) != len(seeds):
+        raise IntentConfigError(f"{field_name} contains duplicates: {seeds}")
+    return seeds
+
+
+def _positive_int_tuple(raw: str, field_name: str) -> Tuple[int, ...]:
+    values = _seed_tuple(raw, field_name)
+    if any(v <= 0 for v in values):
+        raise IntentConfigError(f"{field_name} must contain only positive integers, got {values}")
+    return values
+
+
+def _assert_domain_randomization_matches_code(cfg) -> None:
+    """The hashed declaration and the running behaviour must agree.
+
+    Order 12 exists partly because they did not: the env config said the
+    robot was invisible while every scenario builder assigned it visible, so
+    the provenance record described an experiment nobody ran. Declaring the
+    distribution in the config only helps if a mismatch is an error, so the
+    salt, the sampler version and the ranges are checked against the code that
+    actually draws the episodes.
+
+    The robot_visible cross-check lives in assert_robot_visible_matches(),
+    called from the CLI: the env config path is a CLI argument, and a loader
+    that assumed the two files sit in one directory would fail on every
+    legitimate config written to a temp dir.
+    """
+    from crowd_nav.bayesian_dvl.intent_train import (
+        TRAINING_CROWD_SALT, TRAINING_CROWD_RANGES, TRAINING_CROWD_SAMPLER_VERSION)
+    if cfg.training_crowd_salt != TRAINING_CROWD_SALT:
+        raise IntentConfigError(
+            f"config training_crowd_salt {cfg.training_crowd_salt!r} != code's {TRAINING_CROWD_SALT!r}")
+    if cfg.training_crowd_sampler_version != TRAINING_CROWD_SAMPLER_VERSION:
+        raise IntentConfigError(
+            f"config training_crowd_sampler_version {cfg.training_crowd_sampler_version} != "
+            f"code's {TRAINING_CROWD_SAMPLER_VERSION}")
+    code_ranges = "|".join(
+        f"{shape}:n[{r['n'][0]},{r['n'][1]}]:size[{r['size'][0]!r},{r['size'][1]!r}]"
+        for shape, r in sorted(TRAINING_CROWD_RANGES.items()))
+    if cfg.training_crowd_ranges != code_ranges:
+        raise IntentConfigError(
+            f"config training_crowd_ranges {cfg.training_crowd_ranges!r} != code's {code_ranges!r}")
+
+
+
+def assert_robot_visible_matches(cfg, env_config_path) -> None:
+    """The hashed declaration and the env config that builds the episodes
+    must agree on robot visibility.
+
+    Order 12 exists partly because they did not: the env config said one
+    thing while every scenario builder assigned the opposite, so the
+    provenance record described an experiment nobody ran.
+    """
+    import configparser
+    from crowd_nav.bayesian_dvl.intent_runtime_config import robot_visible_from
+    env = configparser.RawConfigParser(inline_comment_prefixes=(";", "#"), strict=False)
+    if not env.read(str(env_config_path)):
+        raise IntentConfigError(f"env config not found: {env_config_path}")
+    actual = robot_visible_from(env)
+    if actual != cfg.robot_visible:
+        raise IntentConfigError(
+            f"training config declares robot_visible={cfg.robot_visible} but "
+            f"{Path(env_config_path).name} says {actual}; the hashed record and the built "
+            f"episodes would disagree")
+
+
+def _canonical_crowd_ranges(parser) -> str:
+    """One order-independent string for the sampled distribution.
+
+    It goes into the corpus identity, so a widened human-count range or a
+    resized arena produces a DIFFERENT corpus rather than silently reusing
+    episodes drawn from the old distribution.
+    """
+    gf = parser.getfloat
+    gi = parser.getint
+    parts = []
+    for shape in ("circle", "square"):
+        n_lo, n_hi = gi("domain_randomization", f"{shape}_human_num_min"), gi("domain_randomization", f"{shape}_human_num_max")
+        s_lo, s_hi = gf("domain_randomization", f"{shape}_size_min"), gf("domain_randomization", f"{shape}_size_max")
+        if n_lo < 1 or n_hi < n_lo:
+            raise IntentConfigError(f"{shape} human_num range [{n_lo}, {n_hi}] is empty or non-positive")
+        if not (s_hi > s_lo > 0):
+            raise IntentConfigError(f"{shape} size range [{s_lo}, {s_hi}] is empty or non-positive")
+        parts.append(f"{shape}:n[{n_lo},{n_hi}]:size[{s_lo!r},{s_hi!r}]")
+    return "|".join(parts)
+
+
+def load_intent_training_config(path: Path = DEFAULT_TRAINING_CONFIG) -> IntentTrainingConfig:
+    """Read + HARD-VALIDATE the formal config. Fails closed on anything
+    inconsistent rather than silently training under a broken budget."""
+    path = Path(path)
+    parser = configparser.RawConfigParser(inline_comment_prefixes=(";", "#"), strict=False)
+    if not parser.read(str(path)):
+        raise IntentConfigError(f"training config not found: {path}")
+    # RETIRED keys: present in the file means the config is describing a
+    # training procedure the code no longer runs. lambda_rank was a scalar
+    # weight on the ranking term; gradients are now combined by projection
+    # with rank_share, so a value here would be hashed into provenance and
+    # take no part in training -- the same provenance lie as the tracker
+    # knobs that were declared and never passed.
+    for section, key, why in (
+        ("ranking", "lambda_rank",
+         "retired: gradients are combined by projection with a capped ranking budget, "
+         "not by a scalar weight"),
+        ("gradient_balance", "rank_share",
+         "retired: it normalised the ranking gradient to a FIXED multiple of |g_MC|, which is a "
+         "floor as well as a ceiling and degraded held-out MC on 3/3 diagnostic seeds. Use "
+         "rank_cap_rho, which is an upper bound only"),
+    ):
+        if parser.has_option(section, key):
+            raise IntentConfigError(f"config declares [{section}] {key}, which is {why}; remove it")
+
+    for section in ("schema", "il", "domain_randomization", "online", "optim", "exploration",
+                    "ranking", "iqn", "belief", "ema", "checkpoint", "monitoring", "seeds"):
+        if not parser.has_section(section):
+            raise IntentConfigError(f"training config {path} is missing required section [{section}]")
+
+    g, gi, gf = parser.get, parser.getint, parser.getfloat
+    cfg = IntentTrainingConfig(
+        feature_schema=g("schema", "feature_schema").strip(),
+        training_contract_schema=g("schema", "training_contract_schema").strip(),
+        checkpoint_schema=g("schema", "checkpoint_schema").strip(),
+        scenario_registry_id=g("schema", "scenario_registry_id").strip(),
+        il_episodes_total=gi("il", "il_episodes_total"),
+        il_episodes_circle=gi("il", "il_episodes_circle"),
+        il_episodes_square=gi("il", "il_episodes_square"),
+        robot_visible=parser.getboolean("domain_randomization", "robot_visible"),
+        training_crowd_salt=g("domain_randomization", "training_crowd_salt").strip(),
+        training_crowd_sampler_version=gi("domain_randomization", "training_crowd_sampler_version"),
+        training_crowd_ranges=_canonical_crowd_ranges(parser),
+        il_episodes_junction_crowd=gi("il", "il_episodes_junction_crowd"),
+        il_passes=gi("il", "il_passes"),
+        online_episodes_total=gi("online", "online_episodes_total"),
+        mix_standard=gf("online", "mix_standard"),
+        mix_junction_crowd=gf("online", "mix_junction_crowd"),
+        updates_per_episode=gi("online", "updates_per_episode"),
+        batch_size=gi("optim", "batch_size"),
+        demo_sample_ratio=gf("optim", "demo_sample_ratio"),
+        demo_capacity=gi("optim", "demo_capacity"),
+        replay_capacity=gi("optim", "replay_capacity"),
+        learning_rate=gf("optim", "learning_rate"),
+        gamma=gf("optim", "gamma"),
+        grad_clip_norm=gf("optim", "grad_clip_norm"),
+        epsilon_start=gf("exploration", "epsilon_start"),
+        epsilon_end=gf("exploration", "epsilon_end"),
+        epsilon_decay_episodes=gi("exploration", "epsilon_decay_episodes"),
+        ranking_margin=gf("ranking", "ranking_margin"),
+        ranking_batch_size=gi("ranking", "ranking_batch_size"),
+        gradient_diagnostic_interval=gi("ranking", "gradient_diagnostic_interval"),
+        iqn_mc_quantiles=gi("iqn", "iqn_mc_quantiles"),
+        iqn_action_quantiles=gi("iqn", "iqn_action_quantiles"),
+        future_horizon=gi("belief", "future_horizon"),
+        future_n_samples=gi("belief", "future_n_samples"),
+        tracker_sigma=gf("belief", "tracker_sigma"),
+        tracker_persistence=gf("belief", "tracker_persistence"),
+        tracker_waypoint_radius=gf("belief", "tracker_waypoint_radius"),
+        missing_timeout_steps=gi("belief", "missing_timeout_steps"),
+        tracker_speed_prior=gf("belief", "tracker_speed_prior"),
+        tracker_estimate_speed=g("belief", "tracker_estimate_speed").strip().lower() in ("1", "true", "yes"),
+        tracker_speed_ema_alpha=gf("belief", "tracker_speed_ema_alpha"),
+        tracker_speed_min=gf("belief", "tracker_speed_min"),
+        tracker_speed_max=gf("belief", "tracker_speed_max"),
+        max_candidate_goals=gi("belief", "max_candidate_goals"),
+        ema_decay=gf("ema", "ema_decay"),
+        checkpoint_interval_episodes=gi("checkpoint", "checkpoint_interval_episodes"),
+        monitor_rolling_windows=_positive_int_tuple(
+            g("monitoring", "rolling_windows"), "rolling_windows"),
+        monitor_plot_interval_episodes=gi("monitoring", "plot_interval_episodes"),
+        development_eval_interval_episodes=gi("monitoring", "development_eval_interval_episodes"),
+        tensorboard_enabled=parser.getboolean("monitoring", "tensorboard_enabled"),
+        training_seeds=_seed_tuple(g("seeds", "training_seeds"), "training_seeds"),
+        validation_seeds=_seed_tuple(g("seeds", "validation_seeds"), "validation_seeds"),
+        rank_cap_rho=gf("gradient_balance", "rank_cap_rho"),
+        audit_episodes_per_scenario=gi("audit_split", "audit_episodes_per_scenario"),
+        rank_zero_tolerance=gf("gradient_balance", "rank_zero_tolerance"),
+        warmup_max_steps=gi("ranking_warmup", "warmup_max_steps"),
+        warmup_check_interval=gi("ranking_warmup", "warmup_check_interval"),
+        warmup_rank_loss_max=gf("ranking_warmup", "warmup_rank_loss_max"),
+        audit_interval=gi("audit", "audit_interval"),
+        source_path=str(path),
+        source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
+    )
+    _validate(cfg)
+    return cfg
+
+
+def _validate(cfg: IntentTrainingConfig) -> None:
+    # schema must match the CODE, not just be internally consistent
+    from crowd_nav.bayesian_dvl.intent_runtime_config import (
+        ACTION_QUANTILES, FEATURE_SCHEMA_V7,
+        TRAINING_CONTRACT_V10_UNIFIED_ACTION_QUANTILES,
+    )
+    from crowd_nav.bayesian_dvl.intent_policy import CHECKPOINT_SCHEMA_V8
+    if cfg.feature_schema != FEATURE_SCHEMA_V7:
+        raise IntentConfigError(f"config feature_schema {cfg.feature_schema!r} != code's {FEATURE_SCHEMA_V7!r}")
+    _assert_domain_randomization_matches_code(cfg)
+    if cfg.training_contract_schema != TRAINING_CONTRACT_V10_UNIFIED_ACTION_QUANTILES:
+        raise IntentConfigError(
+            f"config training_contract_schema {cfg.training_contract_schema!r} != "
+            f"code's {TRAINING_CONTRACT_V10_UNIFIED_ACTION_QUANTILES!r}")
+    # Order 14C: the action-quantile grid is a CODE constant. Declaring a
+    # different one in the config is the same provenance lie as the tracker
+    # knobs that were hashed but never passed -- fail closed.
+    if cfg.iqn_action_quantiles != ACTION_QUANTILES:
+        raise IntentConfigError(
+            f"config iqn_action_quantiles {cfg.iqn_action_quantiles} != code's {ACTION_QUANTILES}. "
+            "Ranking, warm-up, audit and deployment must all score actions on ONE grid.")
+    if cfg.checkpoint_schema != CHECKPOINT_SCHEMA_V8:
+        raise IntentConfigError(f"config checkpoint_schema {cfg.checkpoint_schema!r} != code's {CHECKPOINT_SCHEMA_V8!r}")
+
+    # Every tracker knob the config declares must be one the code actually
+    # uses. These were previously hashed into provenance and then ignored,
+    # because the bank was constructed without passing them; they matched the
+    # defaults, so the gap was invisible. Fail closed instead.
+    from crowd_nav.bayesian_dvl.junction_scenario import SCENARIO_REGISTRY_ID
+    if cfg.scenario_registry_id != SCENARIO_REGISTRY_ID:
+        raise IntentConfigError(
+            f"config scenario_registry_id {cfg.scenario_registry_id!r} != code's {SCENARIO_REGISTRY_ID!r}. "
+            "Nothing compared these before, so a V1 config passed preflight against V2 code -- the exact "
+            "way two different environments get recorded as one.")
+    from crowd_nav.bayesian_dvl.intent_runtime_config import TRACKER_DEFAULTS
+    for cfg_name, code_name in (
+        ("tracker_sigma", "sigma"), ("tracker_persistence", "persistence"),
+        ("tracker_waypoint_radius", "waypoint_radius"),
+        ("missing_timeout_steps", "missing_timeout_steps"),
+        ("tracker_speed_prior", "speed_prior"), ("tracker_estimate_speed", "estimate_speed"),
+        ("tracker_speed_ema_alpha", "speed_ema_alpha"),
+        ("tracker_speed_min", "speed_min"), ("tracker_speed_max", "speed_max"),
+    ):
+        declared, used = getattr(cfg, cfg_name), TRACKER_DEFAULTS[code_name]
+        if type(declared) is bool or type(used) is bool:
+            same = bool(declared) == bool(used)
+        else:
+            same = abs(float(declared) - float(used)) < 1e-12
+        if not same:
+            raise IntentConfigError(
+                f"config {cfg_name}={declared!r} but the code uses TRACKER_DEFAULTS[{code_name!r}]={used!r}; "
+                "a declared value the code does not use is a provenance lie")
+
+    if (cfg.il_episodes_circle + cfg.il_episodes_square
+            + cfg.il_episodes_junction_crowd != cfg.il_episodes_total):
+        raise IntentConfigError(
+            f"IL split {cfg.il_episodes_circle}+{cfg.il_episodes_square}+"
+            f"{cfg.il_episodes_junction_crowd} != total {cfg.il_episodes_total}")
+    if abs(cfg.mix_standard + cfg.mix_junction_crowd - 1.0) > 1e-9:
+        raise IntentConfigError(f"online mix must sum to 1.0, got {cfg.mix_standard}+{cfg.mix_junction_crowd}")
+    for name, v in (
+        ("il_passes", cfg.il_passes), ("online_episodes_total", cfg.online_episodes_total),
+        ("batch_size", cfg.batch_size), ("replay_capacity", cfg.replay_capacity),
+        ("updates_per_episode", cfg.updates_per_episode),
+        ("iqn_mc_quantiles", cfg.iqn_mc_quantiles), ("iqn_action_quantiles", cfg.iqn_action_quantiles),
+        ("future_horizon", cfg.future_horizon), ("future_n_samples", cfg.future_n_samples),
+        ("missing_timeout_steps", cfg.missing_timeout_steps), ("max_candidate_goals", cfg.max_candidate_goals),
+        ("checkpoint_interval_episodes", cfg.checkpoint_interval_episodes),
+        ("monitor_plot_interval_episodes", cfg.monitor_plot_interval_episodes),
+        ("development_eval_interval_episodes", cfg.development_eval_interval_episodes),
+        ("demo_capacity", cfg.demo_capacity),
+        ("ranking_batch_size", cfg.ranking_batch_size),
+        ("gradient_diagnostic_interval", cfg.gradient_diagnostic_interval),
+    ):
+        if v <= 0:
+            raise IntentConfigError(f"{name} must be positive, got {v}")
+    for name, v in (("learning_rate", cfg.learning_rate), ("grad_clip_norm", cfg.grad_clip_norm),
+                    ("ranking_margin", cfg.ranking_margin),
+                    ("tracker_sigma", cfg.tracker_sigma), ("tracker_waypoint_radius", cfg.tracker_waypoint_radius)):
+        if not v > 0:
+            raise IntentConfigError(f"{name} must be positive, got {v}")
+    if not 0.0 <= cfg.demo_sample_ratio <= 1.0:
+        raise IntentConfigError(f"demo_sample_ratio must be in [0,1], got {cfg.demo_sample_ratio}")
+    if cfg.ranking_batch_size > cfg.batch_size:
+        raise IntentConfigError(
+            f"ranking_batch_size {cfg.ranking_batch_size} cannot exceed batch_size {cfg.batch_size}")
+    # Order 2R/3R validation -- fail closed on every gate parameter.
+    if not (0.0 <= cfg.rank_cap_rho <= 10.0):
+        raise IntentConfigError(f"rank_cap_rho must be in [0,10], got {cfg.rank_cap_rho}")
+    if cfg.audit_episodes_per_scenario <= 0:
+        raise IntentConfigError(
+            f"audit_episodes_per_scenario must be positive, got {cfg.audit_episodes_per_scenario}")
+    if not (0.0 < cfg.rank_zero_tolerance < 1.0):
+        raise IntentConfigError(f"rank_zero_tolerance must be in (0,1), got {cfg.rank_zero_tolerance}")
+    if cfg.warmup_max_steps <= 0 or cfg.warmup_check_interval <= 0:
+        raise IntentConfigError("warm-up steps and check interval must be positive")
+    if cfg.warmup_rank_loss_max <= 0:
+        raise IntentConfigError(f"warmup_rank_loss_max must be positive, got {cfg.warmup_rank_loss_max}")
+    if cfg.audit_interval <= 0:
+        raise IntentConfigError(f"audit_interval must be positive, got {cfg.audit_interval}")
+    if not 0.0 < cfg.gamma <= 1.0:
+        raise IntentConfigError(f"gamma must be in (0,1], got {cfg.gamma}")
+    if not 0.0 < cfg.ema_decay < 1.0:
+        raise IntentConfigError(f"ema_decay must be in (0,1), got {cfg.ema_decay}")
+    if not 0.0 < cfg.tracker_persistence < 1.0:
+        raise IntentConfigError(f"tracker_persistence must be in (0,1), got {cfg.tracker_persistence}")
+    if not 0.0 <= cfg.epsilon_end <= cfg.epsilon_start <= 1.0:
+        raise IntentConfigError(
+            f"require 0 <= epsilon_end <= epsilon_start <= 1, got {cfg.epsilon_end}/{cfg.epsilon_start}")
+    if cfg.epsilon_decay_episodes <= 0:
+        raise IntentConfigError(f"epsilon_decay_episodes must be positive, got {cfg.epsilon_decay_episodes}")
+
+    # the MAX_CANDIDATE_GOALS the network was built for must match
+    from crowd_nav.bayesian_dvl.intent_policy import MAX_CANDIDATE_GOALS
+    if cfg.max_candidate_goals != MAX_CANDIDATE_GOALS:
+        raise IntentConfigError(
+            f"config max_candidate_goals {cfg.max_candidate_goals} != code's {MAX_CANDIDATE_GOALS}")
+
+    # seed roles must be mutually exclusive AND disjoint from every frozen
+    # scenario/eval block (plan section 4.2: no reusing an eval seed for training)
+    from crowd_nav.bayesian_dvl.junction_scenario import (
+        JUNCTION_CROWD_SEED_ROLES, JUNCTION_HELDOUT_SEEDS, JUNCTION_TRAIN_SEEDS,
+    )
+    from crowd_nav.bayesian_dvl.intent_train import (
+        FORMAL_EVAL_HELDOUT_SEEDS, STANDARD_DEV_DIAGNOSTIC_SEEDS,
+        STANDARD_SELECTION_DEV_SEEDS,
+        STAGE_ACCEPT_CIRCLE_SEEDS, STAGE_ACCEPT_SQUARE_SEEDS,
+    )
+    # Order 14 section 7: every junction_crowd role is enumerated FROM the role
+    # registry, not hand-listed here. The hand-listed version silently omitted
+    # crowd_il, crowd_online and crowd_paper_test, and would have omitted every
+    # role added later -- which is exactly how the stage block came to exist in
+    # the evaluation module while the scenario module had never heard of it.
+    blocks = {
+        "training_seeds": set(cfg.training_seeds),
+        "validation_seeds": set(cfg.validation_seeds),
+        "junction_train": set(JUNCTION_TRAIN_SEEDS),
+        "junction_heldout": set(JUNCTION_HELDOUT_SEEDS),
+        "formal_eval": set(FORMAL_EVAL_HELDOUT_SEEDS),
+        "standard_dev_diagnostic": set(STANDARD_DEV_DIAGNOSTIC_SEEDS),
+        "standard_selection_dev": set(STANDARD_SELECTION_DEV_SEEDS),
+        # circle/square only: the junction third of the stage block is listed
+        # by the role loop below as crowd_stage_accept, and a block must not
+        # be counted twice or it overlaps itself.
+        "stage_accept_circle": set(STAGE_ACCEPT_CIRCLE_SEEDS),
+        "stage_accept_square": set(STAGE_ACCEPT_SQUARE_SEEDS),
+    }
+    for role, seeds in JUNCTION_CROWD_SEED_ROLES.items():
+        blocks[f"crowd_{role}"] = set(seeds)
+    names = sorted(blocks)
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            overlap = blocks[a] & blocks[b]
+            if overlap:
+                raise IntentConfigError(f"seed roles {a} and {b} must be disjoint, overlap={sorted(overlap)[:5]}")

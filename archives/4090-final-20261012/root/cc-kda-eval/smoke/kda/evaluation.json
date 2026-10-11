@@ -1,0 +1,27 @@
+{
+  "checkpoint_sha256": "55acb5c08a3c62b78ef9fe92477ffda42be16e07c23b2dc2af5218bbc5e2909f",
+  "episodes": [
+    {
+      "case": 88000,
+      "geometry": "circle_crossing",
+      "human_num": 5,
+      "minimum_clearance": 0.1834963106818951,
+      "outcome": "success",
+      "return": 0.5834737846269918,
+      "time": 13.5
+    },
+    {
+      "case": 88001,
+      "geometry": "circle_crossing",
+      "human_num": 5,
+      "minimum_clearance": 0.24443814312689854,
+      "outcome": "success",
+      "return": 0.6622820409839835,
+      "time": 10.5
+    }
+  ],
+  "latency_includes_full_80_action_scoring": true,
+  "policy_latency_ms_median": 29.967309907078743,
+  "policy_latency_ms_p95": 42.943742126226425,
+  "wall_seconds": 4.054663419723511
+}

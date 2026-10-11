@@ -1,0 +1,7 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"case": 90000, "condition": "E2", "outcome": "success", "return": 0.4890618619714646, "time": 17.0, "latency_ms_p50": 6.374496966600418}
+{"case": 90001, "condition": "E2", "outcome": "success", "return": 0.6438783062354612, "time": 10.5, "latency_ms_p50": 6.436211988329887}
+{"case": 90002, "condition": "E2", "outcome": "collision", "return": -0.42631875821941334, "time": 5.25, "latency_ms_p50": 6.476353853940964}

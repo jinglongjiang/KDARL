@@ -1,0 +1,14 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{"cell": 3, "case": 90000, "checked_steps": 49, "elapsed_seconds": 14.156938076019287}
+{"cell": 3, "case": 90001, "checked_steps": 94, "elapsed_seconds": 26.305912256240845}
+{"cell": 3, "case": 90002, "checked_steps": 110, "elapsed_seconds": 30.622631549835205}
+{"cell": 3, "case": 90003, "checked_steps": 162, "elapsed_seconds": 44.61572003364563}
+{"cell": 3, "case": 90004, "checked_steps": 212, "elapsed_seconds": 58.11072587966919}
+{"cell": 3, "case": 90005, "checked_steps": 259, "elapsed_seconds": 70.7952287197113}
+{"cell": 3, "case": 90006, "checked_steps": 305, "elapsed_seconds": 82.74225664138794}
+{"status": "\u5df2\u9a8c\u8bc1\u901a\u8fc7", "output": "/root/kda-lookahead-20261009/h3-random/implcheck/cell3.json", "bytes": 125720, "records_bytes": 4920165, "checked_steps": 305}
+[W1009 20:59:11.585516994 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

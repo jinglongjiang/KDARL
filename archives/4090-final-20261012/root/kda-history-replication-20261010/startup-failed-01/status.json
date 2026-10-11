@@ -1,0 +1,32 @@
+{
+  "stage": "RUNNING",
+  "seed": 443,
+  "elapsed_seconds": 0.037258148193359375,
+  "remaining_seconds": 28799.962738513947,
+  "free_disk_bytes": 5535076352,
+  "active": [
+    {
+      "pid": 2815738,
+      "kind": "train",
+      "name": "kda-t24"
+    }
+  ],
+  "pending_training": [
+    [
+      "gru",
+      24
+    ],
+    [
+      "kda",
+      12
+    ],
+    [
+      "gru",
+      12
+    ]
+  ],
+  "trained": [],
+  "pending_evaluation": 0,
+  "complete_eval_cells": 0,
+  "stage2_started": false
+}

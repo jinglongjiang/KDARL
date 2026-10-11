@@ -1,0 +1,4856 @@
+{
+  "status": "已验证通过",
+  "n_episodes": 300,
+  "n_steps": 16020,
+  "repeats": 5,
+  "family": "A final flip and B three physical metrics: 4 simultaneous intervals",
+  "inference_unit": "episode=(cell,case), resampled jointly across arms; repeat means fixed within each step",
+  "bootstrap_replicates": 10000,
+  "groups": {
+    "all": {
+      "n_episodes": 300,
+      "n_steps": 16020,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.001560549313358302,
+              "episode_bootstrap_ci95": [
+                0.0009670990046809749,
+                0.002219085169016694
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0018726591760299626,
+              "episode_bootstrap_ci95": [
+                0.0011298578429551483,
+                0.0027202160639885294
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9496878901373283,
+              "episode_bootstrap_ci95": [
+                0.9428641690006959,
+                0.956017596969872
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9433208489388265,
+              "episode_bootstrap_ci95": [
+                0.935701098962703,
+                0.9505477765516548
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.22053682896379526,
+              "episode_bootstrap_ci95": [
+                0.20793226892607597,
+                0.23276158258941343
+              ]
+            },
+            "value_flip": {
+              "mean": 0.21523096129837702,
+              "episode_bootstrap_ci95": [
+                0.20325822758949003,
+                0.2271565807006784
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0007827516310131349,
+              "episode_bootstrap_ci95": [
+                -0.001150084133580418,
+                -0.0004181166907895402
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0001765063156515456,
+              "episode_bootstrap_ci95": [
+                -0.000546177602908979,
+                0.00019993795454196312
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.0008138518217628721,
+              "episode_bootstrap_ci95": [
+                -0.0013405863837563422,
+                -0.00026881058639068267
+              ]
+            },
+            "env_collision": {
+              "mean": 0.001560549313358302,
+              "episode_bootstrap_ci95": [
+                0.0009651817762324361,
+                0.0022204595272646583
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0016229712858926342,
+              "episode_bootstrap_ci95": [
+                0.0009996704326601235,
+                0.002323099452382519
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9391385767790262,
+              "episode_bootstrap_ci95": [
+                0.9319311143805953,
+                0.9459336358871175
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9490012484394507,
+              "episode_bootstrap_ci95": [
+                0.9421105775404364,
+                0.9553993345385324
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.0035320565256322036,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                0.0031355952613349248,
+                0.003973999323837617
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0032767849630854673,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                0.0028784208652752937,
+                0.0037517345927773594
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.013958132675436968,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                -0.020895790294672048,
+                -0.007068830108003324
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.3570242449294215,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                0.3469532510291457,
+                0.3672920762342779
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 29.402122443323847,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                28.03609826381299,
+                30.797413439310787
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0035493011969517188,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                -0.0051959333989892355,
+                -0.0018780153715061635
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0008003484791219248,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                -0.002483562041110777,
+                0.0009082652954906033
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0036903215920297797,
+              "weighted_flips": 3533.0,
+              "episode_bootstrap_ci95": [
+                -0.0060841463146456476,
+                -0.0012199760661660605
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.21672908863920073,
+              "episode_bootstrap_ci95": [
+                0.20515487372589045,
+                0.22813255431578167
+              ]
+            },
+            "value_flip": {
+              "mean": 0.21056179775280875,
+              "episode_bootstrap_ci95": [
+                0.19934126615428496,
+                0.22154473903985591
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.00047531429510367203,
+              "episode_bootstrap_ci95": [
+                -0.0007388343316524384,
+                -0.00021360609746451067
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0003922200078333695,
+              "episode_bootstrap_ci95": [
+                -0.0006489174694665807,
+                -0.00012894267843315023
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.00010023469841622861,
+              "episode_bootstrap_ci95": [
+                -0.0005014920376548113,
+                0.0002994440388673761
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0016229712858926342,
+              "episode_bootstrap_ci95": [
+                0.0010173429430919661,
+                0.0022980153366764376
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0017727840199750313,
+              "episode_bootstrap_ci95": [
+                0.001111096022692981,
+                0.0025342554098073357
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9416604244694152,
+              "episode_bootstrap_ci95": [
+                0.9343388438931031,
+                0.9484393627897667
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9410611735330856,
+              "episode_bootstrap_ci95": [
+                0.9334242051507206,
+                0.9481333215265167
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.0032981208735896736,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                0.0029454924857856657,
+                0.0036954474641892423
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.00288753784604989,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                0.0025847793493398567,
+                0.0032348743616782143
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 6.705837262384356e-05,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                -0.00458611475957253,
+                0.004540227889207554
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.35309652474990627,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                0.3454626369378897,
+                0.36066973770655636
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 29.0465197310058,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                28.038018806723912,
+                30.033985403133787
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.002193126442269826,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                -0.0034063361608481536,
+                -0.0009916340284726313
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0018097248057288558,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                -0.0030172046183683863,
+                -0.0005877444294759652
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.00046248844142511065,
+              "weighted_flips": 3471.999999999996,
+              "episode_bootstrap_ci95": [
+                -0.002331716704554602,
+                0.0013649868123900412
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.2194756554307116,
+            0.21473158551810237,
+            0.21797752808988763,
+            0.21348314606741572,
+            0.21797752808988763
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.21795255930087368,
+              "episode_bootstrap_ci95": [
+                0.2060794319596576,
+                0.22947659568264972
+              ]
+            },
+            "value_flip": {
+              "mean": 0.21078651685393238,
+              "episode_bootstrap_ci95": [
+                0.19931360967500467,
+                0.22196244929708214
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0004035685029349003,
+              "episode_bootstrap_ci95": [
+                -0.0006536344989654285,
+                -0.00015477549476560688
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.00026583899118749505,
+              "episode_bootstrap_ci95": [
+                -0.0005246510122606808,
+                -8.018524072937528e-06
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.00017475785808126248,
+              "episode_bootstrap_ci95": [
+                -0.0005559847103775951,
+                0.0002036910568769325
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0017103620474406994,
+              "episode_bootstrap_ci95": [
+                0.001087217108044168,
+                0.0023999194882666822
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.001910112359550562,
+              "episode_bootstrap_ci95": [
+                0.0012136107577029956,
+                0.0026995650972800244
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9419101123595525,
+              "episode_bootstrap_ci95": [
+                0.9347136263049195,
+                0.9486212789403071
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9412359550561817,
+              "episode_bootstrap_ci95": [
+                0.9336603012783858,
+                0.9482335324780935
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.003178891474149569,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                0.002864252736418382,
+                0.0035523820605476175
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.002978859828422949,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                0.002677607625838326,
+                0.0033261077437774598
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.0018366351611926433,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                -0.006026815863699383,
+                0.0024694645489350743
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.35143276138333157,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                0.34441831410328405,
+                0.35849592451363144
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 28.826352306229428,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                27.8161267681322,
+                29.86136752341607
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.001851634613649075,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                -0.003004021241949147,
+                -0.0007045481533491691
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0012197103444906848,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                -0.002420984682414785,
+                -3.6672618763274644e-05
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0008018160403430598,
+              "weighted_flips": 3491.5999999999963,
+              "episode_bootstrap_ci95": [
+                -0.0025582520644260223,
+                0.0009380478660248787
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.22028714107365793,
+            0.21679151061173532,
+            0.21953807740324593,
+            0.21729088639201,
+            0.21585518102372034
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": 0.0038077403245944954,
+          "paired_episode_ci95": [
+            -0.0013514933810086266,
+            0.00899742685302613
+          ],
+          "simultaneous_ci98_75": [
+            -0.0027091236090284886,
+            0.01024748985654286
+          ]
+        },
+        "value_flip": {
+          "difference": 0.004669163545568259,
+          "paired_episode_ci95": [
+            -0.0004187639060554381,
+            0.009719133825678855
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0003074373359094631,
+          "paired_episode_ci95": [
+            -0.0006164935976167038,
+            -1.9162667601868215e-06
+          ],
+          "simultaneous_ci98_75": [
+            -0.0007076799988326047,
+            8.642554628798162e-05
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.0002157136921818239,
+          "paired_episode_ci95": [
+            -0.00010495717087746995,
+            0.0005380248373379928
+          ],
+          "simultaneous_ci98_75": [
+            -0.00019292280754207427,
+            0.0006269351510021037
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0007136171233466434,
+          "paired_episode_ci95": [
+            -0.0011512585201801995,
+            -0.00026897006201142605
+          ],
+          "simultaneous_ci98_75": [
+            -0.0012819645341792326,
+            -0.00015626279413675728
+          ]
+        },
+        "env_collision": {
+          "difference": -6.242197253433208e-05,
+          "paired_episode_ci95": [
+            -0.00018897816423145606,
+            6.086427267194157e-05
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.00014981273408239698,
+          "paired_episode_ci95": [
+            -0.00035265059946791615,
+            1.2547917378683703e-05
+          ]
+        },
+        "env_safe": {
+          "difference": -0.002521847690389023,
+          "paired_episode_ci95": [
+            -0.004071462607246497,
+            -0.0010248025167733988
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.007940074906365044,
+          "paired_episode_ci95": [
+            0.0063245930358605835,
+            0.009610662535155804
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": 0.0025842696629215928,
+          "paired_episode_ci95": [
+            -0.0029086986723669515,
+            0.008107776370044294
+          ]
+        },
+        "value_flip": {
+          "difference": 0.004444444444444666,
+          "paired_episode_ci95": [
+            -0.0011337773422436547,
+            0.010026674656782442
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.00037918312807823455,
+          "paired_episode_ci95": [
+            -0.0007053044761739307,
+            -5.833030503533702e-05
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 8.933267553594938e-05,
+          "paired_episode_ci95": [
+            -0.00024213461789449072,
+            0.0004194750940423419
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0006390939636816095,
+          "paired_episode_ci95": [
+            -0.001075113628815885,
+            -0.00018424845822915113
+          ]
+        },
+        "env_collision": {
+          "difference": -0.000149812734082397,
+          "paired_episode_ci95": [
+            -0.0003183902190524707,
+            -2.3886269028595528e-05
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.00028714107365792756,
+          "paired_episode_ci95": [
+            -0.000521332037033913,
+            -9.747731756450261e-05
+          ]
+        },
+        "env_safe": {
+          "difference": -0.0027715355805263578,
+          "paired_episode_ci95": [
+            -0.004450367528622465,
+            -0.0011666664053205467
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.007765293383268912,
+          "paired_episode_ci95": [
+            0.006127670550045111,
+            0.009458574290596091
+          ]
+        }
+      }
+    },
+    "success_all": {
+      "n_episodes": 269,
+      "n_steps": 14341,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.954884596611115,
+              "episode_bootstrap_ci95": [
+                0.9483667205637929,
+                0.9612354998711354
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9483299630430235,
+              "episode_bootstrap_ci95": [
+                0.9407903473018662,
+                0.9556347548044583
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.22871487343978802,
+              "episode_bootstrap_ci95": [
+                0.2185236758682227,
+                0.23899259705192258
+              ]
+            },
+            "value_flip": {
+              "mean": 0.22243916044906212,
+              "episode_bootstrap_ci95": [
+                0.2123734893927719,
+                0.23241624844730177
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0006809160857076329,
+              "episode_bootstrap_ci95": [
+                -0.0010745034247760664,
+                -0.00028708213143162267
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.00012985554928119798,
+              "episode_bootstrap_ci95": [
+                -0.0005314843124404107,
+                0.0002678217762751482
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.000802763164179162,
+              "episode_bootstrap_ci95": [
+                -0.0013973171277113677,
+                -0.00022229564342827188
+              ]
+            },
+            "env_collision": {
+              "mean": 6.973014434139879e-05,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0002142707918822125
+              ]
+            },
+            "actual_collision": {
+              "mean": 6.973014434139879e-05,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0002142707918822125
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9440764242381982,
+              "episode_bootstrap_ci95": [
+                0.9371734300773726,
+                0.9508466724466689
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9541175650233596,
+              "episode_bootstrap_ci95": [
+                0.9474177743472731,
+                0.9606175627666627
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.0033656304179713495,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                0.002968432822006134,
+                0.003801272923765026
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0032817577852345095,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                0.002873572136936233,
+                0.003776636934022009
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.01501136770074165,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                -0.022345993775819365,
+                -0.007944675243384023
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.35233459981805343,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                0.34201638300757287,
+                0.36316511436277704
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 28.76355672971448,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                27.375381873592445,
+                30.17969159950081
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0029771395076625498,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                -0.004695394370009291,
+                -0.0012508643618200895
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0005677617171468476,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                -0.002310927722714687,
+                0.0011638447638741439
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0035098861394796833,
+              "weighted_flips": 3280.0,
+              "episode_bootstrap_ci95": [
+                -0.006162897851347801,
+                -0.0009675461081620165
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2244194965483576,
+              "episode_bootstrap_ci95": [
+                0.21520580162233635,
+                0.2337234068000079
+              ]
+            },
+            "value_flip": {
+              "mean": 0.21779513283592475,
+              "episode_bootstrap_ci95": [
+                0.20871637944686516,
+                0.22694039932516094
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0004482069841250283,
+              "episode_bootstrap_ci95": [
+                -0.0007266044842564626,
+                -0.00016353178779671902
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0003968871048257076,
+              "episode_bootstrap_ci95": [
+                -0.0006744614080271913,
+                -0.00011103757186716266
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.00010972009610912934,
+              "episode_bootstrap_ci95": [
+                -0.0005603541030012007,
+                0.00033153593605325486
+              ]
+            },
+            "env_collision": {
+              "mean": 4.1838086604839275e-05,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.00011218642580650643
+              ]
+            },
+            "actual_collision": {
+              "mean": 8.367617320967854e-05,
+              "episode_bootstrap_ci95": [
+                1.3726812412673474e-05,
+                0.00018043244903822613
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9468795760407257,
+              "episode_bootstrap_ci95": [
+                0.9399828045773871,
+                0.9536323717870921
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9462101666550482,
+              "episode_bootstrap_ci95": [
+                0.9387681202344785,
+                0.9534949388061841
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.0031850335556062783,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                0.0028261967165236295,
+                0.003615987571324244
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0028384615019660196,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                0.002545010456693201,
+                0.0032009381427936363
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.0005741567726096831,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                -0.00531776471306854,
+                0.004182456721829432
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.35042979464440754,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                0.34255449154423034,
+                0.3583810699428064
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 28.64032328775999,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                27.598526354794046,
+                29.67207480745028
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.001997183805411707,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                -0.003257738891038388,
+                -0.0007250642570597945
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0017685054593293186,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                -0.003030838593239006,
+                -0.0004952292219423527
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0004889062572399408,
+              "weighted_flips": 3218.3999999999965,
+              "episode_bootstrap_ci95": [
+                -0.0025062581098318393,
+                0.0014762639531189375
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.22808730214071543,
+            0.2234851126141831,
+            0.22529809636705947,
+            0.22076563698486856,
+            0.2244613346349627
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2264416707342582,
+              "episode_bootstrap_ci95": [
+                0.21719352259861052,
+                0.23568875118454855
+              ]
+            },
+            "value_flip": {
+              "mean": 0.2185761104525484,
+              "episode_bootstrap_ci95": [
+                0.20973546729375098,
+                0.2275773674479781
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0003489827698337416,
+              "episode_bootstrap_ci95": [
+                -0.000616148852230996,
+                -7.840535721873089e-05
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.00022969855554995884,
+              "episode_bootstrap_ci95": [
+                -0.0005078643676698383,
+                4.60169608223453e-05
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.00022491749342521303,
+              "episode_bootstrap_ci95": [
+                -0.0006416579033987128,
+                0.00020355744734163703
+              ]
+            },
+            "env_collision": {
+              "mean": 0.00011156823094623806,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0002683487953880349
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.00015340631755107734,
+              "episode_bootstrap_ci95": [
+                2.745362482534695e-05,
+                0.000321927647107356
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9472561188201692,
+              "episode_bootstrap_ci95": [
+                0.9405651059087815,
+                0.9538917342509348
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9464751412035456,
+              "episode_bootstrap_ci95": [
+                0.9392201826702539,
+                0.9535768961266093
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.003056061256518837,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                0.0027423210915271347,
+                0.003441633394195479
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.00293875245443154,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                0.0026356014273774347,
+                0.0033070014550512883
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.0031640045685373394,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                -0.007460178059228707,
+                0.0011721130766145973
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.3477881973645136,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                0.34058066512274854,
+                0.35505654891994554
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 28.364574812035908,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                27.346395955392126,
+                29.403473055920422
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0015411596668675534,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                -0.0027321033424769796,
+                -0.00034625069311095376
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0010143828863527632,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                -0.002252832124365857,
+                0.00020410410591541057
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0009932690069627958,
+              "weighted_flips": 3247.399999999997,
+              "episode_bootstrap_ci95": [
+                -0.0028556026279387627,
+                0.0008909876244609322
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.2298305557492504,
+            0.22460079492364549,
+            0.22864514329544663,
+            0.2246705250679869,
+            0.2244613346349627
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": 0.004295376891430419,
+          "paired_episode_ci95": [
+            -0.0010592583690300142,
+            0.009749590182659716
+          ]
+        },
+        "value_flip": {
+          "difference": 0.004644027613137391,
+          "paired_episode_ci95": [
+            -0.0007693038248041011,
+            0.00997403154760552
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.00023270910158260468,
+          "paired_episode_ci95": [
+            -0.0005663352360370116,
+            0.0001020039497549201
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.0002670315555445096,
+          "paired_episode_ci95": [
+            -8.002135314810864e-05,
+            0.0006127488398894935
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0006930430680700324,
+          "paired_episode_ci95": [
+            -0.0011623962578263343,
+            -0.00021970766064588154
+          ]
+        },
+        "env_collision": {
+          "difference": 2.789205773655951e-05,
+          "paired_episode_ci95": [
+            -4.145120692192743e-05,
+            0.00012711034074183256
+          ]
+        },
+        "actual_collision": {
+          "difference": -1.3946028868279762e-05,
+          "paired_episode_ci95": [
+            -0.0001122206568913319,
+            9.805363552616577e-05
+          ]
+        },
+        "env_safe": {
+          "difference": -0.002803151802527558,
+          "paired_episode_ci95": [
+            -0.004417583583335603,
+            -0.001154541032592719
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.007907398368311305,
+          "paired_episode_ci95": [
+            0.00620995809480184,
+            0.009634758103408612
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": 0.0022732027055298613,
+          "paired_episode_ci95": [
+            -0.0036911226911703395,
+            0.008217293965379263
+          ]
+        },
+        "value_flip": {
+          "difference": 0.003863049996513729,
+          "paired_episode_ci95": [
+            -0.002281556591776173,
+            0.009841908561679453
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.00033193331587389125,
+          "paired_episode_ci95": [
+            -0.0006711843296088333,
+            1.3526049662918743e-05
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 9.984300626876086e-05,
+          "paired_episode_ci95": [
+            -0.00025475436397089975,
+            0.0004512398819237161
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0005778456707539489,
+          "paired_episode_ci95": [
+            -0.001059378978249415,
+            -9.608208995668813e-05
+          ]
+        },
+        "env_collision": {
+          "difference": -4.1838086604839275e-05,
+          "paired_episode_ci95": [
+            -0.00015042889390519187,
+            2.819085206850376e-05
+          ]
+        },
+        "actual_collision": {
+          "difference": -8.367617320967855e-05,
+          "paired_episode_ci95": [
+            -0.0002065895247053883,
+            1.3743886132400625e-05
+          ]
+        },
+        "env_safe": {
+          "difference": -0.003179694581971117,
+          "paired_episode_ci95": [
+            -0.004938275874439077,
+            -0.0014468071787268487
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.007642423819813986,
+          "paired_episode_ci95": [
+            0.005938052884762295,
+            0.009391494292675696
+          ]
+        }
+      }
+    },
+    "collision_all": {
+      "n_episodes": 25,
+      "n_steps": 473,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.052854122621564484,
+              "episode_bootstrap_ci95": [
+                0.04664179104477612,
+                0.06142506142506143
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.06342494714587738,
+              "episode_bootstrap_ci95": [
+                0.052742616033755275,
+                0.07823960880195599
+              ]
+            },
+            "env_safe": {
+              "mean": 0.7315010570824524,
+              "episode_bootstrap_ci95": [
+                0.6752336448598131,
+                0.7816623954555547
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.718816067653277,
+              "episode_bootstrap_ci95": [
+                0.6571396754692969,
+                0.7724425887265136
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2938689217758985,
+              "episode_bootstrap_ci95": [
+                0.2433535888404208,
+                0.3445194856466076
+              ]
+            },
+            "value_flip": {
+              "mean": 0.3023255813953488,
+              "episode_bootstrap_ci95": [
+                0.25206611570247933,
+                0.35685781762373214
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.004016388400983278,
+              "episode_bootstrap_ci95": [
+                -0.007797296926772312,
+                -0.00048760714840982857
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0008840796927927387,
+              "episode_bootstrap_ci95": [
+                -0.004832562902475333,
+                0.0029669632886180743
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.002914252968871034,
+              "episode_bootstrap_ci95": [
+                -0.00673704384817859,
+                0.0012109266846840455
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0507399577167019,
+              "episode_bootstrap_ci95": [
+                0.04389312977099236,
+                0.059665871121718374
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.052854122621564484,
+              "episode_bootstrap_ci95": [
+                0.045081967213114756,
+                0.06265060240963856
+              ]
+            },
+            "env_safe": {
+              "mean": 0.7209302325581395,
+              "episode_bootstrap_ci95": [
+                0.6617995920996136,
+                0.7737076584813654
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.733615221987315,
+              "episode_bootstrap_ci95": [
+                0.6772009029345373,
+                0.782435129740519
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.006833154520542502,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                0.004279692135900857,
+                0.011447338378556155
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.002643711489739178,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                0.00047012284820623426,
+                0.004718921556004456
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.004832429449953908,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                -0.034827202133183445,
+                0.024154989862048594
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.4611226800533035,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                0.40827481912607916,
+                0.5213583996390827
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 41.5010486076468,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                35.23848350951302,
+                48.689537803634316
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.013667278515576189,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                -0.025632733900592022,
+                -0.0017524969757971409
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0030084150697191757,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                -0.016131278717273143,
+                0.010367958623362969
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.009916846433640282,
+              "weighted_flips": 139.0,
+              "episode_bootstrap_ci95": [
+                -0.02301589468850311,
+                0.003994507696739814
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2989429175475688,
+              "episode_bootstrap_ci95": [
+                0.25524148411169967,
+                0.34569551406910193
+              ]
+            },
+            "value_flip": {
+              "mean": 0.29725158562367876,
+              "episode_bootstrap_ci95": [
+                0.25206793206793215,
+                0.34447126372079945
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.001977324164352779,
+              "episode_bootstrap_ci95": [
+                -0.004261341703978572,
+                0.000270764299826381
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.000716334810755936,
+              "episode_bootstrap_ci95": [
+                -0.0030273481019863846,
+                0.0017248670511232419
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.0003054232526702078,
+              "episode_bootstrap_ci95": [
+                -0.0026258948990304344,
+                0.0020925912238868908
+              ]
+            },
+            "env_collision": {
+              "mean": 0.05369978858350951,
+              "episode_bootstrap_ci95": [
+                0.047601458308249106,
+                0.06205250596658711
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.057505285412262165,
+              "episode_bootstrap_ci95": [
+                0.049902534113060434,
+                0.06716801473380421
+              ]
+            },
+            "env_safe": {
+              "mean": 0.7133192389006332,
+              "episode_bootstrap_ci95": [
+                0.6558586901844097,
+                0.7648417131073073
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.7128964059196609,
+              "episode_bootstrap_ci95": [
+                0.6549842970785656,
+                0.7645038295038283
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.004399020440844869,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                0.0024599162813865793,
+                0.006968842805736493
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.002794622215725576,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                0.0005306135695653091,
+                0.0047911602298369195
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.00741603135053116,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                -0.015059981877874148,
+                0.03230703491830013
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.40859208080852216,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                0.37647082843707946,
+                0.44757571456271833
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 35.376345151995665,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                31.384586527157847,
+                40.014781692961925
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.006614387056144727,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                -0.01394370713390787,
+                0.0008943080291136984
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0023962260642684417,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                -0.009852351255238987,
+                0.005957563285582194
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0010216775000919962,
+              "weighted_flips": 141.40000000000003,
+              "episode_bootstrap_ci95": [
+                -0.009091146295664923,
+                0.006690282134822209
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.3044397463002114,
+            0.27061310782241016,
+            0.30021141649048627,
+            0.29809725158562367,
+            0.321353065539112
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.29133192389006346,
+              "episode_bootstrap_ci95": [
+                0.24999731182795698,
+                0.3377544338846068
+              ]
+            },
+            "value_flip": {
+              "mean": 0.291754756871036,
+              "episode_bootstrap_ci95": [
+                0.24943601342477756,
+                0.3390626816860464
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0023326956234872866,
+              "episode_bootstrap_ci95": [
+                -0.004981378010297358,
+                0.00028470269013999253
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0012307708133048392,
+              "episode_bootstrap_ci95": [
+                -0.0038682425654974293,
+                0.001497109592236646
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.00014612096073235114,
+              "episode_bootstrap_ci95": [
+                -0.002248056483053048,
+                0.0024600174040261386
+              ]
+            },
+            "env_collision": {
+              "mean": 0.05454545454545455,
+              "episode_bootstrap_ci95": [
+                0.04778403982016699,
+                0.0636144578313253
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.06004228329809725,
+              "episode_bootstrap_ci95": [
+                0.051320564131884884,
+                0.07203791469194312
+              ]
+            },
+            "env_safe": {
+              "mean": 0.7112050739957708,
+              "episode_bootstrap_ci95": [
+                0.6524684798650634,
+                0.7639072778531889
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.7099365750528532,
+              "episode_bootstrap_ci95": [
+                0.6506932736468801,
+                0.7625018863179063
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.005222268921629957,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                0.0032525140802133054,
+                0.008013215361961349
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0029250603001591776,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                0.0011987368867407949,
+                0.004715560999105571
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.01465662720781418,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                -0.011619637375111062,
+                0.044875674014554584
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.426358838043401,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                0.3926390726130837,
+                0.46377568059863267
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 36.14707012251822,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                32.07849878516062,
+                40.98302595579665
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.008007003119807595,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                -0.01709746383388729,
+                0.0010234580388320369
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.004224634214028947,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                -0.01337358015471871,
+                0.005213065962895547
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": 0.0005015617882902909,
+              "weighted_flips": 137.8,
+              "episode_bootstrap_ci95": [
+                -0.007837966605002767,
+                0.008307775062129145
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.26849894291754756,
+            0.3128964059196617,
+            0.28964059196617337,
+            0.3023255813953488,
+            0.2832980972515856
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": -0.005073995771670264,
+          "paired_episode_ci95": [
+            -0.03333333333333344,
+            0.02222327044025152
+          ]
+        },
+        "value_flip": {
+          "difference": 0.005073995771670127,
+          "paired_episode_ci95": [
+            -0.020451997329335808,
+            0.03118285158607735
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0020390642366304983,
+          "paired_episode_ci95": [
+            -0.005148847081932161,
+            0.0007109745022559966
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": -0.0001677448820368031,
+          "paired_episode_ci95": [
+            -0.0034081096960021907,
+            0.002828437959755128
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.002608829716200827,
+          "paired_episode_ci95": [
+            -0.006453665035845801,
+            0.0010944931719679511
+          ]
+        },
+        "env_collision": {
+          "difference": -0.0029598308668076106,
+          "paired_episode_ci95": [
+            -0.0063064156389399115,
+            -0.0004210526315789473
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.004651162790697673,
+          "paired_episode_ci95": [
+            -0.009821472424922813,
+            -0.0004889677380881391
+          ]
+        },
+        "env_safe": {
+          "difference": 0.007610993657506235,
+          "paired_episode_ci95": [
+            -0.0019234496124022023,
+            0.017156004019050836
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.020718816067654234,
+          "paired_episode_ci95": [
+            0.011335855979819858,
+            0.030992051319066835
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": 0.0025369978858350364,
+          "paired_episode_ci95": [
+            -0.02802555335340494,
+            0.03233506023344346
+          ]
+        },
+        "value_flip": {
+          "difference": 0.010570824524312853,
+          "paired_episode_ci95": [
+            -0.015985392540231638,
+            0.037323062291163375
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0016836927774959915,
+          "paired_episode_ci95": [
+            -0.005340202949184025,
+            0.0017630579739610357
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.00034669112051209997,
+          "paired_episode_ci95": [
+            -0.0035371294163028945,
+            0.0042152738143935485
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0030603739296033855,
+          "paired_episode_ci95": [
+            -0.007078583073440474,
+            0.0008048902391285707
+          ]
+        },
+        "env_collision": {
+          "difference": -0.0038054968287526423,
+          "paired_episode_ci95": [
+            -0.008519269776876266,
+            -0.00041407867494824005
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.007188160676532768,
+          "paired_episode_ci95": [
+            -0.01366751247080534,
+            -0.0017543859649122799
+          ]
+        },
+        "env_safe": {
+          "difference": 0.009725158562368807,
+          "paired_episode_ci95": [
+            0.0021551530675425596,
+            0.01835806932420064
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.023678646934461832,
+          "paired_episode_ci95": [
+            0.012877220403969882,
+            0.03596157635468075
+          ]
+        }
+      }
+    },
+    "timeout_all": {
+      "n_episodes": 6,
+      "n_steps": 1206,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9734660033167496,
+              "episode_bootstrap_ci95": [
+                0.9593698175787728,
+                0.9875621890547264
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9718076285240465,
+              "episode_bootstrap_ci95": [
+                0.9585406301824212,
+                0.9850746268656716
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0945273631840796,
+              "episode_bootstrap_ci95": [
+                0.0779436152570481,
+                0.11359867330016583
+              ]
+            },
+            "value_flip": {
+              "mean": 0.09535655058043117,
+              "episode_bootstrap_ci95": [
+                0.07877280265339967,
+                0.11276948590381426
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0007254658623815656,
+              "episode_bootstrap_ci95": [
+                -0.0009909389486183581,
+                -0.0003988430650921879
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0004537338721435623,
+              "episode_bootstrap_ci95": [
+                -0.000779538909507003,
+                -0.00012675074948802605
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.00012192205047417093,
+              "episode_bootstrap_ci95": [
+                -0.001041534327254007,
+                0.0008039718146810484
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9660033167495854,
+              "episode_bootstrap_ci95": [
+                0.9535655058043118,
+                0.9792703150912107
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.972636815920398,
+              "episode_bootstrap_ci95": [
+                0.9593698175787728,
+                0.9859038142620232
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.004295433822431062,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                0.0026689317761635295,
+                0.0059296524730221975
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0039056126485791124,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                0.002743105093638102,
+                0.005056902902935623
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.005218517628573669,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                -0.044507930380015145,
+                0.0558733812553542
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.3650273456580832,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                0.3111533257602474,
+                0.4177822517409946
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 33.02269089769066,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                25.38388651997263,
+                41.36888526801878
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.007674665175720773,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                -0.010729689385667252,
+                -0.004449973266701395
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.004800026752676633,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                -0.008249876188298155,
+                -0.0013776779701011625
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0012898069550162294,
+              "weighted_flips": 114.0,
+              "episode_bootstrap_ci95": [
+                -0.011679980217175588,
+                0.00898247765724756
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0930348258706466,
+              "episode_bootstrap_ci95": [
+                0.07446102819237137,
+                0.11012023217247069
+              ]
+            },
+            "value_flip": {
+              "mean": 0.09054726368159188,
+              "episode_bootstrap_ci95": [
+                0.07330016583747916,
+                0.10679933665008269
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.00020856079476362375,
+              "episode_bootstrap_ci95": [
+                -0.0005665588785559335,
+                3.104582876347315e-05
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0002096021473445691,
+              "episode_bootstrap_ci95": [
+                -0.0006912880980688936,
+                0.00022895174318611256
+              ]
+            },
+            "progress_delta": {
+              "mean": 9.303584426703929e-05,
+              "episode_bootstrap_ci95": [
+                -0.0006228312188835533,
+                0.0007812316489862496
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9691542288557089,
+              "episode_bootstrap_ci95": [
+                0.9555555555555437,
+                0.9835820895522255
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9693200663349792,
+              "episode_bootstrap_ci95": [
+                0.9560530679933547,
+                0.9830845771144144
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.005154564950130424,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                0.003966526098522858,
+                0.006456745808859586
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0044123647259730996,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                0.003323606152309291,
+                0.005456065952882995
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.009198449142173609,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                -0.022345831223885,
+                0.036251325350151034
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.35965207327796894,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                0.3277369577049773,
+                0.38725661977145764
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 32.72089868300515,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                27.549071465572048,
+                38.76576244221113
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0022417497191170293,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                -0.005793899437199286,
+                0.0003820537702933539
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.002252942867179597,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                -0.007085524665036411,
+                0.0024850930446027155
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": 0.001000010946399729,
+              "weighted_flips": 112.19999999999979,
+              "episode_bootstrap_ci95": [
+                -0.007197344935796756,
+                0.007622697157584295
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.08374792703150911,
+            0.08872305140961857,
+            0.09867330016583747,
+            0.09369817578772803,
+            0.10033167495854063
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.08822553897180747,
+              "episode_bootstrap_ci95": [
+                0.07412935323383073,
+                0.10099502487562169
+              ]
+            },
+            "value_flip": {
+              "mean": 0.08640132669983401,
+              "episode_bootstrap_ci95": [
+                0.0736318407960198,
+                0.09701492537313414
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.00029605347008451836,
+              "episode_bootstrap_ci95": [
+                -0.0005806079026140538,
+                -3.4312548161937905e-05
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0003171468150816938,
+              "episode_bootstrap_ci95": [
+                -0.0007791913851538123,
+                9.481097753157325e-05
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.00029585876643677643,
+              "episode_bootstrap_ci95": [
+                -0.0004235848841103287,
+                0.0010120518111449565
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9688225538971682,
+              "episode_bootstrap_ci95": [
+                0.9560530679933547,
+                0.9827611940298374
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9696517412935198,
+              "episode_bootstrap_ci95": [
+                0.9567164179104358,
+                0.9832504145936848
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.00428134858384169,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                0.00358393700485057,
+                0.005210627740788692
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.004272640479686571,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                0.0034473376390174774,
+                0.004940617332425449
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.01731494246063092,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                -0.0155449907226375,
+                0.04559053220430272
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.36562960189979354,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                0.3312845876291286,
+                0.3983109955146775
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 33.43895869306615,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                26.27894927386468,
+                43.16189410818292
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0033556436552812947,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                -0.00642941141385361,
+                -0.0004405216552424057
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0035947279980124373,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                -0.008355302102390138,
+                0.0012992221463074623
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": 0.003353436769950686,
+              "weighted_flips": 106.39999999999982,
+              "episode_bootstrap_ci95": [
+                -0.005032065777378668,
+                0.011518405302784524
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.087893864013267,
+            0.08623548922056384,
+            0.08374792703150911,
+            0.09618573797678276,
+            0.08706467661691543
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": 0.0014925373134330074,
+          "paired_episode_ci95": [
+            -0.013598673300165653,
+            0.015257048092869117
+          ]
+        },
+        "value_flip": {
+          "difference": 0.0048092868988393,
+          "paired_episode_ci95": [
+            -0.01160862354892191,
+            0.019568822553897237
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0005169050676179417,
+          "paired_episode_ci95": [
+            -0.0008671819121570042,
+            -0.00015400137658776842
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": -0.0002441317247989931,
+          "paired_episode_ci95": [
+            -0.0005807670075609194,
+            0.00017219115659416944
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.00021495789474121024,
+          "paired_episode_ci95": [
+            -0.0013674054035727758,
+            0.0009149453502982426
+          ]
+        },
+        "env_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_safe": {
+          "difference": -0.0031509121061234586,
+          "paired_episode_ci95": [
+            -0.0066334991707997365,
+            -0.000331674958528875
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.0033167495854188396,
+          "paired_episode_ci95": [
+            -0.0004975124377984737,
+            0.008291873963527726
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": 0.006301824212272128,
+          "paired_episode_ci95": [
+            -0.004975124378109285,
+            0.016915422885572275
+          ]
+        },
+        "value_flip": {
+          "difference": 0.008955223880597163,
+          "paired_episode_ci95": [
+            -0.0069651741293530675,
+            0.02139303482587083
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0004294123922970473,
+          "paired_episode_ci95": [
+            -0.0007472063733402834,
+            -0.00013956521972708356
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": -0.00013658705706186844,
+          "paired_episode_ci95": [
+            -0.0005017115441320583,
+            0.0002389305286769071
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0004177808169109475,
+          "paired_episode_ci95": [
+            -0.0011472588440565232,
+            0.0003437788818123735
+          ]
+        },
+        "env_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_safe": {
+          "difference": -0.002819237147582847,
+          "paired_episode_ci95": [
+            -0.005472636815907078,
+            -0.000497512437798615
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.002985074626878228,
+          "paired_episode_ci95": [
+            0.000331674958552819,
+            0.006633499170825094
+          ]
+        }
+      }
+    },
+    "success_last20": {
+      "n_episodes": 269,
+      "n_steps": 5380,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9799256505576208,
+              "episode_bootstrap_ci95": [
+                0.9726765799256506,
+                0.9862453531598513
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9760223048327138,
+              "episode_bootstrap_ci95": [
+                0.9671003717472119,
+                0.9840148698884759
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.1137546468401487,
+              "episode_bootstrap_ci95": [
+                0.10130111524163568,
+                0.12676579925650558
+              ]
+            },
+            "value_flip": {
+              "mean": 0.1117100371747212,
+              "episode_bootstrap_ci95": [
+                0.09981412639405204,
+                0.12397769516728624
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0003608770696014199,
+              "episode_bootstrap_ci95": [
+                -0.0006874479449543292,
+                -5.075222305501618e-05
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.00018962939565830706,
+              "episode_bootstrap_ci95": [
+                -0.0005131174640123278,
+                0.0001237785632980296
+              ]
+            },
+            "progress_delta": {
+              "mean": -9.884192659175506e-06,
+              "episode_bootstrap_ci95": [
+                -0.0004117331163292407,
+                0.0003975837818814413
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9775092936802974,
+              "episode_bootstrap_ci95": [
+                0.9700743494423791,
+                0.9842007434944238
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.978810408921933,
+              "episode_bootstrap_ci95": [
+                0.9711895910780669,
+                0.9855018587360594
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.001087943225904228,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                0.0007882716694294154,
+                0.0014300380444419284
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0013435537032052583,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                0.0008162774913212851,
+                0.002136739963353769
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.009737658889396815,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                -0.019952190088681623,
+                0.0007616299640312955
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.29206037958986336,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                0.2811511401716636,
+                0.30353734412541816
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 17.323956548321256,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                16.118475280555934,
+                18.613867836955315
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.003172416069371959,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                -0.00605664733340803,
+                -0.0004579079552843287
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0016670035108524378,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                -0.004581923117415861,
+                0.0010997189020300238
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -8.689045180778468e-05,
+              "weighted_flips": 612.0,
+              "episode_bootstrap_ci95": [
+                -0.00360610021148317,
+                0.003508898797818468
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.11806691449814129,
+              "episode_bootstrap_ci95": [
+                0.10724814126394051,
+                0.1294061338289963
+              ]
+            },
+            "value_flip": {
+              "mean": 0.11550185873605949,
+              "episode_bootstrap_ci95": [
+                0.10501765799256506,
+                0.1262825278810409
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -7.127221656121321e-05,
+              "episode_bootstrap_ci95": [
+                -0.0002656770465676053,
+                0.00012422187315423803
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -4.5435836114531954e-05,
+              "episode_bootstrap_ci95": [
+                -0.0002485975616756787,
+                0.00015339163726596437
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.00013901378284673655,
+              "episode_bootstrap_ci95": [
+                -0.00039196018194176895,
+                0.00011165970635419518
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.00011152416356877326,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.00029739776951672863
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9763197026022286,
+              "episode_bootstrap_ci95": [
+                0.9683271375464666,
+                0.9834953531598494
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.974646840148697,
+              "episode_bootstrap_ci95": [
+                0.9657992565055745,
+                0.9825650557620799
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.0009427622748862585,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                0.0007624464137635091,
+                0.0011426899438646359
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0009706674861517597,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                0.0007820114162490433,
+                0.0011983701112120652
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": -0.003930128960991775,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.011161883462083242,
+                0.0032511315959542486
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.28975363109217833,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                0.28251038606958434,
+                0.29771078893184216
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 16.85159827506129,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                16.09591896388495,
+                17.68605586529726
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0006036595168440285,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.002252360760682866,
+                0.001058370816343689
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0003848312315745936,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.002113201790982685,
+                0.0012910392551625832
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.001177415226252271,
+              "weighted_flips": 635.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.00330087198945679,
+                0.0009497014761705344
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.11970260223048328,
+            0.1191449814126394,
+            0.11747211895910781,
+            0.11840148698884759,
+            0.11561338289962825
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.11825278810408925,
+              "episode_bootstrap_ci95": [
+                0.10735966542750931,
+                0.12948048327137548
+              ]
+            },
+            "value_flip": {
+              "mean": 0.11591078066914501,
+              "episode_bootstrap_ci95": [
+                0.10568680297397771,
+                0.12643215613382902
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -6.0567368721272385e-05,
+              "episode_bootstrap_ci95": [
+                -0.00026575253692403465,
+                0.00013848016185683055
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -3.776282968844863e-05,
+              "episode_bootstrap_ci95": [
+                -0.0002535766101154689,
+                0.0001698592443268104
+              ]
+            },
+            "progress_delta": {
+              "mean": -2.382252621088774e-05,
+              "episode_bootstrap_ci95": [
+                -0.00030775514567719643,
+                0.00027065064892730896
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 7.434944237918216e-05,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0002230483271375465
+              ]
+            },
+            "env_safe": {
+              "mean": 0.9771747211895894,
+              "episode_bootstrap_ci95": [
+                0.9692193308550169,
+                0.9842388475836414
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.9754275092936785,
+              "episode_bootstrap_ci95": [
+                0.9666914498141247,
+                0.9832342007434925
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.001062705377406648,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                0.0008112721193630696,
+                0.0013819621110245652
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.001050021795685356,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                0.000822694613788355,
+                0.0013147984658061142
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.0024939455816996086,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.00500457377318308,
+                0.009869838008110655
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.2935752490231286,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                0.28535590666979394,
+                0.30207042078362695
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 17.365591807998086,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                16.467518419191656,
+                18.382561414271226
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.0005121855449865535,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.002266720443675962,
+                0.0011613010687396988
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.00031933986753199245,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.002159223768474334,
+                0.0014547426229061173
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.0002014542455431877,
+              "weighted_flips": 636.2000000000002,
+              "episode_bootstrap_ci95": [
+                -0.0026077670739674094,
+                0.0022831413403319673
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.12007434944237919,
+            0.11951672862453531,
+            0.11821561338289963,
+            0.11263940520446096,
+            0.120817843866171
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": -0.004312267657992587,
+          "paired_episode_ci95": [
+            -0.012491635687732363,
+            0.0037918215613382653
+          ]
+        },
+        "value_flip": {
+          "difference": -0.0037918215613383104,
+          "paired_episode_ci95": [
+            -0.01189684014869891,
+            0.00416356877323418
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0002896048530402067,
+          "paired_episode_ci95": [
+            -0.0005821175639230387,
+            -1.0761666008467506e-05
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": -0.00014419355954377512,
+          "paired_episode_ci95": [
+            -0.00044632410767207124,
+            0.00014525911083516083
+          ]
+        },
+        "progress_delta": {
+          "difference": 0.00012912959018756092,
+          "paired_episode_ci95": [
+            -0.00024667356164167613,
+            0.0005029480181828548
+          ]
+        },
+        "env_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.00011152416356877326,
+          "paired_episode_ci95": [
+            -0.00029739776951672863,
+            0.0
+          ]
+        },
+        "env_safe": {
+          "difference": 0.0011895910780687843,
+          "paired_episode_ci95": [
+            -0.0005576208178419789,
+            0.002973977695169137
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.004163568773236065,
+          "paired_episode_ci95": [
+            0.0023048327137565354,
+            0.006208178438663544
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": -0.004498141263940544,
+          "paired_episode_ci95": [
+            -0.012937732342007464,
+            0.004052044609665402
+          ]
+        },
+        "value_flip": {
+          "difference": -0.0042007434944238125,
+          "paired_episode_ci95": [
+            -0.01275092936802976,
+            0.00412639405204459
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.00030030970088014755,
+          "paired_episode_ci95": [
+            -0.000592223599501963,
+            -2.515925576801582e-05
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": -0.0001518665659698585,
+          "paired_episode_ci95": [
+            -0.00045118431915025666,
+            0.00013123375311227328
+          ]
+        },
+        "progress_delta": {
+          "difference": 1.3938333551712271e-05,
+          "paired_episode_ci95": [
+            -0.0003545444804590815,
+            0.00038709708760044386
+          ]
+        },
+        "env_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_collision": {
+          "difference": -7.434944237918216e-05,
+          "paired_episode_ci95": [
+            -0.0002230483271375465,
+            0.0
+          ]
+        },
+        "env_safe": {
+          "difference": 0.0003345724907081926,
+          "paired_episode_ci95": [
+            -0.0015985130111505353,
+            0.0021942379182174885
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.003382899628254655,
+          "paired_episode_ci95": [
+            0.0015613382899647235,
+            0.005390334572492565
+          ]
+        }
+      }
+    },
+    "collision_last20": {
+      "n_episodes": 25,
+      "n_steps": 420,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.05952380952380952,
+              "episode_bootstrap_ci95": [
+                0.054466230936819175,
+                0.06684491978609626
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.07142857142857142,
+              "episode_bootstrap_ci95": [
+                0.06004618937644342,
+                0.08685133239831694
+              ]
+            },
+            "env_safe": {
+              "mean": 0.7023809523809523,
+              "episode_bootstrap_ci95": [
+                0.6428571428571429,
+                0.7563233058644692
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.6904761904761905,
+              "episode_bootstrap_ci95": [
+                0.6289581856839122,
+                0.7464123336130071
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2761904761904762,
+              "episode_bootstrap_ci95": [
+                0.2241013525561018,
+                0.32808501476377955
+              ]
+            },
+            "value_flip": {
+              "mean": 0.2857142857142857,
+              "episode_bootstrap_ci95": [
+                0.237874698026615,
+                0.33737938258124245
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0036848571221141865,
+              "episode_bootstrap_ci95": [
+                -0.007708678043606485,
+                4.973353782091751e-05
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0005660602716461682,
+              "episode_bootstrap_ci95": [
+                -0.004468679738189754,
+                0.0032099269067316447
+              ]
+            },
+            "progress_delta": {
+              "mean": -0.0026329503407708263,
+              "episode_bootstrap_ci95": [
+                -0.006253585168610155,
+                0.0009276776275391138
+              ]
+            },
+            "env_collision": {
+              "mean": 0.05714285714285714,
+              "episode_bootstrap_ci95": [
+                0.05057471264367816,
+                0.06521739130434782
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.05952380952380952,
+              "episode_bootstrap_ci95": [
+                0.052132701421800945,
+                0.06862745098039216
+              ]
+            },
+            "env_safe": {
+              "mean": 0.6904761904761905,
+              "episode_bootstrap_ci95": [
+                0.626013335672925,
+                0.748792270531401
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.7047619047619048,
+              "episode_bootstrap_ci95": [
+                0.6477507598784195,
+                0.7566964285714286
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.006942558905173992,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                0.0038815929649168982,
+                0.012604222910453693
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0025255502811793624,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                -0.00022507090160071725,
+                0.004854500876699247
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.008562976082239469,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                -0.022055143082976375,
+                0.04040133958296757
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.4661990815046253,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                0.40664941130731264,
+                0.5332957459576998
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 43.44593374593683,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                36.079639117724284,
+                51.696019522817224
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.013341724062827227,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                -0.0267545581561033,
+                0.0002121785340037506
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.002049528569753368,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                -0.015671241550655277,
+                0.012395892657279174
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": -0.009533096061411613,
+              "weighted_flips": 116.0,
+              "episode_bootstrap_ci95": [
+                -0.022134584666910342,
+                0.003389593982716265
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2866666666666668,
+              "episode_bootstrap_ci95": [
+                0.24035742884597797,
+                0.336296849087894
+              ]
+            },
+            "value_flip": {
+              "mean": 0.2876190476190477,
+              "episode_bootstrap_ci95": [
+                0.2430376754346591,
+                0.33498860944049585
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0017728729337304495,
+              "episode_bootstrap_ci95": [
+                -0.004199362932416245,
+                0.00047072759061568607
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0007304269246668877,
+              "episode_bootstrap_ci95": [
+                -0.0029165301691829078,
+                0.0015187680623562777
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0004446615299597403,
+              "episode_bootstrap_ci95": [
+                -0.0020036891508520348,
+                0.0028920715624744012
+              ]
+            },
+            "env_collision": {
+              "mean": 0.060476190476190475,
+              "episode_bootstrap_ci95": [
+                0.05526315789473685,
+                0.06789473684210527
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.06476190476190477,
+              "episode_bootstrap_ci95": [
+                0.05726867468728201,
+                0.07431454981129082
+              ]
+            },
+            "env_safe": {
+              "mean": 0.6838095238095231,
+              "episode_bootstrap_ci95": [
+                0.6225959558823525,
+                0.739287087912087
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.6833333333333327,
+              "episode_bootstrap_ci95": [
+                0.6241828991082352,
+                0.7378446115288213
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.00450646020843341,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                0.002234581801205063,
+                0.007448902745061409
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0026994162669213492,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                3.205866599201253e-05,
+                0.0050161605521742295
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.014414413052442544,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                -0.009064314166345446,
+                0.039746075999913616
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.41058652330053674,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                0.37268412743272694,
+                0.4553617968257803
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 36.64208465260511,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                31.98202945033049,
+                41.91396416409451
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.006184440466501566,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                -0.013890534604985164,
+                0.0017732506907293625
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.00254800090000077,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                -0.009815137068117239,
+                0.005414180579070638
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": 0.001551144871952582,
+              "weighted_flips": 120.40000000000005,
+              "episode_bootstrap_ci95": [
+                -0.007259466749602648,
+                0.009604011337468384
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.2857142857142857,
+            0.2642857142857143,
+            0.2785714285714286,
+            0.28809523809523807,
+            0.31666666666666665
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.2733333333333335,
+              "episode_bootstrap_ci95": [
+                0.22890404040404047,
+                0.32167590036846777
+              ]
+            },
+            "value_flip": {
+              "mean": 0.27523809523809534,
+              "episode_bootstrap_ci95": [
+                0.23265258550972848,
+                0.32153181379219536
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": -0.0021357522423968633,
+              "episode_bootstrap_ci95": [
+                -0.005046349067355328,
+                0.0006975976899320095
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": -0.0009044415386466202,
+              "episode_bootstrap_ci95": [
+                -0.003538672777738747,
+                0.0018720020418761182
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.00019693311968941617,
+              "episode_bootstrap_ci95": [
+                -0.0022391296621107606,
+                0.0026554304365091134
+              ]
+            },
+            "env_collision": {
+              "mean": 0.06142857142857143,
+              "episode_bootstrap_ci95": [
+                0.05573033707865169,
+                0.06935483870967742
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.06761904761904762,
+              "episode_bootstrap_ci95": [
+                0.05855826980826981,
+                0.07955241513050842
+              ]
+            },
+            "env_safe": {
+              "mean": 0.6809523809523804,
+              "episode_bootstrap_ci95": [
+                0.6180178045343917,
+                0.7372014492753614
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.6804761904761898,
+              "episode_bootstrap_ci95": [
+                0.6204753968253963,
+                0.7349730784886942
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": 0.005377753387864041,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                0.0031053352863086407,
+                0.008575072100610464
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": 0.0028446236631803805,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                0.0007236643734503111,
+                0.004936624230422456
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": 0.02028072315203337,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                -0.005999398349574823,
+                0.04920815323424091
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": 0.4336334726495629,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                0.39371558254130595,
+                0.47625514389028023
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": 38.17336883486003,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                33.2983409782687,
+                43.736652536437234
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": -0.00781372771608608,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                -0.017995114358681518,
+                0.0026700876225797957
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": -0.003308932458463243,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                -0.012753962746083229,
+                0.006943831734815111
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": 0.0007204870232539613,
+              "weighted_flips": 114.80000000000005,
+              "episode_bootstrap_ci95": [
+                -0.00814788622742163,
+                0.0095232921357342
+              ],
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.25,
+            0.2857142857142857,
+            0.27380952380952384,
+            0.29285714285714287,
+            0.2642857142857143
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": -0.010476190476190583,
+          "paired_episode_ci95": [
+            -0.03728999813745585,
+            0.01694915254237277
+          ]
+        },
+        "value_flip": {
+          "difference": -0.0019047619047619995,
+          "paired_episode_ci95": [
+            -0.0248316939379409,
+            0.020833564301552
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.001911984188383736,
+          "paired_episode_ci95": [
+            -0.004993910234148176,
+            0.0009158213954765499
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.00016436665302071922,
+          "paired_episode_ci95": [
+            -0.0029676181595044786,
+            0.003085155454663782
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0030776118707305667,
+          "paired_episode_ci95": [
+            -0.006832541966945953,
+            0.0005976510027256475
+          ]
+        },
+        "env_collision": {
+          "difference": -0.003333333333333333,
+          "paired_episode_ci95": [
+            -0.007027230748336276,
+            -0.00047169811320754707
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.005238095238095236,
+          "paired_episode_ci95": [
+            -0.011253398539204162,
+            -0.0005290309106098582
+          ]
+        },
+        "env_safe": {
+          "difference": 0.0066666666666673115,
+          "paired_episode_ci95": [
+            -0.005069299866662804,
+            0.017897234762011674
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.02142857142857208,
+          "paired_episode_ci95": [
+            0.011493593799431132,
+            0.03274336283185906
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": 0.0028571428571427626,
+          "paired_episode_ci95": [
+            -0.02675753513084073,
+            0.03276466080356153
+          ]
+        },
+        "value_flip": {
+          "difference": 0.010476190476190389,
+          "paired_episode_ci95": [
+            -0.016818400349650448,
+            0.036651583710407144
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": -0.0015491048797173228,
+          "paired_episode_ci95": [
+            -0.005050970989224342,
+            0.001952347905664057
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.000338381267000452,
+          "paired_episode_ci95": [
+            -0.00318357639238536,
+            0.004092727125450221
+          ]
+        },
+        "progress_delta": {
+          "difference": -0.0028298834604602425,
+          "paired_episode_ci95": [
+            -0.006644083318378884,
+            0.0005844975273422729
+          ]
+        },
+        "env_collision": {
+          "difference": -0.004285714285714285,
+          "paired_episode_ci95": [
+            -0.009448818897637795,
+            -0.0004683840749414519
+          ]
+        },
+        "actual_collision": {
+          "difference": -0.008095238095238095,
+          "paired_episode_ci95": [
+            -0.015529525985151336,
+            -0.001913875598086124
+          ]
+        },
+        "env_safe": {
+          "difference": 0.009523809523810167,
+          "paired_episode_ci95": [
+            0.0013303033573382128,
+            0.018957667064822995
+          ]
+        },
+        "actual_safe": {
+          "difference": 0.024285714285714927,
+          "paired_episode_ci95": [
+            0.012441681233117015,
+            0.0372964721845326
+          ]
+        }
+      }
+    },
+    "timeout_last20": {
+      "n_episodes": 6,
+      "n_steps": 120,
+      "arms": {
+        "cv": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 1.0,
+              "episode_bootstrap_ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "actual_safe": {
+              "mean": 1.0,
+              "episode_bootstrap_ci95": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "oracle": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 1.0,
+              "episode_bootstrap_ci95": [
+                1.0,
+                1.0
+              ]
+            },
+            "actual_safe": {
+              "mean": 1.0,
+              "episode_bootstrap_ci95": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": null
+        },
+        "random_shared": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.999999999999998,
+              "episode_bootstrap_ci95": [
+                0.999999999999998,
+                0.999999999999998
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.999999999999998,
+              "episode_bootstrap_ci95": [
+                0.999999999999998,
+                0.999999999999998
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "random_independent": {
+          "metrics": {
+            "final_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "value_flip": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_clearance_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "progress_delta": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "actual_collision": {
+              "mean": 0.0,
+              "episode_bootstrap_ci95": [
+                0.0,
+                0.0
+              ]
+            },
+            "env_safe": {
+              "mean": 0.999999999999998,
+              "episode_bootstrap_ci95": [
+                0.999999999999998,
+                0.999999999999998
+              ]
+            },
+            "actual_safe": {
+              "mean": 0.999999999999998,
+              "episode_bootstrap_ci95": [
+                0.999999999999998,
+                0.999999999999998
+              ]
+            }
+          },
+          "flipped_only": {
+            "cv_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "new_value_gap": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "speed_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "command_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "direction_degrees": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "env_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "actual_clearance_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            },
+            "progress_delta": {
+              "mean": null,
+              "weighted_flips": 0.0,
+              "episode_bootstrap_ci95": null,
+              "limitation": "conditional on this arm flipping; different arms can select different state subsets"
+            }
+          },
+          "random_repeat_final_flip_rates": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "oracle_minus_shared": {
+        "final_flip": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "value_flip": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "progress_delta": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_safe": {
+          "difference": 1.9539925233402757e-15,
+          "paired_episode_ci95": [
+            1.9539925233402757e-15,
+            1.9539925233402757e-15
+          ]
+        },
+        "actual_safe": {
+          "difference": 1.9539925233402757e-15,
+          "paired_episode_ci95": [
+            1.9539925233402757e-15,
+            1.9539925233402757e-15
+          ]
+        }
+      },
+      "oracle_minus_independent": {
+        "final_flip": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "value_flip": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_clearance_delta": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_clearance_delta": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "progress_delta": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "actual_collision": {
+          "difference": 0.0,
+          "paired_episode_ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "env_safe": {
+          "difference": 1.9539925233402757e-15,
+          "paired_episode_ci95": [
+            1.9539925233402757e-15,
+            1.9539925233402757e-15
+          ]
+        },
+        "actual_safe": {
+          "difference": 1.9539925233402757e-15,
+          "paired_episode_ci95": [
+            1.9539925233402757e-15,
+            1.9539925233402757e-15
+          ]
+        }
+      }
+    }
+  },
+  "A": {
+    "positive_structure_supported": false,
+    "verdict": "在预注册±1pp诊断等效界限内相近；支持幅度敏感性解释，但不证明预测信息无价值",
+    "evidence": {
+      "difference": 0.0038077403245944954,
+      "paired_episode_ci95": [
+        -0.0013514933810086266,
+        0.00899742685302613
+      ],
+      "simultaneous_ci98_75": [
+        -0.0027091236090284886,
+        0.01024748985654286
+      ]
+    }
+  },
+  "B": {
+    "positive_one_step_safety_progress_supported": false,
+    "definition": "All-step paired comparison, both swept-clearance definitions and goal progress simultaneously improve; observed collision frequencies do not increase",
+    "collision_guard_observed_only": true,
+    "evidence": {
+      "env_clearance_delta": {
+        "difference": -0.0003074373359094631,
+        "paired_episode_ci95": [
+          -0.0006164935976167038,
+          -1.9162667601868215e-06
+        ],
+        "simultaneous_ci98_75": [
+          -0.0007076799988326047,
+          8.642554628798162e-05
+        ]
+      },
+      "actual_clearance_delta": {
+        "difference": 0.0002157136921818239,
+        "paired_episode_ci95": [
+          -0.00010495717087746995,
+          0.0005380248373379928
+        ],
+        "simultaneous_ci98_75": [
+          -0.00019292280754207427,
+          0.0006269351510021037
+        ]
+      },
+      "progress_delta": {
+        "difference": -0.0007136171233466434,
+        "paired_episode_ci95": [
+          -0.0011512585201801995,
+          -0.00026897006201142605
+        ],
+        "simultaneous_ci98_75": [
+          -0.0012819645341792326,
+          -0.00015626279413675728
+        ]
+      }
+    },
+    "scope": "one-step geometric/control indicators, NOT rollout navigation return or success rate"
+  },
+  "recommendation": "A、B的正向门槛均未通过：暂停当前冻结网络、alpha0.3、0.25秒单步CV改进路线；不外推到多步、reward或其他KDA方向"
+}

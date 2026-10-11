@@ -1,0 +1,70 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{"model": "kda-s419-t24", "case": 90000, "arms": 4, "wall_seconds": 6.6584532260894775}
+{"model": "kda-s419-t24", "case": 90001, "arms": 4, "wall_seconds": 7.7860002517700195}
+{"model": "kda-s419-t24", "case": 90002, "arms": 4, "wall_seconds": 9.478531837463379}
+{"model": "kda-s419-t24", "case": 90003, "arms": 4, "wall_seconds": 11.331794023513794}
+{"model": "kda-s419-t24", "case": 90004, "arms": 4, "wall_seconds": 13.135052680969238}
+{"model": "kda-s419-t24", "case": 90005, "arms": 4, "wall_seconds": 15.034069299697876}
+{"model": "kda-s419-t24", "case": 90006, "arms": 4, "wall_seconds": 16.269302368164062}
+{"model": "kda-s419-t24", "case": 90007, "arms": 4, "wall_seconds": 18.00717043876648}
+{"model": "kda-s419-t24", "case": 90008, "arms": 4, "wall_seconds": 19.780868530273438}
+{"model": "kda-s419-t24", "case": 90009, "arms": 4, "wall_seconds": 21.516995429992676}
+{"model": "kda-s419-t24", "case": 90010, "arms": 4, "wall_seconds": 22.71233630180359}
+{"model": "kda-s419-t24", "case": 90011, "arms": 4, "wall_seconds": 24.893083810806274}
+{"model": "kda-s419-t24", "case": 90012, "arms": 4, "wall_seconds": 26.188709020614624}
+{"model": "kda-s419-t24", "case": 90013, "arms": 4, "wall_seconds": 27.354958534240723}
+{"model": "kda-s419-t24", "case": 90014, "arms": 4, "wall_seconds": 28.844663858413696}
+{"model": "kda-s419-t24", "case": 90015, "arms": 4, "wall_seconds": 30.39857244491577}
+{"model": "kda-s443-t24", "case": 90000, "arms": 4, "wall_seconds": 32.758816719055176}
+{"model": "kda-s443-t24", "case": 90001, "arms": 4, "wall_seconds": 34.1936309337616}
+{"model": "kda-s443-t24", "case": 90002, "arms": 4, "wall_seconds": 35.94765305519104}
+{"model": "kda-s443-t24", "case": 90003, "arms": 4, "wall_seconds": 37.3947491645813}
+{"model": "kda-s443-t24", "case": 90004, "arms": 4, "wall_seconds": 38.679654598236084}
+{"model": "kda-s443-t24", "case": 90005, "arms": 4, "wall_seconds": 45.628018379211426}
+{"model": "kda-s443-t24", "case": 90006, "arms": 4, "wall_seconds": 47.22001624107361}
+{"model": "kda-s443-t24", "case": 90007, "arms": 4, "wall_seconds": 49.231430530548096}
+{"model": "kda-s443-t24", "case": 90008, "arms": 4, "wall_seconds": 50.92462682723999}
+{"model": "kda-s443-t24", "case": 90009, "arms": 4, "wall_seconds": 52.48810696601868}
+{"model": "kda-s443-t24", "case": 90010, "arms": 4, "wall_seconds": 54.17487168312073}
+{"model": "kda-s443-t24", "case": 90011, "arms": 4, "wall_seconds": 55.965510845184326}
+{"model": "kda-s443-t24", "case": 90012, "arms": 4, "wall_seconds": 57.78331160545349}
+{"model": "kda-s443-t24", "case": 90013, "arms": 4, "wall_seconds": 59.355305910110474}
+{"model": "kda-s443-t24", "case": 90014, "arms": 4, "wall_seconds": 60.85408854484558}
+{"model": "kda-s443-t24", "case": 90015, "arms": 4, "wall_seconds": 62.39516067504883}
+{"model": "gru-s419-t24", "case": 90000, "arms": 4, "wall_seconds": 64.66102576255798}
+{"model": "gru-s419-t24", "case": 90001, "arms": 4, "wall_seconds": 65.58570003509521}
+{"model": "gru-s419-t24", "case": 90002, "arms": 4, "wall_seconds": 66.84288191795349}
+{"model": "gru-s419-t24", "case": 90003, "arms": 4, "wall_seconds": 68.34708166122437}
+{"model": "gru-s419-t24", "case": 90004, "arms": 4, "wall_seconds": 69.54794430732727}
+{"model": "gru-s419-t24", "case": 90005, "arms": 4, "wall_seconds": 69.63947868347168}
+{"model": "gru-s419-t24", "case": 90006, "arms": 4, "wall_seconds": 70.56251287460327}
+{"model": "gru-s419-t24", "case": 90007, "arms": 4, "wall_seconds": 72.09274864196777}
+{"model": "gru-s419-t24", "case": 90008, "arms": 4, "wall_seconds": 73.7189290523529}
+{"model": "gru-s419-t24", "case": 90009, "arms": 4, "wall_seconds": 75.0519745349884}
+{"model": "gru-s419-t24", "case": 90010, "arms": 4, "wall_seconds": 76.02708578109741}
+{"model": "gru-s419-t24", "case": 90011, "arms": 4, "wall_seconds": 77.46088552474976}
+{"model": "gru-s419-t24", "case": 90012, "arms": 4, "wall_seconds": 78.96977996826172}
+{"model": "gru-s419-t24", "case": 90013, "arms": 4, "wall_seconds": 79.94403266906738}
+{"model": "gru-s419-t24", "case": 90014, "arms": 4, "wall_seconds": 81.1969542503357}
+{"model": "gru-s419-t24", "case": 90015, "arms": 4, "wall_seconds": 82.5968496799469}
+{"model": "gru-s443-t24", "case": 90000, "arms": 4, "wall_seconds": 84.62114644050598}
+{"model": "gru-s443-t24", "case": 90001, "arms": 4, "wall_seconds": 85.59655857086182}
+{"model": "gru-s443-t24", "case": 90002, "arms": 4, "wall_seconds": 87.15591406822205}
+{"model": "gru-s443-t24", "case": 90003, "arms": 4, "wall_seconds": 88.70708179473877}
+{"model": "gru-s443-t24", "case": 90004, "arms": 4, "wall_seconds": 89.83562779426575}
+{"model": "gru-s443-t24", "case": 90005, "arms": 4, "wall_seconds": 91.80139708518982}
+{"model": "gru-s443-t24", "case": 90006, "arms": 4, "wall_seconds": 92.68476748466492}
+{"model": "gru-s443-t24", "case": 90007, "arms": 4, "wall_seconds": 94.45866513252258}
+{"model": "gru-s443-t24", "case": 90008, "arms": 4, "wall_seconds": 95.98714470863342}
+{"model": "gru-s443-t24", "case": 90009, "arms": 4, "wall_seconds": 97.47733855247498}
+{"model": "gru-s443-t24", "case": 90010, "arms": 4, "wall_seconds": 98.56555390357971}
+{"model": "gru-s443-t24", "case": 90011, "arms": 4, "wall_seconds": 100.05049157142639}
+{"model": "gru-s443-t24", "case": 90012, "arms": 4, "wall_seconds": 101.56694221496582}
+{"model": "gru-s443-t24", "case": 90013, "arms": 4, "wall_seconds": 103.09982323646545}
+{"model": "gru-s443-t24", "case": 90014, "arms": 4, "wall_seconds": 104.3539834022522}
+{"model": "gru-s443-t24", "case": 90015, "arms": 4, "wall_seconds": 105.80387449264526}
+[W1011 17:28:56.182076839 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

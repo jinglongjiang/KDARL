@@ -1,0 +1,96 @@
+[10-09 02:02:16] INFO: [TENSORBOARD] Fresh events will be saved to: /root/kda-history-20261009/preflight/rl-continuity/split/tensorboard_logs
+[10-09 02:02:16] INFO: [TEMPORAL-BACKBONE] CLI override: gru
+[10-09 02:02:16] INFO: [CONTRACTS] GRID initialized from runtime cfg: {'n_speeds': 5, 'n_headings': 16, 'v_min': 0.05, 'v_max': 1.0, 'sampling': 'exponential', 'include_stop': False, 'stop_eps': 0.05}
+[10-09 02:02:16] INFO: [CONTRACTS] GRID locked from env.config: {'n_speeds': 5, 'n_headings': 16, 'v_min': 0.05, 'v_max': 1.0, 'sampling': 'exponential', 'include_stop': False, 'stop_eps': 0.05}, num_actions=80
+[10-09 02:02:16] INFO: [SEED] 使用命令行指定的seed: 419
+[10-09 02:02:16] INFO: [SEED] ⚡ CUDA确定性模式已关闭（训练模式，速度优先）
+[10-09 02:02:16] INFO: [DENSE-REWARD] progress_reward=0.0, time_penalty=0.0, stand_penalty=0.0
+[10-09 02:02:16] INFO: human number: 5
+[10-09 02:02:16] INFO: Not randomize human's radius and preferred speed
+[10-09 02:02:16] INFO: Training simulation: circle_crossing, test simulation: circle_crossing
+[10-09 02:02:16] INFO: Square width: 10.0, circle radius: 4.0
+[10-09 02:02:16] INFO: [BOOT] policy=mamba_rl device=cuda
+[10-09 02:02:16] INFO: ============================================================
+[10-09 02:02:16] INFO: [SOT] env: circle R=4.0 Nh=5 dt=0.25 T=50 | reward: 1.0/-0.5/-0.5 | actions: 80(sampling=exponential, stop=False) | success_radius=0.25 | eval eps=0
+[10-09 02:02:16] INFO: ============================================================
+[10-09 02:02:16] INFO: [ALGO] Value-lookahead (GRU): one-step lookahead + epsilon-greedy
+[10-09 02:02:16] INFO: REWARD: success=1.0, collision=-0.5, timeout=-0.5
+[10-09 02:02:16] INFO: TRAINING: lr=1e-05, gamma=0.99, batch=256, updates_per_ep=4
+[10-09 02:02:16] INFO: TIMESTEP: dt=0.25s
+[10-09 02:02:16] INFO: ============================================================
+[10-09 02:02:16] INFO: [DISCRETE-Q] Q-head initialized: 80 actions (5 speeds × 16 headings, stop=False)
+[10-09 02:02:16] INFO: [VALUE-HEAD] Value head initialized (SARL-style, 1-dim output)
+[10-09 02:02:16] INFO: [AUXILIARY-HEAD] Future position predictor initialized: 3 neighbors × 4 future steps
+[10-09 02:02:16] INFO: [ABLATION] Lookahead scoring mode: full
+[10-09 02:02:16] INFO: ================================================================================
+[10-09 02:02:16] INFO: [TEMPORAL-BACKBONE] GRU backbone configuration:
+[10-09 02:02:16] INFO:   d_model=256, n_layers=4, d_state=64
+[10-09 02:02:16] INFO:   d_conv=4, expand=2
+[10-09 02:02:16] INFO: [SEQ-FINAL] Sequence Length Configuration (SSOT):
+[10-09 02:02:16] INFO:   seq_len=12 (from train.config:[buffer])
+[10-09 02:02:16] INFO:   T=12 (should match policy.config:[temporal].T)
+[10-09 02:02:16] INFO: [ARCH-FINAL] Architecture: EnhancedSpatial(3-way:robot+human+relation) -> GRU -> DualHead
+[10-09 02:02:16] INFO: [DEVICE] cuda
+[10-09 02:02:16] INFO: ================================================================================
+[10-09 02:02:16] INFO: [SEED] ⚡ CUDA确定性模式已关闭（训练模式，速度优先）
+[10-09 02:02:16] INFO: [POLICY-INIT] Main policy built: mamba_rl
+[10-09 02:02:16] INFO: [POLICY-INIT] Set multiagent_training=True (5-human crowd navigation)
+[10-09 02:02:16] INFO: [MAMBA-RL] Set env_dt=0.25
+[10-09 02:02:16] INFO: ✅ debug.md清理：奖励整形器已删除（未实际使用）
+[10-09 02:02:16] INFO: ============================================================
+[10-09 02:02:16] INFO: [CONFIG-SUMMARY] Training Configuration (Runtime Values)
+[10-09 02:02:16] INFO:   Policy: mamba_rl
+[10-09 02:02:16] INFO:   Sequence: seq_len=12
+[10-09 02:02:16] INFO:   Training: batch_size=256, updates_per_ep=4
+[10-09 02:02:16] INFO:   Learning: lr=0.000010, gamma=0.99
+[10-09 02:02:16] INFO:   Episodes: 3, device=cuda
+[10-09 02:02:16] INFO: ============================================================
+[10-09 02:02:16] INFO: [SARL-TRAIN] goal prior=OFF
+[10-09 02:02:16] INFO: [CFG-LOCK] circle R=4 Nh=5 dt=0.25 T=50 succ_r=0.25 visible=False actions=80 eval_eps=0
+[10-09 02:02:16] INFO: [REWARD-PROFILE] Using profile=benchmark, time_limit=50.0s
+[10-09 02:02:16] INFO: [REWARD-BENCHMARK] {'success': 1.0, 'collision': -0.5, 'timeout': -0.5}
+[10-09 02:02:16] INFO: [CONFIG-FALLBACK] success=1.0, collision=-0.5, timeout=-0.5
+[10-09 02:02:16] INFO: [ACTIVE-REWARD] Using profile-based rewards: {'success': 1.0, 'collision': -0.5, 'timeout': -0.5}
+[10-09 02:02:16] INFO: ============================================================
+[10-09 02:02:16] INFO: [TRAJECTORY-LOG] Recording enabled: /root/kda-history-20261009/preflight/rl-continuity/split/trajectory.log
+[10-09 02:02:16] INFO: [IL-AUTO] 自动检测训练数据...
+[10-09 02:02:16] INFO: [IL-AUTO]   离线数据集: None (exists: False)
+[10-09 02:02:16] INFO: [IL-AUTO]   BC checkpoint: /root/kda-history-20261009/preflight/rl-continuity/split/il_policy.pth (exists: False)
+[10-09 02:02:16] INFO: [IL-AUTO]   IL checkpoint: /root/kda-history-20261009/preflight/rl-continuity/split/ckpt_il.pt (exists: False)
+[10-09 02:02:16] INFO: [ABLATION] --skip-il-pretrain enabled: skip ORCA/IL pretraining and IL replay prefill
+[10-09 02:02:16] INFO: [IQL-REPLAY] Initialized: capacity=256, seq_len=12, with MC returns
+[10-09 02:02:16] INFO: [MC-REPLAY] next_states 未分配, 省 0.00 GiB
+[10-09 02:02:16] INFO: [SARL-BUFFER] rl_buffer capacity=256, n_step=1, per=False
+[10-09 02:02:16] INFO: [STATS-RESET] TrainingStats reset for RL phase
+[10-09 02:02:16] INFO: [IL-BC] Skipping BC training (checkpoint loaded)
+[10-09 02:02:16] INFO: [ABLATION] Continuing directly to online RL from random initialization
+[10-09 02:02:16] INFO: [CKPT-LOAD] IL warm-start intentionally disabled for w/o ORCA pretraining ablation
+[10-09 02:02:17] INFO: [JIT] 4090 UNLEASHED: torch.compile FORCED ON! (reduce-overhead mode, after checkpoint loads)
+[10-09 02:02:17] INFO: [CURRICULUM] DISABLED - Focusing on standard environment
+[10-09 02:02:17] INFO: [CURRICULUM] RL will use baseline 5-human circle environment (Nh=5, R=4)
+[10-09 02:02:17] INFO: [ALGO] Value-lookahead (GRU): value regression + one-step lookahead, lr=1e-05
+[10-09 02:02:17] INFO: [SARL-WARMUP] Replay warmup threshold: 5000 transitions
+[10-09 02:02:17] INFO: [SARL] n_step=1, use_per=False
+[10-09 02:02:17] INFO: [CHECKPOINT] interval=1 episodes
+[10-09 02:02:17] INFO: [VECTORIZE] Parallel sampling disabled, using serial explorer
+[10-09 02:02:17] INFO: [DIAGNOSTIC] ⚠ Using SERIAL sampling (no parallelization)
+[10-09 02:02:17] INFO: [DIAGNOSTIC] Pre-RL policy evaluation (5 episodes)...
+[10-09 02:02:17] INFO: [ENV-TRACK] Robot get_full_state #1: radius=0.300, v_pref=1.000, gx=0.000, gy=4.000
+[10-09 02:02:17] INFO: [ACTION-SPACE] Built 80 actions (GRID 5×16, stop=False)
+[10-09 02:02:18] INFO: [EXPLORER] RL-MAMBA-DOUBLEQ: JointState constructed, state_dim=(34,)
+[10-09 02:02:18] INFO: [DENSE-REWARD-STEP] progress=-0.2500, progress_reward=0.0, time_penalty=0.0, robot_speed=1.000, step_reward=0.0000
+[10-09 02:02:18] INFO: [ENV-TRACK] Robot get_full_state #2: radius=0.300, v_pref=1.000, gx=0.000, gy=4.000
+[10-09 02:02:18] INFO: [ENV-TRACK] Robot get_full_state #3: radius=0.300, v_pref=1.000, gx=0.000, gy=4.000
+[10-09 02:02:29] INFO: [DIAGNOSTIC] Pre-RL test performance: s/c/t=0.0%/0.0%/100.0%
+[10-09 02:02:29] INFO: [TRAIN] Algorithm: sarl
+[10-09 02:02:29] INFO: [P1-RL] Base config: human_num=5, circle_radius=4.0, success_radius=0.25
+[10-09 02:02:31] INFO: FIRST_ACTION: Policy doesn't expose continuous action info, skipping debug
+[10-09 02:02:31] INFO: [SARL-WARMUP] RL buffer size: 201, waiting for 256...
+[10-09 02:02:31] INFO: [RL-EP-0001] (1/3) s/c/t=0/0/1 qloss=0.0000 ploss=0.0000 buf=201
+[10-09 02:02:31] INFO:               cumulative s/c/t%: 0.0%/0.0%/100.0%
+[10-09 02:02:31] INFO: [REPLAY-STORE] ok=1 skip=0 steps=201 buf=201
+[10-09 02:02:32] INFO: [RL-SAVE] sarl checkpoint -> /root/kda-history-20261009/preflight/rl-continuity/split/rl_model_ep1.pth
+[10-09 02:02:32] INFO: [RL-SAVE] Saved components: policy, target network, optimizer
+[10-09 02:02:34] INFO: [RL-EP-0002] (2/3) s/c/t=0/0/1 qloss=0.0000 ploss=0.0000 buf=256
+[10-09 02:02:34] INFO:               cumulative s/c/t%: 0.0%/0.0%/100.0%
+[10-09 02:02:34] INFO: [REPLAY-STORE] ok=2 skip=0 steps=402 buf=256

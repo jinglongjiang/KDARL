@@ -1,0 +1,32 @@
+{
+  "root_id": 1133,
+  "case": 90312,
+  "cell": 4,
+  "model": "kda-s419-t24",
+  "split": "train",
+  "step": 26,
+  "type": "timeout",
+  "a0": 44,
+  "N": 20,
+  "N5_bitwise": false,
+  "original_windows_bitwise": true,
+  "spatial_N5_compatibility_bitwise": true,
+  "saved_values_bitwise": true,
+  "saved_values_max_error": 0.0,
+  "branch_source": "/root/ttc5-causal-20261011/work/branches-kda-s419-t24-cell4.jsonl.gz",
+  "baseline_source": "/root/ttc5-causal-20261011/work/baseline-kda-s419-t24-cell4.jsonl.gz",
+  "labels": {
+    "29": [
+      "A2"
+    ],
+    "34": [
+      "A1"
+    ],
+    "39": [
+      "A3"
+    ],
+    "44": [
+      "A0"
+    ]
+  }
+}

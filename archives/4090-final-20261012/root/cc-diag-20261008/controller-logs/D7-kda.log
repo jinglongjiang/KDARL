@@ -1,0 +1,13 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+CF kda 89026 timeout -0.10636285161450935
+CF kda 89000 timeout -0.09197912165452407
+CF kda 89002 timeout -0.13047321519102414
+CF kda 89012 timeout -0.12491852822922635
+CF kda 89016 timeout -0.146076169579586
+CF kda 89019 success 0.31480917318095203
+CF kda 89020 timeout -0.08991487063687251
+CF kda 89029 timeout -0.10162453113519036
+[W1008 02:42:35.740583039 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

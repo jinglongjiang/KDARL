@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/root/kda-lookahead-20261009/run-diagnostics.py", line 367, in <module>
+    main()
+  File "/root/kda-lookahead-20261009/run-diagnostics.py", line 351, in main
+    run_jobs(smoke, 'smoke')
+  File "/root/kda-lookahead-20261009/run-diagnostics.py", line 139, in run_jobs
+    log = BASE / 'logs' / (job['name'] + '.log'); log.parent.mkdir(exist_ok=True)
+  File "/root/miniconda3/envs/mamba/lib/python3.10/pathlib.py", line 1175, in mkdir
+    self._accessor.mkdir(self, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/root/kda-lookahead-20261009/logs/smoke'

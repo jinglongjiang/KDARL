@@ -1,0 +1,32 @@
+{
+  "question": "Do original allN gains exceed repeated-TTC5 token-count/pooling-statistic effects on the exact same frozen roots?",
+  "design": "Each frame of parent out.windows already contains the same selected/anchored TTC5 human rows. Repeat each of those five rows four times, preserve the first3 robot/goal/motion rows exactly: [80,24,8,13] -> [80,24,23,13]. No candidate-dependent reselection or additional15 information.",
+  "interpretation": "Statistical negative control, NOT20 independent humans or a new physical world. Original physical humans, commands/reward/filter/smoothing/terminal, frozen encoder/head and seeds unchanged. Recursive input replacement, not single-action branch effect.",
+  "history": "Decision windows come ONLY from parent real TTC history/current/candidate windows. Inherited full_history hash is bookkeeping, not the used decision window; after root it includes repeated current tokens. Root used window/current hashes and80 values/raw/final scores are recorded from the actual repeated input.",
+  "N5": "Unmodified upstream N5 token/window/value/score checks remain executable; helpers return original inputs for N=5. No bypass of existing numerical gate.",
+  "GO": "Only if original allN exceeds duplication AND original protection controls pass; no new numeric threshold.",
+  "KILL": "If duplication matches original allN, stop attributing that gain specifically to added crowd information. This does not alter original scientific gates or prove all input effects impossible.",
+  "roots_plan_sha256": "ceb8a247f5e428aae0d402a8b05c46debff357a23a8233aa2c22268b0756362a",
+  "reference_sha256": "27390c1fa8d6e955e7b2e414326407d65a22054299b7caf8a36554d1b52b50b2",
+  "upstream_source_sha256": "a0db37797b06d704087f45cbc719eb35307624e9eeb42500ba5a39b912abfad3",
+  "wrapper_sha256": "d83501c224b785ecd35d6014c5d314ed2aecbbde73dedf4e0bdecef4fee5e4bd",
+  "AST_replacements": [
+    "current",
+    "full_windows"
+  ],
+  "arms": [
+    "ttc5-V",
+    "dup5x4-V"
+  ],
+  "expected_roots": [
+    501,
+    504,
+    685,
+    688,
+    3,
+    14,
+    229,
+    254
+  ],
+  "budget": "Smoke: same8roots x2arms +8A0 repeat gates=24 continuations. Formal: exact80roots x2arms +8repeat gates=168. No optimizer, extra model invocation or root reselection."
+}

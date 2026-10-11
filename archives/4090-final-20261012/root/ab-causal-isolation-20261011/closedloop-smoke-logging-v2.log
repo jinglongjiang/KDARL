@@ -1,0 +1,22 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"model": "gru-s419-t24", "root_id": 501, "arm": "ttc5-V", "outcome": "success", "wall_seconds": 22.2321457862854}
+{"model": "gru-s419-t24", "root_id": 501, "arm": "allN-V", "outcome": "success", "wall_seconds": 25.9519944190979}
+{"model": "gru-s419-t24", "root_id": 504, "arm": "ttc5-V", "outcome": "collision", "wall_seconds": 26.184778213500977}
+{"model": "gru-s419-t24", "root_id": 504, "arm": "allN-V", "outcome": "success", "wall_seconds": 28.49879503250122}
+{"model": "gru-s443-t24", "root_id": 685, "arm": "ttc5-V", "outcome": "collision", "wall_seconds": 52.00146293640137}
+{"model": "gru-s443-t24", "root_id": 685, "arm": "allN-V", "outcome": "success", "wall_seconds": 54.80642247200012}
+{"model": "gru-s443-t24", "root_id": 688, "arm": "ttc5-V", "outcome": "success", "wall_seconds": 56.45439386367798}
+{"model": "gru-s443-t24", "root_id": 688, "arm": "allN-V", "outcome": "success", "wall_seconds": 61.09666585922241}
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{"model": "kda-s419-t24", "root_id": 3, "arm": "ttc5-V", "outcome": "success", "wall_seconds": 88.16248917579651}
+{"model": "kda-s419-t24", "root_id": 3, "arm": "allN-V", "outcome": "success", "wall_seconds": 92.87793278694153}
+{"model": "kda-s419-t24", "root_id": 14, "arm": "ttc5-V", "outcome": "collision", "wall_seconds": 93.34970426559448}
+{"model": "kda-s419-t24", "root_id": 14, "arm": "allN-V", "outcome": "collision", "wall_seconds": 94.80172848701477}
+{"model": "kda-s443-t24", "root_id": 229, "arm": "ttc5-V", "outcome": "timeout", "wall_seconds": 123.05258417129517}
+{"model": "kda-s443-t24", "root_id": 229, "arm": "allN-V", "outcome": "success", "wall_seconds": 129.30651330947876}
+{"model": "kda-s443-t24", "root_id": 254, "arm": "ttc5-V", "outcome": "success", "wall_seconds": 131.13659358024597}
+{"model": "kda-s443-t24", "root_id": 254, "arm": "allN-V", "outcome": "success", "wall_seconds": 135.79566550254822}
+[W1011 17:17:06.528621439 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

@@ -1,0 +1,25 @@
+{
+  "pid": 2818359,
+  "command": [
+    "/root/miniconda3/envs/mamba/bin/python",
+    "-B",
+    "/root/kda-history-20261009/train-worker.py",
+    "--project",
+    "/root/cc-diag-20261008/code",
+    "--deadline",
+    "1791590829.6947935",
+    "--config",
+    "/root/kda-history-replication-20261010/kda-t12.ini",
+    "--outdir",
+    "/root/kda-history-replication-20261010/runs/kda-t12",
+    "--device",
+    "cuda",
+    "--seed",
+    "443",
+    "--temporal-backbone",
+    "kda"
+  ],
+  "core": 2,
+  "started": 1791563949.9335742,
+  "kind": "train"
+}

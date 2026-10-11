@@ -1,0 +1,1259 @@
+{
+  "plan_sha256": "ceb8a247f5e428aae0d402a8b05c46debff357a23a8233aa2c22268b0756362a",
+  "plan": {
+    "roots": [
+      {
+        "root_id": 501,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90004,
+        "step": 21,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 504,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90009,
+        "step": 0,
+        "scope": "failure",
+        "matched_control_root": 538,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 508,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90019,
+        "step": 22,
+        "scope": "failure",
+        "matched_control_root": 518,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 511,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90024,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": 629,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 518,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90044,
+        "step": 28,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 508
+      },
+      {
+        "root_id": 538,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90094,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 504
+      },
+      {
+        "root_id": 539,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90099,
+        "step": 24,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 594
+      },
+      {
+        "root_id": 541,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90109,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 555,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90149,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 566
+      },
+      {
+        "root_id": 566,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90169,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 555,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 575,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90184,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 628,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 594,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90229,
+        "step": 23,
+        "scope": "failure",
+        "matched_control_root": 539,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 601,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90244,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 607
+      },
+      {
+        "root_id": 604,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90249,
+        "step": 59,
+        "scope": "failure",
+        "matched_control_root": 672,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 607,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90259,
+        "step": 8,
+        "scope": "failure",
+        "matched_control_root": 601,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 613,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90274,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 620,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90294,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 628,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90329,
+        "step": 21,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 575
+      },
+      {
+        "root_id": 629,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90334,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 511
+      },
+      {
+        "root_id": 672,
+        "model": "gru-s419-t24",
+        "cell": 5,
+        "case": 90474,
+        "step": 60,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 604
+      },
+      {
+        "root_id": 685,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90009,
+        "step": 0,
+        "scope": "failure",
+        "matched_control_root": 730,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 688,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90014,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 782
+      },
+      {
+        "root_id": 691,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90019,
+        "step": 0,
+        "scope": "failure",
+        "matched_control_root": 750,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 696,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90024,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 702,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90034,
+        "step": 25,
+        "scope": "failure",
+        "matched_control_root": 738,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 713,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90064,
+        "step": 24,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 717,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90069,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 728,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90089,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 730,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90094,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 685
+      },
+      {
+        "root_id": 738,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90119,
+        "step": 22,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 702
+      },
+      {
+        "root_id": 750,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90149,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 691
+      },
+      {
+        "root_id": 755,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90159,
+        "step": 30,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 760,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90169,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 870,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 766,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90184,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 813,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 774,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90199,
+        "step": 43,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 776,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90204,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 782,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90214,
+        "step": 0,
+        "scope": "failure",
+        "matched_control_root": 688,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 786,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90219,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 813,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90274,
+        "step": 21,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 766
+      },
+      {
+        "root_id": 870,
+        "model": "gru-s443-t24",
+        "cell": 5,
+        "case": 90404,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 760
+      },
+      {
+        "root_id": 3,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90004,
+        "step": 4,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 7,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90009,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 12,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90014,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 14,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90019,
+        "step": 0,
+        "scope": "failure",
+        "matched_control_root": 68,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 20,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90029,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 110
+      },
+      {
+        "root_id": 23,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90034,
+        "step": 22,
+        "scope": "failure",
+        "matched_control_root": 89,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 25,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90039,
+        "step": 30,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 31,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90049,
+        "step": 1,
+        "scope": "failure",
+        "matched_control_root": 172,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 37,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90064,
+        "step": 30,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 64,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90124,
+        "step": 26,
+        "scope": "failure",
+        "matched_control_root": 145,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 68,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90134,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 14
+      },
+      {
+        "root_id": 77,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90169,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": 132,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 85,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90184,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 89,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90204,
+        "step": 22,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 23
+      },
+      {
+        "root_id": 101,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90229,
+        "step": 22,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 108,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90249,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 110,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90254,
+        "step": 25,
+        "scope": "failure",
+        "matched_control_root": 20,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 132,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90299,
+        "step": 26,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 77
+      },
+      {
+        "root_id": 145,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90329,
+        "step": 22,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 64
+      },
+      {
+        "root_id": 172,
+        "model": "kda-s419-t24",
+        "cell": 5,
+        "case": 90389,
+        "step": 2,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 31
+      },
+      {
+        "root_id": 229,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90009,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 464,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 234,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90014,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": 403,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 237,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90019,
+        "step": 0,
+        "scope": "failure",
+        "matched_control_root": 264,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 241,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90024,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 400,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 246,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90029,
+        "step": 35,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 250,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90034,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": 414,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 254,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90039,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 258,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90049,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 356,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 264,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90059,
+        "step": 0,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 237
+      },
+      {
+        "root_id": 268,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90064,
+        "step": 23,
+        "scope": "failure",
+        "matched_control_root": 485,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 272,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90069,
+        "step": 21,
+        "scope": "failure",
+        "matched_control_root": null,
+        "matching_status": "unmatched"
+      },
+      {
+        "root_id": 276,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90074,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "independent_not_matched",
+        "matched_failure_root": null
+      },
+      {
+        "root_id": 278,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90079,
+        "step": 20,
+        "scope": "failure",
+        "matched_control_root": 366,
+        "matching_status": "matched_heldout_caliper"
+      },
+      {
+        "root_id": 356,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90244,
+        "step": 21,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 258
+      },
+      {
+        "root_id": 366,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90264,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 278
+      },
+      {
+        "root_id": 400,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90329,
+        "step": 24,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 241
+      },
+      {
+        "root_id": 403,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90334,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 234
+      },
+      {
+        "root_id": 414,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90354,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 250
+      },
+      {
+        "root_id": 464,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90439,
+        "step": 24,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 229
+      },
+      {
+        "root_id": 485,
+        "model": "kda-s443-t24",
+        "cell": 5,
+        "case": 90479,
+        "step": 20,
+        "scope": "success-control",
+        "matching_status": "matched_heldout_caliper",
+        "matched_failure_root": 268
+      }
+    ],
+    "roots_sha256": "665da8a3e170b40f8106e0f634c738b576e2dc7d887c508fab3a922f13adacb2",
+    "rule": "case%5==4; first10 failures per model, then nearest heldout success roots under original calipers (time2s/dgoal1/nsafe16/crowd2m2), L1 standardized distance, tie case/step/root_id, no replacement of success cases. Unmatched failures retained; remaining up-to10 success protectors explicitly independent_not_matched. No future labels or readout used.",
+    "matching": [
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 14,
+        "control_root": 68,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.0,
+          0.125,
+          0.0
+        ]
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 23,
+        "control_root": 89,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.5286912503967764,
+          0.1875,
+          0.5
+        ]
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 31,
+        "control_root": 172,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.005858994829693209,
+          0.4375,
+          0.5
+        ]
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 37,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 64,
+        "control_root": 145,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.5,
+          0.6424902909400991,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 77,
+        "control_root": 132,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.625,
+          0.3782362936552248,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 85,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 101,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 108,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "kda-s419-t24",
+        "failure_root": 110,
+        "control_root": 20,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.625,
+          0.07486191341275017,
+          0.25,
+          1.0
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 229,
+        "control_root": 464,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.5,
+          0.25122029365096843,
+          0.8125,
+          0.0
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 234,
+        "control_root": 403,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.2699710314270911,
+          0.3125,
+          0.5
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 237,
+        "control_root": 264,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 241,
+        "control_root": 400,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.5,
+          0.5545523964750831,
+          0.25,
+          0.5
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 246,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 250,
+        "control_root": 414,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.14805035284849488,
+          0.0625,
+          0.0
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 258,
+        "control_root": 356,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.16883274727568143,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 268,
+        "control_root": 485,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.375,
+          0.3579433254909645,
+          0.6875,
+          1.0
+        ]
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 272,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "kda-s443-t24",
+        "failure_root": 278,
+        "control_root": 366,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.7510905709820559,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 504,
+        "control_root": 538,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 508,
+        "control_root": 518,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.75,
+          0.045349543699637174,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 511,
+        "control_root": 629,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.019470748864239162,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 566,
+        "control_root": 555,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.08111952811094625,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 575,
+        "control_root": 628,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.09366069299594582,
+          0.6875,
+          1.0
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 594,
+        "control_root": 539,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.46312544810843015,
+          0.6875,
+          0.5
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 604,
+        "control_root": 672,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.08239704383250412,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 607,
+        "control_root": 601,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          1.0,
+          0.13613294184332947,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 613,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "gru-s419-t24",
+        "failure_root": 620,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 685,
+        "control_root": 730,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 691,
+        "control_root": 750,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.0,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 702,
+        "control_root": 738,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.375,
+          0.036201369450457044,
+          0.125,
+          0.5
+        ]
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 717,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 728,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 760,
+        "control_root": 870,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.1513119512705261,
+          0.0,
+          0.5
+        ]
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 766,
+        "control_root": 813,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.125,
+          0.48053427715693164,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 774,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 782,
+        "control_root": 688,
+        "status": "matched_heldout_caliper",
+        "standardized_differences": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "model": "gru-s443-t24",
+        "failure_root": 786,
+        "control_root": null,
+        "status": "unmatched",
+        "standardized_differences": null
+      }
+    ],
+    "per_scope": 10,
+    "models": [
+      "kda-s419-t24",
+      "kda-s443-t24",
+      "gru-s419-t24",
+      "gru-s443-t24"
+    ],
+    "arms": [
+      "ttc5-V",
+      "allN-V"
+    ],
+    "question": "Does replacing only legal observable crowd input/history change actual finite navigation continuation beyond matched readouts?",
+    "GO": "Same held-out root set improves success without additional success-control destruction or collisions, with comparable head controls; eligibility only, no method contribution claim.",
+    "KILL": "No protected navigation benefit, or matched TTC5 head explains gain: stop full-N-only candidate.",
+    "budget": "80 roots x2 arms, <=201 total env steps each; no optimizer or second round.",
+    "closedloop_semantics": "After frozen prefix, TTC5 or allN input with the SAME original frozen V used at EVERY subsequent step. Linear readout gate failed; MC/pairwise arms forbidden.",
+    "authorization": "Plan only; execution requires explicit main scheduling."
+  },
+  "arms": [
+    "ttc5-V",
+    "allN-V"
+  ],
+  "script_sha256": "a0db37797b06d704087f45cbc719eb35307624e9eeb42500ba5a39b912abfad3",
+  "public_baseline": "Both public history/terminal fixes active; old checkpoint; no archived-score binding.",
+  "input": "N5 contracts bitwise; legal all-human current/past only, CV candidate future. Same13 fields, same256 spatial/temporal widths, attention and maxpool.",
+  "controls": "Same candidate commands/smoothing, all-human endpoint reward/clearance/filter, terminal mask, environment reward. Only crowd encoder input and explicitly named matched head change.",
+  "intervention": "Recursive selected input/head after root",
+  "sweep_recording": "Read-only synchronous min ||d0+t*(executed robot command-human velocity)||-radii, t in[0,.25]; env uses current human velocity, actual uses realized human displacement/.25. Strict clearance<0 counts collision intervals, not distinct people. No decision changes.",
+  "incomplete_alias": "No artificial omitted-position alias claimed; hidden-goal sensitivity is separate main experiment."
+}

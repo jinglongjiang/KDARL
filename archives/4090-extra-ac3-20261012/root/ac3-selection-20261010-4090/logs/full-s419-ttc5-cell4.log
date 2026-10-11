@@ -1,0 +1,57 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 10}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 20}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 30}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 40}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 50}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 60}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 70}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 80}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 90}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 100}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 110}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 120}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 130}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 140}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 150}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 160}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 170}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 180}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 190}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 200}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 210}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 220}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 230}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 240}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 250}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 260}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 270}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 280}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 290}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 300}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 310}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 320}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 330}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 340}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 350}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 360}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 370}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 380}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 390}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 400}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 410}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 420}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 430}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 440}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 450}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 460}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 470}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 480}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 490}
+{'seed': 419, 'rule': 'ttc5', 'cell': 4, 'episodes': 500}
+{'status': 'PASS', 'out': '/root/ac3-selection-20261010-4090/per-case/s419-ttc5/cell4.json', 'episodes': 500, 'wall_seconds': 798.1129076480865}
+[W1010 21:24:29.580372561 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

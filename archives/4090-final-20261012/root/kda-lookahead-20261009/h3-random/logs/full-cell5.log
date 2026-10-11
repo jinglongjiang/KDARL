@@ -1,0 +1,50 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{"cell": 5, "case": 90007, "checked_steps": 63, "elapsed_seconds": 19.409015893936157}
+{"cell": 5, "case": 90008, "checked_steps": 120, "elapsed_seconds": 35.997273683547974}
+{"cell": 5, "case": 90009, "checked_steps": 130, "elapsed_seconds": 38.914732694625854}
+{"cell": 5, "case": 90010, "checked_steps": 132, "elapsed_seconds": 39.49554419517517}
+{"cell": 5, "case": 90011, "checked_steps": 187, "elapsed_seconds": 55.49419188499451}
+{"cell": 5, "case": 90012, "checked_steps": 205, "elapsed_seconds": 60.71194815635681}
+{"cell": 5, "case": 90013, "checked_steps": 406, "elapsed_seconds": 118.95979070663452}
+{"cell": 5, "case": 90014, "checked_steps": 453, "elapsed_seconds": 132.581125497818}
+{"cell": 5, "case": 90015, "checked_steps": 511, "elapsed_seconds": 149.43586444854736}
+{"cell": 5, "case": 90016, "checked_steps": 575, "elapsed_seconds": 168.05710911750793}
+{"cell": 5, "case": 90017, "checked_steps": 644, "elapsed_seconds": 188.12276411056519}
+{"cell": 5, "case": 90018, "checked_steps": 659, "elapsed_seconds": 192.4646897315979}
+{"cell": 5, "case": 90019, "checked_steps": 670, "elapsed_seconds": 195.67174315452576}
+{"cell": 5, "case": 90020, "checked_steps": 689, "elapsed_seconds": 201.18117952346802}
+{"cell": 5, "case": 90021, "checked_steps": 778, "elapsed_seconds": 226.97824478149414}
+{"cell": 5, "case": 90022, "checked_steps": 798, "elapsed_seconds": 232.76057958602905}
+{"cell": 5, "case": 90023, "checked_steps": 861, "elapsed_seconds": 251.0911762714386}
+{"cell": 5, "case": 90024, "checked_steps": 950, "elapsed_seconds": 277.04238271713257}
+{"cell": 5, "case": 90025, "checked_steps": 1010, "elapsed_seconds": 294.4755244255066}
+{"cell": 5, "case": 90026, "checked_steps": 1077, "elapsed_seconds": 314.0027403831482}
+{"cell": 5, "case": 90027, "checked_steps": 1169, "elapsed_seconds": 340.73892092704773}
+{"cell": 5, "case": 90028, "checked_steps": 1246, "elapsed_seconds": 363.18489503860474}
+{"cell": 5, "case": 90029, "checked_steps": 1323, "elapsed_seconds": 385.5302383899689}
+{"cell": 5, "case": 90030, "checked_steps": 1524, "elapsed_seconds": 443.9070429801941}
+{"cell": 5, "case": 90031, "checked_steps": 1569, "elapsed_seconds": 456.9800343513489}
+{"cell": 5, "case": 90032, "checked_steps": 1626, "elapsed_seconds": 473.5180058479309}
+{"cell": 5, "case": 90033, "checked_steps": 1722, "elapsed_seconds": 500.5692808628082}
+{"cell": 5, "case": 90034, "checked_steps": 1825, "elapsed_seconds": 527.64586353302}
+{"cell": 5, "case": 90035, "checked_steps": 1886, "elapsed_seconds": 543.6356673240662}
+{"cell": 5, "case": 90036, "checked_steps": 1918, "elapsed_seconds": 551.7321968078613}
+{"cell": 5, "case": 90037, "checked_steps": 1938, "elapsed_seconds": 556.7603495121002}
+{"cell": 5, "case": 90038, "checked_steps": 1994, "elapsed_seconds": 570.8348989486694}
+{"cell": 5, "case": 90039, "checked_steps": 2079, "elapsed_seconds": 591.8289422988892}
+{"cell": 5, "case": 90040, "checked_steps": 2093, "elapsed_seconds": 595.2314994335175}
+{"cell": 5, "case": 90041, "checked_steps": 2206, "elapsed_seconds": 622.7872710227966}
+{"cell": 5, "case": 90042, "checked_steps": 2293, "elapsed_seconds": 643.9551267623901}
+{"cell": 5, "case": 90043, "checked_steps": 2494, "elapsed_seconds": 693.0944015979767}
+{"cell": 5, "case": 90044, "checked_steps": 2555, "elapsed_seconds": 708.0796585083008}
+{"cell": 5, "case": 90045, "checked_steps": 2633, "elapsed_seconds": 727.1435294151306}
+{"cell": 5, "case": 90046, "checked_steps": 2688, "elapsed_seconds": 740.3944935798645}
+{"cell": 5, "case": 90047, "checked_steps": 2889, "elapsed_seconds": 788.5155563354492}
+{"cell": 5, "case": 90048, "checked_steps": 2952, "elapsed_seconds": 803.4574501514435}
+{"cell": 5, "case": 90049, "checked_steps": 3006, "elapsed_seconds": 816.097179889679}
+{"status": "\u5df2\u9a8c\u8bc1\u901a\u8fc7", "output": "/root/kda-lookahead-20261009/h3-random/full/cell5.json", "bytes": 762877, "records_bytes": 46989404, "checked_steps": 3006}
+[W1009 21:13:51.897072163 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

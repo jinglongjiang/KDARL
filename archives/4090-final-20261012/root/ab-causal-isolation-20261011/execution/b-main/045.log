@@ -1,0 +1,20 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"case": 90000, "condition": "E1", "outcome": "success", "return": 0.6894490858690777, "time": 9.5, "latency_ms_p50": 0.6420239806175232}
+{"case": 90001, "condition": "E1", "outcome": "success", "return": 0.6964132180495735, "time": 9.25, "latency_ms_p50": 0.6312131881713867}
+{"case": 90002, "condition": "E1", "outcome": "success", "return": 0.622475682271837, "time": 12.0, "latency_ms_p50": 0.6257966160774231}
+{"case": 90003, "condition": "E1", "outcome": "success", "return": 0.7249803359578534, "time": 8.25, "latency_ms_p50": 0.6296150386333466}
+{"case": 90004, "condition": "E1", "outcome": "success", "return": 0.7323033696543975, "time": 8.0, "latency_ms_p50": 0.6281770765781403}
+{"case": 90005, "condition": "E1", "outcome": "success", "return": 0.6526513048506545, "time": 10.75, "latency_ms_p50": 0.6302893161773682}
+{"case": 90006, "condition": "E1", "outcome": "success", "return": 0.7034476949995692, "time": 9.0, "latency_ms_p50": 0.6320755928754807}
+{"case": 90007, "condition": "E1", "outcome": "success", "return": 0.6893618668621734, "time": 9.5, "latency_ms_p50": 0.6385408341884613}
+{"case": 90008, "condition": "E1", "outcome": "success", "return": 0.6622820409839835, "time": 10.5, "latency_ms_p50": 0.6286315619945526}
+{"case": 90009, "condition": "E1", "outcome": "success", "return": 0.5471566423907612, "time": 15.25, "latency_ms_p50": 0.6244294345378876}
+{"case": 90010, "condition": "E1", "outcome": "success", "return": 0.6360471018477086, "time": 11.5, "latency_ms_p50": 0.6321985274553299}
+{"case": 90011, "condition": "E1", "outcome": "success", "return": 0.6622820409839835, "time": 10.5, "latency_ms_p50": 0.6307493895292282}
+{"case": 90012, "condition": "E1", "outcome": "success", "return": 0.682554595010387, "time": 9.75, "latency_ms_p50": 0.6315633654594421}
+{"case": 90013, "condition": "E1", "outcome": "success", "return": 0.682554595010387, "time": 9.75, "latency_ms_p50": 0.6306096911430359}
+{"case": 90014, "condition": "E1", "outcome": "success", "return": 0.7249803359578534, "time": 8.25, "latency_ms_p50": 0.6403885781764984}
+{"case": 90015, "condition": "E1", "outcome": "success", "return": 0.6298236312032323, "time": 11.75, "latency_ms_p50": 0.6330870091915131}

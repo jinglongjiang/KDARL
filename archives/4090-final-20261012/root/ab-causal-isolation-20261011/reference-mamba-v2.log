@@ -1,0 +1,49 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"case": 90000, "condition": "E1", "outcome": "success", "return": 0.6361482671376132, "time": 11.5, "latency_ms_p50": 12.427056208252907}
+{"case": 90001, "condition": "E1", "outcome": "success", "return": 0.6491026283684022, "time": 11.0, "latency_ms_p50": 12.442704290151596}
+{"case": 90002, "condition": "E1", "outcome": "success", "return": 0.6418168589954663, "time": 11.25, "latency_ms_p50": 12.447349727153778}
+{"case": 90000, "condition": "E2", "outcome": "success", "return": 0.5604162109776527, "time": 14.25, "latency_ms_p50": 12.62500137090683}
+{"case": 90001, "condition": "E2", "outcome": "success", "return": 0.5203405226503064, "time": 16.5, "latency_ms_p50": 12.64585368335247}
+{"case": 90002, "condition": "E2", "outcome": "success", "return": 0.4055120247670339, "time": 22.0, "latency_ms_p50": 12.770801782608032}
+{"case": 90000, "condition": "E3", "outcome": "success", "return": 0.6361482671376132, "time": 11.5, "latency_ms_p50": 12.559225782752037}
+{"case": 90001, "condition": "E3", "outcome": "success", "return": 0.6491026283684022, "time": 11.0, "latency_ms_p50": 12.600397691130638}
+{"case": 90002, "condition": "E3", "outcome": "success", "return": 0.6418168589954663, "time": 11.25, "latency_ms_p50": 12.674570083618164}
+{"case": 90000, "condition": "E4", "outcome": "success", "return": 0.5810036525055785, "time": 13.75, "latency_ms_p50": 12.543562799692154}
+{"case": 90001, "condition": "E4", "outcome": "timeout", "return": -0.06702050218936538, "time": 50.25, "latency_ms_p50": 12.727692723274231}
+{"case": 90002, "condition": "E4", "outcome": "success", "return": 0.18112695312597024, "time": 42.75, "latency_ms_p50": 12.748342007398605}
+{"case": 90000, "condition": "E5", "outcome": "success", "return": 0.682554595010387, "time": 9.75, "latency_ms_p50": 12.654535472393036}
+{"case": 90001, "condition": "E5", "outcome": "collision", "return": -0.37217395868203584, "time": 8.75, "latency_ms_p50": 12.692626565694809}
+{"case": 90002, "condition": "E5", "outcome": "collision", "return": -0.4071050962723832, "time": 7.0, "latency_ms_p50": 12.670408934354782}
+{"case": 90000, "condition": "E10", "outcome": "success", "return": 0.5780996961984595, "time": 13.75, "latency_ms_p50": 12.49898225069046}
+{"case": 90001, "condition": "E10", "outcome": "success", "return": 0.598956006466161, "time": 13.0, "latency_ms_p50": 12.667139992117882}
+{"case": 90002, "condition": "E10", "outcome": "success", "return": 0.5081044299427485, "time": 17.0, "latency_ms_p50": 12.710582464933395}
+{"case": 90000, "condition": "E1", "outcome": "success", "return": 0.6757290490602831, "time": 10.0, "latency_ms_p50": 12.552725151181221}
+{"case": 90001, "condition": "E1", "outcome": "success", "return": 0.6877219171363026, "time": 9.5, "latency_ms_p50": 12.527670711278915}
+{"case": 90002, "condition": "E1", "outcome": "success", "return": 0.624580391204606, "time": 11.75, "latency_ms_p50": 12.47500255703926}
+{"case": 90000, "condition": "E2", "outcome": "timeout", "return": -0.1331547305601418, "time": 50.25, "latency_ms_p50": 12.845683842897415}
+{"case": 90001, "condition": "E2", "outcome": "collision", "return": -0.4454714833755536, "time": 4.25, "latency_ms_p50": 12.741480022668839}
+{"case": 90002, "condition": "E2", "outcome": "success", "return": 0.2002770268574893, "time": 40.25, "latency_ms_p50": 12.701533734798431}
+{"case": 90000, "condition": "E3", "outcome": "success", "return": 0.6757290490602831, "time": 10.0, "latency_ms_p50": 12.625154107809067}
+{"case": 90001, "condition": "E3", "outcome": "success", "return": 0.6877219171363026, "time": 9.5, "latency_ms_p50": 12.618975713849068}
+{"case": 90002, "condition": "E3", "outcome": "success", "return": 0.624580391204606, "time": 11.75, "latency_ms_p50": 12.678094208240509}
+{"case": 90000, "condition": "E4", "outcome": "success", "return": 0.2934227215252159, "time": 30.75, "latency_ms_p50": 12.871604412794113}
+{"case": 90001, "condition": "E4", "outcome": "success", "return": 0.5099857462495653, "time": 17.0, "latency_ms_p50": 12.800486758351326}
+{"case": 90002, "condition": "E4", "outcome": "success", "return": 0.5639051904523875, "time": 14.5, "latency_ms_p50": 12.763207778334618}
+{"case": 90000, "condition": "E5", "outcome": "timeout", "return": -0.07958118101232604, "time": 50.25, "latency_ms_p50": 12.77058944106102}
+{"case": 90001, "condition": "E5", "outcome": "success", "return": 0.5329951308931519, "time": 15.0, "latency_ms_p50": 12.790167704224586}
+{"case": 90002, "condition": "E5", "outcome": "success", "return": 0.578086562169897, "time": 12.75, "latency_ms_p50": 12.751519680023193}
+{"case": 90000, "condition": "E10", "outcome": "timeout", "return": -0.10040077220541027, "time": 50.25, "latency_ms_p50": 12.670528143644333}
+{"case": 90001, "condition": "E10", "outcome": "success", "return": 0.5929664464014994, "time": 13.25, "latency_ms_p50": 12.732822448015213}
+{"case": 90002, "condition": "E10", "outcome": "success", "return": 0.5095742581944884, "time": 17.0, "latency_ms_p50": 12.836609035730362}
+Traceback (most recent call last):
+  File "/root/ab-causal-isolation-20261011/reference-mamba.py", line 89, in <module>
+    if __name__=='__main__':main()
+  File "/root/ab-causal-isolation-20261011/reference-mamba.py", line 62, in main
+    args.condition=condition;B.baseline(args)
+  File "/root/ab-causal-isolation-20261011/b/run-b.py", line 586, in baseline
+    assert gate.is_file() and json.loads(gate.read_text())['status']=='PASS', 'Main-scheduled full smoke gate required'
+AssertionError: Main-scheduled full smoke gate required
+[W1011 18:01:06.225225539 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

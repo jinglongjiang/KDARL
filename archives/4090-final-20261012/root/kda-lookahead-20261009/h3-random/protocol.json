@@ -1,0 +1,48 @@
+{
+  "version": "h3-random-matched-v1-20261009",
+  "weight_sha256": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a",
+  "wrong_history_weight_sha256": "24573aefc0cf9d67e32805980acbcf8d8bc648588b5ba0a3371fb466ef29be5e",
+  "train_episodes": 0,
+  "new_environment_episodes": 0,
+  "n_episodes": 300,
+  "n_steps": 16020,
+  "config": "/root/kda-lookahead-20261009/original-configs/kda.ini",
+  "seq_len": 24,
+  "alpha": 0.3,
+  "selection": "ttc5",
+  "actions": 80,
+  "random_repeats": 5,
+  "seed_rule": "SHA256(cell/case/step/variant/repetition/20261009)",
+  "effort_rule": "10 repeats if measured projected serial time <=5400 seconds, otherwise5; no outcome-based selection",
+  "benchmark": {
+    "records": 12,
+    "seconds_per_step_with5": 0.19939645210450346,
+    "projected_serial_seconds_with10": 5856.273798309267
+  },
+  "implementation_cases": "first7 cases in each6 cell,42 complete episodes; reused in full300",
+  "main": "one shared angle for all humans per step/repetition; same rotation for dp and dv",
+  "secondary": "independent human angles, same angle for each humans dp and dv",
+  "physics": {
+    "environment": "old human velocity relative segment; first negative short-circuit recorded separately",
+    "actual": "segment from current human position to true next position; same-time relative minimum",
+    "counterfactual_human_trajectory_assumption": "robot.visible=false, current ORCA human response independent of robot command"
+  },
+  "inference": {
+    "unit": "episode=(cell,case)",
+    "bootstrap": 10000,
+    "paired": true,
+    "step_weighted_rates": true,
+    "random_repeats_averaged_inside_step": true,
+    "primary_family": [
+      "A_final_flip",
+      "B_env_clearance",
+      "B_actual_clearance",
+      "B_progress"
+    ],
+    "simultaneous_ci_percent": 98.75,
+    "secondary_ci_percent": 95
+  },
+  "equivalence_margin_flip_fraction": 0.01,
+  "B_gate": "both clearance definitions and progress Oracle-minus-shared Random simultaneous intervals >0, and observed collision fractions do not increase; one-step only",
+  "negative_scope": "frozen KDA+0.25seconds+alpha0.3 only; not reward/multistep/other KDA; no closed-loop advantage claim"
+}

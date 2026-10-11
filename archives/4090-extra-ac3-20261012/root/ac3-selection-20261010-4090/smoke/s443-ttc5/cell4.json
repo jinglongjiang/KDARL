@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "episodes": [
+    {
+      "seed": 443,
+      "rule": "ttc5",
+      "cell": 4,
+      "case": 90000,
+      "outcome": "success",
+      "return_": 0.5811664141181095,
+      "time": 13.75,
+      "minimum_clearance": 0.20914362014884974,
+      "steps": 55,
+      "trajectory_sha256": "8106c2e1a302761c6d2cff827d2c59aaf5bed34b54a447eb03156cc7d9f4ce8e"
+    },
+    {
+      "seed": 443,
+      "rule": "ttc5",
+      "cell": 4,
+      "case": 90001,
+      "outcome": "success",
+      "return_": 0.575233208893126,
+      "time": 14.0,
+      "minimum_clearance": 0.2107194063501115,
+      "steps": 56,
+      "trajectory_sha256": "258101c740764460408cb21a25c8f90ac571fea1442b6249701d88eb568a640c"
+    },
+    {
+      "seed": 443,
+      "rule": "ttc5",
+      "cell": 4,
+      "case": 90002,
+      "outcome": "success",
+      "return_": 0.4825434766691213,
+      "time": 18.25,
+      "minimum_clearance": 0.19621963384336172,
+      "steps": 73,
+      "trajectory_sha256": "78a5d521609723583ad0577864a58cb1239a9371330610e16671984e7f6ac5c0"
+    }
+  ],
+  "checkpoint": {
+    "seed": 443,
+    "weight": "/root/ac3-selection-20261010-4090/inputs/s443/rl_model_ep10000.pth",
+    "config": "/root/ac3-selection-20261010-4090/inputs/s443/kda-t24.ini",
+    "training": "fresh IL50 + RL10000",
+    "weight_sha256": "c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd",
+    "config_sha256": "3b24c5d78e57c12db7f92e08775c2c66d06274a613c548b81b28f8dc18c8166a",
+    "training_protocol": "/root/ac3-selection-20261010-4090/inputs/s443/training-protocol.json"
+  },
+  "actions": 80,
+  "alpha": 0.3,
+  "all_crowd_filter": true,
+  "torch": "2.9.1+cu128",
+  "device": "NVIDIA GeForce RTX 4090",
+  "wall_seconds": 4.890550851821899,
+  "steps": 184
+}

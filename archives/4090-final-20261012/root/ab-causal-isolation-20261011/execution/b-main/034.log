@@ -1,0 +1,21 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"case": 90000, "condition": "E5", "outcome": "success", "return": 0.7291633290866473, "time": 8.0, "latency_ms_p50": 13.366222381591797}
+{"case": 90001, "condition": "E5", "outcome": "success", "return": 0.5851167303892966, "time": 10.75, "latency_ms_p50": 13.300884515047073}
+{"case": 90002, "condition": "E5", "outcome": "success", "return": 0.7221845898452657, "time": 8.25, "latency_ms_p50": 13.323627412319183}
+{"case": 90003, "condition": "E5", "outcome": "success", "return": 0.37660076216137717, "time": 23.25, "latency_ms_p50": 13.349819928407669}
+{"case": 90004, "condition": "E5", "outcome": "collision", "return": -0.39903970442510106, "time": 7.5, "latency_ms_p50": 13.36144283413887}
+{"case": 90005, "condition": "E5", "outcome": "success", "return": 0.6676974000252933, "time": 10.25, "latency_ms_p50": 13.366088271141052}
+{"case": 90006, "condition": "E5", "outcome": "success", "return": 0.29024533346316433, "time": 22.5, "latency_ms_p50": 13.324346393346786}
+{"case": 90007, "condition": "E5", "outcome": "collision", "return": -0.4195982492108532, "time": 8.0, "latency_ms_p50": 13.334600254893303}
+{"case": 90008, "condition": "E5", "outcome": "success", "return": 0.7249803359578534, "time": 8.25, "latency_ms_p50": 13.344455510377884}
+{"case": 90009, "condition": "E5", "outcome": "collision", "return": -0.43278989734727097, "time": 7.25, "latency_ms_p50": 13.495367020368576}
+{"case": 90010, "condition": "E5", "outcome": "collision", "return": -0.39025171994877866, "time": 7.0, "latency_ms_p50": 13.323312625288963}
+{"case": 90011, "condition": "E5", "outcome": "success", "return": 0.7323033696543975, "time": 8.0, "latency_ms_p50": 13.293618336319923}
+{"case": 90012, "condition": "E5", "outcome": "collision", "return": -0.39958352514102613, "time": 7.0, "latency_ms_p50": 13.213064521551132}
+{"case": 90013, "condition": "E5", "outcome": "collision", "return": -0.3949999267053879, "time": 7.25, "latency_ms_p50": 13.17509263753891}
+{"case": 90014, "condition": "E5", "outcome": "success", "return": 0.7323033696543975, "time": 8.0, "latency_ms_p50": 13.23835551738739}
+{"case": 90015, "condition": "E5", "outcome": "success", "return": 0.6816111643348206, "time": 9.75, "latency_ms_p50": 13.288863003253937}
+[W1011 17:05:13.701553597 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

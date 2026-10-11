@@ -1,0 +1,2460 @@
+{
+  "status": "COLLECTION_COMPLETE_READOUT_PENDING",
+  "protocol": {
+    "question": "At identical 5Circle t5s state and forced action, do history omission and train/deploy continuation change targets or actual outcomes?",
+    "GO": "History fix changes held-out continuation regret/outcome in matched train behavior, or target-mode readout consistently improves held-out G in both seeds; eligible only for bounded controlled validation.",
+    "KILL": "No actual outcome/target benefit in matched arms, or linear readout fails held-out calibration: stop the tested continuation-only candidate, not claim impossibility.",
+    "cases": [
+      90000,
+      90001,
+      90002,
+      90003,
+      90004,
+      90005,
+      90006,
+      90007,
+      90008,
+      90009,
+      90010,
+      90011,
+      90012,
+      90013,
+      90014,
+      90015
+    ],
+    "root_step": 20,
+    "root_time_seconds": 5.0,
+    "denominator_per_model": 16,
+    "arms": [
+      "old-train",
+      "fixed-train",
+      "old-deploy",
+      "fixed-deploy"
+    ],
+    "root": "Replay original saved commands to step20. Force identical archived A0 command once, append observed current frame once. Compare tails starting at the identical resulting true state.",
+    "history_intervention": "Only post-root epsilon early-return history omission vs append-every-real-frame. Initial complete deployment prefix identical. Both arms keep repaired terminal bootstrap.",
+    "buffer_contract": "ReplayBufferMC push_episode rebuilds continuous real-state windows, including epsilon frames. This intervention changes online actor continuation/actions/labels, NOT buffer frame availability. No buffer or training update is performed.",
+    "train_behavior": "phase=train; frozen epsilon=.05, no smoothing/filter/risk according to original phase rules. Same frozen checkpoint. Not a recreation of all past training checkpoints.",
+    "eval_contract": "All four arms keep net.eval(), so dropout is disabled. Does NOT reproduce original train-mode actor dropout, mixtures of historical checkpoints, or replay state noise. A controlled frozen continuation contract, not complete original training-behavior reproduction. No new intervention.",
+    "deploy": "phase=test; epsilon=0; smoothing=.3, clearance=.2, risk=.8; repaired terminal baseline.",
+    "rng": "Per-model/case fixed private NumPy exploration RNG, restored around predict so environment RNG is not consumed by exploration; paired tape same initial seed.",
+    "early_terminal": "Cases ending before t5s retained in all16 denominator, marked PRE_ROOT_TERMINAL; no replacement roots.",
+    "budget": "4 models x16 fixed cases x4 arms; <=201 total env steps/episode; 300 full-batch CPU optimizer steps/head; no IL/RL.",
+    "readout": "Same true next-window latent256, same train/dev/test cases, old V init, linear257 parameters. MC labels independently for each arm. case%5 split; no dev selection.",
+    "scope": "Finite deterministic realizations with one exploration tape, not expected Q or full-learning causal effect.",
+    "sweep_recording": "Read-only synchronous min ||d0+t*(executed robot command-human velocity)||-radii over[0,.25]; env current velocity versus actual displacement/.25. Negative clearance counts collision intervals. Includes forced root command; no decision changes.",
+    "models": [
+      "kda-s419-t24",
+      "kda-s443-t24",
+      "gru-s419-t24",
+      "gru-s443-t24"
+    ],
+    "git_head": "9f062230541cde94b943f56b5ae9021eee042860",
+    "script_sha256": "5c6941071c5bf244f9257efce0edb191640e057ad8b57ab6dce4d0e3e1a997a8",
+    "policy_sha256": "b2f4c77ae795ca321e3c22780573f2e2bbba6ac0caca43744c4d6e49a3a1bdf6"
+  },
+  "models": [
+    {
+      "model": "kda-s419-t24",
+      "denominator": 16,
+      "valid_roots": 16,
+      "pre_root_terminal": 0,
+      "outcome_counts_all16": {
+        "old-train": {
+          "success": 16
+        },
+        "fixed-train": {
+          "success": 16
+        },
+        "old-deploy": {
+          "success": 16
+        },
+        "fixed-deploy": {
+          "success": 16
+        }
+      },
+      "paired_effects": [
+        {
+          "case": 90000,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90000,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_old",
+          "delta_G": 0.015792924244508733,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015792924244508733,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "history_train",
+          "delta_G": -0.0035593659413987178,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_old",
+          "delta_G": 0.03696272114345589,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_fixed",
+          "delta_G": 0.04052208708485461,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_train",
+          "delta_G": 0.007547192872036423,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_old",
+          "delta_G": 0.007547192872036423,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_old",
+          "delta_G": -0.007623427143470973,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_fixed",
+          "delta_G": -0.007623427143470973,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_old",
+          "delta_G": 0.00376365135733725,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_fixed",
+          "delta_G": 0.00376365135733725,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_old",
+          "delta_G": -0.00014974094670183735,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_fixed",
+          "delta_G": -0.00014974094670183735,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90008,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_old",
+          "delta_G": 0.015323858601522522,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015323858601522522,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90009,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_old",
+          "delta_G": 0.007700431458051549,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_fixed",
+          "delta_G": 0.007700431458051549,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_old",
+          "delta_G": -0.008429431933839271,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_fixed",
+          "delta_G": -0.008429431933839271,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "history_train",
+          "delta_G": 0.0024658490880250516,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_old",
+          "delta_G": 0.003377776653445186,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0009119275654201342,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90012,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_old",
+          "delta_G": 0.008261686238355881,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_fixed",
+          "delta_G": 0.008261686238355881,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "history_train",
+          "delta_G": 0.008016305895390485,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_old",
+          "delta_G": 0.008016305895390485,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        }
+      ]
+    },
+    {
+      "model": "kda-s443-t24",
+      "denominator": 16,
+      "valid_roots": 16,
+      "pre_root_terminal": 0,
+      "outcome_counts_all16": {
+        "old-train": {
+          "success": 16
+        },
+        "fixed-train": {
+          "success": 16
+        },
+        "old-deploy": {
+          "success": 15,
+          "timeout": 1
+        },
+        "fixed-deploy": {
+          "success": 15,
+          "timeout": 1
+        }
+      },
+      "paired_effects": [
+        {
+          "case": 90000,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90000,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_old",
+          "delta_G": -0.00809727868221255,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_fixed",
+          "delta_G": -0.00809727868221255,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_old",
+          "delta_G": 0.0004759426241472964,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0004759426241472964,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_old",
+          "delta_G": 0.0017497594144935125,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0017497594144935125,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90003,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_old",
+          "delta_G": 0.016606823852856722,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_fixed",
+          "delta_G": 0.016606823852856722,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_old",
+          "delta_G": -0.7853516798536129,
+          "outcome_changed": true,
+          "success_gained": false,
+          "success_lost": true,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_fixed",
+          "delta_G": -0.7853516798536129,
+          "outcome_changed": true,
+          "success_gained": false,
+          "success_lost": true,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_old",
+          "delta_G": 0.005701356591142681,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_fixed",
+          "delta_G": 0.005701356591142681,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_old",
+          "delta_G": 0.00840213050020644,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_fixed",
+          "delta_G": 0.00840213050020644,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_old",
+          "delta_G": 0.0020854310117341956,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0020854310117341956,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_old",
+          "delta_G": 0.015792924244508733,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015792924244508733,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_old",
+          "delta_G": 0.016131855372431003,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_fixed",
+          "delta_G": 0.016131855372431003,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_old",
+          "delta_G": 0.022642340958823337,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_fixed",
+          "delta_G": 0.022642340958823337,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_old",
+          "delta_G": 0.016955977758393637,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_fixed",
+          "delta_G": 0.016955977758393637,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_old",
+          "delta_G": -0.016113584577603035,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_fixed",
+          "delta_G": -0.016113584577603035,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_old",
+          "delta_G": 0.01584378575034251,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_fixed",
+          "delta_G": 0.01584378575034251,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        }
+      ]
+    },
+    {
+      "model": "gru-s419-t24",
+      "denominator": 16,
+      "valid_roots": 16,
+      "pre_root_terminal": 0,
+      "outcome_counts_all16": {
+        "old-train": {
+          "success": 15,
+          "collision": 1
+        },
+        "fixed-train": {
+          "success": 15,
+          "collision": 1
+        },
+        "old-deploy": {
+          "success": 15,
+          "collision": 1
+        },
+        "fixed-deploy": {
+          "success": 15,
+          "collision": 1
+        }
+      },
+      "paired_effects": [
+        {
+          "case": 90000,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90000,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_old",
+          "delta_G": 0.015634995002063667,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015634995002063667,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_old",
+          "delta_G": 0.01638937904888349,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_fixed",
+          "delta_G": 0.01638937904888349,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_old",
+          "delta_G": 0.0015766087099164938,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0015766087099164938,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_old",
+          "delta_G": 0.011057975388424679,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_fixed",
+          "delta_G": 0.011057975388424679,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_old",
+          "delta_G": 0.009340608348947343,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_fixed",
+          "delta_G": 0.009340608348947343,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90008,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_old",
+          "delta_G": 0.013222130827464706,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_fixed",
+          "delta_G": 0.013222130827464706,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90009,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_old",
+          "delta_G": 0.048492537736790964,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_fixed",
+          "delta_G": 0.048492537736790964,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90012,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_old",
+          "delta_G": 0.005551970613976276,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_fixed",
+          "delta_G": 0.005551970613976276,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_old",
+          "delta_G": 0.0019003617404552697,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0019003617404552697,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_old",
+          "delta_G": 0.00809727868221255,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_fixed",
+          "delta_G": 0.00809727868221255,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_old",
+          "delta_G": -0.007936142836436622,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_fixed",
+          "delta_G": -0.007936142836436622,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        }
+      ]
+    },
+    {
+      "model": "gru-s443-t24",
+      "denominator": 16,
+      "valid_roots": 16,
+      "pre_root_terminal": 0,
+      "outcome_counts_all16": {
+        "old-train": {
+          "success": 16
+        },
+        "fixed-train": {
+          "success": 16
+        },
+        "old-deploy": {
+          "success": 16
+        },
+        "fixed-deploy": {
+          "success": 16
+        }
+      },
+      "paired_effects": [
+        {
+          "case": 90000,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90000,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_old",
+          "delta_G": -0.007856781408072111,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90000,
+          "factor": "continuation_fixed",
+          "delta_G": -0.007856781408072111,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90001,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_old",
+          "delta_G": -0.02302218904167952,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90002,
+          "factor": "continuation_fixed",
+          "delta_G": -0.02302218904167952,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_old",
+          "delta_G": 0.007700431458051549,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90003,
+          "factor": "continuation_fixed",
+          "delta_G": 0.007700431458051549,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_old",
+          "delta_G": 0.02478589322882907,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90004,
+          "factor": "continuation_fixed",
+          "delta_G": 0.02478589322882907,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "history_train",
+          "delta_G": -0.007105532272722925,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90005,
+          "factor": "continuation_fixed",
+          "delta_G": 0.007105532272722925,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_old",
+          "delta_G": 0.008687458127689784,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90006,
+          "factor": "continuation_fixed",
+          "delta_G": 0.008687458127689784,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_old",
+          "delta_G": -0.0073970037338827455,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90007,
+          "factor": "continuation_fixed",
+          "delta_G": -0.0073970037338827455,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_old",
+          "delta_G": 0.024596626969500046,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90008,
+          "factor": "continuation_fixed",
+          "delta_G": 0.024596626969500046,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_old",
+          "delta_G": 0.015478645052043105,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90009,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015478645052043105,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90010,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90011,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_old",
+          "delta_G": 0.030649265067550502,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90012,
+          "factor": "continuation_fixed",
+          "delta_G": 0.030649265067550502,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_old",
+          "delta_G": 0.015323858601522522,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90013,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015323858601522522,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_old",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90014,
+          "factor": "continuation_fixed",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "history_train",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "history_deploy",
+          "delta_G": 0.0,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": false
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_old",
+          "delta_G": 0.015478645052043105,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        },
+        {
+          "case": 90015,
+          "factor": "continuation_fixed",
+          "delta_G": 0.015478645052043105,
+          "outcome_changed": false,
+          "success_gained": false,
+          "success_lost": false,
+          "command_trace_changed": true
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 105.81022524833679,
+  "method_level_progress": false,
+  "scientific_verdict": "INCONCLUSIVE",
+  "limitation": "Frozen-contract intervention with one exploration realization; not the causal effect of retraining."
+}

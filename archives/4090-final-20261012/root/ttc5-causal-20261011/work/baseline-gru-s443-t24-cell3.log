@@ -1,0 +1,8 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"mode": "baseline", "model": "gru-s443-t24", "cell": 3, "completed": 10, "seconds": 10.365737676620483}
+{"mode": "baseline", "model": "gru-s443-t24", "cell": 3, "completed": 20, "seconds": 20.62725853919983}
+{"mode": "baseline", "model": "gru-s443-t24", "cell": 3, "completed": 30, "seconds": 30.821145057678223}
+[W1011 11:46:56.489714479 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

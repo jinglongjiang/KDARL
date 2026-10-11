@@ -1,0 +1,4 @@
+/root/ab-causal-isolation-20261011/a/readout-a.py:132: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  optimizer_steps=args.steps,final_train_loss=float(loss),metrics=summary))
+{"status": "DONE", "groups": 14, "arms": 70, "wall_seconds": 14.89516305923462}

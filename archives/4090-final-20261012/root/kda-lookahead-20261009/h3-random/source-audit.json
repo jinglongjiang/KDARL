@@ -1,0 +1,10 @@
+{
+  "status": "已验证通过",
+  "episodes": 300,
+  "steps": 16020,
+  "physical_models_match": false,
+  "source": "crowd_sim/envs/crowd_sim.py:348-380,451-460",
+  "environment_collision_velocity": "human.vx/vy BEFORE current-step ORCA action is applied",
+  "actual_update_velocity": "new human_actions from human.act; recorded true_next_humans.vx/vy",
+  "margin": "same-time swept relative segments; NOT unrelated geometric segment intersections"
+}

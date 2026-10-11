@@ -1,0 +1,21 @@
+{"D0": ["arms", "pairs", "scope"]}
+DONE D1-mamba
+DONE D1-gru
+DONE D1-kda
+{"D0": ["arms", "pairs", "scope"], "D1": ["kda", "mamba", "gru"], "safety_geometry_shadow": ["kda", "mamba", "gru"], "D2": ["kda", "mamba", "gru"], "D3": ["kda", "mamba", "gru"], "D5": ["kda", "mamba", "gru"], "D8": ["same_reference_rank_delta", "same_raw_top_fraction", "episode_level", "warning"]}
+DONE D4-mamba-n6
+DONE D4-gru-n6
+DONE D4-kda-n6
+DONE D4-kda-n8
+DONE D4-mamba-n8
+DONE D4-gru-n8
+DONE D4-mamba-n15
+DONE D4-kda-n15
+DONE D4-gru-n15
+DONE D6-kda
+DONE D6-mamba
+DONE D6-gru
+DONE D7-mamba
+DONE D7-kda
+{"D0": ["arms", "pairs", "scope"], "D1": ["kda", "mamba", "gru"], "safety_geometry_shadow": ["kda", "mamba", "gru"], "D2": ["kda", "mamba", "gru"], "D3": ["kda", "mamba", "gru"], "D5": ["kda", "mamba", "gru"], "D8": ["same_reference_rank_delta", "same_raw_top_fraction", "episode_level", "warning"], "D4": ["gru-n10", "gru-n15", "gru-n20", "gru-n5", "gru-n6", "gru-n8", "kda-n10", "kda-n15", "kda-n20", "kda-n5", "kda-n6", "kda-n8", "mamba-n10", "mamba-n15", "mamba-n20", "mamba-n5", "mamba-n6", "mamba-n8"], "D6": ["gru-distance", "kda-distance", "mamba-distance"], "D7": ["n", "records"]}
+ALL_DIAGNOSTICS_DONE

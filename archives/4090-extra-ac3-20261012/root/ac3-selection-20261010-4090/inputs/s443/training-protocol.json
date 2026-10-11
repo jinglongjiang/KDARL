@@ -1,0 +1,108 @@
+{
+  "task": "KDA_GRU_HISTORY_SECOND_SEED_REPLICATION",
+  "seed": 443,
+  "prior_seed": 419,
+  "arms": [
+    [
+      "kda",
+      24
+    ],
+    [
+      "gru",
+      24
+    ],
+    [
+      "kda",
+      12
+    ],
+    [
+      "gru",
+      12
+    ]
+  ],
+  "il_epochs": 50,
+  "rl_episodes": 10000,
+  "fresh_il": true,
+  "dataset_sha256": "940ae49af4b641d23b7c8bdf47f548dddce5db128b7ea0beaabe1e897459a8e2",
+  "shared_initialization_hashes": {
+    "kda-t12": "f71570d863291063554543dc52dab7c60a1740ad294a733d58a58a006f0aeff1",
+    "kda-t24": "f71570d863291063554543dc52dab7c60a1740ad294a733d58a58a006f0aeff1",
+    "gru-t12": "f71570d863291063554543dc52dab7c60a1740ad294a733d58a58a006f0aeff1",
+    "gru-t24": "f71570d863291063554543dc52dab7c60a1740ad294a733d58a58a006f0aeff1"
+  },
+  "frozen": [
+    "reward",
+    "safety",
+    "ttc5",
+    "action_grid80",
+    "smoothing",
+    "learning_rate",
+    "temporal architecture except T"
+  ],
+  "evaluation": {
+    "case_base": 91000,
+    "n_cases_per_cell": 500,
+    "cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selection": "ttc5",
+    "scope": "same development cases as seed419; comparable, NOT independent case confirmation",
+    "reserved_92000_92499_untouched": true
+  },
+  "primary": {
+    "family_size": 1,
+    "alpha": 0.05,
+    "definition": "D=(SR_KDA24-SR_KDA12)-(SR_GRU24-SR_GRU12)",
+    "direction": "D>0",
+    "confidence_interval": "two-sided95% as explicitly requested",
+    "unit": "case ID clustered across all six cells and all four arms",
+    "bootstrap_replicates": 10000
+  },
+  "secondary": {
+    "family_size": 6,
+    "tests": "KDA/GRU T24-T12 SR/CR/TO",
+    "test": "paired exact McNemar",
+    "bonferroni_alpha": 0.008333333333333333
+  },
+  "scale_check": "marginal failure OR T24/T12 and log OR_KDA-log OR_GRU; D>0 corresponds to log-failure-odds interaction<0",
+  "gate": {
+    "REPLICATED_PRELIMINARY": "D>0 and CI excludes0; KDA SR delta>0, GRU<0, both pass secondary correction; scales agree; prior seed419 same signs",
+    "PARTIAL": "D>0 and CI excludes0, but any full criterion fails, including missing within-arm significance",
+    "NOT_CONFIRMED": "D<=0 or CI contains0"
+  },
+  "stage2_authorized": false,
+  "stage2": "M1 and M2 require new user authorization even if replicated",
+  "M1_deferred": [
+    "full24",
+    "replace older12 while retaining recent12",
+    "shuffle older frames only",
+    "amplitude-matched recent-history positive/control intervention"
+  ],
+  "M1_limits": "History replacement creates distribution shift; value/ranking/action sensitivity alone is not memory causal value",
+  "M2_deferred": "Only after authorized M1 localizes an effect; candidate explanations are not established defects",
+  "n_seeds_scope": "n=2 checks sign replication only; do not estimate architecture-level seed variance",
+  "storage": {
+    "start_min_free_GiB": 4,
+    "checkpoint_every": 1000,
+    "resume_latest_copies": 1,
+    "backup": "Immediately after all training and evaluation finish: rsync, both-side every-file SHA256, then weight-only deletion",
+    "deletion_guard": "Neither inventory empty; re-enumerate and hash remote list before deletion; no directory or non-weight deletion",
+    "no_deletion_on_failure_or_partial": true
+  },
+  "scheduling": {
+    "stagger_seconds": 60,
+    "max_IL_workers": 3,
+    "max_training_workers": 4,
+    "max_eval_during_training": 2,
+    "max_eval_after_training": 4
+  },
+  "wall_budget_hours": 8,
+  "reserve_report_minutes": 30,
+  "no_automatic_restart": true,
+  "other_line": "Bayesian CA baseline not coupled to these overnight GPU runs; not launched by this controller"
+}

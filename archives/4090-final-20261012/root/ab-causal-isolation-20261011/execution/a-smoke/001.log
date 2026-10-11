@@ -1,0 +1,11 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+WARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.
+{"root_id": 222, "N": 20, "split": "train", "wall_seconds": 25.62551712989807}
+{"root_id": 223, "N": 20, "split": "train", "wall_seconds": 25.76628279685974}
+{"root_id": 224, "N": 20, "split": "train", "wall_seconds": 25.975231170654297}
+{"root_id": 225, "N": 20, "split": "dev", "wall_seconds": 26.151252508163452}
+{"root_id": 226, "N": 20, "split": "train", "wall_seconds": 26.29437017440796}
+[W1011 16:25:13.169599043 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

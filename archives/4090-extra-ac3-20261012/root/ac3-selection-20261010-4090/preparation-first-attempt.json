@@ -1,0 +1,8 @@
+{
+  "exit_code": 1,
+  "stage": "remote prepare before transfer completed",
+  "cause": "Input presence assertion rejected an incomplete transfer; no model constructed",
+  "fix": "Wait for rsync exit0 before rerunning the same unmodified prepare script",
+  "protocol_or_method_changed": false,
+  "evaluation_started": false
+}

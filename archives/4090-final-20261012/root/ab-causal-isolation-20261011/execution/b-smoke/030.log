@@ -1,0 +1,8 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"case": 90000, "condition": "E1", "outcome": "success", "return": 0.6361854860638709, "time": 11.5, "latency_ms_p50": 12.997929006814957}
+{"case": 90001, "condition": "E1", "outcome": "success", "return": 0.6940263541830959, "time": 9.25, "latency_ms_p50": 12.98866793513298}
+{"case": 90002, "condition": "E1", "outcome": "success", "return": 0.617290140942288, "time": 12.25, "latency_ms_p50": 13.05052638053894}
+[W1011 16:41:10.947367293 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())

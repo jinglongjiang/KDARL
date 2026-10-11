@@ -25,6 +25,12 @@ as historical records of the previous weight-free export.
   A/B audits, and historical preference-formation measurements through Oct 11.
 - `CrowdNav/data/il_dataset_diverse_v5.0_merged_15000_with_idx.pth`:
   the matching archived ORCA dataset (SHA256 recorded in the manifest).
+- `archives/4090-final-20261012` and `archives/4090-extra-ac3-20261012`:
+  verified final remote snapshots and backup/cleanup manifests. The local backup
+  contains 9,167 files; only 1,010 explicitly hash-verified artifact files were
+  subsequently removed from the finished remote research directories. Source,
+  configurations, environments, dependencies and unrelated research were not
+  deleted. This housekeeping is not a new navigation experiment.
 
 These are archived experiments, not claims of algorithmic success. In
 particular, the preference-formation T1 historical RL measurement is complete,

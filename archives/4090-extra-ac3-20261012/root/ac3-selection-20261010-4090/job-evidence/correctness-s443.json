@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "pid": 3031419,
+  "wall_seconds": 29.047556400299072,
+  "log": "/root/ac3-selection-20261010-4090/logs/correctness-s443.log",
+  "log_bytes": 1150,
+  "actual_output_tail": "Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.\nPlease upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.\nUsers of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.\nSee the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.\nWARNING:fla.utils._device:Current Python version 3.10 is below the recommended 3.11 version. It is recommended to upgrade to Python 3.11 or higher for the best experience.\nCPU_REFERENCE_PASS n_humans= 8 selected= [0, 4, 5, 6, 7]\n{'fast_legacy': 36, 'five_person_score_equal': 12, 'five_person_trajectory_equal': 4, 'current_selected_once': True, 'full_crowd_safety_unchanged': True, 'status': 'PASS', 'seed': 443, 'weight_sha256': 'c6cf228f489793ddc6dacc9bb78aa07ce8fcd9ec0fba1588e3a15c0fb38c23fd'}\n[W1010 21:09:54.255157674 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())\n",
+  "args": [
+    "--seed",
+    "443",
+    "--correctness"
+  ]
+}

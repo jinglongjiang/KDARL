@@ -1,0 +1,518 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "model": "kda-s419-t24",
+      "arm": "old-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.0005167584167793393,
+          "fit_mse": 8.881784197001252e-15,
+          "target_mean": 0.7882171273231506,
+          "target_std": 0.045735929161310196
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0012982990592718124,
+          "fit_mse": 0.0005253563867881894,
+          "target_mean": 0.7816115021705627,
+          "target_std": 0.043477337807416916
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.001512963674031198,
+          "fit_mse": 0.0007671467028558254,
+          "target_mean": 0.7727665901184082,
+          "target_std": 0.014741562306880951
+        }
+      ]
+    },
+    {
+      "model": "kda-s419-t24",
+      "arm": "fixed-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.0005155198159627616,
+          "fit_mse": 3.907985131383846e-15,
+          "target_mean": 0.7881077527999878,
+          "target_std": 0.045641057193279266
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0014527477324008942,
+          "fit_mse": 0.0006277202046476305,
+          "target_mean": 0.7841272354125977,
+          "target_std": 0.04158913344144821
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0016023734351620078,
+          "fit_mse": 0.0008274417486973107,
+          "target_mean": 0.7754386067390442,
+          "target_std": 0.018520506098866463
+        }
+      ]
+    },
+    {
+      "model": "kda-s419-t24",
+      "arm": "old-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.0008291277335956693,
+          "fit_mse": 6.750155905017657e-15,
+          "target_mean": 0.7941750288009644,
+          "target_std": 0.041971150785684586
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0020493422634899616,
+          "fit_mse": 0.0003601300995796919,
+          "target_mean": 0.7892351746559143,
+          "target_std": 0.03848908841609955
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0014523196732625365,
+          "fit_mse": 0.000111399196612183,
+          "target_mean": 0.7754643559455872,
+          "target_std": 0.019531337544322014
+        }
+      ]
+    },
+    {
+      "model": "kda-s419-t24",
+      "arm": "fixed-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.0008291277335956693,
+          "fit_mse": 6.750155905017657e-15,
+          "target_mean": 0.7941750288009644,
+          "target_std": 0.041971150785684586
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0020493422634899616,
+          "fit_mse": 0.0003601300995796919,
+          "target_mean": 0.7892351746559143,
+          "target_std": 0.03848908841609955
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0014523196732625365,
+          "fit_mse": 0.000111399196612183,
+          "target_mean": 0.7754643559455872,
+          "target_std": 0.019531337544322014
+        }
+      ]
+    },
+    {
+      "model": "kda-s443-t24",
+      "arm": "old-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.0018684761598706245,
+          "fit_mse": 1.421085492696024e-15,
+          "target_mean": 0.764703094959259,
+          "target_std": 0.03174751251935959
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0028754372615367174,
+          "fit_mse": 0.0005185942281968892,
+          "target_mean": 0.7834638953208923,
+          "target_std": 0.018672332167625427
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.003122485475614667,
+          "fit_mse": 0.000852006662171334,
+          "target_mean": 0.8018186688423157,
+          "target_std": 0.017294099554419518
+        }
+      ]
+    },
+    {
+      "model": "kda-s443-t24",
+      "arm": "fixed-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.0018684761598706245,
+          "fit_mse": 1.421085492696024e-15,
+          "target_mean": 0.764703094959259,
+          "target_std": 0.03174751251935959
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0028754372615367174,
+          "fit_mse": 0.0005185942281968892,
+          "target_mean": 0.7834638953208923,
+          "target_std": 0.018672332167625427
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.003122485475614667,
+          "fit_mse": 0.000852006662171334,
+          "target_mean": 0.8018186688423157,
+          "target_std": 0.017294099554419518
+        }
+      ]
+    },
+    {
+      "model": "kda-s443-t24",
+      "arm": "old-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.06112677603960037,
+          "fit_mse": 2.53685965362013e-15,
+          "target_mean": 0.6924528479576111,
+          "target_std": 0.2588222324848175
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.003440197790041566,
+          "fit_mse": 0.08881903439760208,
+          "target_mean": 0.7898110747337341,
+          "target_std": 0.016201559454202652
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0035078171640634537,
+          "fit_mse": 0.10150670260190964,
+          "target_mean": 0.8072474598884583,
+          "target_std": 0.019280215725302696
+        }
+      ]
+    },
+    {
+      "model": "kda-s443-t24",
+      "arm": "fixed-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.06112677603960037,
+          "fit_mse": 2.53685965362013e-15,
+          "target_mean": 0.6924528479576111,
+          "target_std": 0.2588222324848175
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.003440197790041566,
+          "fit_mse": 0.08881903439760208,
+          "target_mean": 0.7898110747337341,
+          "target_std": 0.016201559454202652
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0035078171640634537,
+          "fit_mse": 0.10150670260190964,
+          "target_mean": 0.8072474598884583,
+          "target_std": 0.019280215725302696
+        }
+      ]
+    },
+    {
+      "model": "gru-s419-t24",
+      "arm": "old-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.002661794191226363,
+          "fit_mse": 1.421085492696024e-15,
+          "target_mean": 0.6679727435112,
+          "target_std": 0.3917510211467743
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.001897763111628592,
+          "fit_mse": 0.0005814762553200126,
+          "target_mean": 0.785236120223999,
+          "target_std": 0.04672342538833618
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0034852626267820597,
+          "fit_mse": 0.0002932768256869167,
+          "target_mean": 0.8006979823112488,
+          "target_std": 0.005443134345114231
+        }
+      ]
+    },
+    {
+      "model": "gru-s419-t24",
+      "arm": "fixed-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.002661794191226363,
+          "fit_mse": 1.421085492696024e-15,
+          "target_mean": 0.6679727435112,
+          "target_std": 0.3917510211467743
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.001897763111628592,
+          "fit_mse": 0.0005814762553200126,
+          "target_mean": 0.785236120223999,
+          "target_std": 0.04672342538833618
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0034852626267820597,
+          "fit_mse": 0.0002932768256869167,
+          "target_mean": 0.8006979823112488,
+          "target_std": 0.005443134345114231
+        }
+      ]
+    },
+    {
+      "model": "gru-s419-t24",
+      "arm": "old-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.00309975678101182,
+          "fit_mse": 1.0658141459917976e-15,
+          "target_mean": 0.6767200827598572,
+          "target_std": 0.3938091993331909
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0021668097469955683,
+          "fit_mse": 0.00021026474132668227,
+          "target_mean": 0.7908024787902832,
+          "target_std": 0.04320809245109558
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.004287247080355883,
+          "fit_mse": 0.00012157847959315404,
+          "target_mean": 0.8070830702781677,
+          "target_std": 0.010092226788401604
+        }
+      ]
+    },
+    {
+      "model": "gru-s419-t24",
+      "arm": "fixed-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.00309975678101182,
+          "fit_mse": 1.0658141459917976e-15,
+          "target_mean": 0.6767200827598572,
+          "target_std": 0.3938091993331909
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.0021668097469955683,
+          "fit_mse": 0.00021026474132668227,
+          "target_mean": 0.7908024787902832,
+          "target_std": 0.04320809245109558
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.004287247080355883,
+          "fit_mse": 0.00012157847959315404,
+          "target_mean": 0.8070830702781677,
+          "target_std": 0.010092226788401604
+        }
+      ]
+    },
+    {
+      "model": "gru-s443-t24",
+      "arm": "old-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.003928907215595245,
+          "fit_mse": 4.618527613034062e-15,
+          "target_mean": 0.7846497297286987,
+          "target_std": 0.0469713918864727
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.002847735770046711,
+          "fit_mse": 0.00011246022768318653,
+          "target_mean": 0.7536965012550354,
+          "target_std": 0.007511993404477835
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0015137906884774566,
+          "fit_mse": 0.000392705638660118,
+          "target_mean": 0.7939328551292419,
+          "target_std": 0.022337576374411583
+        }
+      ]
+    },
+    {
+      "model": "gru-s443-t24",
+      "arm": "fixed-train",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.003860143944621086,
+          "fit_mse": 2.4868995328087033e-15,
+          "target_mean": 0.7839392423629761,
+          "target_std": 0.04812644422054291
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.002847735770046711,
+          "fit_mse": 0.00011669680679915473,
+          "target_mean": 0.7536965012550354,
+          "target_std": 0.007511993404477835
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.0015137906884774566,
+          "fit_mse": 0.0003902411262970418,
+          "target_mean": 0.7939328551292419,
+          "target_std": 0.022337576374411583
+        }
+      ]
+    },
+    {
+      "model": "gru-s443-t24",
+      "arm": "old-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.004256799351423979,
+          "fit_mse": 6.039613423367441e-15,
+          "target_mean": 0.786303699016571,
+          "target_std": 0.048183489590883255
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.004753171931952238,
+          "fit_mse": 4.3399148125899956e-05,
+          "target_mean": 0.7695701718330383,
+          "target_std": 0.0006688704597763717
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.002514526015147567,
+          "fit_mse": 0.00018203099898528308,
+          "target_mean": 0.8073543906211853,
+          "target_std": 0.023205356672406197
+        }
+      ]
+    },
+    {
+      "model": "gru-s443-t24",
+      "arm": "fixed-deploy",
+      "parameters": 257,
+      "steps": 300,
+      "metrics": [
+        {
+          "split": "train",
+          "cases": 10,
+          "old_V_mse": 0.004256799351423979,
+          "fit_mse": 6.039613423367441e-15,
+          "target_mean": 0.786303699016571,
+          "target_std": 0.048183489590883255
+        },
+        {
+          "split": "dev",
+          "cases": 3,
+          "old_V_mse": 0.004753171931952238,
+          "fit_mse": 4.3399148125899956e-05,
+          "target_mean": 0.7695701718330383,
+          "target_std": 0.0006688704597763717
+        },
+        {
+          "split": "test",
+          "cases": 3,
+          "old_V_mse": 0.002514526015147567,
+          "fit_mse": 0.00018203099898528308,
+          "target_mean": 0.8073543906211853,
+          "target_std": 0.023205356672406197
+        }
+      ]
+    }
+  ],
+  "limitation": "At most16 cases/seed, one root action and exploration tape; no full-learning effect claimed."
+}

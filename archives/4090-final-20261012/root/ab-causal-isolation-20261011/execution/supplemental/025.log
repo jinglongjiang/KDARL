@@ -1,0 +1,20 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"case": 90000, "condition": "E10", "outcome": "collision", "return": -0.40673432446505886, "time": 6.5, "latency_ms_p50": 6.020715460181236}
+{"case": 90001, "condition": "E10", "outcome": "collision", "return": -0.4332497278857129, "time": 5.0, "latency_ms_p50": 6.053609773516655}
+{"case": 90002, "condition": "E10", "outcome": "collision", "return": -0.4567468927229397, "time": 7.5, "latency_ms_p50": 5.9945303946733475}
+{"case": 90003, "condition": "E10", "outcome": "collision", "return": -0.44564328405351217, "time": 5.0, "latency_ms_p50": 6.166351959109306}
+{"case": 90004, "condition": "E10", "outcome": "collision", "return": -0.4104310414627911, "time": 6.75, "latency_ms_p50": 6.047200411558151}
+{"case": 90005, "condition": "E10", "outcome": "collision", "return": -0.42430032436548326, "time": 5.25, "latency_ms_p50": 6.108034402132034}
+{"case": 90006, "condition": "E10", "outcome": "collision", "return": -0.4024023588334619, "time": 7.5, "latency_ms_p50": 6.102774292230606}
+{"case": 90007, "condition": "E10", "outcome": "collision", "return": -0.4697303476304384, "time": 4.75, "latency_ms_p50": 6.07893243432045}
+{"case": 90008, "condition": "E10", "outcome": "collision", "return": -0.439616489181052, "time": 5.0, "latency_ms_p50": 6.126768887042999}
+{"case": 90009, "condition": "E10", "outcome": "collision", "return": -0.5047878450924621, "time": 7.0, "latency_ms_p50": 6.141673773527145}
+{"case": 90010, "condition": "E10", "outcome": "collision", "return": -0.4343405765137281, "time": 5.75, "latency_ms_p50": 6.060820072889328}
+{"case": 90011, "condition": "E10", "outcome": "collision", "return": -0.47811873056137005, "time": 5.75, "latency_ms_p50": 6.098710000514984}
+{"case": 90012, "condition": "E10", "outcome": "collision", "return": -0.42106099230158045, "time": 6.0, "latency_ms_p50": 6.0890354216098785}
+{"case": 90013, "condition": "E10", "outcome": "collision", "return": -0.4468110725713548, "time": 3.75, "latency_ms_p50": 6.1322711408138275}
+{"case": 90014, "condition": "E10", "outcome": "collision", "return": -0.4672936758386758, "time": 4.75, "latency_ms_p50": 6.100010126829147}
+{"case": 90015, "condition": "E10", "outcome": "collision", "return": -0.4311938779344506, "time": 5.25, "latency_ms_p50": 6.164293736219406}

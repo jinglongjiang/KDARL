@@ -1,0 +1,27 @@
+{
+  "weight": {
+    "/root/kda-lookahead-20261009/weights/kda/rl_model_ep10000.pth": "cb2e20c4cc2f12014fed589e9ff02468d04cfa12573c66fc79617c95356cbf0a"
+  },
+  "config": {
+    "/root/kda-lookahead-20261009/original-configs/kda.ini": "6e77ae41f6902672490fa929670ea3c6c703a6db3c4f10eed8fbc75a10fd8749"
+  },
+  "inputs": {
+    "/root/kda-lookahead-20261009/h3/per-case/kda-alpha0.3-a80/cell0.steps.jsonl.gz": "4cbad475e3bb7caef0849f6f485f22d21e43ba0d54aa32d587699b59ee84e752",
+    "/root/kda-lookahead-20261009/h3/per-case/kda-alpha0.3-a80/cell1.steps.jsonl.gz": "095b4c8bdfbcc3cb246e5e962ecd31ea4402f33ab18bfe049c1b44cc4fdd4bbc",
+    "/root/kda-lookahead-20261009/h3/per-case/kda-alpha0.3-a80/cell2.steps.jsonl.gz": "91c02c67ff9cd7c1db6d6099d55874cd618284f3202f1c28506f5c0bb7909463",
+    "/root/kda-lookahead-20261009/h3/per-case/kda-alpha0.3-a80/cell3.steps.jsonl.gz": "a4a203fc2cb26921c9d8af0fe630d8672ce74f6d07e12ba504871bf9fdf3db4a",
+    "/root/kda-lookahead-20261009/h3/per-case/kda-alpha0.3-a80/cell4.steps.jsonl.gz": "46c9d0e44c0258f66ea3017773869749c249d7d2d7f30aa43d2eb134ee162f96",
+    "/root/kda-lookahead-20261009/h3/per-case/kda-alpha0.3-a80/cell5.steps.jsonl.gz": "3e71058093d3f167eb194f7708146e2c56941e839ca0b0530fbe7cb3ec1a8f1b"
+  },
+  "scripts": {
+    "/root/kda-lookahead-20261009/h3-random/random-worker.py": "51bf1ba428ead9e46fc5c06ee52ab324246dad448e13989d5a2a94c431ebbb88",
+    "/root/kda-lookahead-20261009/h3-random/summarize-random.py": "0f900d6c02058158cf372286586a8d0982974cb45e3c11ba8f48c9339ae1ad8f",
+    "/root/kda-lookahead-20261009/h3-random/run-random.py": "0a2c679148d977a1a71ddf005128041879d6400986b1605bafae20c6e4629a97",
+    "/root/kda-lookahead-20261009/h3-random/mirror-random.py": "4b94c3fcdbe4fd60a3e410c5bccc73e8615a782e0be36911eefa9037c157e06d"
+  },
+  "parent_manifest": {
+    "/root/kda-lookahead-20261009/frozen-manifest.json": "b433abaa3687f2a319fef909726b7b66e2d9965ea340c74f67eb1831d1d8309a"
+  },
+  "protocol_sha256": "db90b2cb8b89c38441b31ed9bb01be0eb79f4726efe0c804f663a3d2d337af44",
+  "protected_local_inventory_sha256": "fde59f346023411e3703a80ffaac4763fff138a4bd664239c4a1792fca830769"
+}
