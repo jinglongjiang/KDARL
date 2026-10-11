@@ -150,8 +150,32 @@ def store(src, relative, entries, attributes):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--export', action='store_true')
+    parser.add_argument('--backup', type=Path, help='Append a verified local remote-backup snapshot')
+    parser.add_argument('--archive-prefix', default='archives/4090-final-20261012')
     args = parser.parse_args()
-    sources = source_files()
+    previous = None
+    if args.backup:
+        prefix = Path(args.archive_prefix)
+        assert not prefix.is_absolute() and '..' not in prefix.parts
+        backup = args.backup.resolve()
+        verification = json.loads((backup / 'local-backup-verification.json').read_text())
+        cleanup = json.loads((backup / 'cleanup-result.json').read_text())
+        assert verification['status'] == cleanup['status'] == 'PASS'
+        previous = json.loads((REPO / 'research-archive-manifest.json').read_text())
+        sources = {}
+        for entry in verification['entries']:
+            p = Path(entry['local'])
+            p.resolve().relative_to(backup)
+            if eligible(p):
+                sources[str(prefix / p.relative_to(backup))] = p
+        for name in ('backup-and-clean.py', 'protocol.json', 'guard-selftest.json',
+                     'remote-manifest-before.json', 'local-backup-verification.json',
+                     'deletion-plan.json', 'cleanup-result.json', 'rsync.log'):
+            p = backup / name
+            assert p.is_file(), p
+            sources[str(prefix / name)] = p
+    else:
+        sources = source_files()
     total = sum(p.stat().st_size for p in sources.values())
     plan = dict(files=len(sources), logical_bytes=total,
         weights=sum(p.name.endswith(WEIGHT_SUFFIXES) for p in sources.values()),
@@ -161,8 +185,13 @@ def main():
     if not args.export:
         return
     assert shutil.disk_usage(REPO).free >= 4 * 1024**3
-    entries = []
+    entries = previous['entries'].copy() if previous else []
     attributes = set()
+    if previous:
+        tail = (REPO / '.gitattributes').read_text().split('# Large immutable evidence paths (generated)')
+        if len(tail) == 2:
+            attributes.update(x for x in tail[1].splitlines() if x.strip())
+        assert not {str(x) for x in sources} & {x['path'] for x in entries}
     for i, (relative, source) in enumerate(sorted(sources.items()), 1):
         store(source, relative, entries, attributes)
         if i % 250 == 0:
@@ -170,6 +199,11 @@ def main():
     attr = REPO / '.gitattributes'
     current = attr.read_text().split('# Large immutable evidence paths (generated)')[0].rstrip()
     attr.write_text(current + '\n# Large immutable evidence paths (generated)\n' + '\n'.join(sorted(attributes)) + '\n')
+    if previous:
+        plan = dict(previous['plan'], files=len(entries),
+            logical_bytes=sum(x['bytes'] for x in entries),
+            weights=sum(x['path'].endswith(WEIGHT_SUFFIXES) for x in entries),
+            verified_remote_backup_added=str(args.backup))
     manifest = dict(version='20261012-full-evidence-with-weights', plan=plan, entries=entries,
         historical_manifests='snapshot-manifest.json and export-verification.json describe the previous weight-free export, not this update',
         immutable_LFS_cache='Content-addressed local objects may share storage with existing immutable local originals; do not edit archived objects in place.')
