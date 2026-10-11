@@ -31,6 +31,10 @@ as historical records of the previous weight-free export.
   subsequently removed from the finished remote research directories. Source,
   configurations, environments, dependencies and unrelated research were not
   deleted. This housekeeping is not a new navigation experiment.
+  `archives/4090-final-20261012/storage-isolation.json` separately records
+  post-backup storage isolation: local backup files and Git LFS objects no
+  longer share hardlinks with mutable original research files. The companion
+  script is retained; contents were SHA256-checked during copying.
 
 These are archived experiments, not claims of algorithmic success. In
 particular, the preference-formation T1 historical RL measurement is complete,
