@@ -12,7 +12,7 @@ import subprocess
 import time
 
 BASE=Path(__file__).resolve().parent
-HOST='root@45.126.120.6'
+HOST='root@REMOTE_HOST_REDACTED'
 REMOTE='/root/kda-history-replication-20261010'
 
 

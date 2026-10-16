@@ -5,7 +5,7 @@ import subprocess
 import time
 
 BASE = Path(__file__).resolve().parent
-REMOTE = 'root@45.126.120.6:/root/kda-history-20261009/'
+REMOTE = 'root@REMOTE_HOST_REDACTED:/root/kda-history-20261009/'
 DEADLINE = time.time() + 9 * 3600
 
 while time.time() < DEADLINE:

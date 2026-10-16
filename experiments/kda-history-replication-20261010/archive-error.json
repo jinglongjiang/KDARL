@@ -1,4 +1,4 @@
 {
-  "error": "CalledProcessError(1, ['scp', '-q', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15', '/home/abc/workspace/kda-history-replication-20261010/archive-expected-weights.json', 'root@45.126.120.6:/root/kda-history-replication-20261010/archive-expected-weights.json'])",
+  "error": "CalledProcessError(1, ['scp', '-q', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15', '/home/abc/workspace/kda-history-replication-20261010/archive-expected-weights.json', 'root@REMOTE_HOST_REDACTED:/root/kda-history-replication-20261010/archive-expected-weights.json'])",
   "remote_cleanup_not_assumed": true
 }

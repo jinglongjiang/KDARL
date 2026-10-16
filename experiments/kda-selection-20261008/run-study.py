@@ -20,7 +20,7 @@ CPROJECT = '/workspace/nav_data/mamba/camrl/CrowdNav'
 CBASE = '/workspace/kda-selection-20261008'
 RBASE = '/root/kda-selection-20261008'
 RPROJECT = '/root/cc-diag-20261008/code'
-REMOTE = 'root@45.126.120.6'
+REMOTE = 'root@REMOTE_HOST_REDACTED'
 PYTHON = '/root/miniconda3/envs/mamba/bin/python'
 SSH = ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15',
        '-o', 'ServerAliveInterval=30', REMOTE]

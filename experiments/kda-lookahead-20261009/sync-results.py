@@ -27,7 +27,7 @@ def main():
         try:
             process = subprocess.run(['rsync', '-rt', '-e', 'ssh -o BatchMode=yes -o ConnectTimeout=15',
                 '--include=*/', '--include=*.json', '--include=*.md', '--include=*.log', '--include=*.gz', '--exclude=*',
-                'root@45.126.120.6:/root/kda-lookahead-20261009/', str(BASE) + '/'], timeout=300)
+                'root@REMOTE_HOST_REDACTED:/root/kda-lookahead-20261009/', str(BASE) + '/'], timeout=300)
             status = dict(last_sync=time.time(), exit_code=process.returncode)
         except subprocess.TimeoutExpired:
             status = dict(last_sync=time.time(), exit_code=None, reason='sync timeout; training never started')

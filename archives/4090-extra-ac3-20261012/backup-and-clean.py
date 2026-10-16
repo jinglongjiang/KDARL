@@ -11,7 +11,7 @@ import sys
 
 BASE = Path(__file__).resolve().parent
 REPO = Path('/home/abc/workspace/KDARL')
-REMOTE = 'root@45.126.120.6'
+REMOTE = 'root@REMOTE_HOST_REDACTED'
 NAMES = ['ac3-selection-20261010-4090']
 SSH = ['ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=15',
        '-o', 'ServerAliveInterval=15', '-o', 'ServerAliveCountMax=4', REMOTE]

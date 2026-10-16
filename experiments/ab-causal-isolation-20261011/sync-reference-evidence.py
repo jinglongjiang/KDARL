@@ -7,7 +7,7 @@ import time
 
 BASE = Path(__file__).resolve().parent
 REL = 'reference-mamba-v3/'
-REMOTE = 'root@45.126.120.6:/root/ab-causal-isolation-20261011/'
+REMOTE = 'root@REMOTE_HOST_REDACTED:/root/ab-causal-isolation-20261011/'
 
 
 def main():

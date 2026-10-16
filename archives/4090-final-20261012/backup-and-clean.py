@@ -11,7 +11,7 @@ import sys
 
 BASE = Path(__file__).resolve().parent
 REPO = Path('/home/abc/workspace/KDARL')
-REMOTE = 'root@45.126.120.6'
+REMOTE = 'root@REMOTE_HOST_REDACTED'
 NAMES = ['ab-causal-isolation-20261011', 'cc-diag-20261008', 'cc-kda-curve',
          'cc-kda-eval', 'kda-history-20261009', 'kda-history-replication-20261010',
          'kda-lookahead-20261009', 'kda-selection-20261008', 'mamba-ttc5-20261009',

@@ -13,7 +13,7 @@ def main():
     while True:
         command=['rsync','-rt','-e','ssh -o BatchMode=yes -o ConnectTimeout=15',
             '--include=*/','--include=*.json','--include=*.md','--include=*.log','--include=*.gz','--exclude=*',
-            'root@45.126.120.6:/root/kda-lookahead-20261009/h3-random/',str(BASE)+'/']
+            'root@REMOTE_HOST_REDACTED:/root/kda-lookahead-20261009/h3-random/',str(BASE)+'/']
         try:
             result=subprocess.run(command,timeout=600)
             (BASE/'sync-status.json').write_text(json.dumps({'exit_code':result.returncode,'time':time.time()}))

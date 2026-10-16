@@ -4,7 +4,7 @@
 set -u
 W=/home/abc/temp/cc_6env_20261007
 P='/home/abc/workspace/CrowdNav(20270731_backup2)/CrowdNav'
-R=root@45.126.120.6
+R=root@REMOTE_HOST_REDACTED
 RB=/root/bayes-vl-optimized-20261007/crowd_nav/runs/optimized-10000-r1
 PY=/root/miniconda3/envs/mamba/bin/python
 log(){ echo "[$(date +%H:%M:%S)] $*" >> $W/watcher.log; }

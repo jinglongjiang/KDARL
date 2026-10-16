@@ -42,7 +42,7 @@ def main():
     source += '\nprint(json.dumps(inventory(Path("/root/ab-causal-isolation-20261011"), SCOPES)))\n'
     output = subprocess.check_output([
         'ssh', '-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10',
-        'root@45.126.120.6', 'python3 -c ' + shlex.quote(source)], text=True)
+        'root@REMOTE_HOST_REDACTED', 'python3 -c ' + shlex.quote(source)], text=True)
     remote = json.loads(output)
     assert remote, 'FAIL empty remote inventory'
     missing_local = sorted(set(remote) - set(local))

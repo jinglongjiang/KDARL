@@ -6,7 +6,7 @@ import subprocess
 import time
 
 BASE=Path(__file__).resolve().parent
-REMOTE='root@45.126.120.6:/root/ab-causal-isolation-20261011/'
+REMOTE='root@REMOTE_HOST_REDACTED:/root/ab-causal-isolation-20261011/'
 MODELS=['gru-s419-t24','gru-s443-t24','kda-s419-t24','kda-s443-t24']
 
 
