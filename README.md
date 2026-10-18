@@ -1,13 +1,7 @@
 ## 第 6 轮（2026-10-18）
 
-- 主报告：[ROUND6-REPORT.md](ROUND6-REPORT.md)，只列事实，涵盖插件 / X1 / X2 / X3。
-- 原始结果文件：reports/ 目录下的 plugin-b-confirm、pareto、srfm-transfer、train-x（RESULT / DESIGN / KF-DESIGN / CONTROLS-DESIGN）、reactivity、rho-R0。
-- Gemini 文献检索：reports/gemini-lit-t01~t06.md（仅供参考，引用未经全部核实）。
-
-# 第二篇方向证据包（2026-10-17，第 2 版）
-
-本 README 是整理文档第 14 节（上午，旧标准）与第 15 节（下午，按"比基线好点、有边界、有区分即算贡献"重判）的原文抽取；reports/ 为原始实验报告。
-统计口径：按 case 配对 bootstrap 95% CI；dev 块与测试块分离；所有数字均已由 CC 对照原始报告核实。
+- [ROUND6-REPORT.md](ROUND6-REPORT.md)：盲化版实验记录。四个方向随机编为 A/B/C/D，只列设置和数字，不含结论。
+- 注意：reports/ 目录里是未盲化的原始结果，文件名和内容会暴露各方向的名称。做盲审时请只看 ROUND6-REPORT.md。
 
 ## 14. 10-17 新结果（甲、乙'、丙、CC、Gemini）
 
