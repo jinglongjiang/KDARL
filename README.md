@@ -1,3 +1,9 @@
+## 第 6 轮（2026-10-18）
+
+- 主报告：[ROUND6-REPORT.md](ROUND6-REPORT.md)，只列事实，涵盖插件 / X1 / X2 / X3。
+- 原始结果文件：reports/ 目录下的 plugin-b-confirm、pareto、srfm-transfer、train-x（RESULT / DESIGN / KF-DESIGN / CONTROLS-DESIGN）、reactivity、rho-R0。
+- Gemini 文献检索：reports/gemini-lit-t01~t06.md（仅供参考，引用未经全部核实）。
+
 # 第二篇方向证据包（2026-10-17，第 2 版）
 
 本 README 是整理文档第 14 节（上午，旧标准）与第 15 节（下午，按"比基线好点、有边界、有区分即算贡献"重判）的原文抽取；reports/ 为原始实验报告。
